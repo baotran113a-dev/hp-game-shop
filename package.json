@@ -1,0 +1,7 @@
+{
+  "name": "hp-game-shop",
+  "private": true,
+  "type": "module",
+  "scripts": { "cap-ma": "node cap-ma/server.mjs" },
+  "dependencies": { "express": "^4.21.2" }
+}

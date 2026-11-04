@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cấp mã kích hoạt — HP Media</title>
+<style>
+  :root { --bg: #0d1f2b; --card: #15303f; --line: #24485c; --tx: #e8f4fa; --mut: #8fb1c2; --acc: #ffd23f; --ok: #3ddc97; --bad: #ff6b6b; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 20px; background: var(--bg); color: var(--tx); font: 15px/1.5 system-ui, sans-serif; }
+  h1 { margin: 0 0 14px; font-size: 22px; } h1 span { color: var(--acc); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-bottom: 16px; max-width: 980px; }
+  label { display: block; color: var(--mut); font-size: 13px; margin: 10px 0 4px; }
+  input, select, textarea { width: 100%; padding: 9px 10px; border-radius: 8px; border: 1px solid var(--line); background: #0b1a24; color: var(--tx); font: inherit; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .days { display: flex; gap: 8px; flex-wrap: wrap; } .days button { flex: 1; }
+  button { padding: 9px 14px; border-radius: 8px; border: 1px solid var(--line); background: #1d3d50; color: var(--tx); font: inherit; cursor: pointer; }
+  button.on, button.pri { background: var(--acc); color: #1a1a1a; border-color: var(--acc); font-weight: 700; }
+  #out { display: none; margin-top: 14px; padding: 12px; border-radius: 10px; background: #0b1a24; border: 1px dashed var(--ok); }
+  #key { font: 12px/1.4 monospace; word-break: break-all; height: 70px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; } th, td { text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--line); }
+  th { color: var(--mut); font-weight: 600; } .warn { color: var(--acc); } .dead { color: var(--bad); } .live { color: var(--ok); }
+  @media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<h1>🔑 Cấp mã kích hoạt — <span>HP Media Game</span></h1>
+<div class="card">
+  <div class="row">
+    <div><label>Game</label><select id="game"></select></div>
+    <div><label>Mã máy khách gửi (dạng XXXXX-XXXXX)</label><input id="machine" placeholder="ABCDE-FGH23" style="font:700 17px monospace;letter-spacing:2px;text-transform:uppercase"></div>
+  </div>
+  <label>Thời hạn (khách còn hạn thì cộng tiếp từ ngày hết hạn cũ)</label>
+  <div class="days" id="days"></div>
+  <div class="row">
+    <div><label>Tên khách / Zalo</label><input id="customer" placeholder="Anh Minh - 09xx"></div>
+    <div><label>Ghi chú (đã nhận bao nhiêu tiền…)</label><input id="note" placeholder="CK 199k ngày 05/11"></div>
+  </div>
+  <p><button class="pri" onclick="issue()">Cấp mã</button></p>
+  <div id="out">
+    <div id="outInfo"></div>
+    <label>Mã kích hoạt — chép gửi khách qua Zalo</label>
+    <textarea id="key" readonly></textarea>
+    <p><button class="pri" onclick="copyKey()">📋 Chép mã</button> <span id="copied" class="live"></span></p>
+  </div>
+</div>
+<div class="card">
+  <h2 style="margin:0 0 8px;font-size:17px">Khách đã cấp mã</h2>
+  <table><thead><tr><th>Khách</th><th>Game</th><th>Mã máy</th><th>Hết hạn</th><th>Ghi chú</th><th></th></tr></thead><tbody id="list"></tbody></table>
+</div>
+<script>
+const $ = (id) => document.getElementById(id);
+const DAYS = [[30, '1 tháng'], [90, '3 tháng'], [180, '6 tháng'], [365, '1 năm'], [3, '3 ngày thử']];
+let data = { games: [], list: [], today: 0 }, days = 30;
+const fmt = (e) => `${String(e % 100).padStart(2, '0')}/${String(Math.floor(e / 100) % 100).padStart(2, '0')}/${Math.floor(e / 10000)}`;
+const left = (e) => Math.round((Date.UTC(e / 10000 | 0, (e / 100 | 0) % 100 - 1, e % 100) - Date.UTC(data.today / 10000 | 0, (data.today / 100 | 0) % 100 - 1, data.today % 100)) / 864e5) + 1;
+function drawDays() { $('days').innerHTML = DAYS.map(([d, t]) => `<button class="${d === days ? 'on' : ''}" onclick="days=${d};drawDays()">${t}</button>`).join(''); }
+function drawList() {
+  const name = (id) => data.games.find((g) => g.id === id)?.name || id;
+  // Mỗi khách + máy + game chỉ hiện lần cấp mới nhất, sắp theo ngày hết hạn
+  const last = {};
+  for (const r of data.list) { const k = r.game + r.machine; if (!last[k] || r.expires >= last[k].expires) last[k] = r; }
+  $('list').innerHTML = Object.values(last).sort((a, b) => a.expires - b.expires).map((r) => {
+    const n = left(r.expires), cls = n <= 0 ? 'dead' : n <= 3 ? 'warn' : 'live';
+    return `<tr><td>${esc(r.customer || '—')}</td><td>${esc(name(r.game))}</td><td style="font-family:monospace">${r.machine}</td>
+      <td class="${cls}">${fmt(r.expires)} · ${n <= 0 ? 'hết hạn' : `còn ${n} ngày`}</td><td>${esc(r.note || '')}</td>
+      <td><button onclick="renew('${r.game}','${r.machine}')">Gia hạn</button></td></tr>`;
+  }).join('') || '<tr><td colspan="6" style="color:var(--mut)">Chưa cấp mã nào</td></tr>';
+}
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+function renew(game, machine) {
+  $('game').value = game; $('machine').value = machine;
+  const r = data.list.filter((x) => x.machine === machine).pop(); if (r) $('customer').value = r.customer || '';
+  scrollTo({ top: 0, behavior: 'smooth' }); $('note').focus();
+}
+async function load() {
+  data = await (await fetch('/api/data')).json();
+  $('game').innerHTML = data.games.map((g) => `<option value="${g.id}">${esc(g.name)}</option>`).join('');
+  drawDays(); drawList();
+}
+async function issue() {
+  const r = await fetch('/api/cap-ma', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ game: $('game').value, machine: $('machine').value, days, customer: $('customer').value, note: $('note').value }) });
+  const j = await r.json();
+  if (!j.ok) return alert(j.error || 'Lỗi');
+  $('out').style.display = 'block'; $('copied').textContent = '';
+  $('outInfo').innerHTML = `✅ Mã cho máy <b>${j.machine}</b> — dùng đến hết ngày <b>${fmt(j.expires)}</b>`;
+  $('key').value = j.key;
+  const d = await (await fetch('/api/data')).json(); data.list = d.list; drawList();
+}
+function copyKey() { navigator.clipboard.writeText($('key').value).then(() => { $('copied').textContent = 'Đã chép!'; }); }
+load();
+</script>
+</body>
+</html>
