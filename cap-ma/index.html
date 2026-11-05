@@ -20,7 +20,13 @@
   #key { font: 12px/1.4 monospace; word-break: break-all; height: 70px; }
   table { width: 100%; border-collapse: collapse; font-size: 14px; } th, td { text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--line); }
   th { color: var(--mut); font-weight: 600; } .warn { color: var(--acc); } .dead { color: var(--bad); } .live { color: var(--ok); }
-  @media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
+  .tbl { overflow-x: auto; }
+  @media (max-width: 640px) {
+    body { padding: 14px; font-size: 16px; } h1 { font-size: 19px; }
+    .row { grid-template-columns: 1fr; } .card { padding: 12px; }
+    .days button { min-width: 30%; padding: 12px 8px; } button.pri { padding: 12px 16px; width: 100%; }
+    table { font-size: 14px; } th, td { padding: 8px 4px; }
+  }
 </style>
 </head>
 <body>
@@ -46,7 +52,7 @@
 </div>
 <div class="card">
   <h2 style="margin:0 0 8px;font-size:17px">Khách đã cấp mã</h2>
-  <table><thead><tr><th>Khách</th><th>Game</th><th>Mã máy</th><th>Hết hạn</th><th>Ghi chú</th><th></th></tr></thead><tbody id="list"></tbody></table>
+  <div class="tbl"><table><thead><tr><th>Khách</th><th>Game</th><th>Mã máy</th><th>Hết hạn</th><th>Ghi chú</th><th></th></tr></thead><tbody id="list"></tbody></table></div>
 </div>
 <script>
 const $ = (id) => document.getElementById(id);
@@ -73,20 +79,27 @@ function renew(game, machine) {
   const r = data.list.filter((x) => x.machine === machine).pop(); if (r) $('customer').value = r.customer || '';
   scrollTo({ top: 0, behavior: 'smooth' }); $('note').focus();
 }
+// Gọi API kèm PIN. Sai PIN thì hỏi lại.
+async function api(url, opts = {}) {
+  const pin = localStorage.getItem('pin') || prompt('Nhập PIN (6 số) để vào công cụ cấp mã:') || '';
+  const r = await fetch(url, { ...opts, headers: { 'Content-Type': 'application/json', 'x-pin': pin, ...(opts.headers || {}) } });
+  if (r.status === 401) { localStorage.removeItem('pin'); alert('Sai PIN, nhập lại.'); return api(url, opts); }
+  localStorage.setItem('pin', pin);
+  return r.json();
+}
 async function load() {
-  data = await (await fetch('/api/data')).json();
+  data = await api('/api/data');
   $('game').innerHTML = data.games.map((g) => `<option value="${g.id}">${esc(g.name)}</option>`).join('');
   drawDays(); drawList();
 }
 async function issue() {
-  const r = await fetch('/api/cap-ma', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+  const j = await api('/api/cap-ma', { method: 'POST',
     body: JSON.stringify({ game: $('game').value, machine: $('machine').value, days, customer: $('customer').value, note: $('note').value }) });
-  const j = await r.json();
   if (!j.ok) return alert(j.error || 'Lỗi');
   $('out').style.display = 'block'; $('copied').textContent = '';
   $('outInfo').innerHTML = `✅ Mã cho máy <b>${j.machine}</b> — dùng đến hết ngày <b>${fmt(j.expires)}</b>`;
   $('key').value = j.key;
-  const d = await (await fetch('/api/data')).json(); data.list = d.list; drawList();
+  const d = await api('/api/data'); data.list = d.list; drawList();
 }
 function copyKey() { navigator.clipboard.writeText($('key').value).then(() => { $('copied').textContent = 'Đã chép!'; }); }
 load();
