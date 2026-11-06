@@ -2,8 +2,8 @@
 
 ## Trạng thái (06/11/2026)
 - Web đã làm lại thành **BH Studio** (logo `docs/img/logo.webp` từ `Downloads\Logo 3D BH Studio Tím Bạc.png`, màu tím bạc, font Lexend + Be Vietnam Pro).
-  Commit cục bộ mới nhất `8b04d9d`. **CHƯA push lên GitHub** — chỉ push khi Bảo đồng ý.
-- Nội dung trang chủ trong `docs/site.json`; `docs/admin.html` = trang admin (mật khẩu + chìa GitHub fine-grained mã hóa trong máy, sửa site.json/games.json, tải ảnh, xem trước `?preview=1`). Chưa thử đăng nhập thật (cần Bảo tạo chìa).
+  Commit cục bộ mới nhất `4e84673` (web nhiều trang). **CHƯA push lên GitHub** — chỉ push khi Bảo đồng ý.
+- Nội dung mọi trang trong `docs/site.json` (đã có 97 creator, đã xóa _list.json và tài khoản hpmedia.bmt khỏi lưới); `docs/admin.html` = trang admin (mật khẩu + chìa GitHub fine-grained mã hóa trong máy, sửa site.json/games.json, tải ảnh, xem trước `?preview=1`). Chưa thử đăng nhập thật (cần Bảo tạo chìa).
 - Xem thử: `preview_start` "shop-web" (8691). Khung browser hay bị ẩn → chụp bằng Edge headless (`msedge --headless=new --screenshot=... --window-size=1280,6400 --user-data-dir=D:\video-ai\.tmp\edge-shot`), ảnh điện thoại dùng iframe 390px. Ảnh chụp ở `anh-thu/` (git bỏ qua).
 
 ## Yêu cầu 06/11 (ĐÃ LÀM, commit cục bộ, chờ Bảo duyệt + đồng ý push)
