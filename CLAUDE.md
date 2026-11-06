@@ -20,6 +20,7 @@ Bảo kiểm tra tiền, mở `CAP-MA.bat` cấp mã → gửi mã qua Zalo → 
 - `cap-ma/server.mjs` + `index.html`: công cụ cấp mã (chỉ 127.0.0.1:8690), ký Ed25519 bằng `khoa-rieng/private.pem`; lưu khách ở `du-lieu/khach-hang.json`.
   Còn hạn thì cộng tiếp từ ngày hết hạn cũ. Số ngày tính cả hôm nay.
 - `khoa-rieng/` và `du-lieu/` **không lưu git, không bao giờ đưa lên mạng**. Khóa công khai tương ứng nằm trong `license.mjs` của từng game.
+- Tên miền: **tuyendungidol.vn** (DNS ở Tenten, `docs/CNAME`; link github.io cũ tự chuyển).
 - Xem thử web: `node xem-web.mjs` (8691). Game dùng chung khóa: game mới copy `cau-ca-online/license.mjs`, đặt `game` = id trong games.json.
 
 ## Quy tắc

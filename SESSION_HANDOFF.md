@@ -38,3 +38,9 @@
 
 ## Trang admin
 - Bảo tạo chìa GitHub nhưng báo "Resource not accessible by personal access token" → đã hướng dẫn sửa chìa: Resource owner baotran113a-dev, Only select repositories → hp-game-shop, Contents: Read and write. Chưa biết kết quả.
+
+## Tên miền tuyendungidol.vn (07/11, Bảo mua ở Tenten, đăng nhập sẵn trong Chrome)
+- DNS ở Tenten (domain.tenten.vn): 4 bản ghi A @ → 185.199.108/109/110/111.153, CNAME www → baotran113a-dev.github.io (Bảo đồng ý, đã lưu).
+- `docs/CNAME` = tuyendungidol.vn (đã đăng). GitHub Pages nhận tên miền; link cũ github.io/hp-game-shop/* tự 301 sang tên miền mới (giữ ?game=&may=) → app Câu Cá cũ vẫn chạy.
+- HTTPS: ĐÃ BẬT Enforce HTTPS (07/11); http và www tự chuyển về https://tuyendungidol.vn. Đã thử Nội bộ mở được trên tên miền mới. Trang Nội bộ + admin CẦN https (WebCrypto không chạy trên http).
+- Việc còn lại: Bảo phải làm eKYC tên miền .vn ở id.tenten.vn (không làm có thể bị khóa); sửa link trong `cau-ca-online/public/control.html` sang tuyendungidol.vn (bản app sau); admin phải đăng nhập lại trên tên miền mới.
