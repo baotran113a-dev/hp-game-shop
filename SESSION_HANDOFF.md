@@ -31,7 +31,7 @@
 - Mã hóa: `node ma-hoa-noi-bo.mjs [id]` (hỏi pass ẩn, gõ 2 lần, ≥ 8 ký tự; hoặc biến NOIBO_PASS_IDOL_TAI_NHA / NOIBO_PASS_NPC_CONG_TY) → `docs/noi-bo/<id>.enc.json`. AES-256-GCM, PBKDF2-SHA256 600k vòng, salt/iv ngẫu nhiên, tự kiểm tra giải mã.
   Trình duyệt giải mã bằng WebCrypto (`nbOpen`/`md2html` trong app.js), nhớ khóa trong sessionStorage (nút "Khóa lại").
 - Đã thử: sai pass báo lỗi, đúng pass mở bảng (24 dòng NPC, 41 dòng idol), tải lại vẫn mở. Ảnh: `anh-thu/noibo-*.png`.
-- 06/11: đã mã hóa bằng 2 mật khẩu thật Bảo đưa (không ghi ở đây) và commit. Bảo biết là pass ngắn (< 10 ký tự) dễ bị dò; muốn đổi thì chạy lại script. **Chưa push — hỏi Bảo trước.**
+- 06/11: đã mã hóa bằng 2 mật khẩu thật Bảo đưa (không ghi ở đây) và commit. Bảo biết là pass ngắn (< 10 ký tự) dễ bị dò; muốn đổi thì chạy lại script. **ĐÃ ĐĂNG 06/11** (b65da74, gộp cùng 6 commit Bảo sửa qua admin — admin đã chạy được). Kiểm tra web thật: menu có Nội bộ, mở mục NPC đúng 24 dòng.
 - Admin chỉ sửa được tiêu đề/mô tả 2 mục (site.json `noibo`); nội dung mã hóa phải nhờ Claude sửa file md + chạy script.
 - Chống copy (06/11, Bảo yêu cầu): `noCopy()` cuối app.js + CSS cuối style.css — mọi trang tắt bôi đen/chuột phải/copy/kéo ảnh/Ctrl+C,S,P,U,F12, xóa clipboard khi bấm PrintScreen, in ra trang trắng; ô nhập vẫn dán được. Trang Nội bộ: in chìm "BH STUDIO · NỘI BỘ" + làm mờ nội dung khi rời cửa sổ/đổi tab. Không chặn hẳn được chụp màn hình/chụp bằng điện thoại (đã nói Bảo).
 - Chụp ảnh khi khung browser ẩn: tạo tạm `docs/_shot.html` (iframe noi-bo.html, đặt sessionStorage khóa, ép `.rv` hiện, tắt animation `.nbd`) → Edge headless → xóa file tạm.
