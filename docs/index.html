@@ -3,154 +3,225 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BSMEDIA — Tuyển Idol TikTok LIVE & game LIVE tương tác</title>
+<title>BH Studio — Tuyển Idol TikTok LIVE & game LIVE tương tác</title>
 <meta name="description" content="Tuyển Idol TikTok LIVE: đào tạo từ A–Z, miễn phí cài TikTok LIVE Studio và làm đẹp Douyin. Kèm game tương tác cho phiên LIVE.">
-<meta name="theme-color" content="#0b0618">
+<meta name="theme-color" content="#08051a">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Lexend:wght@500;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0b0618; --bg2: #120a26; --glass: rgba(255, 255, 255, .06); --glass2: rgba(255, 255, 255, .1); --line: rgba(255, 255, 255, .12);
-    --tx: #f6f0ff; --mut: #b9a8d9; --vio: #a855f7; --pink: #ec4899; --cy: #22d3ee; --gold: #fcd34d; --ok: #34d399;
-    --grad: linear-gradient(120deg, #a855f7, #ec4899 55%, #f97316);
+    --bg: #08051a; --bg2: #110a26; --glass: rgba(196, 181, 253, .07); --glass2: rgba(196, 181, 253, .12); --line: rgba(196, 181, 253, .18);
+    --tx: #f5f3ff; --mut: #b4abcf; --cy: #c084fc; --vio: #8b5cf6; --lime: #a3e635; --gold: #fcd34d; --red: #ff3b5c; --ok: #34d399;
+    --grad: linear-gradient(110deg, #a855f7, #7c3aed 55%, #5b21b6);
+    --silver: linear-gradient(110deg, #ffffff, #d4d4e0 35%, #c084fc 70%, #a855f7);
+    --hd: 'Lexend', 'Be Vietnam Pro', system-ui, sans-serif;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 72px; }
   body { margin: 0; background: var(--bg); color: var(--tx); font: 16px/1.6 'Be Vietnam Pro', system-ui, sans-serif; overflow-x: hidden; }
   a { color: inherit; }
-  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 16px; }
-  /* Nền chuyển màu động */
-  .bgfx { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
-  .bgfx i { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .55; animation: drift 18s ease-in-out infinite alternate; }
-  .bgfx i:nth-child(1) { width: 520px; height: 520px; background: #7c3aed; left: -120px; top: -80px; }
-  .bgfx i:nth-child(2) { width: 460px; height: 460px; background: #db2777; right: -140px; top: 20%; animation-delay: -6s; }
-  .bgfx i:nth-child(3) { width: 380px; height: 380px; background: #0891b2; left: 30%; bottom: -160px; opacity: .35; animation-delay: -12s; }
-  @keyframes drift { to { transform: translate(60px, 40px) scale(1.15); } }
-  .grain { position: fixed; inset: 0; z-index: -1; pointer-events: none; background-image: radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px); background-size: 3px 3px; opacity: .35; }
+  h1, h2, h3, .logo, .big { font-family: var(--hd); }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 16px; }
+  /* Nền: lưới mờ + quầng sáng */
+  .bgfx { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden;
+    background: linear-gradient(rgba(196,181,253,.05) 1px, transparent 1px) 0 0 / 56px 56px, linear-gradient(90deg, rgba(196,181,253,.05) 1px, transparent 1px) 0 0 / 56px 56px;
+    mask-image: radial-gradient(ellipse at 50% 0%, #000 30%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse at 50% 0%, #000 30%, transparent 75%); }
+  .glow { position: fixed; z-index: -1; pointer-events: none; border-radius: 50%; filter: blur(100px); opacity: .45; animation: drift 20s ease-in-out infinite alternate; }
+  .glow.a { width: 560px; height: 560px; background: #6d28d9; left: -180px; top: -120px; } .glow.b { width: 520px; height: 520px; background: #3730a3; right: -200px; top: 25%; animation-delay: -8s; }
+  @keyframes drift { to { transform: translate(70px, 50px) scale(1.12); } }
 
-  header { position: sticky; top: 0; z-index: 20; background: rgba(11, 6, 24, .55); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
-  header .wrap { display: flex; align-items: center; gap: 16px; height: 64px; }
-  .logo { font-weight: 900; font-size: 22px; letter-spacing: 1px; text-decoration: none; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .logo::before { content: '◆ '; color: var(--pink); -webkit-text-fill-color: var(--pink); font-size: 16px; }
-  nav { margin-left: auto; display: flex; gap: 20px; font-size: 15px; } nav a { text-decoration: none; color: var(--mut); transition: color .2s; } nav a:hover { color: var(--tx); }
-  .btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; border-radius: 999px; border: 0; font: 800 15px 'Be Vietnam Pro', sans-serif; cursor: pointer; text-decoration: none; overflow: hidden; transition: transform .2s, box-shadow .2s; }
+  header { position: sticky; top: 0; z-index: 30; background: rgba(6, 10, 24, .6); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; gap: 18px; height: 64px; }
+  .logo { display: flex; align-items: center; text-decoration: none; } .logo img { height: 40px; width: auto; display: block; filter: drop-shadow(0 0 12px rgba(168, 85, 247, .45)); }
+  .final .flogo { width: min(420px, 80%); margin: 6px auto 4px; display: block; filter: drop-shadow(0 0 30px rgba(168, 85, 247, .5)); }
+  nav { margin-left: auto; display: flex; gap: 22px; font-size: 15px; } nav a { text-decoration: none; color: var(--mut); transition: color .2s; } nav a:hover { color: var(--cy); }
+  .btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 24px; border-radius: 14px; border: 0; font: 700 15px var(--hd); cursor: pointer; text-decoration: none; overflow: hidden; transition: transform .2s, box-shadow .2s, background .2s; }
   .btn:hover { transform: translateY(-2px); }
-  .btn.pri { background: var(--grad); color: #fff; box-shadow: 0 8px 30px rgba(236, 72, 153, .35); }
-  .btn.pri::after { content: ''; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.45) 50%, transparent 70%); transform: translateX(-120%); animation: shine 3.2s ease-in-out infinite; }
+  .btn.pri { background: var(--grad); color: #fff; box-shadow: 0 10px 30px rgba(124, 58, 237, .4); }
+  .btn.pri::after { content: ''; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.4) 50%, transparent 70%); transform: translateX(-120%); animation: shine 3.4s ease-in-out infinite; }
   @keyframes shine { 60%, 100% { transform: translateX(120%); } }
-  .btn.ghost { background: var(--glass); color: var(--tx); border: 1px solid var(--line); backdrop-filter: blur(8px); } .btn.ghost:hover { background: var(--glass2); }
-  .btn.sm { padding: 9px 15px; font-size: 14px; }
-  .glass { background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-radius: 20px; }
-
-  .hero { padding: 56px 0 30px; }
-  .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; }
-  .tag { display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(236, 72, 153, .15); border: 1px solid rgba(236, 72, 153, .4); color: #fbcfe8; font-weight: 700; font-size: 13.5px; animation: pulse 2.4s ease-in-out infinite; }
-  @keyframes pulse { 50% { box-shadow: 0 0 0 6px rgba(236, 72, 153, .12); } }
-  h1 { font-size: clamp(34px, 5.4vw, 60px); line-height: 1.1; margin: 16px 0; font-weight: 900; letter-spacing: -.5px; }
-  em.g { font-style: normal; background: var(--grad); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: flow 5s linear infinite; }
+  .btn.ghost { background: var(--glass); color: var(--tx); border: 1px solid var(--line); } .btn.ghost:hover { background: var(--glass2); border-color: rgba(192, 132, 252, .5); }
+  .btn.sm { padding: 9px 15px; font-size: 14px; border-radius: 11px; }
+  .glass { background: linear-gradient(160deg, rgba(196, 181, 253, .09), rgba(196, 181, 253, .03)); border: 1px solid var(--line); border-radius: 22px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font: 700 13px var(--hd); letter-spacing: 1.5px; text-transform: uppercase; color: var(--cy); }
+  .eyebrow::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 0 rgba(255, 59, 92, .6); animation: blink 1.6s infinite; }
+  @keyframes blink { 70% { box-shadow: 0 0 0 9px rgba(255, 59, 92, 0); } }
+  em.g { font-style: normal; background: var(--silver); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: flow 6s linear infinite; }
   @keyframes flow { to { background-position: 200% center; } }
-  .hero p.lead { color: var(--mut); font-size: 18px; max-width: 560px; margin: 0; }
-  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
-  .portrait { position: relative; justify-self: center; width: min(380px, 100%); }
-  .portrait .ring { position: absolute; inset: -14px; border-radius: 32px; background: conic-gradient(from 0deg, #a855f7, #ec4899, #22d3ee, #a855f7); animation: spin 8s linear infinite; filter: blur(18px); opacity: .7; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .portrait img { position: relative; display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; border-radius: 28px; border: 1px solid rgba(255,255,255,.25); }
-  .chip { position: absolute; padding: 9px 14px; border-radius: 14px; font-weight: 800; font-size: 14px; white-space: nowrap; background: rgba(20, 10, 40, .65); border: 1px solid var(--line); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); animation: float 4s ease-in-out infinite; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
-  .chip:nth-of-type(1) { left: -30px; top: 12%; } .chip:nth-of-type(2) { right: -26px; top: 46%; animation-delay: -1.3s; } .chip:nth-of-type(3) { left: -14px; bottom: 8%; animation-delay: -2.6s; }
+
+  /* Đầu trang */
+  .hero { padding: 54px 0 36px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+  h1 { font-size: clamp(36px, 5.6vw, 64px); line-height: 1.08; margin: 16px 0 18px; font-weight: 900; letter-spacing: -1px; }
+  .lead { color: var(--mut); font-size: 18px; max-width: 560px; margin: 0; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+  .try { margin-top: 26px; max-width: 470px; padding: 14px; }
+  .try small { display: block; color: var(--mut); font-size: 13px; margin: 0 0 8px 4px; }
+  .try .f { display: flex; gap: 8px; } .try .in { flex: 1; display: flex; align-items: center; gap: 4px; padding: 0 12px; border-radius: 11px; background: rgba(0,0,0,.35); border: 1px solid var(--line); }
+  .try .in b { color: var(--cy); } .try input { flex: 1; min-width: 0; background: none; border: 0; color: var(--tx); font: 600 15px 'Be Vietnam Pro', sans-serif; padding: 11px 0; outline: none; }
+  /* Màn hình LIVE giả lập */
+  .stage { position: relative; justify-self: center; width: min(350px, 100%); }
+  .screen { position: relative; aspect-ratio: 9 / 15.5; border-radius: 30px; overflow: hidden; border: 1px solid rgba(255,255,255,.2); box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 0 8px rgba(148,197,255,.06), 0 0 60px rgba(192, 132, 252, .25); background: #111; }
+  .screen > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .screen::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, transparent 22%, transparent 55%, rgba(0,0,0,.7) 100%); }
+  .ov { position: absolute; z-index: 2; left: 12px; right: 12px; }
+  .ov.top { top: 12px; display: flex; align-items: center; gap: 8px; }
+  .who { display: flex; align-items: center; gap: 7px; padding: 4px 10px 4px 4px; border-radius: 999px; background: rgba(0,0,0,.45); font-size: 13px; font-weight: 700; max-width: 62%; }
+  .who i { width: 24px; height: 24px; border-radius: 50%; background: var(--grad); flex: none; } .who span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .live { background: var(--red); color: #fff; font: 800 11px var(--hd); padding: 3px 8px; border-radius: 6px; letter-spacing: 1px; }
+  .eye { white-space: nowrap; margin-left: auto; font-size: 12.5px; font-weight: 700; background: rgba(0,0,0,.45); padding: 3px 9px; border-radius: 999px; }
+  .ov.bot { bottom: 14px; display: flex; flex-direction: column; gap: 6px; }
+  .cm { align-self: flex-start; max-width: 85%; font-size: 13px; padding: 5px 11px; border-radius: 12px; background: rgba(0,0,0,.45); animation: cmIn .4s ease; } .cm b { color: var(--cy); margin-right: 5px; }
+  @keyframes cmIn { from { opacity: 0; transform: translateY(10px); } }
+  .heart { position: absolute; z-index: 3; right: 22px; bottom: 60px; font-size: 22px; pointer-events: none; animation: up 2.6s ease-out forwards; }
+  @keyframes up { to { transform: translate(var(--dx), -260px) scale(1.4); opacity: 0; } }
+  .chip { position: absolute; z-index: 4; padding: 9px 14px; border-radius: 14px; font-weight: 700; font-size: 14px; white-space: nowrap; background: rgba(20, 12, 44, .88); border: 1px solid var(--line); animation: float 4.5s ease-in-out infinite; box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+  .chip:nth-child(1) { left: -46px; top: 18%; } .chip:nth-child(2) { right: -40px; top: 44%; animation-delay: -1.5s; } .chip:nth-child(3) { left: -30px; bottom: 22%; animation-delay: -3s; }
   @keyframes float { 50% { transform: translateY(-10px); } }
 
-  section { padding: 56px 0; } section h2 { font-size: clamp(26px, 3.6vw, 36px); margin: 0 0 8px; font-weight: 900; } .sub { color: var(--mut); margin: 0 0 28px; max-width: 720px; }
-  .free { position: relative; padding: 30px; display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; overflow: hidden; border-color: rgba(236, 72, 153, .45); }
-  .free::before { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(168, 85, 247, .25), rgba(236, 72, 153, .2), rgba(249, 115, 22, .15)); z-index: -1; }
-  .free .badge { font-weight: 900; font-size: 22px; padding: 16px 18px; border-radius: 18px; background: var(--grad); text-align: center; line-height: 1.1; transform: rotate(-4deg); box-shadow: 0 10px 30px rgba(236, 72, 153, .4); }
-  .free h3 { margin: 0 0 6px; font-size: 24px; font-weight: 900; } .free p { margin: 0; color: #e9ddff; }
-  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .perk { padding: 22px; transition: transform .25s, border-color .25s, background .25s; }
-  .perk:hover { transform: translateY(-4px); border-color: rgba(236, 72, 153, .5); background: var(--glass2); }
-  .perk .ic { font-size: 30px; width: 54px; height: 54px; display: grid; place-items: center; border-radius: 16px; background: rgba(168, 85, 247, .18); margin-bottom: 12px; }
-  .perk b { display: block; font-size: 17px; margin-bottom: 4px; } .perk p { margin: 0; color: var(--mut); font-size: 14.5px; }
-  .req { padding: 24px; margin-top: 18px; } .req h3 { margin: 0 0 12px; font-size: 20px; }
+  /* Dải nổi bật + chữ chạy */
+  .hl { display: grid; grid-template-columns: repeat(4, 1fr); padding: 0; overflow: hidden; }
+  .hl > div { padding: 20px 22px; border-right: 1px solid var(--line); } .hl > div:last-child { border: 0; }
+  .hl .big { font-size: 32px; font-weight: 900; background: var(--silver); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1.1; }
+  .hl small { color: var(--mut); font-size: 14px; }
+  .mq { margin-top: 36px; border-block: 1px solid var(--line); background: rgba(192, 132, 252, .04); overflow: hidden; white-space: nowrap; transform: rotate(-1.2deg); }
+  .mq .t { display: inline-block; padding: 14px 0; animation: mq 30s linear infinite; font: 800 20px var(--hd); text-transform: uppercase; letter-spacing: 1px; color: #e9e4ff; }
+  .mq .t span::after { content: '✦'; color: var(--cy); margin: 0 22px; }
+  @keyframes mq { to { transform: translateX(-50%); } }
+
+  section { padding: 64px 0; } section h2 { font-size: clamp(27px, 3.8vw, 40px); margin: 6px 0 8px; font-weight: 900; letter-spacing: -.5px; } .sub { color: var(--mut); margin: 0 0 30px; max-width: 720px; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; } .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card { position: relative; padding: 24px; transition: transform .25s, border-color .25s, background .25s; overflow: hidden; }
+  .card:hover { transform: translateY(-5px); border-color: rgba(192, 132, 252, .55); background: var(--glass2); }
+  .card::before { content: ''; position: absolute; width: 160px; height: 160px; right: -60px; top: -60px; border-radius: 50%; background: radial-gradient(rgba(124, 58, 237, .35), transparent 70%); opacity: 0; transition: opacity .3s; } .card:hover::before { opacity: 1; }
+  .card .ic { font-size: 30px; width: 56px; height: 56px; display: grid; place-items: center; border-radius: 16px; background: rgba(192, 132, 252, .1); border: 1px solid rgba(192, 132, 252, .25); margin-bottom: 14px; }
+  .card b { display: block; font: 700 17.5px var(--hd); margin-bottom: 5px; } .card p { margin: 0; color: var(--mut); font-size: 14.5px; }
+  .card .no { position: absolute; right: 18px; top: 14px; font: 900 34px var(--hd); color: rgba(196, 181, 253, .12); }
+  /* Vé miễn phí */
+  .ticket { position: relative; display: grid; grid-template-columns: 170px 1fr auto; align-items: stretch; border-radius: 22px; background: linear-gradient(110deg, rgba(192, 132, 252, .16), rgba(124, 58, 237, .16), rgba(168, 85, 247, .18)); border: 1px solid rgba(192, 132, 252, .4); overflow: hidden; }
+  .ticket .stub { display: grid; place-items: center; background: var(--grad); font: 900 26px var(--hd); text-align: center; line-height: 1.05; padding: 20px; border-right: 2px dashed rgba(6, 10, 24, .5); }
+  .ticket .mid { padding: 26px; } .ticket h3 { margin: 0 0 6px; font-size: 23px; font-weight: 800; } .ticket p { margin: 0; color: #ece6ff; }
+  .ticket .go { display: grid; place-items: center; padding: 20px 26px; }
+  .ticket::before, .ticket::after { content: ''; position: absolute; left: 160px; width: 22px; height: 22px; border-radius: 50%; background: var(--bg); } .ticket::before { top: -11px; } .ticket::after { bottom: -11px; }
+  .req { padding: 24px; margin-top: 18px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; } .req h3 { margin: 0; font-size: 19px; }
   .req ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
-  .req li { padding: 8px 14px; border-radius: 999px; background: rgba(52, 211, 153, .1); border: 1px solid rgba(52, 211, 153, .35); font-size: 14.5px; } .req li::before { content: '✓ '; color: var(--ok); font-weight: 900; }
-  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: s; }
-  .step { padding: 20px; }
-  .step::before { counter-increment: s; content: counter(s); display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; background: var(--grad); color: #fff; font-weight: 900; margin-bottom: 10px; }
-  .step b { display: block; margin-bottom: 4px; } .step p { margin: 0; color: var(--mut); font-size: 14.5px; }
+  .req li { padding: 8px 14px; border-radius: 10px; background: rgba(163, 230, 53, .08); border: 1px solid rgba(163, 230, 53, .3); font-size: 14.5px; } .req li::before { content: '✓ '; color: var(--lime); font-weight: 900; }
+  /* Hành trình: đường thời gian */
+  .tl { position: relative; max-width: 900px; margin: 0 auto; }
+  .tl .rail { position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; transform: translateX(-50%); background: var(--line); border-radius: 3px; }
+  .tl .rail i { position: absolute; left: 0; top: 0; width: 100%; height: var(--p, 0%); background: var(--grad); border-radius: 3px; box-shadow: 0 0 14px rgba(192, 132, 252, .7); }
+  .ts { position: relative; width: 50%; padding: 0 44px 34px 0; }
+  .ts:nth-child(odd) { margin-left: 50%; padding: 0 0 34px 44px; }
+  .ts .dot { position: absolute; top: 14px; right: -23px; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; font-size: 20px; background: var(--bg2); border: 2px solid var(--line); z-index: 1; transition: border-color .3s, box-shadow .3s; }
+  .ts:nth-child(odd) .dot { right: auto; left: -23px; }
+  .ts.on .dot { border-color: var(--cy); box-shadow: 0 0 20px rgba(192, 132, 252, .6); }
+  .ts .glass { padding: 20px 22px; } .ts small { font: 800 12.5px var(--hd); color: var(--cy); letter-spacing: 1px; } .ts b { display: block; font: 700 18px var(--hd); margin: 2px 0 4px; } .ts p { margin: 0; color: var(--mut); font-size: 14.5px; }
+  /* Game */
   .games { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 22px; }
   .game { overflow: hidden; display: flex; flex-direction: column; }
   .shots { display: flex; gap: 8px; padding: 12px; background: rgba(0, 0, 0, .25); overflow-x: auto; scrollbar-width: thin; }
   .shots img { height: 230px; border-radius: 12px; flex: none; cursor: zoom-in; transition: transform .2s; } .shots img:hover { transform: scale(1.03); }
   .game .body { padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-  .game h3 { margin: 0; font-size: 23px; font-weight: 900; } .game .tl { color: var(--mut); margin: 0; font-size: 15px; }
+  .game h3 { margin: 0; font-size: 23px; font-weight: 800; } .game .tl2 { color: var(--mut); margin: 0; font-size: 15px; }
   .game ul { margin: 0; padding-left: 0; list-style: none; font-size: 14.5px; } .game li::before { content: '✓ '; color: var(--ok); font-weight: 800; }
-  .price { display: flex; gap: 10px; flex-wrap: wrap; } .price div { background: rgba(0, 0, 0, .25); border: 1px solid var(--line); border-radius: 12px; padding: 6px 12px; font-size: 14px; }
+  .price { display: flex; gap: 10px; flex-wrap: wrap; } .price div { background: rgba(0, 0, 0, .25); border: 1px solid var(--line); border-radius: 11px; padding: 6px 12px; font-size: 14px; }
   .price b { color: var(--gold); font-size: 17px; }
   .game .act { display: flex; gap: 10px; margin-top: auto; flex-wrap: wrap; }
   .soon { border-style: dashed; justify-content: center; align-items: center; text-align: center; padding: 30px; color: var(--mut); min-height: 200px; align-self: start; }
-  .author { display: grid; grid-template-columns: auto 1fr auto; gap: 22px; align-items: center; padding: 26px; }
-  .avatar { width: 92px; height: 92px; border-radius: 50%; display: grid; place-items: center; font-size: 34px; font-weight: 900; background: var(--grad); overflow: hidden; box-shadow: 0 0 0 4px rgba(255,255,255,.08), 0 10px 30px rgba(168, 85, 247, .4); }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: s; }
+  .step { padding: 20px; } .step::before { counter-increment: s; content: '0' counter(s); display: block; font: 900 28px var(--hd); background: var(--silver); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 6px; }
+  .step b { display: block; margin-bottom: 4px; font-family: var(--hd); } .step p { margin: 0; color: var(--mut); font-size: 14.5px; }
+  /* Tác giả */
+  .author { display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; padding: 26px 28px; }
+  .avatar { width: 92px; height: 92px; border-radius: 26px; display: grid; place-items: center; font: 900 36px var(--hd); background: var(--grad); overflow: hidden; transform: rotate(-4deg); box-shadow: 0 12px 34px rgba(124, 58, 237, .45); }
   .avatar img { width: 100%; height: 100%; object-fit: cover; }
-  .author small { color: var(--pink); font-weight: 800; letter-spacing: .5px; text-transform: uppercase; font-size: 12.5px; }
-  .author h3 { margin: 2px 0 6px; font-size: 24px; font-weight: 900; } .author p { margin: 0; color: var(--mut); }
-  details { padding: 14px 18px; margin-bottom: 10px; border-radius: 14px; }
-  summary { cursor: pointer; font-weight: 700; } details p { color: var(--mut); margin: 8px 0 0; }
-  .contact { text-align: center; padding: 40px 20px; }
+  .author small { color: var(--cy); font: 700 12.5px var(--hd); letter-spacing: 1px; text-transform: uppercase; }
+  .author h3 { margin: 2px 0 6px; font-size: 25px; font-weight: 800; } .author p { margin: 0; color: var(--mut); }
+  details { padding: 15px 20px; margin-bottom: 10px; border-radius: 16px; transition: border-color .2s; } details[open] { border-color: rgba(192, 132, 252, .45); }
+  summary { cursor: pointer; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 12px; } summary::after { content: '+'; color: var(--cy); font: 700 22px var(--hd); line-height: 1; transition: transform .2s; } details[open] summary::after { transform: rotate(45deg); }
+  details p { color: var(--mut); margin: 10px 0 0; }
+  /* Kêu gọi cuối */
+  .final { position: relative; isolation: isolate; text-align: center; padding: 64px 22px; overflow: hidden; }
+  .final::before { content: ''; position: absolute; left: 50%; top: -60%; width: 1400px; height: 1400px; margin-top: -350px; border-radius: 50%; transform: translateX(-50%); background: conic-gradient(from 180deg, transparent, rgba(192, 132, 252, .22), transparent 30%, rgba(124, 58, 237, .25), transparent 60%); animation: spin 14s linear infinite; z-index: -1; }
+  @keyframes spin { to { transform: translateX(-50%) rotate(360deg); } }
+  .final h2 { font-size: clamp(32px, 5vw, 56px); }
   footer { border-top: 1px solid var(--line); padding: 26px 0; color: var(--mut); font-size: 14px; }
   footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-  /* Hiện dần khi cuộn */
-  .rv { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; } .rv.in { opacity: 1; transform: none; }
+  .rv { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; } .rv.in { opacity: 1; transform: none; }
+  .toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 80; background: #140b2e; border: 1px solid var(--cy); padding: 10px 18px; border-radius: 12px; font-size: 14px; display: none; } .toast.on { display: block; }
   /* Hộp mua */
-  .modal { position: fixed; inset: 0; z-index: 50; background: rgba(5, 2, 12, .75); backdrop-filter: blur(6px); display: none; align-items: flex-start; justify-content: center; padding: 30px 16px; overflow-y: auto; }
+  .modal { position: fixed; inset: 0; z-index: 50; background: rgba(3, 6, 15, .78); backdrop-filter: blur(6px); display: none; align-items: flex-start; justify-content: center; padding: 30px 16px; overflow-y: auto; }
   .modal.on { display: flex; }
-  .box { width: 100%; max-width: 560px; background: #160c2c; border: 1px solid var(--line); border-radius: 20px; padding: 22px; position: relative; }
+  .box { width: 100%; max-width: 560px; background: #140b2e; border: 1px solid var(--line); border-radius: 20px; padding: 22px; position: relative; }
   .box h3 { margin: 0 0 4px; font-size: 22px; } .x { position: absolute; right: 12px; top: 10px; background: none; border: 0; color: var(--mut); font-size: 26px; cursor: pointer; }
   .box label { display: block; font-weight: 700; margin: 16px 0 6px; } .box label small { color: var(--mut); font-weight: 400; }
   .box input { width: 100%; padding: 11px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: var(--tx); font: 700 18px monospace; letter-spacing: 2px; text-transform: uppercase; }
   .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
   .plan { border: 1.5px solid var(--line); border-radius: 12px; padding: 10px 12px; cursor: pointer; background: var(--bg); }
-  .plan.on { border-color: var(--pink); box-shadow: 0 0 0 2px rgba(236, 72, 153, .25); } .plan b { display: block; color: var(--gold); font-size: 18px; }
+  .plan.on { border-color: var(--cy); box-shadow: 0 0 0 2px rgba(192, 132, 252, .25); } .plan b { display: block; color: var(--gold); font-size: 18px; }
   .qr { text-align: center; background: #fff; border-radius: 14px; padding: 12px; color: #111; margin-top: 8px; } .qr img { width: 100%; max-width: 300px; }
-  .qr .ct { font: 700 15px monospace; } .warn { background: rgba(236, 72, 153, .12); border: 1px solid rgba(236, 72, 153, .4); border-radius: 10px; padding: 10px 12px; font-size: 14px; margin-top: 8px; }
+  .qr .ct { font: 700 15px monospace; } .warn { background: rgba(192, 132, 252, .1); border: 1px solid rgba(192, 132, 252, .4); border-radius: 10px; padding: 10px 12px; font-size: 14px; margin-top: 8px; }
   .lb { position: fixed; inset: 0; z-index: 60; background: rgba(0, 0, 0, .9); display: none; align-items: center; justify-content: center; cursor: zoom-out; } .lb img { max-height: 94vh; max-width: 94vw; border-radius: 12px; } .lb.on { display: flex; }
   .pv { position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 70; background: var(--gold); color: #1b1300; font-weight: 800; padding: 8px 16px; border-radius: 999px; font-size: 14px; }
-  @media (max-width: 900px) {
-    .hero .wrap { grid-template-columns: 1fr; } .portrait { width: min(320px, 80%); margin-top: 10px; }
-    .grid3 { grid-template-columns: 1fr 1fr; } .steps { grid-template-columns: 1fr 1fr; } nav { display: none; }
-    .free { grid-template-columns: 1fr; text-align: center; } .free .badge { justify-self: center; }
+  @media (max-width: 960px) {
+    .hero .wrap { grid-template-columns: 1fr; } .stage { width: min(300px, 78%); margin-top: 8px; }
+    .grid4 { grid-template-columns: 1fr 1fr; } .grid3 { grid-template-columns: 1fr 1fr; } .steps { grid-template-columns: 1fr 1fr; } nav { display: none; }
+    .hl { grid-template-columns: 1fr 1fr; } .hl > div:nth-child(2) { border-right: 0; } .hl > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    .ticket { grid-template-columns: 1fr; text-align: center; } .ticket .stub { border-right: 0; border-bottom: 2px dashed rgba(6, 10, 24, .5); } .ticket::before, .ticket::after { display: none; } .ticket .go { padding-top: 0; }
     .author { grid-template-columns: 1fr; text-align: center; } .avatar { justify-self: center; }
+    .tl .rail { left: 22px; } .ts, .ts:nth-child(odd) { width: 100%; margin-left: 0; padding: 0 0 26px 62px; } .ts .dot, .ts:nth-child(odd) .dot { left: 0; right: auto; }
   }
-  @media (max-width: 520px) {
-    .grid3, .steps, .games { grid-template-columns: 1fr; } .shots img { height: 190px; }
-    .chip { font-size: 12.5px; padding: 7px 10px; } .chip:nth-of-type(1) { left: -12px; } .chip:nth-of-type(2) { right: -12px; } .chip:nth-of-type(3) { left: -6px; }
-    .free { padding: 22px; } header .btn { padding: 8px 12px; }
+  @media (max-width: 560px) {
+    .grid4, .grid3, .steps, .games { grid-template-columns: 1fr; } .shots img { height: 190px; }
+    .chip { font-size: 12.5px; padding: 7px 10px; } .chip:nth-child(1) { left: -14px; } .chip:nth-child(2) { right: -14px; } .chip:nth-child(3) { left: -8px; }
+    header .btn { padding: 8px 12px; } .hl .big { font-size: 26px; } .mq .t { font-size: 16px; }
   }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .rv { opacity: 1; transform: none; } }
 </style>
 </head>
 <body>
-<div class="bgfx"><i></i><i></i><i></i></div><div class="grain"></div>
+<div class="bgfx"></div><div class="glow a"></div><div class="glow b"></div>
 
 <header><div class="wrap">
-  <a class="logo" href="#" id="logo">BSMEDIA</a>
-  <nav><a href="#tuyen-idol" data-t="nav.idol"></a><a href="#quyen-loi" data-t="nav.perks"></a><a href="#games" data-t="nav.games"></a><a href="#hoi-dap" data-t="nav.faq"></a></nav>
+  <a class="logo" href="#"><img id="logo" src="img/logo.webp" alt="BH Studio"></a>
+  <nav><a href="#kieu-live" data-t="nav.formats"></a><a href="#quyen-loi" data-t="nav.perks"></a><a href="#hanh-trinh" data-t="nav.journey"></a><a href="#games" data-t="nav.games"></a><a href="#hoi-dap" data-t="nav.faq"></a></nav>
   <a class="btn pri sm zalo" target="_blank" href="#lien-he" data-t="nav.cta"></a>
 </div></header>
 
-<div class="hero" id="tuyen-idol"><div class="wrap">
+<div class="hero"><div class="wrap">
   <div class="rv">
-    <span class="tag" data-t="hero.tag"></span>
+    <span class="eyebrow" data-t="hero.tag"></span>
     <h1 data-h="hero.title"></h1>
     <p class="lead" data-t="hero.text"></p>
-    <div class="cta"><a class="btn pri zalo" target="_blank" href="#lien-he" data-t="hero.btn1"></a><a class="btn ghost" href="#quyen-loi" data-t="hero.btn2"></a></div>
+    <div class="cta"><a class="btn pri zalo" target="_blank" href="#lien-he" data-t="hero.btn1"></a><a class="btn ghost" href="#hanh-trinh" data-t="hero.btn2"></a></div>
+    <div class="try glass">
+      <small data-t="nameTry.label"></small>
+      <div class="f"><label class="in"><b>@</b><input id="liveName" maxlength="24" autocomplete="off"></label><button class="btn pri sm" id="keepName" data-t="nameTry.btn"></button></div>
+    </div>
   </div>
-  <div class="portrait rv"><div class="ring"></div><img id="heroImg" alt="Idol TikTok LIVE"><div id="chips"></div></div>
+  <div class="stage rv">
+    <div id="chips"></div>
+    <div class="screen" id="screen">
+      <img id="heroImg" alt="Idol TikTok LIVE">
+      <div class="ov top"><span class="who"><i></i><span id="who"></span></span><span class="live">LIVE</span><span class="eye">👁 <span id="eye"></span></span></div>
+      <div class="ov bot" id="cms"></div>
+    </div>
+  </div>
 </div></div>
 
-<section style="padding-top:20px"><div class="wrap">
-  <div class="free glass rv">
-    <div class="badge" data-t="free.badge"></div>
-    <div><h3 data-t="free.title"></h3><p data-t="free.text"></p></div>
-    <a class="btn pri zalo" target="_blank" href="#lien-he" data-t="free.btn"></a>
+<div class="wrap"><div class="hl glass rv" id="hl"></div></div>
+<div class="mq" aria-hidden="true"><div class="t" id="mq"></div></div>
+
+<section id="kieu-live"><div class="wrap">
+  <h2 class="rv" data-t="formatsTitle"></h2><p class="sub rv" data-t="formatsSub"></p>
+  <div class="grid4" id="formats"></div>
+</div></section>
+
+<section style="padding-top:10px"><div class="wrap">
+  <div class="ticket rv">
+    <div class="stub" data-t="free.badge"></div>
+    <div class="mid"><h3 data-t="free.title"></h3><p data-t="free.text"></p></div>
+    <div class="go"><a class="btn pri zalo" target="_blank" href="#lien-he" data-t="free.btn"></a></div>
   </div>
 </div></section>
 
@@ -160,19 +231,19 @@
   <div class="req glass rv"><h3 data-t="reqTitle"></h3><ul id="reqs"></ul></div>
 </div></section>
 
-<section><div class="wrap">
-  <h2 class="rv" data-t="stepsTitle"></h2><p class="sub rv" data-t="stepsSub"></p>
-  <div class="steps" id="steps"></div>
+<section id="hanh-trinh"><div class="wrap">
+  <div style="text-align:center"><h2 class="rv" data-t="stepsTitle"></h2><p class="sub rv" style="margin-inline:auto" data-t="stepsSub"></p></div>
+  <div class="tl" id="tl"><div class="rail"><i></i></div><div id="steps"></div></div>
 </div></section>
 
 <section id="games"><div class="wrap">
   <h2 class="rv" data-t="gamesTitle"></h2><p class="sub rv" data-t="gamesSub"></p>
   <div class="games" id="gameList"></div>
-  <h3 class="rv" style="font-size:22px;margin:40px 0 16px" data-t="buyTitle"></h3>
+  <h3 class="rv" style="font-size:22px;margin:42px 0 16px" data-t="buyTitle"></h3>
   <div class="steps" id="buySteps"></div>
 </div></section>
 
-<section id="tac-gia" style="padding-top:20px"><div class="wrap">
+<section id="tac-gia" style="padding-top:10px"><div class="wrap">
   <div class="author glass rv">
     <div class="avatar" id="avatar"></div>
     <div><small data-t="author.label"></small><h3 data-t="author.name"></h3><p data-t="author.text"></p></div>
@@ -180,14 +251,15 @@
   </div>
 </div></section>
 
-<section id="hoi-dap"><div class="wrap">
+<section id="hoi-dap"><div class="wrap" style="max-width:860px">
   <h2 class="rv" data-t="faqTitle"></h2>
   <div id="faq"></div>
 </div></section>
 
 <section id="lien-he"><div class="wrap">
-  <div class="contact glass rv">
-    <h2 data-t="contactTitle"></h2><p class="sub" style="margin:0 auto 22px" data-t="contactText"></p>
+  <div class="final glass rv">
+    <img class="flogo" id="flogo" alt=""><span class="eyebrow" data-t="contactTag"></span>
+    <h2 data-h="contactTitle"></h2><p class="sub" style="margin:0 auto 24px" data-t="contactText"></p>
     <a class="btn pri zalo" target="_blank" href="#" data-t="contactBtn"></a>
     <p id="zaloNum" style="color:var(--mut);margin:14px 0 0;font-size:14px"></p>
   </div>
@@ -211,6 +283,7 @@
   <p id="msgPrev" style="font-size:14px;color:var(--mut)"></p>
 </div></div>
 <div class="lb" id="lb" onclick="this.classList.remove('on')"><img alt=""></div>
+<div class="toast" id="toast"></div>
 
 <script>
 const $ = (id) => document.getElementById(id);
@@ -219,7 +292,8 @@ const rich = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<em class="g">$1</em>').re
 const money = (n) => n ? `${n.toLocaleString('vi-VN')}đ` : 'Liên hệ';
 const get = (o, path) => path.split('.').reduce((a, k) => a?.[k], o);
 const params = new URLSearchParams(location.search);
-let DATA = { shop: {}, games: [] }, SITE = {}, cur = null, plan = null;
+const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let DATA = { shop: {}, games: [] }, SITE = {}, cur = null, plan = null, ZALO = '#lien-he';
 
 async function getJson(name) { return (await fetch(name, { cache: 'no-cache' })).json(); }
 async function load() {
@@ -229,22 +303,26 @@ async function load() {
   [SITE, DATA] = draft ? [draft.site, draft.games] : await Promise.all([getJson('site.json'), getJson('games.json')]);
   if (draft) document.body.insertAdjacentHTML('beforeend', '<div class="pv">👁 Bản xem trước — chưa đăng</div>');
   const S = SITE, s = DATA.shop || {};
+  const img = (src) => draft?.images?.[src] || src; // ảnh vừa tải lên trong admin
   document.title = S.seoTitle || S.brand || document.title;
   document.querySelector('meta[name=description]').content = S.seoDescription || '';
-  $('logo').textContent = S.brand || '';
+  $('logo').src = img(S.logo || 'img/logo.webp'); $('logo').alt = S.brand || ''; $('flogo').src = $('logo').src; $('flogo').alt = S.brand || '';
   document.querySelectorAll('[data-t]').forEach((el) => { el.textContent = get(S, el.dataset.t) ?? ''; });
   document.querySelectorAll('[data-h]').forEach((el) => { el.innerHTML = rich(get(S, el.dataset.h)); });
-  const zalo = s.zalo ? `https://zalo.me/${s.zalo.replace(/\D/g, '')}` : '#lien-he';
-  document.querySelectorAll('.zalo').forEach((a) => { a.href = zalo; });
+  ZALO = s.zalo ? `https://zalo.me/${s.zalo.replace(/\D/g, '')}` : '#lien-he';
+  document.querySelectorAll('.zalo').forEach((a) => { a.href = ZALO; });
   if (s.zalo) $('zaloNum').textContent = `Zalo: ${s.zalo.replace(/\D/g, '').replace(/(\d{4})(\d{3})(\d+)/, '$1 $2 $3')}`;
   $('year').textContent = new Date().getFullYear();
-  const img = (src) => draft?.images?.[src] || src; // ảnh vừa tải lên trong admin
   $('heroImg').src = img(S.hero?.image || 'img/idol.jpg');
   $('chips').innerHTML = (S.hero?.chips || []).map((c) => `<span class="chip">${esc(c)}</span>`).join('');
-  $('perks').innerHTML = (S.perks || []).map((p) => `<div class="perk glass rv"><div class="ic">${esc(p.icon)}</div><b>${esc(p.title)}</b><p>${esc(p.text)}</p></div>`).join('');
+  $('liveName').placeholder = S.nameTry?.placeholder || '';
+  $('hl').innerHTML = (S.highlights || []).map((h) => `<div><div class="big">${esc(h.big)}</div><small>${esc(h.small)}</small></div>`).join('');
+  const mq = (S.marquee || []).map((w) => `<span>${esc(w)}</span>`).join(''); $('mq').innerHTML = mq + mq;
+  const cards = (arr, no) => (arr || []).map((p, i) => `<div class="card glass rv">${no ? `<span class="no">${String(i + 1).padStart(2, '0')}</span>` : ''}<div class="ic">${esc(p.icon)}</div><b>${esc(p.title)}</b><p>${esc(p.text)}</p></div>`).join('');
+  $('formats').innerHTML = cards(S.formats); $('perks').innerHTML = cards(S.perks, true);
   $('reqs').innerHTML = (S.requirements || []).map((r) => `<li>${esc(r)}</li>`).join('');
-  const steps = (arr) => (arr || []).map((p) => `<div class="step glass rv"><b>${esc(p.title)}</b><p>${esc(p.text)}</p></div>`).join('');
-  $('steps').innerHTML = steps(S.steps); $('buySteps').innerHTML = steps(S.buySteps);
+  $('steps').innerHTML = (S.steps || []).map((p, i) => `<div class="ts rv"><div class="dot">${esc(p.icon || i + 1)}</div><div class="glass"><small>BƯỚC ${String(i + 1).padStart(2, '0')}</small><b>${esc(p.title)}</b><p>${esc(p.text)}</p></div></div>`).join('');
+  $('buySteps').innerHTML = (S.buySteps || []).map((p) => `<div class="step glass rv"><b>${esc(p.title)}</b><p>${esc(p.text)}</p></div>`).join('');
   const a = S.author || {};
   $('avatar').innerHTML = a.image ? `<img src="${esc(img(a.image))}" alt="${esc(a.name)}">` : esc((a.name || '?').trim().split(/\s+/).pop()[0]);
   $('faq').innerHTML = (S.faq || []).map((f) => `<details class="glass rv"><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('');
@@ -252,7 +330,7 @@ async function load() {
     <div class="game glass rv">
       <div class="shots">${(g.images || [g.image]).filter(Boolean).map((src) => `<img src="${esc(img(src))}" alt="${esc(g.name)}" loading="lazy" onclick="zoom(this.src)">`).join('')}</div>
       <div class="body">
-        <h3>${esc(g.name)}</h3><p class="tl">${esc(g.tagline)}</p>
+        <h3>${esc(g.name)}</h3><p class="tl2">${esc(g.tagline)}</p>
         <ul>${(g.features || []).map((f) => `<li>${esc(f)}</li>`).join('')}</ul>
         <div class="price">${(g.plans || []).map((p) => `<div>${esc(p.label)} · <b>${money(p.price)}</b></div>`).join('')}</div>
         <div class="act">
@@ -261,15 +339,55 @@ async function load() {
         </div>
       </div>
     </div>`).join('') + '<div class="game glass soon rv">🎮 Game mới đang làm…<br>Nhắn Zalo để được báo khi ra mắt.</div>';
-  reveal();
+  liveScreen(S.live || {});
+  reveal(); timeline();
   // Mở từ app (nút "Mua / gia hạn") thì có sẵn game + mã máy
   if (params.get('game')) openBuy(params.get('game'), params.get('may'));
 }
+// Màn hình LIVE giả lập: tên, người xem, bình luận, tim bay
+function liveScreen(L) {
+  const name = () => '@' + ($('liveName').value.trim().replace(/^@/, '') || L.defaultName || 'idol');
+  $('who').textContent = name();
+  $('liveName').oninput = () => { $('who').textContent = name(); };
+  $('keepName').onclick = () => {
+    const t = `Mình muốn đăng ký làm Idol TikTok LIVE, tên LIVE: ${name()}`;
+    (navigator.clipboard?.writeText(t) || Promise.reject()).then(() => toast('Đã chép tin nhắn — dán vào Zalo để giữ tên nhé!'), () => toast(t));
+    if (ZALO.startsWith('http')) window.open(ZALO, '_blank');
+  };
+  let v = Number(L.viewers) || 0; const eye = () => { $('eye').textContent = v.toLocaleString('vi-VN'); }; eye();
+  const cms = L.comments || [], users = ['minh.thu', 'tuan_bmt', 'ha.vy99', 'khoa.dz', 'ngoc_anh', 'bao.long'];
+  let i = 0;
+  const push = () => {
+    if (!cms.length) return;
+    const box = $('cms'); box.insertAdjacentHTML('beforeend', `<div class="cm"><b>${users[i % users.length]}</b>${esc(cms[i % cms.length])}</div>`); i++;
+    while (box.children.length > 3) box.firstElementChild.remove();
+  };
+  push(); push();
+  if (calm) return;
+  setInterval(() => { v = Math.max(1, v + Math.round((Math.random() - .4) * 40)); eye(); }, 1500);
+  setInterval(push, 2200);
+  setInterval(() => {
+    const h = document.createElement('span'); h.className = 'heart'; h.textContent = ['❤️', '💜', '💙', '🌹'][Math.floor(Math.random() * 4)];
+    h.style.setProperty('--dx', `${Math.round((Math.random() - .5) * 80)}px`); $('screen').append(h); setTimeout(() => h.remove(), 2700);
+  }, 700);
+}
+function toast(t) { const e = $('toast'); e.textContent = t; e.classList.add('on'); clearTimeout(e._t); e._t = setTimeout(() => e.classList.remove('on'), 3500); }
 function reveal() {
   const els = document.querySelectorAll('.rv:not(.in)');
   if (!('IntersectionObserver' in window)) return els.forEach((e) => e.classList.add('in'));
   const io = new IntersectionObserver((list) => list.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
   els.forEach((e, i) => { e.style.transitionDelay = `${(i % 3) * 80}ms`; io.observe(e); });
+}
+// Đường hành trình sáng dần theo cuộn
+function timeline() {
+  const tl = $('tl'), rail = tl.querySelector('.rail i'), items = [...tl.querySelectorAll('.ts')];
+  const f = () => {
+    const r = tl.getBoundingClientRect(), mid = innerHeight * .6;
+    const p = Math.min(1, Math.max(0, (mid - r.top) / r.height));
+    rail.style.setProperty('--p', `${p * 100}%`);
+    items.forEach((it) => it.classList.toggle('on', it.getBoundingClientRect().top + 30 < mid));
+  };
+  addEventListener('scroll', f, { passive: true }); f();
 }
 function zoom(src) { $('lb').querySelector('img').src = src; $('lb').classList.add('on'); }
 function openBuy(id, may) {

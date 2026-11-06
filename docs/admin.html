@@ -148,9 +148,13 @@ async function writeFile(path, base64, sha, message) {
 
 // ---------- Nhãn tiếng Việt ----------
 const L = {
-  brand: 'Tên thương hiệu (logo)', seoTitle: 'Tiêu đề trên tab trình duyệt / Google', seoDescription: 'Mô tả khi chia sẻ link',
-  nav: 'Menu đầu trang', 'nav.idol': 'Chữ menu "Tuyển Idol"', 'nav.perks': 'Chữ menu "Quyền lợi"', 'nav.games': 'Chữ menu "Game LIVE"', 'nav.faq': 'Chữ menu "Hỏi đáp"', 'nav.cta': 'Nút Zalo góc phải',
-  hero: 'Phần đầu trang (ảnh idol)', 'hero.tag': 'Nhãn nhỏ phía trên', 'hero.title': 'Tiêu đề lớn — chữ nằm giữa **hai dấu sao** sẽ có màu', 'hero.text': 'Đoạn giới thiệu', 'hero.image': 'Ảnh idol', 'hero.btn1': 'Nút chính (mở Zalo)', 'hero.btn2': 'Nút phụ', 'hero.chips': 'Nhãn nổi quanh ảnh',
+  brand: 'Tên thương hiệu', logo: 'Ảnh logo (nên dùng PNG nền trong suốt)', seoTitle: 'Tiêu đề trên tab trình duyệt / Google', seoDescription: 'Mô tả khi chia sẻ link',
+  nav: 'Menu đầu trang', 'nav.formats': 'Chữ menu "Kiểu LIVE"', 'nav.perks': 'Chữ menu "Quyền lợi"', 'nav.journey': 'Chữ menu "Hành trình"', 'nav.games': 'Chữ menu "Game LIVE"', 'nav.faq': 'Chữ menu "Hỏi đáp"', 'nav.cta': 'Nút Zalo góc phải',
+  live: 'Màn hình LIVE giả lập (cạnh ảnh idol)', 'live.defaultName': 'Tên LIVE hiện sẵn', 'live.viewers': 'Số người xem ban đầu (chỉ để trang trí)', 'live.comments': 'Bình luận chạy trên màn hình',
+  nameTry: 'Ô "Gõ thử tên LIVE"', 'nameTry.label': 'Dòng chữ phía trên ô', 'nameTry.placeholder': 'Chữ mờ trong ô', 'nameTry.btn': 'Chữ nút',
+  highlights: 'Dải điểm nổi bật (dưới đầu trang)', big: 'Chữ to', small: 'Chữ nhỏ', marquee: 'Chữ chạy ngang',
+  formatsTitle: 'Tiêu đề mục Kiểu LIVE', formatsSub: 'Dòng phụ mục Kiểu LIVE', formats: 'Các kiểu LIVE', contactTag: 'Nhãn nhỏ khung cuối trang',
+  hero: 'Phần đầu trang (ảnh idol)', 'hero.tag': 'Nhãn nhỏ phía trên', 'hero.title': 'Tiêu đề lớn — chữ nằm giữa **hai dấu sao** sẽ có màu, xuống dòng là xuống dòng', contactTitle: 'Tiêu đề khung cuối trang (**chữ màu** như trên)', 'hero.text': 'Đoạn giới thiệu', 'hero.image': 'Ảnh idol', 'hero.btn1': 'Nút chính (mở Zalo)', 'hero.btn2': 'Nút phụ', 'hero.chips': 'Nhãn nổi quanh ảnh',
   free: 'Khung MIỄN PHÍ', 'free.badge': 'Chữ trên nhãn', 'free.title': 'Tiêu đề', 'free.text': 'Nội dung', 'free.btn': 'Chữ nút',
   perksTitle: 'Tiêu đề mục Quyền lợi', perksSub: 'Dòng phụ mục Quyền lợi', perks: 'Các quyền lợi', icon: 'Biểu tượng (emoji)', title: 'Tiêu đề', text: 'Mô tả',
   reqTitle: 'Tiêu đề khung Yêu cầu', requirements: 'Các yêu cầu ứng viên',
@@ -165,8 +169,8 @@ const L = {
 };
 const pat = (path) => path.filter((k) => typeof k === 'string').join('.');
 const label = (path) => L[pat(path)] ?? L[path[path.length - 1]] ?? (typeof path[path.length - 1] === 'number' ? '' : path[path.length - 1]);
-const isImg = (path) => { const k = path[path.length - 1], p = path[path.length - 2]; return k === 'image' || p === 'images'; };
-const LONG = new Set(['text', 'a', 'seoDescription', 'gamesSub', 'contactText', 'tagline', 'perksSub', 'stepsSub']);
+const isImg = (path) => { const k = path[path.length - 1], p = path[path.length - 2]; return k === 'image' || k === 'logo' || p === 'images'; };
+const LONG = new Set(['text', 'a', 'seoDescription', 'gamesSub', 'contactText', 'tagline', 'perksSub', 'stepsSub', 'formatsSub']);
 
 // ---------- Trạng thái ----------
 let DOC = { site: null, games: null }, SHA = {}, ORIG = {}, TAB = 'site';
@@ -222,7 +226,7 @@ function input(root, path) {
   const v = getAt(root, path), k = path[path.length - 1];
   if (typeof v === 'boolean') return h('input', { type: 'checkbox', ...(v ? { checked: '' } : {}), onchange: (e) => { setAt(root, path, e.target.checked); markDirty(); } });
   const num = typeof v === 'number';
-  const long = !num && (LONG.has(k) || String(v).length > 70);
+  const long = !num && (LONG.has(k) || String(v).length > 70 || String(v).includes('\n'));
   const el = h(long ? 'textarea' : 'input', num ? { type: 'number', inputmode: 'numeric' } : {});
   el.value = v ?? '';
   el.oninput = () => { setAt(root, path, num ? Number(el.value || 0) : el.value); markDirty(); };
@@ -241,7 +245,7 @@ function imgField(root, path) {
   } });
   return h('div', { class: 'imgf' }, pv, h('div', { class: 'c' }, txt, h('button', { class: 'btn sm', style: 'margin-top:6px', onclick: () => file.click() }, '🖼 Chọn ảnh từ máy'), file));
 }
-// Thu nhỏ ảnh (tối đa 1400px, JPG) cho web nhẹ
+// Thu nhỏ ảnh (tối đa 1400px; JPG, ảnh PNG giữ nền trong suốt) cho web nhẹ
 function shrink(f) {
   return new Promise((ok, bad) => {
     const img = new Image(); img.onerror = () => bad(new Error('file không phải ảnh'));
@@ -249,7 +253,8 @@ function shrink(f) {
       const s = Math.min(1, 1400 / Math.max(img.width, img.height)), c = document.createElement('canvas');
       c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
       c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
-      ok({ name: `img/up-${Date.now().toString(36)}.jpg`, url: c.toDataURL('image/jpeg', .85) });
+      const png = /png|webp|gif/.test(f.type); // giữ nền trong suốt (logo)
+      ok({ name: `img/up-${Date.now().toString(36)}.${png ? 'png' : 'jpg'}`, url: png ? c.toDataURL('image/png') : c.toDataURL('image/jpeg', .85) });
       URL.revokeObjectURL(img.src);
     };
     img.src = URL.createObjectURL(f);

@@ -1,70 +1,229 @@
 {
-  "brand": "BSMEDIA",
-  "seoTitle": "BSMEDIA — Tuyển Idol TikTok LIVE & game LIVE tương tác",
+  "brand": "BH Studio",
+  "logo": "img/logo.webp",
+  "seoTitle": "BH Studio — Tuyển Idol TikTok LIVE & game LIVE tương tác",
   "seoDescription": "Tuyển Idol TikTok LIVE: đào tạo từ A–Z, miễn phí cài TikTok LIVE Studio và làm đẹp Douyin. Kèm game tương tác cho phiên LIVE.",
-  "nav": { "idol": "Tuyển Idol", "perks": "Quyền lợi", "games": "Game LIVE", "faq": "Hỏi đáp", "cta": "Đăng ký Idol" },
-  "hero": {
-    "tag": "🔥 Đang tuyển Idol TikTok LIVE",
-    "title": "Trở thành **Idol TikTok LIVE** cùng BSMEDIA",
-    "text": "Không cần kinh nghiệm. Được đào tạo từ A–Z, hỗ trợ kỹ thuật & nội dung mỗi phiên live. Đăng ký hôm nay được miễn phí cài đặt LIVE Studio và làm đẹp Douyin.",
-    "image": "img/idol.jpg",
-    "btn1": "💬 Đăng ký làm Idol",
-    "btn2": "Xem quyền lợi",
-    "chips": ["🎁 Miễn phí cài LIVE Studio", "✨ Làm đẹp Douyin", "🎓 Đào tạo A–Z"]
+  "nav": {
+    "formats": "Kiểu LIVE",
+    "perks": "Quyền lợi",
+    "journey": "Hành trình",
+    "games": "Game LIVE",
+    "faq": "Hỏi đáp",
+    "cta": "Ứng tuyển"
   },
+  "hero": {
+    "tag": "Đang mở đợt tuyển Idol TikTok LIVE",
+    "title": "Bật camera.\n**Bật sáng** phòng LIVE của bạn.",
+    "text": "Không cần nổi tiếng, không cần kinh nghiệm. BH Studio lo phần kỹ thuật, làm đẹp và nội dung — bạn chỉ cần tự tin lên sóng và giữ lửa với người xem.",
+    "image": "img/idol.jpg",
+    "btn1": "Ứng tuyển qua Zalo",
+    "btn2": "Xem hành trình",
+    "chips": [
+      "🎁 Miễn phí cài LIVE Studio",
+      "✨ Làm đẹp Douyin",
+      "🎓 Đào tạo A–Z"
+    ]
+  },
+  "live": {
+    "defaultName": "ten_live_cua_ban",
+    "viewers": 1280,
+    "comments": [
+      "Chào idol 👋",
+      "Hát thêm bài nữa đi!",
+      "Tặng bạn 1 bông hồng 🌹",
+      "Da đẹp quá, filter gì vậy 😍",
+      "Vào PK đi idol ơi 🔥",
+      "Thả tim cho idol nè ❤️"
+    ]
+  },
+  "nameTry": {
+    "label": "Gõ thử tên LIVE của bạn",
+    "placeholder": "ten_live_cua_ban",
+    "btn": "Giữ tên này"
+  },
+  "highlights": [
+    {
+      "big": "0đ",
+      "small": "Cài TikTok LIVE Studio"
+    },
+    {
+      "big": "0đ",
+      "small": "Làm đẹp chuẩn Douyin"
+    },
+    {
+      "big": "A–Z",
+      "small": "Đào tạo trực tiếp"
+    },
+    {
+      "big": "1–1",
+      "small": "Hỗ trợ trong phiên LIVE"
+    }
+  ],
+  "marquee": [
+    "Tâm sự",
+    "Ca hát",
+    "Nhảy",
+    "NPC",
+    "PK",
+    "Game LIVE",
+    "Làm đẹp Douyin",
+    "LIVE Studio",
+    "Buôn Ma Thuột"
+  ],
+  "formatsTitle": "Bạn hợp kiểu LIVE nào?",
+  "formatsSub": "Chọn kiểu bạn thích — đội ngũ định hướng nội dung riêng cho từng kiểu.",
+  "formats": [
+    {
+      "icon": "💬",
+      "title": "Tâm sự – trò chuyện",
+      "text": "LIVE tại nhà, nói chuyện, giao lưu cùng người xem, giờ giấc linh hoạt."
+    },
+    {
+      "icon": "🎤",
+      "title": "Ca hát – nhảy",
+      "text": "Biểu diễn, cover, nhảy theo trend; được hỗ trợ âm thanh, ánh sáng."
+    },
+    {
+      "icon": "🎭",
+      "title": "NPC",
+      "text": "Hóa thân nhân vật, phản ứng theo quà — vui, lạ, giữ chân người xem."
+    },
+    {
+      "icon": "🎮",
+      "title": "Game LIVE",
+      "text": "Chơi game tương tác: người xem bình luận, tặng quà là cùng chơi."
+    }
+  ],
   "free": {
     "badge": "MIỄN PHÍ",
     "title": "Cài đặt TikTok LIVE Studio + làm đẹp Douyin",
     "text": "Dành cho bạn đăng ký livestream làm Idol: kỹ thuật viên cài LIVE Studio, chỉnh filter làm đẹp kiểu Douyin, ánh sáng, khung hình — lên sóng là đẹp ngay.",
-    "btn": "💬 Nhận ưu đãi qua Zalo"
+    "btn": "Nhận ưu đãi qua Zalo"
   },
   "perksTitle": "Quyền lợi khi làm Idol",
   "perksSub": "Bạn chỉ cần tự tin lên sóng — phần còn lại có đội ngũ lo.",
   "perks": [
-    { "icon": "🎓", "title": "Đào tạo trực tiếp A–Z", "text": "Cách nói chuyện, giữ chân người xem, kêu gọi quà, chơi PK." },
-    { "icon": "🎥", "title": "Hỗ trợ kỹ thuật & content", "text": "Kịch bản, ý tưởng mỗi phiên live, hỗ trợ khi gặp sự cố." },
-    { "icon": "🏠", "title": "Studio chuyên nghiệp", "text": "Phòng live đủ đèn, máy, phông tại Buôn Ma Thuột." },
-    { "icon": "🎁", "title": "Miễn phí cài LIVE Studio", "text": "Cài đặt, cấu hình TikTok LIVE Studio trên máy của bạn." },
-    { "icon": "✨", "title": "Làm đẹp Douyin miễn phí", "text": "Filter da, khuôn mặt, ánh sáng chuẩn kiểu Douyin." },
-    { "icon": "🎮", "title": "Game LIVE tương tác", "text": "Dùng game tương tác của BSMEDIA để phòng live luôn sôi động." }
+    {
+      "icon": "🎓",
+      "title": "Đào tạo trực tiếp A–Z",
+      "text": "Cách nói chuyện, giữ chân người xem, kêu gọi quà, chơi PK."
+    },
+    {
+      "icon": "🎥",
+      "title": "Hỗ trợ kỹ thuật & content",
+      "text": "Kịch bản, ý tưởng mỗi phiên live, hỗ trợ khi gặp sự cố."
+    },
+    {
+      "icon": "🏠",
+      "title": "Studio chuyên nghiệp",
+      "text": "Phòng live đủ đèn, máy, phông tại Buôn Ma Thuột."
+    },
+    {
+      "icon": "🎁",
+      "title": "Miễn phí cài LIVE Studio",
+      "text": "Cài đặt, cấu hình TikTok LIVE Studio trên máy của bạn."
+    },
+    {
+      "icon": "✨",
+      "title": "Làm đẹp Douyin miễn phí",
+      "text": "Filter da, khuôn mặt, ánh sáng chuẩn kiểu Douyin."
+    },
+    {
+      "icon": "🕹️",
+      "title": "Game LIVE tương tác",
+      "text": "Dùng game tương tác của BH Studio để phòng live luôn sôi động."
+    }
   ],
   "reqTitle": "Yêu cầu ứng viên",
-  "requirements": ["Từ 18 tuổi trở lên", "Tự tin trước ống kính", "Hoạt ngôn, năng động", "Biết nhảy, biểu diễn cơ bản là lợi thế", "Có khả năng diễn xuất là lợi thế"],
-  "stepsTitle": "Đăng ký làm Idol",
-  "stepsSub": "4 bước đơn giản để lên sóng.",
+  "requirements": [
+    "Từ 18 tuổi trở lên",
+    "Tự tin trước ống kính",
+    "Hoạt ngôn, năng động",
+    "Biết nhảy, biểu diễn cơ bản là lợi thế",
+    "Có khả năng diễn xuất là lợi thế"
+  ],
+  "stepsTitle": "Hành trình lên sóng",
+  "stepsSub": "Từ tin nhắn đầu tiên đến phiên LIVE đầu tiên.",
   "steps": [
-    { "title": "Nhắn Zalo đăng ký", "text": "Gửi tên, tuổi, vài ảnh hoặc video ngắn của bạn." },
-    { "title": "Trao đổi & live thử", "text": "Tư vấn hướng đi, thử một phiên live ngắn." },
-    { "title": "Cài đặt & làm đẹp miễn phí", "text": "Cài LIVE Studio, làm đẹp Douyin, ánh sáng, khung hình." },
-    { "title": "Lên sóng", "text": "Bắt đầu live, có người hỗ trợ trong suốt phiên." }
+    {
+      "icon": "💬",
+      "title": "Nhắn Zalo đăng ký",
+      "text": "Gửi tên, tuổi, vài ảnh hoặc video ngắn của bạn."
+    },
+    {
+      "icon": "🤝",
+      "title": "Trao đổi & live thử",
+      "text": "Tư vấn kiểu LIVE hợp với bạn, thử một phiên ngắn có người góp ý."
+    },
+    {
+      "icon": "🎁",
+      "title": "Cài đặt & làm đẹp miễn phí",
+      "text": "Cài LIVE Studio, làm đẹp Douyin, chỉnh ánh sáng, khung hình."
+    },
+    {
+      "icon": "🚀",
+      "title": "Lên sóng chính thức",
+      "text": "Bắt đầu LIVE theo lịch, có người hỗ trợ trong suốt phiên."
+    }
   ],
   "gamesTitle": "Game LIVE tương tác",
   "gamesSub": "Người xem bình luận, thả tim, tặng quà là chơi — giữ chân người xem lâu hơn. Thuê theo tháng, cài trên Windows, dùng với TikTok LIVE Studio hoặc OBS.",
   "buyTitle": "Cách mua game",
   "buySteps": [
-    { "title": "Tải & cài app", "text": "Bấm \"Tải bản dùng thử\", mở file vừa tải để cài. Windows cảnh báo thì bấm \"Thông tin thêm\" → \"Vẫn chạy\"." },
-    { "title": "Chép mã máy", "text": "Mở app, đầu trang có ô \"Mã máy\" (dạng ABCDE-FGH23). Bấm \"Chép mã máy\"." },
-    { "title": "Chuyển khoản", "text": "Bấm \"Mua / gia hạn\", dán mã máy, chọn gói, quét QR. Nội dung chuyển khoản tự điền sẵn." },
-    { "title": "Nhận mã qua Zalo", "text": "Gửi ảnh chuyển khoản + mã máy qua Zalo. Nhận mã kích hoạt, dán vào app là dùng được." }
+    {
+      "title": "Tải & cài app",
+      "text": "Bấm \"Tải bản dùng thử\", mở file vừa tải để cài. Windows cảnh báo thì bấm \"Thông tin thêm\" → \"Vẫn chạy\"."
+    },
+    {
+      "title": "Chép mã máy",
+      "text": "Mở app, đầu trang có ô \"Mã máy\" (dạng ABCDE-FGH23). Bấm \"Chép mã máy\"."
+    },
+    {
+      "title": "Chuyển khoản",
+      "text": "Bấm \"Mua / gia hạn\", dán mã máy, chọn gói, quét QR. Nội dung chuyển khoản tự điền sẵn."
+    },
+    {
+      "title": "Nhận mã qua Zalo",
+      "text": "Gửi ảnh chuyển khoản + mã máy qua Zalo. Nhận mã kích hoạt, dán vào app là dùng được."
+    }
   ],
   "author": {
     "label": "Thiết kế & lập trình",
     "name": "Trần Hữu Gia Bảo",
-    "text": "Người làm ra các game LIVE tương tác của BSMEDIA. Cần game riêng cho phòng live, hỗ trợ cài đặt hay góp ý — nhắn Zalo trực tiếp.",
+    "text": "Người làm ra các game LIVE tương tác của BH Studio. Cần game riêng cho phòng live, hỗ trợ cài đặt hay góp ý — nhắn Zalo trực tiếp.",
     "image": ""
   },
   "faqTitle": "Hỏi đáp",
   "faq": [
-    { "q": "Chưa từng live có đăng ký làm Idol được không?", "a": "Được. Bạn được đào tạo từ đầu: cách nói chuyện, giữ chân người xem, kêu gọi quà, chơi PK." },
-    { "q": "Miễn phí cài LIVE Studio và làm đẹp Douyin là sao?", "a": "Khi đăng ký làm Idol, kỹ thuật viên cài TikTok LIVE Studio và chỉnh filter làm đẹp kiểu Douyin, ánh sáng, khung hình cho bạn, không mất phí." },
-    { "q": "Game LIVE cần máy cấu hình thế nào?", "a": "Windows 10/11 64-bit, RAM 8GB là chạy được. Máy yếu dùng link sân khấu có thêm ?q=low (hướng dẫn có trong app)." },
-    { "q": "Chưa mua game có dùng thử được không?", "a": "Được. Cài app là chơi thử bằng các nút giả lập (có chữ \"BẢN DÙNG THỬ\" trên màn hình). Muốn kết nối phiên LIVE thật thì cần mã kích hoạt." },
-    { "q": "Đổi máy tính thì sao?", "a": "Mã kích hoạt gắn với 1 máy. Đổi máy thì nhắn Zalo gửi mã máy mới, mình cấp lại mã cho thời gian còn lại." },
-    { "q": "Game có ảnh hưởng tài khoản TikTok không?", "a": "Game chỉ đọc bình luận, tim, quà công khai của phiên live, không cần đăng nhập TikTok. Bạn tự chịu trách nhiệm nội dung phiên live theo quy định của TikTok; app có \"Chế độ an toàn\" để quà chỉ dùng cảm ơn." }
+    {
+      "q": "Chưa từng live có đăng ký làm Idol được không?",
+      "a": "Được. Bạn được đào tạo từ đầu: cách nói chuyện, giữ chân người xem, kêu gọi quà, chơi PK."
+    },
+    {
+      "q": "Miễn phí cài LIVE Studio và làm đẹp Douyin là sao?",
+      "a": "Khi đăng ký làm Idol, kỹ thuật viên cài TikTok LIVE Studio và chỉnh filter làm đẹp kiểu Douyin, ánh sáng, khung hình cho bạn, không mất phí."
+    },
+    {
+      "q": "Game LIVE cần máy cấu hình thế nào?",
+      "a": "Windows 10/11 64-bit, RAM 8GB là chạy được. Máy yếu dùng link sân khấu có thêm ?q=low (hướng dẫn có trong app)."
+    },
+    {
+      "q": "Chưa mua game có dùng thử được không?",
+      "a": "Được. Cài app là chơi thử bằng các nút giả lập (có chữ \"BẢN DÙNG THỬ\" trên màn hình). Muốn kết nối phiên LIVE thật thì cần mã kích hoạt."
+    },
+    {
+      "q": "Đổi máy tính thì sao?",
+      "a": "Mã kích hoạt gắn với 1 máy. Đổi máy thì nhắn Zalo gửi mã máy mới, mình cấp lại mã cho thời gian còn lại."
+    },
+    {
+      "q": "Game có ảnh hưởng tài khoản TikTok không?",
+      "a": "Game chỉ đọc bình luận, tim, quà công khai của phiên live, không cần đăng nhập TikTok. Bạn tự chịu trách nhiệm nội dung phiên live theo quy định của TikTok; app có \"Chế độ an toàn\" để quà chỉ dùng cảm ơn."
+    }
   ],
-  "contactTitle": "Sẵn sàng lên sóng?",
+  "contactTag": "Sân khấu đã bật đèn",
+  "contactTitle": "Còn thiếu mỗi **bạn** thôi.",
   "contactText": "Nhắn Zalo để đăng ký làm Idol, nhận ưu đãi cài đặt miễn phí, hoặc hỏi về game LIVE.",
-  "contactBtn": "💬 Nhắn Zalo ngay",
-  "footer": "BSMEDIA · Tuyển Idol TikTok LIVE",
+  "contactBtn": "Nhắn Zalo ngay",
+  "footer": "BH Studio · Tuyển Idol TikTok LIVE",
   "footerNote": "Không liên kết chính thức với TikTok."
 }
