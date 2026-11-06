@@ -148,29 +148,34 @@ async function writeFile(path, base64, sha, message) {
 
 // ---------- Nhãn tiếng Việt ----------
 const L = {
-  brand: 'Tên thương hiệu', logo: 'Ảnh logo (nên dùng PNG nền trong suốt)', seoTitle: 'Tiêu đề trên tab trình duyệt / Google', seoDescription: 'Mô tả khi chia sẻ link',
-  nav: 'Menu đầu trang', 'nav.formats': 'Chữ menu "Kiểu LIVE"', 'nav.perks': 'Chữ menu "Quyền lợi"', 'nav.journey': 'Chữ menu "Hành trình"', 'nav.games': 'Chữ menu "Game LIVE"', 'nav.faq': 'Chữ menu "Hỏi đáp"', 'nav.cta': 'Nút Zalo góc phải',
-  live: 'Màn hình LIVE giả lập (cạnh ảnh idol)', 'live.defaultName': 'Tên LIVE hiện sẵn', 'live.viewers': 'Số người xem ban đầu (chỉ để trang trí)', 'live.comments': 'Bình luận chạy trên màn hình',
-  nameTry: 'Ô "Gõ thử tên LIVE"', 'nameTry.label': 'Dòng chữ phía trên ô', 'nameTry.placeholder': 'Chữ mờ trong ô', 'nameTry.btn': 'Chữ nút',
-  highlights: 'Dải điểm nổi bật (dưới đầu trang)', big: 'Chữ to', small: 'Chữ nhỏ', marquee: 'Chữ chạy ngang',
-  formatsTitle: 'Tiêu đề mục Kiểu LIVE', formatsSub: 'Dòng phụ mục Kiểu LIVE', formats: 'Các kiểu LIVE', contactTag: 'Nhãn nhỏ khung cuối trang',
-  hero: 'Phần đầu trang (ảnh idol)', 'hero.tag': 'Nhãn nhỏ phía trên', 'hero.title': 'Tiêu đề lớn — chữ nằm giữa **hai dấu sao** sẽ có màu, xuống dòng là xuống dòng', contactTitle: 'Tiêu đề khung cuối trang (**chữ màu** như trên)', 'hero.text': 'Đoạn giới thiệu', 'hero.image': 'Ảnh idol', 'hero.btn1': 'Nút chính (mở Zalo)', 'hero.btn2': 'Nút phụ', 'hero.chips': 'Nhãn nổi quanh ảnh',
-  free: 'Khung MIỄN PHÍ', 'free.badge': 'Chữ trên nhãn', 'free.title': 'Tiêu đề', 'free.text': 'Nội dung', 'free.btn': 'Chữ nút',
-  perksTitle: 'Tiêu đề mục Quyền lợi', perksSub: 'Dòng phụ mục Quyền lợi', perks: 'Các quyền lợi', icon: 'Biểu tượng (emoji)', title: 'Tiêu đề', text: 'Mô tả',
-  reqTitle: 'Tiêu đề khung Yêu cầu', requirements: 'Các yêu cầu ứng viên',
-  stepsTitle: 'Tiêu đề mục Đăng ký Idol', stepsSub: 'Dòng phụ mục Đăng ký Idol', steps: 'Các bước đăng ký Idol',
-  gamesTitle: 'Tiêu đề mục Game', gamesSub: 'Dòng phụ mục Game', buyTitle: 'Tiêu đề Cách mua game', buySteps: 'Các bước mua game',
-  author: 'Mục tác giả', 'author.label': 'Dòng nhỏ phía trên tên', 'author.name': 'Tên', 'author.text': 'Giới thiệu', 'author.image': 'Ảnh đại diện (để trống = hiện chữ cái đầu)',
-  faqTitle: 'Tiêu đề Hỏi đáp', faq: 'Các câu hỏi', q: 'Câu hỏi', a: 'Trả lời',
-  contactTitle: 'Tiêu đề khung liên hệ cuối trang', contactText: 'Nội dung khung liên hệ', contactBtn: 'Chữ nút liên hệ', footer: 'Chân trang', footerNote: 'Ghi chú chân trang',
+  brand: 'Tên thương hiệu', logo: 'Ảnh logo (nên dùng PNG nền trong suốt)', seoDescription: 'Mô tả khi chia sẻ link', seoTitle: 'Tiêu đề trên tab trình duyệt / Google',
+  social: 'Mạng xã hội', 'social.facebook': 'Link Fanpage', 'social.tiktok': 'Link TikTok',
+  nav: 'Menu đầu trang (các thẻ)', 'nav.label': 'Chữ trên menu', href: 'Link (tên trang, ví dụ idol.html)', navCta: 'Nút Zalo góc phải',
+  home: '🏠 TRANG CHỦ', perks: '💎 TRANG QUYỀN LỢI', idol: '🎭 TRANG IDOL & NPC', training: '🎓 TRANG ĐÀO TẠO', game: '🎮 TRANG GAME (chữ)', faq: '❓ TRANG HỎI ĐÁP', contact: '📣 Khung kêu gọi cuối mọi trang',
+  hero: 'Phần đầu trang (ảnh idol)', tag: 'Nhãn nhỏ phía trên', title: 'Tiêu đề', text: 'Nội dung', image: 'Ảnh', chips: 'Nhãn nổi quanh ảnh', btn: 'Chữ nút', btn1: 'Nút chính (mở Zalo)', btn2: 'Nút phụ',
+  'home.hero.title': 'Tiêu đề lớn — chữ giữa **hai dấu sao** có màu, xuống dòng là xuống dòng',
+  live: 'Màn hình LIVE giả lập', defaultName: 'Tên LIVE hiện sẵn', viewers: 'Số người xem ban đầu (trang trí)', comments: 'Bình luận chạy trên màn hình',
+  nameTry: 'Ô "Gõ thử tên LIVE"', label: 'Chữ', placeholder: 'Chữ mờ trong ô',
+  highlights: 'Dải điểm nổi bật', big: 'Chữ to', small: 'Chữ nhỏ', marquee: 'Chữ chạy ngang',
+  creatorsTitle: 'Tiêu đề mục creator', creatorsSub: 'Dòng phụ mục creator', creatorsBtn: 'Chữ nút xem tất cả creator',
+  free: 'Khung MIỄN PHÍ', badge: 'Chữ trên nhãn', exploreTitle: 'Tiêu đề mục "Tìm hiểu thêm"', exploreSub: 'Dòng phụ', explore: 'Các ô dẫn sang trang khác', icon: 'Biểu tượng (emoji)',
+  items: 'Các mục', kicker: 'Dòng nhỏ trên tiêu đề', bullets: 'Các ý', link: 'Link nút (để trống = không có nút)', linkText: 'Chữ nút',
+  closingTitle: 'Tiêu đề phần cuối', closing: 'Các ô phần cuối',
+  policyTitle: 'Tiêu đề chính sách', policy: 'Chính sách đãi ngộ', value: 'Nội dung',
+  formatsTitle: 'Tiêu đề mục Kiểu LIVE', formatsSub: 'Dòng phụ mục Kiểu LIVE', formats: 'Các kiểu LIVE',
+  npcTitle: 'Tiêu đề "NPC là gì"', npcText: 'Giải thích NPC', npcPoints: 'Các ý về NPC',
+  filterAll: 'Chữ nút lọc "Tất cả"', searchPlaceholder: 'Chữ mờ ô tìm', list: 'Danh sách creator (ảnh + ID TikTok)', 'idol.list.id': 'ID TikTok (không có @)', type: 'Nhóm (ví dụ NPC / Idol) — dùng để lọc',
+  daysTitle: 'Tiêu đề lộ trình', days: 'Các ngày trong lộ trình', applyTitle: 'Tiêu đề các bước ứng tuyển', apply: 'Các bước ứng tuyển', reqTitle: 'Tiêu đề khung Yêu cầu', requirements: 'Các yêu cầu ứng viên',
+  buyTitle: 'Tiêu đề Cách mua game', buySteps: 'Các bước mua game', author: 'Mục tác giả', 'game.author.label': 'Dòng nhỏ phía trên tên', 'game.author.name': 'Tên', 'game.author.image': 'Ảnh đại diện (để trống = hiện chữ cái đầu)',
+  q: 'Câu hỏi', a: 'Trả lời', footer: 'Chân trang', footerNote: 'Ghi chú chân trang',
   shop: 'Cửa hàng & tài khoản nhận tiền', 'shop.name': 'Tên cửa hàng', 'shop.slogan': 'Khẩu hiệu', 'shop.zalo': 'Số Zalo (dùng cho mọi nút Zalo trên web)', 'shop.bankBin': 'Mã ngân hàng BIN (LPBank = 970449)', 'shop.bankAccount': 'Số tài khoản', 'shop.bankName': 'Tên ngân hàng', 'shop.accountName': 'Tên chủ tài khoản (IN HOA, không dấu)',
-  games: 'Danh sách game', id: '⚠️ Mã game — KHÔNG đổi với game đang bán (dùng trong mã kích hoạt, nội dung chuyển khoản)', name: 'Tên game', tagline: 'Mô tả ngắn', image: 'Ảnh chính', images: 'Ảnh chụp màn hình', features: 'Tính năng',
-  plans: 'Gói thuê', days: 'Số ngày', label: 'Tên gói', price: 'Giá (đồng; 0 = "Liên hệ")', download: 'Link tải file cài', version: 'Phiên bản (app đọc để báo khách có bản mới)', changes: 'Thay đổi ở bản mới (app hiện cho khách)',
+  games: 'Danh sách game', 'games.id': '⚠️ Mã game — KHÔNG đổi với game đang bán (dùng trong mã kích hoạt, nội dung chuyển khoản)', 'games.name': 'Tên game', tagline: 'Mô tả ngắn', 'games.image': 'Ảnh chính', images: 'Ảnh chụp màn hình', features: 'Tính năng',
+  plans: 'Gói thuê', days_: '', 'games.plans.days': 'Số ngày', 'games.plans.label': 'Tên gói', price: 'Giá (đồng; 0 = "Liên hệ")', download: 'Link tải file cài', version: 'Phiên bản (app đọc để báo khách có bản mới)', changes: 'Thay đổi ở bản mới (app hiện cho khách)',
 };
 const pat = (path) => path.filter((k) => typeof k === 'string').join('.');
 const label = (path) => L[pat(path)] ?? L[path[path.length - 1]] ?? (typeof path[path.length - 1] === 'number' ? '' : path[path.length - 1]);
 const isImg = (path) => { const k = path[path.length - 1], p = path[path.length - 2]; return k === 'image' || k === 'logo' || p === 'images'; };
-const LONG = new Set(['text', 'a', 'seoDescription', 'gamesSub', 'contactText', 'tagline', 'perksSub', 'stepsSub', 'formatsSub']);
+const LONG = new Set(['text', 'a', 'seoDescription', 'gamesSub', 'contactText', 'tagline', 'perksSub', 'stepsSub', 'formatsSub', 'npcText', 'exploreSub', 'creatorsSub']);
 
 // ---------- Trạng thái ----------
 let DOC = { site: null, games: null }, SHA = {}, ORIG = {}, TAB = 'site';
@@ -205,7 +210,7 @@ function field(root, path, top) {
       const p = [...path, i];
       const tools = [h('button', { class: 'btn ib', title: 'Lên', onclick: () => move(path, i, -1) }, '↑'), h('button', { class: 'btn ib', title: 'Xuống', onclick: () => move(path, i, 1) }, '↓'), h('button', { class: 'btn ib red', title: 'Xóa', onclick: () => remove(path, i) }, '✕')];
       if (item && typeof item === 'object') {
-        const name = item.title || item.name || item.q || item.label || `#${i + 1}`;
+        const name = item.title || item.name || item.q || item.label || (item.id ? '@' + item.id : '') || `#${i + 1}`;
         list.append(h('div', { class: 'item' }, h('div', { class: 'bar' }, h('span', { class: 't' }, `${i + 1}. ${name}`), ...tools), field(root, p)));
       } else if (isImg(p)) {
         list.append(h('div', { class: 'item' }, h('div', { class: 'bar' }, h('span', { class: 't' }, `Ảnh ${i + 1}`), ...tools), imgField(root, p)));
