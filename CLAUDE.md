@@ -15,6 +15,7 @@ Bảo kiểm tra tiền, mở `CAP-MA.bat` cấp mã → gửi mã qua Zalo → 
   Mỗi trang chỉ là khung `<body data-page=...>`; nội dung vẽ bằng `docs/assets/app.js` từ `docs/site.json` (mỗi trang 1 khóa: home/perks/idol/training/game/faq), CSS chung `docs/assets/style.css`.
   `index.html?game=..&may=..` (app mở) tự chuyển sang `game.html`. Ảnh creator `docs/img/creators/<id>.jpg` (lấy từ TikTok LIVE Backstage, 100px), danh sách ở `site.json` idol.list.
   `docs/admin.html` = trang admin trên web: mật khẩu + chìa GitHub fine-grained (Contents của repo này) mã hóa trong máy; form tự sinh theo JSON (nhãn ở biến `L`), tải ảnh `docs/img/up-*`, xem trước `?preview=1`, đăng = commit qua GitHub API.
+  `docs/noi-bo.html` = trang Nội bộ, mỗi mục 1 mật khẩu: nội dung chữ thường ở `noi-bo/*.md` (KHÔNG lên git), web chỉ chứa bản mã `docs/noi-bo/<id>.enc.json` tạo bằng `node ma-hoa-noi-bo.mjs [id]` (AES-GCM + PBKDF2). Không bao giờ ghi mật khẩu vào file/git/bàn giao.
   Không làm hỏng các trường app đọc (`games[].version/download/changes`).
 - `cap-ma/server.mjs` + `index.html`: công cụ cấp mã (chỉ 127.0.0.1:8690), ký Ed25519 bằng `khoa-rieng/private.pem`; lưu khách ở `du-lieu/khach-hang.json`.
   Còn hạn thì cộng tiếp từ ngày hết hạn cũ. Số ngày tính cả hôm nay.

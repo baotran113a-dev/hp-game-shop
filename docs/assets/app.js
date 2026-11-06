@@ -157,7 +157,61 @@ const PAGES = {
   faq(P) {
     main(`${pageHero(P)}<section style="padding-top:24px"><div class="wrap" style="max-width:860px">${(P.items || []).map((f) => `<details class="glass rv"><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('')}</div></section>`);
   },
+  noibo(P) { // Nội bộ: mỗi mục là bản mã docs/noi-bo/<id>.enc.json, nhập đúng mật khẩu mới giải mã được (trong trình duyệt)
+    main(`${pageHero(P)}<section style="padding-top:24px"><div class="wrap">${(P.items || []).map((it, i) => `
+      <div class="nb glass rv" id="nb-${esc(it.id)}"><div class="nbh"><div class="ic">${esc(it.icon || '🔒')}</div><div><small>MỤC ${two(i)} · MẬT KHẨU RIÊNG</small><h3>${esc(it.title)}</h3><p>${esc(it.text)}</p></div></div>
+        <form class="nbf" onsubmit="event.preventDefault();nbOpen('${esc(it.id)}')"><label class="nbi"><b>🔑</b><input type="password" autocomplete="off" placeholder="${esc(P.placeholder || 'Nhập mật khẩu')}"></label><button class="btn pri sm">${esc(P.btn || 'Mở khóa')}</button></form>
+        <p class="nbm"></p><div class="nbd"></div></div>`).join('')}
+      <p class="nbnote rv">${esc(P.note)}</p></div></section>`);
+    (P.items || []).forEach((it) => nbOpen(it.id, true));
+  },
 };
+
+// ---------- Nội bộ: giải mã AES-GCM (khóa PBKDF2 từ mật khẩu) + vẽ markdown đơn giản ----------
+const b64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+const ub64 = (u) => btoa(String.fromCharCode(...new Uint8Array(u)));
+async function nbOpen(id, auto) {
+  const box = $('nb-' + id), inp = box.querySelector('input'), msg = box.querySelector('.nbm'), btn = box.querySelector('.nbf button');
+  let o; try { o = await (await fetch(`noi-bo/${id}.enc.json`, { cache: 'no-cache' })).json(); } catch { msg.textContent = auto ? '' : '⚠️ Mục này chưa có nội dung.'; return; }
+  const saved = (() => { try { return JSON.parse(sessionStorage.getItem('nb-' + id) || 'null'); } catch { return null; } })();
+  if (auto && !(saved && saved.salt === o.salt)) return;
+  if (!auto && !inp.value) { msg.textContent = 'Nhập mật khẩu trước nhé.'; return; }
+  msg.textContent = auto ? '' : '⏳ Đang mở khóa…'; btn.disabled = true;
+  try {
+    const key = auto ? await crypto.subtle.importKey('raw', b64(saved.key), 'AES-GCM', true, ['decrypt'])
+      : await crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(o.salt), iterations: o.iter, hash: 'SHA-256' },
+        await crypto.subtle.importKey('raw', new TextEncoder().encode(inp.value.normalize('NFC')), 'PBKDF2', false, ['deriveKey']),
+        { name: 'AES-GCM', length: 256 }, true, ['decrypt']);
+    const d = JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(o.iv) }, key, b64(o.ct))));
+    try { sessionStorage.setItem('nb-' + id, JSON.stringify({ salt: o.salt, key: ub64(await crypto.subtle.exportKey('raw', key)) })); } catch {}
+    inp.value = ''; msg.textContent = ''; box.classList.add('open');
+    box.querySelector('.nbd').innerHTML = `<div class="nbbar"><span>🔓 Đã mở · cập nhật ${esc(d.at || '')}</span><button class="btn ghost sm" onclick="nbLock('${esc(id)}')">🔒 Khóa lại</button></div>${md2html(d.md)}`;
+  } catch { if (!auto) msg.textContent = '❌ Sai mật khẩu.'; else sessionStorage.removeItem('nb-' + id); }
+  btn.disabled = false;
+}
+function nbLock(id) { try { sessionStorage.removeItem('nb-' + id); } catch {} const b = $('nb-' + id); b.classList.remove('open'); b.querySelector('.nbd').innerHTML = ''; }
+function md2html(md) {
+  const inl = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+  const L = md.split(/\r?\n/), out = [];
+  for (let i = 0; i < L.length;) {
+    const l = L[i].trim();
+    const take = (re) => { const a = []; while (i < L.length && re.test(L[i].trim())) a.push(L[i++].trim()); return a; };
+    if (!l) { i++; continue; }
+    const h = l.match(/^(#{1,3})\s+(.*)/);
+    if (h) { out.push(`<h${h[1].length + 2}>${inl(h[2])}</h${h[1].length + 2}>`); i++; continue; }
+    if (l.startsWith('|')) {
+      const rows = take(/^\|/).filter((r) => !/^\|[\s|:-]+\|$/.test(r)).map((r) => r.replace(/^\||\|$/g, '').split('|').map((c) => c.trim()));
+      const [hd, ...bd] = rows;
+      out.push(`<div class="tbl"><table><thead><tr>${hd.map((c) => `<th>${inl(c)}</th>`).join('')}</tr></thead><tbody>${bd.map((r) => `<tr>${r.map((c) => `<td>${inl(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
+      continue;
+    }
+    if (l.startsWith(':::')) { out.push(`<div class="nbstat">${take(/^:::/).map((r) => { const [a, b, c] = r.slice(3).split('|').map((x) => x.trim()); return `<div><small>${inl(a)}</small><b>${inl(b)}</b><p>${inl(c || '')}</p></div>`; }).join('')}</div>`); continue; }
+    if (l.startsWith('- ')) { out.push(`<ul>${take(/^- /).map((r) => `<li>${inl(r.slice(2))}</li>`).join('')}</ul>`); continue; }
+    if (l.startsWith('>')) { out.push(take(/^>/).map((r) => { const w = /^>\s*!/.test(r); return `<p class="call${w ? ' warn' : ''}">${inl(r.replace(/^>\s*!?\s*/, ''))}</p>`; }).join('')); continue; }
+    out.push(`<p>${inl(l)}</p>`); i++;
+  }
+  return out.join('');
+}
 
 // ---------- Hiệu ứng ----------
 function liveScreen(L) {

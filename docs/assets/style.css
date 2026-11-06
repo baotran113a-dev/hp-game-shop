@@ -209,3 +209,33 @@
     .prow { grid-template-columns: 1fr; gap: 6px; padding: 22px; } .prow .n { font-size: 44px; }
   }
   @media (max-width: 560px) { .cgrid { grid-template-columns: repeat(2, 1fr); } .pol b { font-size: 18px; } header .btn.zalo { display: none; } }
+
+  /* ---------- Trang Nội bộ (mã hóa) ---------- */
+  .nb { padding: 26px 28px; margin-bottom: 22px; border-radius: 22px; }
+  .nbh { display: flex; gap: 18px; align-items: flex-start; } .nbh .ic { font-size: 34px; width: 62px; height: 62px; flex: none; display: grid; place-items: center; border-radius: 16px; background: var(--grad); box-shadow: 0 10px 30px rgba(139, 92, 246, .35); }
+  .nbh small { font: 800 12.5px var(--hd); color: var(--cy); letter-spacing: 1px; } .nbh h3 { margin: 2px 0 4px; font-size: clamp(20px, 2.6vw, 26px); font-weight: 800; } .nbh p { margin: 0; color: var(--mut); font-size: 15px; }
+  .nbf { display: flex; gap: 8px; margin: 18px 0 0; max-width: 520px; } .nb.open .nbf { display: none; }
+  .nbi { flex: 1; display: flex; align-items: center; gap: 6px; padding: 0 12px; border-radius: 11px; background: rgba(0,0,0,.35); border: 1px solid var(--line); } .nbi:focus-within { border-color: var(--cy); }
+  .nbi input { flex: 1; min-width: 0; background: none; border: 0; color: var(--tx); font: 600 15px 'Be Vietnam Pro', sans-serif; padding: 11px 0; outline: none; }
+  .nbm { margin: 8px 0 0; min-height: 1em; font-size: 14px; color: var(--gold); } .nb.open .nbm { display: none; }
+  .nbd:empty { display: none; } .nbd { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 14px; animation: nbIn .6s ease; }
+  @keyframes nbIn { from { opacity: 0; transform: translateY(14px) rotateX(8deg); } to { opacity: 1; transform: none; } }
+  .nbbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; color: var(--ok); font-size: 14px; font-weight: 600; }
+  .nbd h3 { font-size: clamp(22px, 3vw, 30px); margin: 18px 0 10px; font-weight: 900; background: var(--silver); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .nbd h4 { font: 800 20px var(--hd); margin: 30px 0 6px; padding-left: 12px; border-left: 4px solid var(--vio); } .nbd h5 { font: 700 16.5px var(--hd); margin: 20px 0 6px; color: var(--cy); }
+  .nbd p { margin: 8px 0; color: var(--mut); } .nbd p b, .nbd li b { color: var(--tx); } .nbd ul { margin: 6px 0; padding-left: 20px; color: var(--mut); } .nbd li { margin: 4px 0; }
+  .nbd .call { padding: 12px 16px; border-radius: 12px; background: var(--glass2); border: 1px solid var(--line); color: var(--tx); }
+  .nbd .call.warn { background: rgba(255, 59, 92, .12); border-color: rgba(255, 59, 92, .45); color: #ff8fa3; font-weight: 700; font-size: 14.5px; }
+  .nbstat { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 14px 0; } .nbstat > div { padding: 16px; border-radius: 14px; background: var(--glass2); border: 1px solid var(--line); }
+  .nbstat small { font: 800 11.5px var(--hd); color: var(--cy); letter-spacing: 1px; } .nbstat b { display: block; font: 900 24px var(--hd); background: var(--silver); -webkit-background-clip: text; background-clip: text; color: transparent; } .nbstat p { margin: 4px 0 0; font-size: 13px; }
+  .tbl { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; border-radius: 14px; border: 1px solid var(--line); background: #0d0822; position: relative; z-index: 2; }
+  .tbl table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14.5px; }
+  .tbl th { position: sticky; top: 0; background: #2a1858; color: #e9d5ff; font: 800 12.5px var(--hd); letter-spacing: .5px; text-align: left; padding: 11px 12px; white-space: nowrap; }
+  .tbl td { padding: 9px 12px; border-top: 1px solid rgba(196, 181, 253, .1); white-space: nowrap; }
+  .tbl td:first-child, .tbl th:first-child { position: sticky; left: 0; z-index: 1; } .tbl td:first-child { background: #150d30; font-weight: 800; color: var(--cy); }
+  .tbl tbody tr:nth-child(even) td { background-color: #130c2c; } .tbl tbody tr:nth-child(even) td:first-child { background: #1a1038; }
+  .tbl tbody tr:hover td { background-color: rgba(168, 85, 247, .16); }
+  .tbl td:last-child { font-weight: 800; color: var(--gold); }
+  .nbnote { color: var(--mut); font-size: 14px; text-align: center; margin-top: 8px; }
+  @media (max-width: 960px) { .nbstat { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .nb { padding: 20px 16px; } .nbh .ic { width: 50px; height: 50px; font-size: 26px; } .nbf { flex-direction: column; } .nbstat b { font-size: 20px; } .tbl table { font-size: 13.5px; } }

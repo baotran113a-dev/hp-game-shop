@@ -30,6 +30,10 @@
     {
       "label": "Hỏi đáp",
       "href": "hoi-dap.html"
+    },
+    {
+      "label": "Nội bộ",
+      "href": "noi-bo.html"
     }
   ],
   "navCta": "Ứng tuyển",
@@ -962,5 +966,28 @@
     "btn": "Nhắn Zalo ngay"
   },
   "footer": "BH Studio · Tuyển Idol TikTok LIVE · Buôn Ma Thuột",
-  "footerNote": "Không liên kết chính thức với TikTok."
+  "footerNote": "Không liên kết chính thức với TikTok.",
+  "noibo": {
+    "seoTitle": "BH Studio — Nội bộ",
+    "tag": "🔒 Chỉ dành cho thành viên BH Studio",
+    "title": "Tài liệu **nội bộ**",
+    "text": "Chính sách dành riêng cho Idol & NPC của studio. Mỗi mục có mật khẩu riêng — hỏi quản lý để nhận mật khẩu.",
+    "placeholder": "Nhập mật khẩu",
+    "btn": "Mở khóa",
+    "note": "Nội dung được mã hóa, chỉ mở được khi nhập đúng mật khẩu. Không chia sẻ mật khẩu ra ngoài.",
+    "items": [
+      {
+        "id": "idol-tai-nha",
+        "icon": "🏠",
+        "title": "Chính sách thưởng Idol LIVE tại nhà (bao gồm live game)",
+        "text": "Thưởng bảo cấp 27 bậc, creator mới, chuyên cần, BXH ngày, PKQT, sinh nhật, sự kiện và cảnh báo VPNT."
+      },
+      {
+        "id": "npc-cong-ty",
+        "icon": "🏢",
+        "title": "Chính sách lương NPC tại công ty",
+        "text": "Bảng mốc A1–A20 (KPI kim cương, hoa hồng, lương cứng, chuyên cần), lương cứng, thử việc, học việc."
+      }
+    ]
+  }
 }

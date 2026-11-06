@@ -24,16 +24,16 @@
 - Máy Bảo bật "giảm chuyển động" của Windows → đã bỏ hết điều kiện prefers-reduced-motion (Bảo muốn luôn có hiệu ứng).
 - Việc tiếp: Bảo xem http://localhost:8691 → đồng ý thì `git push origin main`.
 
-## VIỆC TIẾP THEO (Bảo yêu cầu 06/11 tối) — thẻ "Nội bộ" có mật khẩu
-Thêm 1 trang mới `noi-bo.html` (thêm vào menu `site.json` nav), trong đó 2 mục, **mỗi mục 1 mật khẩu riêng**:
-1. **Chính sách thưởng Idol LIVE tại nhà (bao gồm live game)** — nội dung lấy từ https://hpvn.media/creator-2026/ (Bảo cho phép chép nguyên, đây là chính sách của công ty mẹ cho chi nhánh). Đọc trang đó bằng browser rồi đưa vào.
-2. **Chính sách lương NPC — tại công ty** — dữ liệu Bảo gửi đã lưu ở `noi-bo/chinh-sach-npc-tai-cong-ty.md` (bảng mốc A1–A20 + lưu ý + lương cứng/thử việc/học việc). Thư mục `noi-bo/` đã cho vào .gitignore.
-CÁCH LÀM BẮT BUỘC (web là GitHub Pages công khai):
-- KHÔNG để nội dung chữ thường trên web/kho. Mã hóa mỗi mục bằng AES-GCM, khóa từ mật khẩu (PBKDF2-SHA256 ~250k vòng, salt riêng), chỉ lưu bản mã (vd `docs/noi-bo/*.enc.json`). Trang giải mã trong trình duyệt khi nhập đúng pass (có thể nhớ trong sessionStorage).
-- Viết script cục bộ (node) để mã hóa từ file .md/.json trong `noi-bo/` → `docs/noi-bo/*.enc.json`; Bảo đổi nội dung/pass thì chạy lại.
-- HỎI Bảo 2 mật khẩu (không tự đặt, không ghi pass vào file/git/bàn giao). Bảng hiển thị đẹp, cuộn ngang trên điện thoại, cùng giao diện tím bạc + hiệu ứng 3D.
-- Trang admin hiện không sửa được 2 mục này (vì mã hóa) — nói rõ với Bảo; muốn sửa thì nhờ Claude chạy script.
-- Làm xong: chụp ảnh, hỏi Bảo trước khi push.
+## Thẻ "Nội bộ" có mật khẩu (06/11 tối) — ĐÃ LÀM, CHƯA CÓ MẬT KHẨU THẬT
+- Trang `docs/noi-bo.html` (menu "Nội bộ", noindex), 2 mục, mỗi mục 1 mật khẩu: `idol-tai-nha` (chép từ hpvn.media/creator-2026, "HP Media" đổi thành "công ty") và `npc-cong-ty` (bảng A1–A20).
+- Nguồn chữ thường: `noi-bo/thuong-idol-tai-nha.md`, `noi-bo/chinh-sach-npc-tai-cong-ty.md` (gitignore `/noi-bo/` — có dấu / đầu để KHÔNG bỏ qua `docs/noi-bo/`). Ghi chú trong `<!-- -->` bị bỏ khi mã hóa.
+  Cú pháp md: #/##/### tiêu đề, bảng `|`, `- ` danh sách, `::: nhãn | số to | mô tả` = ô thống kê, `> !` = cảnh báo đỏ, `>` = khung ghi chú.
+- Mã hóa: `node ma-hoa-noi-bo.mjs [id]` (hỏi pass ẩn, gõ 2 lần, ≥ 8 ký tự; hoặc biến NOIBO_PASS_IDOL_TAI_NHA / NOIBO_PASS_NPC_CONG_TY) → `docs/noi-bo/<id>.enc.json`. AES-256-GCM, PBKDF2-SHA256 600k vòng, salt/iv ngẫu nhiên, tự kiểm tra giải mã.
+  Trình duyệt giải mã bằng WebCrypto (`nbOpen`/`md2html` trong app.js), nhớ khóa trong sessionStorage (nút "Khóa lại").
+- Đã thử: sai pass báo lỗi, đúng pass mở bảng (24 dòng NPC, 41 dòng idol), tải lại vẫn mở. Ảnh: `anh-thu/noibo-*.png`.
+- **CÒN LẠI**: `docs/noi-bo/*.enc.json` hiện mã bằng mật khẩu THỬ (chưa commit). Cần Bảo đưa 2 mật khẩu → chạy lại script → commit 2 file .enc.json → hỏi Bảo rồi mới push.
+- Admin chỉ sửa được tiêu đề/mô tả 2 mục (site.json `noibo`); nội dung mã hóa phải nhờ Claude sửa file md + chạy script.
+- Chụp ảnh khi khung browser ẩn: tạo tạm `docs/_shot.html` (iframe noi-bo.html, đặt sessionStorage khóa, ép `.rv` hiện, tắt animation `.nbd`) → Edge headless → xóa file tạm.
 
 ## Trang admin
 - Bảo tạo chìa GitHub nhưng báo "Resource not accessible by personal access token" → đã hướng dẫn sửa chìa: Resource owner baotran113a-dev, Only select repositories → hp-game-shop, Contents: Read and write. Chưa biết kết quả.
