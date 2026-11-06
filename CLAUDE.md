@@ -10,7 +10,7 @@ Bảo kiểm tra tiền, mở `CAP-MA.bat` cấp mã → gửi mã qua Zalo → 
 ## File
 - `docs/` = website tĩnh (GitHub Pages): `index.html` đọc `games.json` (`shop`: tên, zalo, bankBin/bankAccount/bankName/accountName cho QR img.vietqr.io; `games`: id, ảnh, tính năng, `plans` [{days,label,price}], `download`, `version`).
   Thêm game = thêm 1 mục vào `games` + ảnh vào `docs/img/`. App mở web với `?game=<id>&may=<mã máy>` là tự mở hộp mua.
-- Từ 06/11 web mang tên **BSMEDIA** (không ghi "HP Media"), hướng tuyển Idol TikTok LIVE + bán game. Mọi chữ/ảnh trang chủ nằm trong `docs/site.json`.
+- Từ 06/11 web mang tên **BH Studio** (logo `docs/img/logo.webp`, màu tím bạc; không ghi "HP Media", bố cục tham khảo hpvn.media nhưng không chép chữ/số liệu), hướng tuyển Idol TikTok LIVE + bán game. Mọi chữ/ảnh trang chủ nằm trong `docs/site.json`.
   `docs/admin.html` = trang admin trên web: đăng nhập mật khẩu (khóa chìa GitHub fine-grained, chỉ quyền Contents của repo này, lưu mã hóa trong máy),
   sửa site.json + games.json (form tự sinh theo JSON), tải ảnh lên `docs/img/up-*.jpg`, xem trước `index.html?preview=1`, đăng = commit qua GitHub API.
   Thêm mục mới vào site.json thì thêm nhãn tiếng Việt vào biến `L` trong admin.html. Không làm hỏng các trường app đọc (`games[].version/download/changes`).
