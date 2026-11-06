@@ -17,9 +17,9 @@
       "images": ["img/cauca-1.jpg", "img/cauca-2.jpg", "img/cauca-3.jpg"],
       "features": ["Bình luận 111 vào ghế, 1–9 chọn cá", "Thả tim = ném cần, có tỉ lệ trúng/hụt", "Tặng quà tự giật cần theo cấp Lv, hiệu ứng toàn màn hình", "Camera phóng to vào người chơi", "Cá Kim Long bốc thăm mỗi 5 phút", "Nhiệm vụ cả phòng, giờ vàng, mưa/tuyết/nắng", "Bảng xếp hạng cần thủ + tặng quà"],
       "plans": [{ "days": 30, "label": "1 tháng", "price": 100000 }, { "days": 90, "label": "3 tháng", "price": 200000 }],
-      "download": "https://github.com/baotran113a-dev/hp-game-shop/releases/download/cauca-v2.3.0/CauCaOnline-Setup-2.3.0.exe",
-      "version": "2.3.0",
-      "changes": ["Tặng quà là tự giật cần ngay, cần câu theo cấp Lv", "Người chỉ thả tim được tự chọn cá", "20 đệm ngồi, người chơi có tên + ảnh đại diện", "Camera phóng to vào người chơi khi câu được cá", "Đổi nhạc nền bằng file mp3 của bạn", "App tự báo khi có bản mới"]
+      "download": "https://github.com/baotran113a-dev/hp-game-shop/releases/download/cauca-v2.3.1/CauCaOnline-Setup-2.3.1.exe",
+      "version": "2.3.1",
+      "changes": ["Ghế ngồi theo đúng đệm vẽ sẵn trong ảnh nền", "Mục 💺 Ghế ngồi: chỉnh / thêm ghế (tối đa 30)", "Đổi ảnh nền thì số ghế tự theo số đệm", "Tặng quà là tự giật cần ngay, cần câu theo cấp Lv", "Camera phóng to vào người chơi khi câu được cá", "Đổi nhạc nền bằng file mp3 của bạn"]
     }
   ]
 }
