@@ -23,3 +23,17 @@
 - `docs/assets/fx.js` + `fx.css` (gắn vào cả 6 trang, three.js r128 từ cdnjs): nền 3D khối pha lê tím bạc + hạt sáng xoay theo chuột/trôi theo cuộn; thẻ nghiêng 3D + vệt sáng; nút hút theo chuột; con trỏ vòng tròn + tia lấp lánh; thanh tiến độ cuộn; tiêu đề trôi; chữ chạy nghiêng theo tốc độ cuộn; hiện ra kiểu lật 3D.
 - Máy Bảo bật "giảm chuyển động" của Windows → đã bỏ hết điều kiện prefers-reduced-motion (Bảo muốn luôn có hiệu ứng).
 - Việc tiếp: Bảo xem http://localhost:8691 → đồng ý thì `git push origin main`.
+
+## VIỆC TIẾP THEO (Bảo yêu cầu 06/11 tối) — thẻ "Nội bộ" có mật khẩu
+Thêm 1 trang mới `noi-bo.html` (thêm vào menu `site.json` nav), trong đó 2 mục, **mỗi mục 1 mật khẩu riêng**:
+1. **Chính sách thưởng Idol LIVE tại nhà (bao gồm live game)** — nội dung lấy từ https://hpvn.media/creator-2026/ (Bảo cho phép chép nguyên, đây là chính sách của công ty mẹ cho chi nhánh). Đọc trang đó bằng browser rồi đưa vào.
+2. **Chính sách lương NPC — tại công ty** — dữ liệu Bảo gửi đã lưu ở `noi-bo/chinh-sach-npc-tai-cong-ty.md` (bảng mốc A1–A20 + lưu ý + lương cứng/thử việc/học việc). Thư mục `noi-bo/` đã cho vào .gitignore.
+CÁCH LÀM BẮT BUỘC (web là GitHub Pages công khai):
+- KHÔNG để nội dung chữ thường trên web/kho. Mã hóa mỗi mục bằng AES-GCM, khóa từ mật khẩu (PBKDF2-SHA256 ~250k vòng, salt riêng), chỉ lưu bản mã (vd `docs/noi-bo/*.enc.json`). Trang giải mã trong trình duyệt khi nhập đúng pass (có thể nhớ trong sessionStorage).
+- Viết script cục bộ (node) để mã hóa từ file .md/.json trong `noi-bo/` → `docs/noi-bo/*.enc.json`; Bảo đổi nội dung/pass thì chạy lại.
+- HỎI Bảo 2 mật khẩu (không tự đặt, không ghi pass vào file/git/bàn giao). Bảng hiển thị đẹp, cuộn ngang trên điện thoại, cùng giao diện tím bạc + hiệu ứng 3D.
+- Trang admin hiện không sửa được 2 mục này (vì mã hóa) — nói rõ với Bảo; muốn sửa thì nhờ Claude chạy script.
+- Làm xong: chụp ảnh, hỏi Bảo trước khi push.
+
+## Trang admin
+- Bảo tạo chìa GitHub nhưng báo "Resource not accessible by personal access token" → đã hướng dẫn sửa chìa: Resource owner baotran113a-dev, Only select repositories → hp-game-shop, Contents: Read and write. Chưa biết kết quả.
