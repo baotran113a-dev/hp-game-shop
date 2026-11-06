@@ -1,4 +1,4 @@
-// Mã hóa trang Nội bộ: noi-bo/*.md (chữ thường, KHÔNG lên mạng) → docs/noi-bo/<id>.enc.json (chỉ bản mã).
+// Mã hóa trang Nội bộ: noi-bo/*.md (chữ thường, KHÔNG lên mạng) → docs/ma-hoa/<id>.enc.json (chỉ bản mã).
 // AES-256-GCM, khóa = PBKDF2-SHA256(mật khẩu, salt ngẫu nhiên, 600.000 vòng). Trình duyệt giải mã bằng WebCrypto.
 // Chạy:  node ma-hoa-noi-bo.mjs            (mã hóa tất cả, hỏi mật khẩu từng mục — gõ không hiện chữ)
 //        node ma-hoa-noi-bo.mjs npc-cong-ty (chỉ 1 mục)
@@ -46,7 +46,7 @@ function decrypt(o, pass) { // dùng để tự kiểm tra
 const only = process.argv[2];
 const list = only ? ITEMS.filter((i) => i.id === only) : ITEMS;
 if (!list.length) { console.log('Không có mục', only, '— các mục:', ITEMS.map((i) => i.id).join(', ')); process.exit(1); }
-mkdirSync(new URL('docs/noi-bo/', root), { recursive: true });
+mkdirSync(new URL('docs/ma-hoa/', root), { recursive: true });
 for (const it of list) {
   const md = readFileSync(new URL(it.src, root), 'utf8').replace(/<!--[\s\S]*?-->\s*/g, '').trim(); // bỏ ghi chú riêng
   const env = 'NOIBO_PASS_' + it.id.toUpperCase().replace(/-/g, '_');
@@ -60,6 +60,6 @@ for (const it of list) {
   const plain = JSON.stringify({ md, at: new Date().toISOString().slice(0, 10) });
   const out = encrypt(plain, pass);
   if (decrypt(out, pass) !== plain) throw new Error('Tự kiểm tra giải mã thất bại');
-  writeFileSync(new URL(`docs/noi-bo/${it.id}.enc.json`, root), JSON.stringify(out));
-  console.log(`✅ ${it.id} → docs/noi-bo/${it.id}.enc.json (${md.length} ký tự)`);
+  writeFileSync(new URL(`docs/ma-hoa/${it.id}.enc.json`, root), JSON.stringify(out));
+  console.log(`✅ ${it.id} → docs/ma-hoa/${it.id}.enc.json (${md.length} ký tự)`);
 }

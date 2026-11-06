@@ -9,7 +9,11 @@ const PAGE = document.body.dataset.page;
 const calm = false; // luôn chạy hiệu ứng
 let BOTTOM = '', SITE = {}, DATA = { shop: {}, games: [] }, DRAFT = null, ZALO = '#lien-he', cur = null, plan = null;
 const img = (src) => DRAFT?.images?.[src] || src; // ảnh vừa tải lên trong admin (xem trước)
-const link = (href) => (DRAFT && /\.html$/.test(href || '') ? `${href}?preview=1` : href);
+// Link gọn không đuôi .html (GitHub Pages tự hiểu /idol = idol.html); "index.html" → "./". Bản xem trước (admin) thêm ?preview=1
+const clean = (href) => String(href || '').replace(/^(\.\/)?index\.html/, './').replace(/\.html(?=$|[?#])/, '');
+const link = (href) => { const h = clean(href); return DRAFT && h && !/^(#|[a-z]+:)/i.test(h) ? h.replace(/^([^#?]*)/, '$1?preview=1') : h; };
+const pageKey = (href) => clean(href).replace(/[?#].*$/, '').replace(/^\.?\//, '') || 'index';
+if (/\.html$/.test(location.pathname)) history.replaceState(null, '', location.pathname.replace(/(index)?\.html$/, '') + location.search + location.hash);
 const two = (i) => String(i + 1).padStart(2, '0');
 
 async function getJson(name) { return (await fetch(name, { cache: 'no-cache' })).json(); }
@@ -32,11 +36,11 @@ function shell() {
   document.title = P.seoTitle || S.brand || document.title;
   const md = document.querySelector('meta[name=description]'); if (md) md.content = S.seoDescription || '';
   ZALO = s.zalo ? `https://zalo.me/${s.zalo.replace(/\D/g, '')}` : '#lien-he';
-  const here = location.pathname.split('/').pop() || 'index.html';
+  const here = pageKey(location.pathname.split('/').pop());
   document.body.insertAdjacentHTML('afterbegin', `<div class="bgfx"></div><div class="glow a"></div><div class="glow b"></div>
   <header><div class="wrap">
-    <a class="logo" href="${link('index.html')}"><img src="${esc(img(S.logo || 'img/logo.webp'))}" alt="${esc(S.brand)}"></a>
-    <nav id="nav">${(S.nav || []).map((n) => `<a href="${esc(link(n.href))}" class="${n.href === here ? 'on' : ''}">${esc(n.label)}</a>`).join('')}</nav>
+    <a class="logo" href="${link('./')}"><img src="${esc(img(S.logo || 'img/logo.webp'))}" alt="${esc(S.brand)}"></a>
+    <nav id="nav">${(S.nav || []).map((n) => `<a href="${esc(link(n.href))}" class="${pageKey(n.href) === here ? 'on' : ''}">${esc(n.label)}</a>`).join('')}</nav>
     <a class="btn pri sm zalo" href="#">${esc(S.navCta || 'Zalo')}</a>
     <button class="menuBtn" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
   </div></header>`);
@@ -71,7 +75,7 @@ const PAGES = {
     <div class="hero"><div class="wrap">
       <div class="rv">
         <span class="eyebrow">${esc(H.hero?.tag)}</span><h1>${rich(H.hero?.title)}</h1><p class="lead">${esc(H.hero?.text)}</p>
-        <div class="cta"><a class="btn pri zalo" href="#">${esc(H.hero?.btn1)}</a><a class="btn ghost" href="${link('quyen-loi.html')}">${esc(H.hero?.btn2)}</a></div>
+        <div class="cta"><a class="btn pri zalo" href="#">${esc(H.hero?.btn1)}</a><a class="btn ghost" href="${link('quyen-loi')}">${esc(H.hero?.btn2)}</a></div>
         <div class="try glass"><small>${esc(H.nameTry?.label)}</small>
           <div class="f"><label class="in"><b>@</b><input id="liveName" maxlength="24" autocomplete="off" placeholder="${esc(H.nameTry?.placeholder)}"></label><button class="btn pri sm" id="keepName">${esc(H.nameTry?.btn)}</button></div></div>
       </div>
@@ -85,7 +89,7 @@ const PAGES = {
     ${list.length ? `<section><div class="wrap" style="text-align:center"><h2 class="rv">${esc(H.creatorsTitle)}</h2><p class="sub rv" style="margin-inline:auto">${esc(H.creatorsSub)}</p></div>
       <div class="cstrip"><div class="t">${(r1.map(creatorChip).join('')).repeat(2)}</div></div>
       <div class="cstrip r" style="margin-top:12px"><div class="t">${(r2.map(creatorChip).join('')).repeat(2)}</div></div>
-      <div class="cta c rv"><a class="btn ghost" href="${link('idol.html')}#creator">${esc(H.creatorsBtn)} (${list.length})</a></div></section>` : ''}
+      <div class="cta c rv"><a class="btn ghost" href="${link('idol')}#creator">${esc(H.creatorsBtn)} (${list.length})</a></div></section>` : ''}
     <section style="padding-top:10px"><div class="wrap"><div class="ticket rv"><div class="stub">${esc(H.free?.badge)}</div>
       <div class="mid"><h3>${esc(H.free?.title)}</h3><p>${esc(H.free?.text)}</p></div><div class="go"><a class="btn pri zalo" href="#">${esc(H.free?.btn)}</a></div></div></div></section>
     <section><div class="wrap"><h2 class="rv">${esc(H.exploreTitle)}</h2><p class="sub rv">${esc(H.exploreSub)}</p>
@@ -157,7 +161,7 @@ const PAGES = {
   faq(P) {
     main(`${pageHero(P)}<section style="padding-top:24px"><div class="wrap" style="max-width:860px">${(P.items || []).map((f) => `<details class="glass rv"><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('')}</div></section>`);
   },
-  noibo(P) { // Nội bộ: mỗi mục là bản mã docs/noi-bo/<id>.enc.json, nhập đúng mật khẩu mới giải mã được (trong trình duyệt)
+  noibo(P) { // Nội bộ: mỗi mục là bản mã docs/ma-hoa/<id>.enc.json, nhập đúng mật khẩu mới giải mã được (trong trình duyệt)
     main(`${pageHero(P)}<section style="padding-top:24px"><div class="wrap">${(P.items || []).map((it, i) => `
       <div class="nb glass rv" id="nb-${esc(it.id)}"><div class="nbh"><div class="ic">${esc(it.icon || '🔒')}</div><div><small>MỤC ${two(i)} · MẬT KHẨU RIÊNG</small><h3>${esc(it.title)}</h3><p>${esc(it.text)}</p></div></div>
         <form class="nbf" onsubmit="event.preventDefault();nbOpen('${esc(it.id)}')"><label class="nbi"><b>🔑</b><input type="password" autocomplete="off" placeholder="${esc(P.placeholder || 'Nhập mật khẩu')}"></label><button class="btn pri sm">${esc(P.btn || 'Mở khóa')}</button></form>
@@ -172,7 +176,7 @@ const b64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
 const ub64 = (u) => btoa(String.fromCharCode(...new Uint8Array(u)));
 async function nbOpen(id, auto) {
   const box = $('nb-' + id), inp = box.querySelector('input'), msg = box.querySelector('.nbm'), btn = box.querySelector('.nbf button');
-  let o; try { o = await (await fetch(`noi-bo/${id}.enc.json`, { cache: 'no-cache' })).json(); } catch { msg.textContent = auto ? '' : '⚠️ Mục này chưa có nội dung.'; return; }
+  let o; try { o = await (await fetch(`ma-hoa/${id}.enc.json`, { cache: 'no-cache' })).json(); } catch { msg.textContent = auto ? '' : '⚠️ Mục này chưa có nội dung.'; return; }
   const saved = (() => { try { return JSON.parse(sessionStorage.getItem('nb-' + id) || 'null'); } catch { return null; } })();
   if (auto && !(saved && saved.salt === o.salt)) return;
   if (!auto && !inp.value) { msg.textContent = 'Nhập mật khẩu trước nhé.'; return; }

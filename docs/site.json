@@ -9,31 +9,31 @@
   "nav": [
     {
       "label": "Trang chủ",
-      "href": "index.html"
+      "href": "./"
     },
     {
       "label": "Quyền lợi",
-      "href": "quyen-loi.html"
+      "href": "quyen-loi"
     },
     {
       "label": "Idol & NPC",
-      "href": "idol.html"
+      "href": "idol"
     },
     {
       "label": "Đào tạo",
-      "href": "dao-tao.html"
+      "href": "dao-tao"
     },
     {
       "label": "Game LIVE",
-      "href": "game.html"
+      "href": "game"
     },
     {
       "label": "Hỏi đáp",
-      "href": "hoi-dap.html"
+      "href": "hoi-dap"
     },
     {
       "label": "Nội bộ",
-      "href": "noi-bo.html"
+      "href": "noi-bo"
     }
   ],
   "navCta": "Ứng tuyển",
@@ -120,25 +120,25 @@
         "icon": "💎",
         "title": "Quyền lợi",
         "text": "Định hướng nội dung, đẩy video, PK, cài đặt, làm đẹp miễn phí và hơn thế nữa.",
-        "href": "quyen-loi.html"
+        "href": "quyen-loi"
       },
       {
         "icon": "🎭",
         "title": "Idol & NPC",
         "text": "Chính sách đãi ngộ, các kiểu LIVE và đội ngũ creator đang hoạt động.",
-        "href": "idol.html"
+        "href": "idol"
       },
       {
         "icon": "🎓",
         "title": "Đào tạo",
         "text": "Lộ trình 7 ngày từ người mới đến phiên LIVE đầu tiên.",
-        "href": "dao-tao.html"
+        "href": "dao-tao"
       },
       {
         "icon": "🎮",
         "title": "Game LIVE",
         "text": "Game tương tác cho phòng LIVE — thuê theo tháng, dùng thử miễn phí.",
-        "href": "game.html"
+        "href": "game"
       }
     ]
   },
@@ -229,7 +229,7 @@
           "Có bản dùng thử miễn phí",
           "Hỗ trợ cài đặt cho Idol"
         ],
-        "link": "game.html",
+        "link": "game",
         "linkText": "Xem game LIVE"
       },
       {

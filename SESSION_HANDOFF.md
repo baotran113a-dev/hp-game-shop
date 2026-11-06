@@ -26,9 +26,9 @@
 
 ## Thẻ "Nội bộ" có mật khẩu (06/11 tối) — ĐÃ LÀM, CHƯA CÓ MẬT KHẨU THẬT
 - Trang `docs/noi-bo.html` (menu "Nội bộ", noindex), 2 mục, mỗi mục 1 mật khẩu: `idol-tai-nha` (chép từ hpvn.media/creator-2026, "HP Media" đổi thành "công ty") và `npc-cong-ty` (bảng A1–A20).
-- Nguồn chữ thường: `noi-bo/thuong-idol-tai-nha.md`, `noi-bo/chinh-sach-npc-tai-cong-ty.md` (gitignore `/noi-bo/` — có dấu / đầu để KHÔNG bỏ qua `docs/noi-bo/`). Ghi chú trong `<!-- -->` bị bỏ khi mã hóa.
+- Nguồn chữ thường: `noi-bo/thuong-idol-tai-nha.md`, `noi-bo/chinh-sach-npc-tai-cong-ty.md` (gitignore `/noi-bo/` — có dấu / đầu để KHÔNG bỏ qua `docs/ma-hoa/`). Ghi chú trong `<!-- -->` bị bỏ khi mã hóa.
   Cú pháp md: #/##/### tiêu đề, bảng `|`, `- ` danh sách, `::: nhãn | số to | mô tả` = ô thống kê, `> !` = cảnh báo đỏ, `>` = khung ghi chú.
-- Mã hóa: `node ma-hoa-noi-bo.mjs [id]` (hỏi pass ẩn, gõ 2 lần, ≥ 8 ký tự; hoặc biến NOIBO_PASS_IDOL_TAI_NHA / NOIBO_PASS_NPC_CONG_TY) → `docs/noi-bo/<id>.enc.json`. AES-256-GCM, PBKDF2-SHA256 600k vòng, salt/iv ngẫu nhiên, tự kiểm tra giải mã.
+- Mã hóa: `node ma-hoa-noi-bo.mjs [id]` (hỏi pass ẩn, gõ 2 lần, ≥ 8 ký tự; hoặc biến NOIBO_PASS_IDOL_TAI_NHA / NOIBO_PASS_NPC_CONG_TY) → `docs/ma-hoa/<id>.enc.json`. AES-256-GCM, PBKDF2-SHA256 600k vòng, salt/iv ngẫu nhiên, tự kiểm tra giải mã.
   Trình duyệt giải mã bằng WebCrypto (`nbOpen`/`md2html` trong app.js), nhớ khóa trong sessionStorage (nút "Khóa lại").
 - Đã thử: sai pass báo lỗi, đúng pass mở bảng (24 dòng NPC, 41 dòng idol), tải lại vẫn mở. Ảnh: `anh-thu/noibo-*.png`.
 - 06/11: đã mã hóa bằng 2 mật khẩu thật Bảo đưa (không ghi ở đây) và commit. Bảo biết là pass ngắn (< 10 ký tự) dễ bị dò; muốn đổi thì chạy lại script. **ĐÃ ĐĂNG 06/11** (b65da74, gộp cùng 6 commit Bảo sửa qua admin — admin đã chạy được). Kiểm tra web thật: menu có Nội bộ, mở mục NPC đúng 24 dòng.
