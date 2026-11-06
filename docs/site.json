@@ -43,22 +43,24 @@
       "tag": "Đang mở đợt tuyển Idol TikTok LIVE",
       "title": "Bật camera.\n**Bật sáng** phòng LIVE của bạn.",
       "text": "Không cần nổi tiếng, không cần kinh nghiệm. BH Studio lo phần kỹ thuật, làm đẹp và nội dung — bạn chỉ cần tự tin lên sóng và giữ lửa với người xem.",
-      "image": "img/idol.jpg",
+      "image": "img/up-mw4pu812.png",
       "btn1": "Ứng tuyển qua Zalo",
       "btn2": "Xem quyền lợi",
       "chips": [
-        "🎁 Miễn phí cài LIVE Studio",
-        "✨ Làm đẹp Douyin",
-        "🎓 Đào tạo A–Z"
+        "Npc Beauty",
+        "Idol online tại nhà",
+        "Idol live game",
+        "",
+        ""
       ]
     },
     "live": {
-      "defaultName": "ten_live_cua_ban",
+      "defaultName": "npc.suna",
       "viewers": 1280,
       "comments": [
         "Chào idol 👋",
-        "Hát thêm bài nữa đi!",
-        "Tặng bạn 1 bông hồng 🌹",
+        "NPC này xinh quá đi mất",
+        "Đã chuẩn bị xu để tặng rồi",
         "Da đẹp quá, filter gì vậy 😍",
         "Vào PK đi idol ơi 🔥",
         "Thả tim cho idol nè ❤️"
@@ -66,7 +68,7 @@
     },
     "nameTry": {
       "label": "Gõ thử tên LIVE của bạn",
-      "placeholder": "ten_live_cua_ban",
+      "placeholder": "id_cua_ban",
       "btn": "Giữ tên này"
     },
     "highlights": [
@@ -85,6 +87,10 @@
       {
         "big": "1–1",
         "small": "Hỗ trợ trong phiên LIVE"
+      },
+      {
+        "big": "Thưởng",
+        "small": "Chính sách thưởng hấp dẫn"
       }
     ],
     "marquee": [
