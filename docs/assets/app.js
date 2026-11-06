@@ -23,7 +23,7 @@ async function boot() {
   document.querySelectorAll('[data-t]').forEach((el) => { el.textContent = get(SITE, el.dataset.t) ?? ''; });
   document.querySelectorAll('[data-h]').forEach((el) => { el.innerHTML = rich(get(SITE, el.dataset.h)); });
   document.querySelectorAll('.zalo').forEach((a) => { a.href = ZALO; a.target = '_blank'; });
-  reveal(); if (typeof fx === "function") fx();
+  reveal(); if (typeof fx === "function") fx(); noCopy();
 }
 
 // ---------- Đầu trang, khung liên hệ, chân trang ----------
@@ -274,4 +274,22 @@ function drawQr() {
 }
 const msg = () => `Mình đã chuyển khoản mua ${cur?.name} gói ${plan?.label}. Mã máy: ${machine() || '(chưa nhập)'}`;
 function copyMsg() { navigator.clipboard.writeText(msg()).then(() => { $('msgPrev').textContent = '✅ Đã chép: ' + msg(); }); }
+
+// ---------- Chống copy / chụp (chỉ làm khó: trình duyệt KHÔNG thể chặn hẳn chụp màn hình hay chụp bằng điện thoại) ----------
+function noCopy() {
+  const typing = (e) => e.target.closest?.('input, textarea, [contenteditable]');
+  const warn = () => toast('🔒 Nội dung của BH Studio được bảo vệ.');
+  ['copy', 'cut', 'contextmenu', 'dragstart', 'selectstart'].forEach((t) => document.addEventListener(t, (e) => { if (typing(e)) return; e.preventDefault(); if (t === 'copy' || t === 'cut' || t === 'contextmenu') warn(); }));
+  const shield = (on) => document.body.classList.toggle('shield', on);
+  addEventListener('keydown', (e) => {
+    const k = e.key.toLowerCase(), mod = e.ctrlKey || e.metaKey;
+    if (k === 'printscreen') { shield(true); try { navigator.clipboard.writeText(''); } catch {} warn(); setTimeout(() => shield(false), 1500); return; }
+    if (e.key === 'F12' || (mod && e.shiftKey && 'ijcs'.includes(k)) || (mod && ['s', 'p', 'u'].includes(k)) || (mod && ['c', 'x', 'a'].includes(k) && !typing(e))) { e.preventDefault(); warn(); }
+  }, true);
+  addEventListener('keyup', (e) => { if (e.key.toLowerCase() === 'printscreen') { try { navigator.clipboard.writeText(''); } catch {} } });
+  if (PAGE === 'noibo') { // trang nội bộ: rời cửa sổ (mở công cụ cắt ảnh, đổi tab) là che nội dung + in chìm tên studio
+    addEventListener('blur', () => shield(true)); addEventListener('focus', () => shield(false));
+    document.addEventListener('visibilitychange', () => shield(document.hidden));
+  }
+}
 boot();

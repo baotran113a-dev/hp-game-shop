@@ -33,6 +33,7 @@
 - Đã thử: sai pass báo lỗi, đúng pass mở bảng (24 dòng NPC, 41 dòng idol), tải lại vẫn mở. Ảnh: `anh-thu/noibo-*.png`.
 - 06/11: đã mã hóa bằng 2 mật khẩu thật Bảo đưa (không ghi ở đây) và commit. Bảo biết là pass ngắn (< 10 ký tự) dễ bị dò; muốn đổi thì chạy lại script. **Chưa push — hỏi Bảo trước.**
 - Admin chỉ sửa được tiêu đề/mô tả 2 mục (site.json `noibo`); nội dung mã hóa phải nhờ Claude sửa file md + chạy script.
+- Chống copy (06/11, Bảo yêu cầu): `noCopy()` cuối app.js + CSS cuối style.css — mọi trang tắt bôi đen/chuột phải/copy/kéo ảnh/Ctrl+C,S,P,U,F12, xóa clipboard khi bấm PrintScreen, in ra trang trắng; ô nhập vẫn dán được. Trang Nội bộ: in chìm "BH STUDIO · NỘI BỘ" + làm mờ nội dung khi rời cửa sổ/đổi tab. Không chặn hẳn được chụp màn hình/chụp bằng điện thoại (đã nói Bảo).
 - Chụp ảnh khi khung browser ẩn: tạo tạm `docs/_shot.html` (iframe noi-bo.html, đặt sessionStorage khóa, ép `.rv` hiện, tắt animation `.nbd`) → Edge headless → xóa file tạm.
 
 ## Trang admin
