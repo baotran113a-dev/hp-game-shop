@@ -200,7 +200,6 @@
     .chip { font-size: 12.5px; padding: 7px 10px; } .chip:nth-child(1) { left: -14px; } .chip:nth-child(2) { right: -14px; } .chip:nth-child(3) { left: -8px; }
     header .btn { padding: 8px 12px; } .hl .big { font-size: 26px; } .mq .t { font-size: 16px; }
   }
-  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .rv { opacity: 1; transform: none; } }
 
   @media (max-width: 960px) {
     .menuBtn { display: block; margin-left: auto; }

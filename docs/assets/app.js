@@ -6,7 +6,7 @@ const money = (n) => n ? `${n.toLocaleString('vi-VN')}đ` : 'Liên hệ';
 const get = (o, path) => path.split('.').reduce((a, k) => a?.[k], o);
 const params = new URLSearchParams(location.search);
 const PAGE = document.body.dataset.page;
-const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const calm = false; // luôn chạy hiệu ứng
 let BOTTOM = '', SITE = {}, DATA = { shop: {}, games: [] }, DRAFT = null, ZALO = '#lien-he', cur = null, plan = null;
 const img = (src) => DRAFT?.images?.[src] || src; // ảnh vừa tải lên trong admin (xem trước)
 const link = (href) => (DRAFT && /\.html$/.test(href || '') ? `${href}?preview=1` : href);
@@ -23,7 +23,7 @@ async function boot() {
   document.querySelectorAll('[data-t]').forEach((el) => { el.textContent = get(SITE, el.dataset.t) ?? ''; });
   document.querySelectorAll('[data-h]').forEach((el) => { el.innerHTML = rich(get(SITE, el.dataset.h)); });
   document.querySelectorAll('.zalo').forEach((a) => { a.href = ZALO; a.target = '_blank'; });
-  reveal();
+  reveal(); if (typeof fx === "function") fx();
 }
 
 // ---------- Đầu trang, khung liên hệ, chân trang ----------

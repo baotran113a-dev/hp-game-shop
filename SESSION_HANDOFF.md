@@ -18,3 +18,8 @@
 ## Lưu ý
 - Không làm hỏng `games.json` (app đọc `games[].version/download/changes`).
 - Git tác giả `Bao <baotran113a@gmail.com>`. Máy không có `gh`.
+
+## 06/11 chiều — chuyển động 3D (commit cục bộ, CHƯA đăng)
+- `docs/assets/fx.js` + `fx.css` (gắn vào cả 6 trang, three.js r128 từ cdnjs): nền 3D khối pha lê tím bạc + hạt sáng xoay theo chuột/trôi theo cuộn; thẻ nghiêng 3D + vệt sáng; nút hút theo chuột; con trỏ vòng tròn + tia lấp lánh; thanh tiến độ cuộn; tiêu đề trôi; chữ chạy nghiêng theo tốc độ cuộn; hiện ra kiểu lật 3D.
+- Máy Bảo bật "giảm chuyển động" của Windows → đã bỏ hết điều kiện prefers-reduced-motion (Bảo muốn luôn có hiệu ứng).
+- Việc tiếp: Bảo xem http://localhost:8691 → đồng ý thì `git push origin main`.
