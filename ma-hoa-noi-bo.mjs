@@ -55,7 +55,8 @@ for (const it of list) {
     pass = await ask(`Mật khẩu cho "${it.id}": `);
     if ((await ask('Gõ lại mật khẩu: ')) !== pass) { console.log('❌ Hai lần không khớp, bỏ qua', it.id); continue; }
   }
-  if (pass.length < 8) { console.log('❌ Mật khẩu quá ngắn (cần ≥ 8 ký tự), bỏ qua', it.id); continue; }
+  if (pass.length < 4) { console.log('❌ Mật khẩu quá ngắn (cần ≥ 4 ký tự), bỏ qua', it.id); continue; }
+  if (pass.length < 10) console.log(`⚠️  Mật khẩu "${it.id}" ngắn (< 10 ký tự) → dễ bị dò ra. Nên dùng ≥ 10 ký tự có chữ + số.`);
   const plain = JSON.stringify({ md, at: new Date().toISOString().slice(0, 10) });
   const out = encrypt(plain, pass);
   if (decrypt(out, pass) !== plain) throw new Error('Tự kiểm tra giải mã thất bại');

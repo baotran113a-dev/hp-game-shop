@@ -31,7 +31,7 @@
 - Mã hóa: `node ma-hoa-noi-bo.mjs [id]` (hỏi pass ẩn, gõ 2 lần, ≥ 8 ký tự; hoặc biến NOIBO_PASS_IDOL_TAI_NHA / NOIBO_PASS_NPC_CONG_TY) → `docs/noi-bo/<id>.enc.json`. AES-256-GCM, PBKDF2-SHA256 600k vòng, salt/iv ngẫu nhiên, tự kiểm tra giải mã.
   Trình duyệt giải mã bằng WebCrypto (`nbOpen`/`md2html` trong app.js), nhớ khóa trong sessionStorage (nút "Khóa lại").
 - Đã thử: sai pass báo lỗi, đúng pass mở bảng (24 dòng NPC, 41 dòng idol), tải lại vẫn mở. Ảnh: `anh-thu/noibo-*.png`.
-- **CÒN LẠI**: `docs/noi-bo/*.enc.json` hiện mã bằng mật khẩu THỬ (chưa commit). Cần Bảo đưa 2 mật khẩu → chạy lại script → commit 2 file .enc.json → hỏi Bảo rồi mới push.
+- 06/11: đã mã hóa bằng 2 mật khẩu thật Bảo đưa (không ghi ở đây) và commit. Bảo biết là pass ngắn (< 10 ký tự) dễ bị dò; muốn đổi thì chạy lại script. **Chưa push — hỏi Bảo trước.**
 - Admin chỉ sửa được tiêu đề/mô tả 2 mục (site.json `noibo`); nội dung mã hóa phải nhờ Claude sửa file md + chạy script.
 - Chụp ảnh khi khung browser ẩn: tạo tạm `docs/_shot.html` (iframe noi-bo.html, đặt sessionStorage khóa, ép `.rv` hiện, tắt animation `.nbd`) → Edge headless → xóa file tạm.
 
