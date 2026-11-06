@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Quản trị web</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0b0618; --card: rgba(255,255,255,.06); --line: rgba(255,255,255,.13); --tx: #f6f0ff; --mut: #b9a8d9; --pink: #ec4899; --ok: #34d399; --bad: #f87171; --grad: linear-gradient(120deg, #a855f7, #ec4899 55%, #f97316); }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: radial-gradient(700px 500px at 0% 0%, rgba(124,58,237,.35), transparent 60%), radial-gradient(700px 500px at 100% 30%, rgba(219,39,119,.25), transparent 60%), var(--bg); background-attachment: fixed; color: var(--tx); font: 15px/1.55 'Be Vietnam Pro', system-ui, sans-serif; }
+  a { color: #f9a8d4; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+  .glass { background: var(--card); border: 1px solid var(--line); border-radius: 18px; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--tx); font: 800 14px 'Be Vietnam Pro', sans-serif; cursor: pointer; text-decoration: none; white-space: nowrap; }
+  .btn:hover { background: rgba(255,255,255,.12); } .btn:disabled { opacity: .5; cursor: wait; }
+  .btn.pri { background: var(--grad); border: 0; color: #fff; } .btn.sm { padding: 6px 11px; font-size: 13px; } .btn.red { color: var(--bad); }
+  input, textarea { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: rgba(0,0,0,.3); color: var(--tx); font: 15px 'Be Vietnam Pro', sans-serif; }
+  input:focus, textarea:focus { outline: 2px solid rgba(236,72,153,.5); border-color: transparent; }
+  textarea { min-height: 70px; resize: vertical; }
+  label { display: block; font-weight: 700; margin: 12px 0 5px; font-size: 14px; }
+  .hint { color: var(--mut); font-size: 13px; }
+  .msg { padding: 10px 14px; border-radius: 12px; margin: 12px 0; font-size: 14px; display: none; } .msg.on { display: block; }
+  .msg.ok { background: rgba(52,211,153,.12); border: 1px solid rgba(52,211,153,.4); } .msg.err { background: rgba(248,113,113,.12); border: 1px solid rgba(248,113,113,.45); } .msg.info { background: rgba(168,85,247,.14); border: 1px solid rgba(168,85,247,.45); }
+  /* Đăng nhập */
+  .login { max-width: 440px; margin: 8vh auto; padding: 28px; }
+  .login h1 { margin: 0 0 4px; font-size: 26px; font-weight: 900; } .login h1 span { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .login .btn.pri { width: 100%; justify-content: center; margin-top: 18px; padding: 12px; font-size: 15px; }
+  .guide { margin-top: 14px; font-size: 13.5px; color: var(--mut); } .guide ol { padding-left: 20px; margin: 6px 0; } .guide b { color: var(--tx); }
+  /* Thanh trên */
+  .top { position: sticky; top: 0; z-index: 10; background: rgba(11,6,24,.7); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; gap: 8px; min-height: 60px; flex-wrap: wrap; padding-top: 8px; padding-bottom: 8px; }
+  .top b { font-size: 18px; font-weight: 900; margin-right: auto; } .top b span { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .dirty { color: #fcd34d; font-size: 13px; font-weight: 700; }
+  .tabs { display: flex; gap: 8px; margin: 18px 0 10px; } .tabs .btn.on { background: rgba(236,72,153,.2); border-color: var(--pink); }
+  /* Ô sửa */
+  details.sec { margin-bottom: 10px; padding: 0; overflow: hidden; }
+  details.sec > summary { padding: 14px 18px; cursor: pointer; font-weight: 800; font-size: 16px; list-style: none; display: flex; align-items: center; gap: 8px; }
+  details.sec > summary::before { content: '▸'; color: var(--pink); transition: transform .2s; } details.sec[open] > summary::before { transform: rotate(90deg); }
+  details.sec > .in { padding: 0 18px 16px; }
+  .group { border-left: 2px solid rgba(168,85,247,.45); padding-left: 12px; margin-top: 8px; }
+  .item { background: rgba(0,0,0,.22); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin: 8px 0; }
+  .item .bar { display: flex; align-items: center; gap: 6px; } .item .bar .t { margin-right: auto; font-weight: 700; color: var(--mut); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .row { display: flex; gap: 6px; align-items: center; margin: 6px 0; } .row input { flex: 1; }
+  .ib { width: 32px; height: 32px; padding: 0; justify-content: center; border-radius: 9px; flex: none; }
+  .imgf { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; } .imgf img { width: 84px; height: 84px; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); background: rgba(0,0,0,.3); } .imgf .c { flex: 1; min-width: 180px; }
+  .add { margin-top: 6px; }
+  @media (max-width: 520px) { .top .btn { padding: 8px 11px; font-size: 13px; } }
+</style>
+</head>
+<body>
+
+<!-- Màn hình đăng nhập -->
+<div id="vLogin" class="login glass" hidden>
+  <h1>🔐 Quản trị <span id="lBrand">web</span></h1>
+  <p class="hint" id="lSub"></p>
+  <div id="fSetup" hidden>
+    <label>Chìa khóa GitHub</label>
+    <input id="tok" type="password" placeholder="github_pat_..." autocomplete="off">
+    <label>Đặt mật khẩu admin</label>
+    <input id="pw1" type="password" placeholder="Ít nhất 8 ký tự" autocomplete="new-password">
+    <label>Nhập lại mật khẩu</label>
+    <input id="pw2" type="password" autocomplete="new-password">
+    <button class="btn pri" id="bSetup">Lưu & đăng nhập</button>
+    <div class="guide"><b>Cách lấy chìa khóa GitHub</b> (làm 1 lần mỗi máy/điện thoại):
+      <ol>
+        <li>Mở <a href="https://github.com/settings/personal-access-tokens/new" target="_blank">github.com/settings/personal-access-tokens/new</a> (đăng nhập tài khoản GitHub của web).</li>
+        <li><b>Token name</b>: tên tùy ý, ví dụ "admin web". <b>Expiration</b>: chọn 1 năm.</li>
+        <li><b>Repository access</b>: chọn <b>Only select repositories</b> → chọn <b>hp-game-shop</b>.</li>
+        <li><b>Permissions</b> → Repository permissions → <b>Contents</b>: chọn <b>Read and write</b>.</li>
+        <li>Bấm <b>Generate token</b>, chép chuỗi <b>github_pat_…</b> dán vào ô trên.</li>
+      </ol>
+      Chìa khóa được khóa bằng mật khẩu và chỉ lưu trong máy này, không gửi đi đâu ngoài GitHub.</div>
+  </div>
+  <div id="fLogin" hidden>
+    <label>Mật khẩu admin</label>
+    <input id="pw" type="password" autocomplete="current-password">
+    <button class="btn pri" id="bLogin">Đăng nhập</button>
+    <p class="hint" style="margin-top:14px">Quên mật khẩu? <a href="#" id="bReset">Cài lại trên máy này</a> (cần dán lại chìa khóa GitHub).</p>
+  </div>
+  <div class="msg" id="lMsg"></div>
+</div>
+
+<!-- Màn hình sửa -->
+<div id="vEdit" hidden>
+  <div class="top"><div class="wrap">
+    <b>⚙️ Quản trị <span id="eBrand"></span></b>
+    <span class="dirty" id="dirty" hidden>● Chưa đăng</span>
+    <button class="btn" id="bPreview">👁 Xem trước</button>
+    <button class="btn pri" id="bPublish">🚀 Đăng lên web</button>
+    <button class="btn" id="bOut" title="Đăng xuất">⎋</button>
+  </div></div>
+  <div class="wrap">
+    <div class="msg" id="eMsg"></div>
+    <div class="tabs"><button class="btn on" data-tab="site">📝 Nội dung web</button><button class="btn" data-tab="games">🎮 Game & bán hàng</button></div>
+    <p class="hint">Bấm từng mục để mở ra sửa. Sửa xong bấm <b>👁 Xem trước</b> để xem, rồi <b>🚀 Đăng lên web</b> (web cập nhật sau khoảng 1–2 phút).</p>
+    <div id="form"></div>
+    <p style="height:40px"></p>
+  </div>
+</div>
+
+<script>
+const REPO = 'baotran113a-dev/hp-game-shop', BRANCH = 'main', DIR = 'docs/';
+const FILES = { site: 'site.json', games: 'games.json' };
+const KEY = 'bs-admin';
+const $ = (id) => document.getElementById(id);
+const te = new TextEncoder(), td = new TextDecoder();
+
+// ---------- Mã hóa chìa khóa bằng mật khẩu (PBKDF2 + AES-GCM) ----------
+const b64 = (buf) => { const u = new Uint8Array(buf); let s = ''; for (let i = 0; i < u.length; i += 0x8000) s += String.fromCharCode.apply(null, u.subarray(i, i + 0x8000)); return btoa(s); };
+const unb64 = (s) => Uint8Array.from(atob(s.replace(/\s/g, '')), (c) => c.charCodeAt(0));
+async function keyFrom(pw, salt) {
+  const base = await crypto.subtle.importKey('raw', te.encode(pw), 'PBKDF2', false, ['deriveKey']);
+  return crypto.subtle.deriveKey({ name: 'PBKDF2', salt, iterations: 250000, hash: 'SHA-256' }, base, { name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']);
+}
+async function lock(token, pw) {
+  const salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));
+  const ct = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, await keyFrom(pw, salt), te.encode(token));
+  return { salt: b64(salt), iv: b64(iv), ct: b64(ct) };
+}
+async function unlock(box, pw) {
+  const pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: unb64(box.iv) }, await keyFrom(pw, unb64(box.salt)), unb64(box.ct));
+  return td.decode(pt);
+}
+const store = { get() { try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch { return null; } }, set(v) { localStorage.setItem(KEY, JSON.stringify(v)); }, del() { try { localStorage.removeItem(KEY); } catch {} } };
+
+// ---------- GitHub ----------
+let TOKEN = null;
+async function gh(path, opt = {}) {
+  const r = await fetch(`https://api.github.com/repos/${REPO}/${path}`, { ...opt, headers: { Authorization: `Bearer ${TOKEN}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', ...(opt.headers || {}) } });
+  if (!r.ok) {
+    const t = await r.text(); let m = t; try { m = JSON.parse(t).message; } catch {}
+    const e = new Error(r.status === 401 ? 'Chìa khóa GitHub sai hoặc đã hết hạn.' : r.status === 403 || r.status === 404 ? `Chìa khóa không có quyền sửa kho ${REPO} (kiểm tra mục Contents: Read and write). [${m}]` : r.status === 409 ? 'Web vừa được sửa ở nơi khác. Tải lại trang rồi sửa lại.' : `Lỗi GitHub ${r.status}: ${m}`);
+    e.status = r.status; throw e;
+  }
+  return r.status === 204 ? null : r.json();
+}
+async function readFile(name) {
+  const j = await gh(`contents/${DIR}${name}?ref=${BRANCH}&t=${Date.now()}`);
+  return { sha: j.sha, data: JSON.parse(td.decode(unb64(j.content))) };
+}
+async function writeFile(path, base64, sha, message) {
+  const body = { message, content: base64, branch: BRANCH }; if (sha) body.sha = sha;
+  return gh(`contents/${path}`, { method: 'PUT', body: JSON.stringify(body) });
+}
+
+// ---------- Nhãn tiếng Việt ----------
+const L = {
+  brand: 'Tên thương hiệu (logo)', seoTitle: 'Tiêu đề trên tab trình duyệt / Google', seoDescription: 'Mô tả khi chia sẻ link',
+  nav: 'Menu đầu trang', 'nav.idol': 'Chữ menu "Tuyển Idol"', 'nav.perks': 'Chữ menu "Quyền lợi"', 'nav.games': 'Chữ menu "Game LIVE"', 'nav.faq': 'Chữ menu "Hỏi đáp"', 'nav.cta': 'Nút Zalo góc phải',
+  hero: 'Phần đầu trang (ảnh idol)', 'hero.tag': 'Nhãn nhỏ phía trên', 'hero.title': 'Tiêu đề lớn — chữ nằm giữa **hai dấu sao** sẽ có màu', 'hero.text': 'Đoạn giới thiệu', 'hero.image': 'Ảnh idol', 'hero.btn1': 'Nút chính (mở Zalo)', 'hero.btn2': 'Nút phụ', 'hero.chips': 'Nhãn nổi quanh ảnh',
+  free: 'Khung MIỄN PHÍ', 'free.badge': 'Chữ trên nhãn', 'free.title': 'Tiêu đề', 'free.text': 'Nội dung', 'free.btn': 'Chữ nút',
+  perksTitle: 'Tiêu đề mục Quyền lợi', perksSub: 'Dòng phụ mục Quyền lợi', perks: 'Các quyền lợi', icon: 'Biểu tượng (emoji)', title: 'Tiêu đề', text: 'Mô tả',
+  reqTitle: 'Tiêu đề khung Yêu cầu', requirements: 'Các yêu cầu ứng viên',
+  stepsTitle: 'Tiêu đề mục Đăng ký Idol', stepsSub: 'Dòng phụ mục Đăng ký Idol', steps: 'Các bước đăng ký Idol',
+  gamesTitle: 'Tiêu đề mục Game', gamesSub: 'Dòng phụ mục Game', buyTitle: 'Tiêu đề Cách mua game', buySteps: 'Các bước mua game',
+  author: 'Mục tác giả', 'author.label': 'Dòng nhỏ phía trên tên', 'author.name': 'Tên', 'author.text': 'Giới thiệu', 'author.image': 'Ảnh đại diện (để trống = hiện chữ cái đầu)',
+  faqTitle: 'Tiêu đề Hỏi đáp', faq: 'Các câu hỏi', q: 'Câu hỏi', a: 'Trả lời',
+  contactTitle: 'Tiêu đề khung liên hệ cuối trang', contactText: 'Nội dung khung liên hệ', contactBtn: 'Chữ nút liên hệ', footer: 'Chân trang', footerNote: 'Ghi chú chân trang',
+  shop: 'Cửa hàng & tài khoản nhận tiền', 'shop.name': 'Tên cửa hàng', 'shop.slogan': 'Khẩu hiệu', 'shop.zalo': 'Số Zalo (dùng cho mọi nút Zalo trên web)', 'shop.bankBin': 'Mã ngân hàng BIN (LPBank = 970449)', 'shop.bankAccount': 'Số tài khoản', 'shop.bankName': 'Tên ngân hàng', 'shop.accountName': 'Tên chủ tài khoản (IN HOA, không dấu)',
+  games: 'Danh sách game', id: '⚠️ Mã game — KHÔNG đổi với game đang bán (dùng trong mã kích hoạt, nội dung chuyển khoản)', name: 'Tên game', tagline: 'Mô tả ngắn', image: 'Ảnh chính', images: 'Ảnh chụp màn hình', features: 'Tính năng',
+  plans: 'Gói thuê', days: 'Số ngày', label: 'Tên gói', price: 'Giá (đồng; 0 = "Liên hệ")', download: 'Link tải file cài', version: 'Phiên bản (app đọc để báo khách có bản mới)', changes: 'Thay đổi ở bản mới (app hiện cho khách)',
+};
+const pat = (path) => path.filter((k) => typeof k === 'string').join('.');
+const label = (path) => L[pat(path)] ?? L[path[path.length - 1]] ?? (typeof path[path.length - 1] === 'number' ? '' : path[path.length - 1]);
+const isImg = (path) => { const k = path[path.length - 1], p = path[path.length - 2]; return k === 'image' || p === 'images'; };
+const LONG = new Set(['text', 'a', 'seoDescription', 'gamesSub', 'contactText', 'tagline', 'perksSub', 'stepsSub']);
+
+// ---------- Trạng thái ----------
+let DOC = { site: null, games: null }, SHA = {}, ORIG = {}, TAB = 'site';
+const NEW_IMG = {}; // path -> dataURL (ảnh mới chưa đăng)
+const getAt = (o, path) => path.reduce((a, k) => a?.[k], o);
+const setAt = (o, path, v) => { const last = path[path.length - 1]; getAt(o, path.slice(0, -1))[last] = v; };
+const blank = (v) => Array.isArray(v) ? [] : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, blank(x)])) : typeof v === 'number' ? 0 : typeof v === 'boolean' ? false : '';
+const isDirty = () => Object.keys(FILES).some((k) => JSON.stringify(DOC[k]) !== ORIG[k]) || Object.keys(NEW_IMG).length > 0;
+function markDirty() { $('dirty').hidden = !isDirty(); }
+function msg(el, kind, html) { const m = $(el); m.className = `msg on ${kind}`; m.innerHTML = html; if (kind !== 'err') m.scrollIntoView({ block: 'nearest' }); }
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+// ---------- Vẽ form tự động theo nội dung JSON ----------
+function h(tag, attrs = {}, ...kids) { const e = document.createElement(tag); for (const [k, v] of Object.entries(attrs)) { if (k.startsWith('on')) e[k] = v; else if (k === 'html') e.innerHTML = v; else e.setAttribute(k, v); } kids.flat().forEach((c) => c != null && e.append(c)); return e; }
+function render() {
+  const f = $('form'); const open = [...f.querySelectorAll('details.sec')].map((d) => d.open);
+  f.innerHTML = '';
+  const root = DOC[TAB];
+  Object.keys(root).forEach((k, i) => {
+    const d = h('details', { class: 'sec glass' }, h('summary', {}, label([k]) || k), h('div', { class: 'in' }, field(root, [k], true)));
+    if (open[i]) d.open = true;
+    f.append(d);
+  });
+}
+function field(root, path, top) {
+  const v = getAt(root, path), lb = top ? null : label(path);
+  const wrap = h('div');
+  if (lb) wrap.append(h('label', {}, lb));
+  if (Array.isArray(v)) {
+    const list = h('div');
+    v.forEach((item, i) => {
+      const p = [...path, i];
+      const tools = [h('button', { class: 'btn ib', title: 'Lên', onclick: () => move(path, i, -1) }, '↑'), h('button', { class: 'btn ib', title: 'Xuống', onclick: () => move(path, i, 1) }, '↓'), h('button', { class: 'btn ib red', title: 'Xóa', onclick: () => remove(path, i) }, '✕')];
+      if (item && typeof item === 'object') {
+        const name = item.title || item.name || item.q || item.label || `#${i + 1}`;
+        list.append(h('div', { class: 'item' }, h('div', { class: 'bar' }, h('span', { class: 't' }, `${i + 1}. ${name}`), ...tools), field(root, p)));
+      } else if (isImg(p)) {
+        list.append(h('div', { class: 'item' }, h('div', { class: 'bar' }, h('span', { class: 't' }, `Ảnh ${i + 1}`), ...tools), imgField(root, p)));
+      } else {
+        list.append(h('div', { class: 'row' }, input(root, p), ...tools));
+      }
+    });
+    wrap.append(list, h('button', { class: 'btn sm add', onclick: () => add(path) }, '+ Thêm'));
+  } else if (v && typeof v === 'object') {
+    const g = h('div', { class: top ? '' : 'group' });
+    Object.keys(v).forEach((k) => g.append(field(root, [...path, k])));
+    wrap.append(g);
+  } else if (isImg(path)) wrap.append(imgField(root, path));
+  else wrap.append(input(root, path));
+  return wrap;
+}
+function input(root, path) {
+  const v = getAt(root, path), k = path[path.length - 1];
+  if (typeof v === 'boolean') return h('input', { type: 'checkbox', ...(v ? { checked: '' } : {}), onchange: (e) => { setAt(root, path, e.target.checked); markDirty(); } });
+  const num = typeof v === 'number';
+  const long = !num && (LONG.has(k) || String(v).length > 70);
+  const el = h(long ? 'textarea' : 'input', num ? { type: 'number', inputmode: 'numeric' } : {});
+  el.value = v ?? '';
+  el.oninput = () => { setAt(root, path, num ? Number(el.value || 0) : el.value); markDirty(); };
+  return el;
+}
+const imgSrc = (p) => NEW_IMG[p] || p;
+function imgField(root, path) {
+  const v = getAt(root, path) || '';
+  const pv = h('img', { alt: '' }); if (v) pv.src = imgSrc(v);
+  const txt = input(root, path); txt.placeholder = 'img/ten-anh.jpg';
+  txt.addEventListener('input', () => { pv.src = txt.value ? imgSrc(txt.value) : ''; });
+  const file = h('input', { type: 'file', accept: 'image/*', style: 'display:none', onchange: async (e) => {
+    const f = e.target.files[0]; if (!f) return;
+    try { const { name, url } = await shrink(f); NEW_IMG[name] = url; setAt(root, path, name); txt.value = name; pv.src = url; markDirty(); }
+    catch (err) { msg('eMsg', 'err', 'Không đọc được ảnh: ' + esc(err.message)); }
+  } });
+  return h('div', { class: 'imgf' }, pv, h('div', { class: 'c' }, txt, h('button', { class: 'btn sm', style: 'margin-top:6px', onclick: () => file.click() }, '🖼 Chọn ảnh từ máy'), file));
+}
+// Thu nhỏ ảnh (tối đa 1400px, JPG) cho web nhẹ
+function shrink(f) {
+  return new Promise((ok, bad) => {
+    const img = new Image(); img.onerror = () => bad(new Error('file không phải ảnh'));
+    img.onload = () => {
+      const s = Math.min(1, 1400 / Math.max(img.width, img.height)), c = document.createElement('canvas');
+      c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      ok({ name: `img/up-${Date.now().toString(36)}.jpg`, url: c.toDataURL('image/jpeg', .85) });
+      URL.revokeObjectURL(img.src);
+    };
+    img.src = URL.createObjectURL(f);
+  });
+}
+function add(path) { const arr = getAt(DOC[TAB], path); arr.push(arr.length ? blank(arr[0]) : ''); render(); markDirty(); }
+function remove(path, i) { const arr = getAt(DOC[TAB], path); const it = arr[i]; const name = typeof it === 'object' ? (it?.title || it?.name || it?.q || it?.label || '') : it; if (!confirm(`Xóa mục "${name || i + 1}"?`)) return; arr.splice(i, 1); render(); markDirty(); }
+function move(path, i, d) { const arr = getAt(DOC[TAB], path), j = i + d; if (j < 0 || j >= arr.length) return; [arr[i], arr[j]] = [arr[j], arr[i]]; render(); markDirty(); }
+
+// ---------- Xem trước + đăng ----------
+function preview() {
+  const used = JSON.stringify(DOC);
+  const images = Object.fromEntries(Object.entries(NEW_IMG).filter(([k]) => used.includes(k)));
+  try { localStorage.setItem('bs-draft', JSON.stringify({ site: DOC.site, games: DOC.games, images })); }
+  catch { try { localStorage.setItem('bs-draft', JSON.stringify({ site: DOC.site, games: DOC.games })); msg('eMsg', 'info', 'Ảnh mới quá nặng để xem trước — sẽ hiện sau khi đăng.'); } catch {} }
+  window.open('index.html?preview=1', '_blank');
+}
+function check() {
+  const g = DOC.games;
+  const ids = (g.games || []).map((x) => x.id);
+  if (ids.some((x) => !/^[a-z0-9]+$/.test(x || ''))) return 'Mã game chỉ dùng chữ thường không dấu và số, không để trống.';
+  if (new Set(ids).size !== ids.length) return 'Có 2 game trùng mã game.';
+  if ((g.games || []).some((x) => !(x.plans || []).length)) return 'Mỗi game cần ít nhất 1 gói thuê.';
+  return '';
+}
+async function publish() {
+  const bad = check(); if (bad) return msg('eMsg', 'err', bad);
+  if (!isDirty()) return msg('eMsg', 'info', 'Chưa có gì thay đổi.');
+  const b = $('bPublish'); b.disabled = true; b.textContent = '⏳ Đang đăng…';
+  try {
+    const used = JSON.stringify(DOC);
+    for (const [p, url] of Object.entries(NEW_IMG)) {
+      if (used.includes(p)) await writeFile(DIR + p, url.split(',')[1], null, `Admin: thêm ảnh ${p}`);
+      delete NEW_IMG[p];
+    }
+    for (const k of Object.keys(FILES)) {
+      const s = JSON.stringify(DOC[k], null, 2) + '\n';
+      if (JSON.stringify(DOC[k]) === ORIG[k]) continue;
+      const r = await writeFile(DIR + FILES[k], b64(te.encode(s)), SHA[k], `Admin: sửa ${FILES[k]}`);
+      SHA[k] = r.content.sha; ORIG[k] = JSON.stringify(DOC[k]);
+    }
+    markDirty(); render();
+    msg('eMsg', 'ok', `✅ Đã đăng! Web cập nhật sau khoảng 1–2 phút: <a href="./" target="_blank">mở web</a> (nếu chưa thấy thì tải lại trang).`);
+  } catch (e) { msg('eMsg', 'err', '❌ ' + esc(e.message)); }
+  finally { b.disabled = false; b.textContent = '🚀 Đăng lên web'; }
+}
+
+// ---------- Đăng nhập ----------
+async function enter() {
+  msg('lMsg', 'info', '⏳ Đang tải nội dung web…');
+  const [s, g] = await Promise.all([readFile(FILES.site), readFile(FILES.games)]);
+  DOC = { site: s.data, games: g.data }; SHA = { site: s.sha, games: g.sha };
+  ORIG = { site: JSON.stringify(s.data), games: JSON.stringify(g.data) };
+  $('eBrand').textContent = DOC.site.brand || '';
+  $('vLogin').hidden = true; $('vEdit').hidden = false; render(); markDirty();
+}
+function showLogin() {
+  $('vEdit').hidden = true; $('vLogin').hidden = false; $('lMsg').className = 'msg';
+  const has = !!store.get();
+  $('fSetup').hidden = has; $('fLogin').hidden = !has;
+  $('lSub').textContent = has ? 'Nhập mật khẩu để sửa web.' : 'Cài đặt lần đầu trên máy/điện thoại này.';
+  setTimeout(() => (has ? $('pw') : $('tok')).focus(), 50);
+}
+$('bSetup').onclick = async () => {
+  const t = $('tok').value.trim(), p1 = $('pw1').value, p2 = $('pw2').value;
+  if (!t) return msg('lMsg', 'err', 'Dán chìa khóa GitHub vào ô đầu tiên.');
+  if (p1.length < 8) return msg('lMsg', 'err', 'Mật khẩu cần ít nhất 8 ký tự.');
+  if (p1 !== p2) return msg('lMsg', 'err', 'Hai mật khẩu không giống nhau.');
+  TOKEN = t;
+  try { await enter(); store.set(await lock(t, p1)); $('tok').value = $('pw1').value = $('pw2').value = ''; }
+  catch (e) { TOKEN = null; msg('lMsg', 'err', '❌ ' + esc(e.message)); }
+};
+$('bLogin').onclick = async () => {
+  const box = store.get(); if (!box) return showLogin();
+  try { TOKEN = await unlock(box, $('pw').value); } catch { return msg('lMsg', 'err', '❌ Sai mật khẩu.'); }
+  $('pw').value = '';
+  try { await enter(); } catch (e) { msg('lMsg', 'err', '❌ ' + esc(e.message) + (e.status === 401 ? ' Bấm "Cài lại trên máy này" để dán chìa khóa mới.' : '')); }
+};
+$('pw').onkeydown = (e) => { if (e.key === 'Enter') $('bLogin').click(); };
+$('pw2').onkeydown = (e) => { if (e.key === 'Enter') $('bSetup').click(); };
+$('bReset').onclick = (e) => { e.preventDefault(); if (confirm('Xóa chìa khóa đã lưu trên máy này để cài lại?')) { store.del(); showLogin(); } };
+$('bOut').onclick = () => { if (isDirty() && !confirm('Có thay đổi chưa đăng. Vẫn đăng xuất?')) return; TOKEN = null; DOC = {}; showLogin(); };
+$('bPreview').onclick = preview; $('bPublish').onclick = publish;
+document.querySelectorAll('[data-tab]').forEach((b) => b.onclick = () => { TAB = b.dataset.tab; document.querySelectorAll('[data-tab]').forEach((x) => x.classList.toggle('on', x === b)); render(); });
+addEventListener('beforeunload', (e) => { if (TOKEN && isDirty()) { e.preventDefault(); e.returnValue = ''; } });
+fetch('site.json', { cache: 'no-cache' }).then((r) => r.json()).then((s) => { $('lBrand').textContent = s.brand || 'web'; }).catch(() => {});
+showLogin();
+</script>
+</body>
+</html>
