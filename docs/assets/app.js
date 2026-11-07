@@ -136,7 +136,7 @@ const PAGES = {
   game(P) {
     const a = P.author || {};
     main(`${pageHero(P)}
-    <section style="padding-top:30px"><div class="wrap"><div class="games" id="gameList">${(DATA.games || []).map((g) => `
+    <section style="padding-top:30px"><div class="wrap"><div class="games" id="gameList">${(DATA.games || []).filter((g) => !g.unlisted).map((g) => `
       <div class="game glass rv"><div class="shots">${(g.images || [g.image]).filter(Boolean).map((src) => `<img src="${esc(img(src))}" alt="${esc(g.name)}" loading="lazy" onclick="zoom(this.src)">`).join('')}</div>
         <div class="body"><h3>${esc(g.name)}</h3><p class="tl2">${esc(g.tagline)}</p><ul>${(g.features || []).map((f) => `<li>${esc(f)}</li>`).join('')}</ul>
           <div class="price">${(g.plans || []).map((p) => `<div>${esc(p.label)} · <b>${money(p.price)}</b></div>`).join('')}</div>

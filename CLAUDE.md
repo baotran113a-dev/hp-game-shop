@@ -19,6 +19,11 @@ Bảo kiểm tra tiền, mở `CAP-MA.bat` cấp mã → gửi mã qua Zalo → 
   Không làm hỏng các trường app đọc (`games[].version/download/changes`).
 - `cap-ma/server.mjs` + `index.html`: công cụ cấp mã (chỉ 127.0.0.1:8690), ký Ed25519 bằng `khoa-rieng/private.pem`; lưu khách ở `du-lieu/khach-hang.json`.
   Còn hạn thì cộng tiếp từ ngày hết hạn cũ. Số ngày tính cả hôm nay.
+  **Trừ ngày / Thu hồi** (07/11): nút "Trừ ngày" mỗi dòng → `/api/tru-ngay` ghi bản ghi `type:'tru'` (trạng thái khách = bản ghi MỚI NHẤT, không phải hạn lớn nhất),
+  sinh `docs/thu-hoi.json` (băm 20 ký tự của mã + hạn mới, ký Ed25519) rồi tự `git commit/push` riêng file đó. Mã có trường `i` (lúc cấp) nên mã cấp lại luôn khác mã đã thu hồi.
+  Game (`license.mjs` của cau-ca-online, le-thanh-hon; `app/license.py` của Auto Edit) tải danh sách mỗi 30 phút (tuyendungidol.vn → raw.githubusercontent → jsDelivr);
+  quá 3 ngày không tải được thì tạm khóa ("Cần kết nối mạng"). Chỉ có tác dụng với bản cài đã có code này. Thử: env `NO_PUSH=1 CAP_MA_DB=… CAP_MA_REVOKE=… CAP_MA_PORT=8692`.
+  **docs/thu-hoi.json phải luôn có trên web** (thiếu → game khách bị khóa sau 3 ngày).
 - `khoa-rieng/` và `du-lieu/` **không lưu git, không bao giờ đưa lên mạng**. Khóa công khai tương ứng nằm trong `license.mjs` của từng game.
 - Tên miền: **tuyendungidol.vn** (DNS ở Tenten, `docs/CNAME`; link github.io cũ tự chuyển).
 - **Thêm game mới**: (1) game copy `cau-ca-online/license.mjs`, đặt `game` = id; (2) file cài .exe đưa lên GitHub Releases của repo này (tag `<id>-v<version>`, như `cauca-v2.3.2`); (3) thêm mục vào `docs/games.json` (id, name, tagline, image/images, features, plans — giá do Bảo đưa, download, version, changes) + ảnh `docs/img/`; (4) xem thử 8691 → hỏi Bảo → push.

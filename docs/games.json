@@ -51,7 +51,7 @@
       ]
     },
     {
-      "id": "autoedit",
+      "id": "auto-edit",
       "name": "AUTO EDIT",
       "tagline": "App edit video tự động: ném video vào → cắt thô → phụ đề, zoom, hiệu ứng, nhạc → video TikTok 9:16",
       "image": "img/autoedit-1.jpg",
@@ -82,7 +82,7 @@
       ]
     },
     {
-      "id": "lophocchu",
+      "id": "lop-hoc-chu",
       "name": "Lớp Học Chữ",
       "tagline": "Lớp học tương tác TikTok LIVE: giải đố chữ, đuổi hình, toán nhanh và thi đua theo lớp.",
       "image": "img/lop-hoc-chu.webp",
@@ -135,8 +135,16 @@
         "Bản dùng thử có giả lập; kết nối TikTok LIVE cần mã HP1 hợp lệ."
       ],
       "plans": [
-        "1 tháng · 50.000đ",
-        "3 tháng · 100.000đ"
+        {
+          "days": 30,
+          "label": "1 tháng",
+          "price": 50000
+        },
+        {
+          "days": 90,
+          "label": "3 tháng",
+          "price": 100000
+        }
       ],
       "download": "https://github.com/baotran113a-dev/hp-game-shop/releases/download/le-thanh-hon-v1.0.1/LeThanhHon-Setup-1.0.1.exe",
       "version": "1.0.1",

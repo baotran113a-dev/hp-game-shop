@@ -19,7 +19,7 @@
   #out { display: none; margin-top: 14px; padding: 12px; border-radius: 10px; background: #0b1a24; border: 1px dashed var(--ok); }
   #key { font: 12px/1.4 monospace; word-break: break-all; height: 70px; }
   table { width: 100%; border-collapse: collapse; font-size: 14px; } th, td { text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--line); }
-  th { color: var(--mut); font-weight: 600; } .warn { color: var(--acc); } .dead { color: var(--bad); } .live { color: var(--ok); }
+  th { color: var(--mut); font-weight: 600; } button.minus { border-color: var(--bad); color: var(--bad); background: transparent; } .warn { color: var(--acc); } .dead { color: var(--bad); } .live { color: var(--ok); }
   @media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
 </style>
 </head>
@@ -57,14 +57,15 @@ const left = (e) => Math.round((Date.UTC(e / 10000 | 0, (e / 100 | 0) % 100 - 1,
 function drawDays() { $('days').innerHTML = DAYS.map(([d, t]) => `<button class="${d === days ? 'on' : ''}" onclick="days=${d};drawDays()">${t}</button>`).join(''); }
 function drawList() {
   const name = (id) => data.games.find((g) => g.id === id)?.name || id;
-  // Mỗi khách + máy + game chỉ hiện lần cấp mới nhất, sắp theo ngày hết hạn
+  // Mỗi khách + máy + game chỉ hiện trạng thái mới nhất (lần cấp hoặc lần trừ ngày sau cùng), sắp theo ngày hết hạn
   const last = {};
-  for (const r of data.list) { const k = r.game + r.machine; if (!last[k] || r.expires >= last[k].expires) last[k] = r; }
+  for (const r of data.list) last[r.game + r.machine] = r;
   $('list').innerHTML = Object.values(last).sort((a, b) => a.expires - b.expires).map((r) => {
     const n = left(r.expires), cls = n <= 0 ? 'dead' : n <= 3 ? 'warn' : 'live';
     return `<tr><td>${esc(r.customer || '—')}</td><td>${esc(name(r.game))}</td><td style="font-family:monospace">${r.machine}</td>
-      <td class="${cls}">${fmt(r.expires)} · ${n <= 0 ? 'hết hạn' : `còn ${n} ngày`}</td><td>${esc(r.note || '')}</td>
-      <td><button onclick="renew('${r.game}','${r.machine}')">Gia hạn</button></td></tr>`;
+      <td class="${cls}">${fmt(r.expires)} · ${n <= 0 ? (r.type === 'tru' ? 'đã thu hồi' : 'hết hạn') : `còn ${n} ngày`}${r.type === 'tru' && n > 0 ? ' <small class="warn">(đã trừ ngày)</small>' : ''}</td><td>${esc(r.note || '')}</td>
+      <td style="white-space:nowrap"><button onclick="renew('${r.game}','${r.machine}')">Gia hạn</button>
+        ${n > 0 ? `<button class="minus" onclick="cut('${r.game}','${r.machine}',${n})">Trừ ngày</button>` : ''}</td></tr>`;
   }).join('') || '<tr><td colspan="6" style="color:var(--mut)">Chưa cấp mã nào</td></tr>';
 }
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -87,6 +88,25 @@ async function issue() {
   $('outInfo').innerHTML = `✅ Mã cho máy <b>${j.machine}</b> — dùng đến hết ngày <b>${fmt(j.expires)}</b>`;
   $('key').value = j.key;
   const d = await (await fetch('/api/data')).json(); data.list = d.list; drawList();
+}
+async function cut(game, machine, n) {
+  const a = prompt(`Máy ${machine} còn ${n} ngày.
+Trừ bao nhiêu ngày? (gõ 0 = THU HỒI HẾT, khóa luôn)`, '0');
+  if (a === null) return;
+  const d = Math.round(Number(a));
+  if (!(d >= 0)) return alert('Số ngày không hợp lệ');
+  const revoke = d === 0 || d >= n;
+  const note = prompt('Ghi chú (vd: hoàn 100k ngày 07/11, khách không dùng nữa)', '');
+  if (note === null) return;
+  if (!confirm(revoke ? `THU HỒI mã của máy ${machine}? Game của khách sẽ bị khóa.` : `Trừ ${d} ngày của máy ${machine}?`)) return;
+  const r = await fetch('/api/tru-ngay', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ game, machine, days: d, revoke, note }) });
+  const j = await r.json();
+  if (!j.ok) return alert(j.error || 'Lỗi');
+  alert((revoke ? '✅ Đã thu hồi.' : `✅ Đã trừ, còn dùng đến hết ngày ${fmt(j.expires)}.`) + '\n' +
+    (j.pushed ? 'Đã đưa lên web — game của khách tự khóa trong khoảng 30–60 phút (khi có mạng).'
+      : '⚠️ Chưa đưa lên web được: ' + (j.msg || '') + '\nBáo Claude kiểm tra.'));
+  const dd = await (await fetch('/api/data')).json(); data.list = dd.list; drawList();
 }
 function copyKey() { navigator.clipboard.writeText($('key').value).then(() => { $('copied').textContent = 'Đã chép!'; }); }
 load();

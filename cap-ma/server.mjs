@@ -5,12 +5,18 @@ import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { execFileSync } from 'child_process';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PRIV = crypto.createPrivateKey(fs.readFileSync(path.join(ROOT, 'khoa-rieng', 'private.pem')));
-const DB = path.join(ROOT, 'du-lieu', 'khach-hang.json'); // danh sách mã đã cấp (không đưa lên mạng)
+const DB = process.env.CAP_MA_DB || path.join(ROOT, 'du-lieu', 'khach-hang.json'); // danh sách mã đã cấp (không đưa lên mạng)
 const GAMES = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs', 'games.json'), 'utf8'));
-const PORT = 8690;
+const PORT = Number(process.env.CAP_MA_PORT) || 8690;
+// Danh sách thu hồi (công khai trên web, game tải về kiểm tra mỗi 30 phút): chỉ chứa băm của mã + ngày hết hạn mới, có chữ ký
+const REVOKE = process.env.CAP_MA_REVOKE || path.join(ROOT, 'docs', 'thu-hoi.json');
+const keyHash = (key) => crypto.createHash('sha256').update(String(key).replace(/\s+/g, '')).digest('hex').slice(0, 20);
+// Trạng thái hiện tại của 1 khách = bản ghi MỚI NHẤT (cấp mã hoặc trừ ngày) của game + máy đó
+const latest = (game, m) => list.filter((x) => x.game === game && x.machine === m).pop();
 
 let list = [];
 try { list = JSON.parse(fs.readFileSync(DB, 'utf8')); } catch {}
@@ -36,19 +42,59 @@ app.post('/api/cap-ma', (req, res) => {
   const n = Math.round(Number(days));
   if (!(n >= 1 && n <= 3660)) return res.status(400).json({ error: 'Số ngày không hợp lệ' });
   // Gia hạn: còn hạn thì cộng tiếp từ ngày hết hạn cũ, hết rồi thì tính từ hôm nay
-  const old = list.filter((x) => x.game === game && x.machine === m).sort((a, b) => b.expires - a.expires)[0];
+  const old = latest(game, m);
   const today = todayVN();
   const start = old && old.expires >= today ? fromYmd(old.expires) : fromYmd(today);
   if (!(old && old.expires >= today)) start.setUTCDate(start.getUTCDate() - 1); // tính cả hôm nay
   start.setUTCDate(start.getUTCDate() + n);
   const expires = toYmd(start);
-  const key = signKey({ g: game, m, e: expires });
+  // i = số lần cấp: mã cấp lại luôn khác mã cũ (mã cũ có thể đã bị thu hồi)
+  const key = signKey({ g: game, m, e: expires, i: Date.now().toString(36) });
   const rec = { at: new Date().toISOString(), game, machine: m, days: n, expires, customer: String(customer || '').slice(0, 60), note: String(note || '').slice(0, 120), key };
   list.push(rec); save();
   res.json({ ok: true, ...rec });
 });
+// Trừ ngày / thu hồi: mọi mã cũ của máy này có hạn dài hơn ngày mới đều bị cắt (khách dán lại mã cũ cũng không được)
+function writeRevoke() {
+  const cut = {};
+  for (const r of list) if (r.type === 'tru') for (const k of r.cut || []) cut[k] = Math.min(cut[k] ?? Infinity, r.expires);
+  const items = Object.entries(cut).map(([k, e]) => ({ k, e })).sort((a, b) => (a.k < b.k ? -1 : 1));
+  const body = JSON.stringify(items);
+  const doc = { v: 1, at: new Date().toISOString(), list: items, sig: crypto.sign(null, Buffer.from(body), PRIV).toString('base64url') };
+  fs.writeFileSync(REVOKE, JSON.stringify(doc, null, 1) + '\n');
+}
+function pushRevoke() {
+  if (process.env.NO_PUSH === '1') return { pushed: false, msg: 'Thử nghiệm: không đẩy lên web' };
+  const git = (...a) => execFileSync('git', a, { cwd: ROOT, encoding: 'utf8', windowsHide: true, timeout: 60e3, stdio: 'pipe' });
+  try {
+    git('add', 'docs/thu-hoi.json');
+    try { git('commit', '-m', 'Cập nhật danh sách thu hồi mã', '--', 'docs/thu-hoi.json'); } catch {}
+    try { git('push'); } catch { git('pull', '--rebase', '--autostash'); git('push'); }
+    return { pushed: true };
+  } catch (e) { return { pushed: false, msg: String(e.stderr || e.message).slice(0, 300) }; }
+}
+app.post('/api/tru-ngay', (req, res) => {
+  const { game, machine, days, revoke, note } = req.body || {};
+  const m = String(machine || '').trim().toUpperCase();
+  const old = latest(game, m);
+  if (!old) return res.status(400).json({ error: 'Không tìm thấy khách này' });
+  const today = todayVN();
+  const n = Math.round(Number(days));
+  if (!revoke && !(n >= 1 && n <= 3660)) return res.status(400).json({ error: 'Số ngày không hợp lệ' });
+  const d = fromYmd(old.expires);
+  d.setUTCDate(d.getUTCDate() - (revoke ? 99999 : n));
+  const y = fromYmd(today); y.setUTCDate(y.getUTCDate() - 1); // khóa ngay = hết hạn từ hôm qua
+  const expires = Math.max(toYmd(d), toYmd(y));
+  const cut = list.filter((x) => x.game === game && x.machine === m && x.key && x.expires > expires).map((x) => keyHash(x.key));
+  const rec = { at: new Date().toISOString(), type: 'tru', game, machine: m, days: -(revoke ? Math.max(0, left(old.expires, today)) : n), expires,
+    customer: old.customer || '', note: String(note || '').slice(0, 120), cut };
+  list.push(rec); save(); writeRevoke();
+  res.json({ ok: true, ...rec, ...pushRevoke() });
+});
+const left = (e, today) => Math.round((fromYmd(e) - fromYmd(today)) / 864e5) + 1;
 app.get('/', (_q, res) => res.sendFile(path.join(ROOT, 'cap-ma', 'index.html')));
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
+  if (!fs.existsSync(REVOKE)) writeRevoke();
   app.listen(PORT, '127.0.0.1', () => console.log(`Cap ma kich hoat: http://localhost:${PORT}`));
 }
