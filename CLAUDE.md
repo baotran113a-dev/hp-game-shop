@@ -27,6 +27,8 @@ Bảo kiểm tra tiền, mở `CAP-MA.bat` cấp mã → gửi mã qua Zalo → 
 - `khoa-rieng/` và `du-lieu/` **không lưu git, không bao giờ đưa lên mạng**. Khóa công khai tương ứng nằm trong `license.mjs` của từng game.
 - Tên miền: **tuyendungidol.vn** (DNS ở Tenten, `docs/CNAME`; link github.io cũ tự chuyển).
 - **Thêm game mới**: (1) game copy `cau-ca-online/license.mjs`, đặt `game` = id; (2) file cài .exe đưa lên GitHub Releases của repo này (tag `<id>-v<version>`, như `cauca-v2.3.2`); (3) thêm mục vào `docs/games.json` (id, name, tagline, image/images, features, plans — giá do Bảo đưa, download, version, changes) + ảnh `docs/img/`; (4) xem thử 8691 → hỏi Bảo → push.
+- Phát hành file cài: `node phat-hanh.mjs <tag> <tiêu đề> <ghi chú> <file>` (tạo Release + tải file, dùng đăng nhập Git đã lưu) → sửa `version/download/changes` trong games.json → push.
+  ⚠️ Sửa games.json trên trang admin từng đổi mã game (`auto-edit`→`autoedit`) làm hỏng kích hoạt: mã game phải khớp `GAME` trong app.
 - Xem thử web: `node xem-web.mjs` (8691). Game dùng chung khóa: game mới copy `cau-ca-online/license.mjs`, đặt `game` = id trong games.json.
 
 - **Sản phẩm app (07/11): BH Studio Auto Edit** (id `auto-edit`, 10.000đ/tháng) — mã nguồn `D:\EDIT-VIDEO-TU-DONG` (Python, không phải Electron), file tải là zip trên Releases tag `auto-edit-v<version>`. App dùng chung mã HP1 + mã máy; chưa kích hoạt thì video có chữ BHSTUDIO.
