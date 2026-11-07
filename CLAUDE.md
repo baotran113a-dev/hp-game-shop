@@ -24,6 +24,8 @@ Bảo kiểm tra tiền, mở `CAP-MA.bat` cấp mã → gửi mã qua Zalo → 
 - **Thêm game mới**: (1) game copy `cau-ca-online/license.mjs`, đặt `game` = id; (2) file cài .exe đưa lên GitHub Releases của repo này (tag `<id>-v<version>`, như `cauca-v2.3.2`); (3) thêm mục vào `docs/games.json` (id, name, tagline, image/images, features, plans — giá do Bảo đưa, download, version, changes) + ảnh `docs/img/`; (4) xem thử 8691 → hỏi Bảo → push.
 - Xem thử web: `node xem-web.mjs` (8691). Game dùng chung khóa: game mới copy `cau-ca-online/license.mjs`, đặt `game` = id trong games.json.
 
+- **Sản phẩm app (07/11): BH Studio Auto Edit** (id `auto-edit`, 10.000đ/tháng) — mã nguồn `D:\EDIT-VIDEO-TU-DONG` (Python, không phải Electron), file tải là zip trên Releases tag `auto-edit-v<version>`. App dùng chung mã HP1 + mã máy; chưa kích hoạt thì video có chữ BHSTUDIO.
+
 ## Quy tắc
 - Không bịa giá/số tài khoản: chỉ điền khi Bảo đưa. Đăng web/file cài lên GitHub công khai phải hỏi Bảo trước.
 - Kho `hpmedia-posts` chỉ để ảnh/video bài đăng — không để file cài ở đó.

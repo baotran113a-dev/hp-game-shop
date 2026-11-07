@@ -14,12 +14,72 @@
       "name": "Câu Cá Online",
       "tagline": "9 con cá 3D, 20 ghế, 7 cần câu theo quà, cá Kim Long bốc thăm, thời tiết, BXH",
       "image": "img/cauca-1.jpg",
-      "images": ["img/cauca-1.jpg", "img/cauca-2.jpg", "img/cauca-3.jpg"],
-      "features": ["Bình luận 111 vào ghế, 1–9 chọn cá", "Thả tim = ném cần, có tỉ lệ trúng/hụt", "Tặng quà tự giật cần theo cấp Lv, hiệu ứng toàn màn hình", "Camera phóng to vào người chơi", "Cá Kim Long bốc thăm mỗi 5 phút", "Nhiệm vụ cả phòng, giờ vàng, mưa/tuyết/nắng", "Bảng xếp hạng cần thủ + tặng quà"],
-      "plans": [{ "days": 30, "label": "1 tháng", "price": 100000 }, { "days": 90, "label": "3 tháng", "price": 200000 }],
+      "images": [
+        "img/cauca-1.jpg",
+        "img/cauca-2.jpg",
+        "img/cauca-3.jpg"
+      ],
+      "features": [
+        "Bình luận 111 vào ghế, 1–9 chọn cá",
+        "Thả tim = ném cần, có tỉ lệ trúng/hụt",
+        "Tặng quà tự giật cần theo cấp Lv, hiệu ứng toàn màn hình",
+        "Camera phóng to vào người chơi",
+        "Cá Kim Long bốc thăm mỗi 5 phút",
+        "Nhiệm vụ cả phòng, giờ vàng, mưa/tuyết/nắng",
+        "Bảng xếp hạng cần thủ + tặng quà"
+      ],
+      "plans": [
+        {
+          "days": 30,
+          "label": "1 tháng",
+          "price": 100000
+        },
+        {
+          "days": 90,
+          "label": "3 tháng",
+          "price": 200000
+        }
+      ],
       "download": "https://github.com/baotran113a-dev/hp-game-shop/releases/download/cauca-v2.3.2/CauCaOnline-Setup-2.3.2.exe",
       "version": "2.3.2",
-      "changes": ["Trang điều khiển mới: gọn, bấm từng mục để mở ra chỉnh", "Ghế ngồi theo đúng đệm vẽ sẵn trong ảnh nền", "Tặng quà là tự giật cần ngay, cần câu theo cấp Lv", "Camera phóng to vào người chơi khi câu được cá", "Đổi nhạc nền bằng file mp3 của bạn"]
+      "changes": [
+        "Trang điều khiển mới: gọn, bấm từng mục để mở ra chỉnh",
+        "Ghế ngồi theo đúng đệm vẽ sẵn trong ảnh nền",
+        "Tặng quà là tự giật cần ngay, cần câu theo cấp Lv",
+        "Camera phóng to vào người chơi khi câu được cá",
+        "Đổi nhạc nền bằng file mp3 của bạn"
+      ]
+    },
+    {
+      "id": "auto-edit",
+      "name": "BH Studio Auto Edit",
+      "tagline": "App edit video tự động: ném video vào → cắt thô → phụ đề, zoom, hiệu ứng, nhạc → video TikTok 9:16",
+      "image": "img/autoedit-1.jpg",
+      "images": [
+        "img/autoedit-1.jpg",
+        "img/autoedit-2.jpg"
+      ],
+      "features": [
+        "Cắt thô tự động: bỏ khoảng lặng, từ đệm (à, ừ, ờm), nói lắp, câu nói hỏng rồi nói lại",
+        "Duyệt từng đoạn trước khi cắt, xem thử bản cắt liền mạch",
+        "Phụ đề chữ hoa tiếng Việt, từ khoá tô màu, tiêu đề mở đầu",
+        "Zoom che vết cắt, hiệu ứng âm thanh, nhạc nền tự giảm khi nói",
+        "Xuất 9:16 TikTok/Reels, 16:9 YouTube, 1:1; âm lượng chuẩn",
+        "Chạy ngay trên máy, không gửi video đi đâu",
+        "Dùng thử miễn phí đủ chức năng (video có chữ BHSTUDIO)"
+      ],
+      "plans": [
+        {
+          "days": 30,
+          "label": "1 tháng",
+          "price": 10000
+        }
+      ],
+      "download": "https://github.com/baotran113a-dev/hp-game-shop/releases/download/auto-edit-v1.0.0/BHStudio-AutoEdit-1.0.0-win64.zip",
+      "version": "1.0.0",
+      "changes": [
+        "Bản đầu tiên"
+      ]
     }
   ]
 }
