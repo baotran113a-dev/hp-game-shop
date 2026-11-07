@@ -1,0 +1,12 @@
+import { hasBad, cleanName, cleanText, speakSafe } from './loc-tu-bay.mjs';
+const bad = ['Lồn', 'thằng l0n', 'Đ.ị.t mẹ', 'đđịịịt', 'Địt', 'dm', 'Đm cuộc đời', 'VCL', 'vkl', 'c4c', 'Con Cặc', 'cặc', 'buồi', 'l-ồ-n', 'L O N'.toLowerCase() === 'l o n' ? 'l ồ n' : '', 'Đéo', 'óc chó', 'Oc Cho', 'fuck', 'FuUuck you', 'f*ck'.replace('*','u'), 'Dit me may', 'ditme', 'đụ má', 'Du Ma', 'chó đẻ', 'cá độ bóng đá', 'xxx', 'sexy girl', 'd1t', 'dcm', 'Đĩ', 'con đĩ', 'cứt'];
+const ok = ['Lớn', 'Hoa Lồng Đèn', 'Các bạn ơi', 'Buổi tối vui', 'Đeo nhẫn', 'Đĩa nhạc', 'Đụng xe', 'Lon bia', 'Học chơi', 'Con lớn', 'Đinh Thị Hà', 'Đức Đỉnh', 'Du lịch', 'Dịu dàng', 'Cường', 'Hoàng Long 99', 'Bé Mi', 'Nguyễn Văn Đức', 'đẹp trai', 'Đi chơi', 'Cục cưng', 'Chú Rể', 'Cave Story'.slice(0,0) || 'Thảo My', 'Vân Anh', 'Lộc', 'Lan Hương', 'Đen Vâu', 'Đĩnh đạc', 'Kim Chi', 'Hoa Mai', 'Đụn cát', 'Thanh Hà', 'Dương', 'Đạt', 'Vĩ', 'Mỹ Duyên', 'Cúc', 'Ngọc Diệp', 'Tú', 'Quyên'];
+let miss = bad.filter((s) => s && !hasBad(s)), fp = ok.filter((s) => hasBad(s));
+console.log('BAT SOT:', miss.length ? miss : 'khong');
+console.log('BAT NHAM:', fp.length ? fp : 'khong');
+console.log(cleanName('Đ.ị.t mẹ mày', 'Khách quý'), '|', cleanText('chúc mừng dm hạnh phúc'), '|', cleanText('địt mẹ'), '|', JSON.stringify(speakSafe('Cảm ơn thằng l0n đã tặng quà')));
+const names = ['Thằng Béo', 'Gầy Gò', 'Ngu Ngơ', 'Cao Thắng', 'Đen Vâu', 'Con Chó', 'heo con', 'Fat Boy', 'Mr Stupid', 'BÉO PHÌ', 'béoooo'];
+const keep = ['Thảo My', 'Cho Em', 'Cáo Già'.replace('Già', 'Nhỏ'), 'Đèn Lồng', 'Ngân', 'Đức', 'Bé Mi', 'Hoa Hậu Làng', 'Anh Nông Dân 9x', 'Gấu Mập'.replace('Mập', 'Bông'), 'Caothu'];
+console.log('TEN CHE:', names.map((n) => cleanName(n)).join(' | '));
+console.log('TEN GIU:', keep.map((n) => cleanName(n)).join(' | '));
+console.log('MC DOC:', JSON.stringify(speakSafe(`Cảm ơn ${cleanName('Thằng Béo')} đã tặng quà!`)), JSON.stringify(speakSafe(`Ối! ${cleanName('Con Chó')} xông lên phá đám cưới!`)));

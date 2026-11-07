@@ -36,3 +36,4 @@ Bảo kiểm tra tiền, mở `CAP-MA.bat` cấp mã → gửi mã qua Zalo → 
 ## Quy tắc
 - Không bịa giá/số tài khoản: chỉ điền khi Bảo đưa. Đăng web/file cài lên GitHub công khai phải hỏi Bảo trước.
 - Kho `hpmedia-posts` chỉ để ảnh/video bài đăng — không để file cài ở đó.
+- **Lọc từ bậy (07/11, Bảo chốt)**: bản gốc `loc-tu-bay/loc-tu-bay.mjs` (+ `kiem-tra.mjs` để thử). Tên có từ cấm (tục + chê ngoại hình: béo, gầy, cao, đen… danh sách `NAME_WORDS`) → `***`, MC không đọc (`speakSafe` bỏ ***); bình luận bậy → che. Chép sang: cau-ca-online/le-thanh-hon `loc-tu-bay.mjs` (lọc trong `broadcast` + `/api/tts`), lop-hoc-chu `src/live/locTuBay.ts`, beer-club `loc-tu-bay.cjs` + `games/loc-tu-bay.js`. Sửa bản gốc rồi chép lại cả 4.
