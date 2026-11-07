@@ -117,6 +117,32 @@
       "changes": [
         "Bản đầu tiên · giao diện BH Studio và mã kích hoạt HP1"
       ]
+    },
+    {
+      "id": "lethanhhon",
+      "name": "Lễ Thành Hôn",
+      "tagline": "Game cưới 3D tương tác cho TikTok LIVE: khách vào tiệc, tặng quà để tham gia nghi lễ. Tải bản dùng thử trước khi mua.",
+      "image": "img/up-mw5xxm1s.jpg",
+      "images": [
+        "img/up-mw5xz411.jpg"
+      ],
+      "features": [
+        "Khách vào tiệc; bình luận chúc mừng hiện trên sân khấu.",
+        "Tặng quà để đăng ký cô dâu/chú rể, mừng vàng, nhảy, phá đám và đãi rượu.",
+        "Nghi lễ cưới 6 bước tự chạy với cô dâu chú rể 3D, sân khấu hoa giấy.",
+        "Tùy chỉnh ảnh nền, nhân vật, nhạc, chữ và bố cục.",
+        "Dùng TikTok LIVE Studio hoặc OBS; sân khấu hỗ trợ đến 200 khách.",
+        "Bản dùng thử có giả lập; kết nối TikTok LIVE cần mã HP1 hợp lệ."
+      ],
+      "plans": [
+        "1 tháng · 50.000đ",
+        "3 tháng · 100.000đ"
+      ],
+      "download": "https://github.com/baotran113a-dev/hp-game-shop/releases/download/le-thanh-hon-v1.0.1/LeThanhHon-Setup-1.0.1.exe",
+      "version": "1.0.1",
+      "changes": [
+        "Bản thử nghiệm: sân khấu giả lập; kích hoạt HP1 để kết nối LIVE."
+      ]
     }
   ]
 }
