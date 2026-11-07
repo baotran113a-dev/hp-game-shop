@@ -40,14 +40,12 @@
           "price": 100000
         }
       ],
-      "download": "https://github.com/baotran113a-dev/hp-game-shop/releases/download/cauca-v2.3.2/CauCaOnline-Setup-2.3.2.exe",
-      "version": "2.3.2",
+      "download": "https://github.com/baotran113a-dev/hp-game-shop/releases/download/cauca-v2.3.3/CauCaOnline-Setup-2.3.3.exe",
+      "version": "2.3.3",
       "changes": [
-        "Trang điều khiển mới: gọn, bấm từng mục để mở ra chỉnh",
-        "Ghế ngồi theo đúng đệm vẽ sẵn trong ảnh nền",
-        "Tặng quà là tự giật cần ngay, cần câu theo cấp Lv",
-        "Camera phóng to vào người chơi khi câu được cá",
-        "Đổi nhạc nền bằng file mp3 của bạn"
+        "Sửa lỗi không hiện icon quà ở một số mạng",
+        "Thêm bảo vệ mã kích hoạt (cần có mạng)",
+        "Banner liên kết web game mới tuyendungidol.vn"
       ]
     },
     {
@@ -75,10 +73,11 @@
           "price": 10000
         }
       ],
-      "download": "https://github.com/baotran113a-dev/hp-game-shop/releases/download/auto-edit-v1.0.0/BHStudio-AutoEdit-1.0.0-win64.zip",
-      "version": "1.0.0",
+      "download": "https://github.com/baotran113a-dev/hp-game-shop/releases/download/auto-edit-v1.0.1/BHStudio-AutoEdit-1.0.1-win64.zip",
+      "version": "1.0.1",
       "changes": [
-        "Bản đầu tiên"
+        "Thêm bảo vệ mã kích hoạt (cần có mạng)",
+        "Banner tuyển Idol + web game"
       ]
     },
     {
@@ -146,10 +145,15 @@
           "price": 100000
         }
       ],
-      "download": "https://github.com/baotran113a-dev/hp-game-shop/releases/download/le-thanh-hon-v1.0.1/LeThanhHon-Setup-1.0.1.exe",
-      "version": "1.0.1",
+      "download": "https://github.com/baotran113a-dev/hp-game-shop/releases/download/le-thanh-hon-v1.0.2/LeThanhHon-Setup-1.0.2.exe",
+      "version": "1.0.2",
       "changes": [
-        "Bản thử nghiệm: sân khấu giả lập; kích hoạt HP1 để kết nối LIVE."
+        "Đeo nhẫn: chú rể quỳ mở hộp nhẫn, đeo cho cô dâu",
+        "Rót rượu: cô dâu chú rể cùng nâng chai rót tháp ly",
+        "Hôn nhau và chú rể bế cô dâu ra về khi chúc phúc",
+        "Phá đám: rượt nhau trên sân khấu rồi HUỶ HÔN, nghi lễ làm lại từ đầu",
+        "Sửa lỗi không hiện icon quà ở một số mạng",
+        "Banner tuyển Idol + web game; bảo vệ mã kích hoạt (cần có mạng)"
       ]
     }
   ]
