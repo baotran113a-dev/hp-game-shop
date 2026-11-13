@@ -1,0 +1,372 @@
+{
+ "shop": {
+  "name": "BH STUDIO",
+  "slogan": "Game tương tác cho TikTok LIVE — bình luận, thả tim, tặng quà là chơi",
+  "zalo": "0364123425"
+ },
+ "games": [
+  {
+   "id": "cauca",
+   "name": "Câu Cá Online",
+   "tagline": "Hồ sen 3D, 20 người đứng câu, quà = buff hào quang 5 cấp, rồng nước/rồng vàng, câu rơi trang phục, BXH",
+   "image": "img/cauca-bia.jpg",
+   "images": [
+    "img/cauca-bia.jpg",
+    "img/cauca-4.jpg",
+    "img/cauca-1.jpg",
+    "img/cauca-2.jpg",
+    "img/cauca-3.jpg"
+   ],
+   "features": [
+    "Bình luận bất kỳ hoặc thả tim là vào câu, không cần cú pháp",
+    "20 nhân vật chibi đứng câu dọc bờ hồ, có tên + ảnh đại diện",
+    "Tặng quà = BUFF hào quang 5 cấp (mỗi cấp 1 icon quà), cấp cao có rồng nước, rồng vàng",
+    "Câu cá rơi trang phục: cánh, mũ, áo choàng, thú cưng — giữ luôn",
+    "Camera zoom cận cảnh khi câu được cá, kích buff",
+    "Cá Kim Long bốc thăm, nhiệm vụ cả phòng, giờ vàng, mưa/tuyết/nắng",
+    "Bảng xếp hạng cần thủ + tặng quà, nhạc nền + hiệu ứng âm thanh"
+   ],
+   "plans": [
+    {
+     "days": 36500,
+     "label": "Vĩnh viễn",
+     "price": 596000
+    }
+   ],
+   "version": "2.4.7",
+   "changes": [
+    "Sửa lỗi nút điều khiển và lưu link nhạc YouTube."
+   ],
+   "videos": [
+    {
+     "label": "Xem demo",
+     "url": "https://www.youtube.com/watch?v=QiINJoXCLgc&t=29s"
+    }
+   ]
+  },
+  {
+   "id": "auto-edit",
+   "name": "AUTO EDIT",
+   "tagline": "App edit video tự động: ném video vào → cắt thô → 11 kiểu edit, B-roll, timeline như CapCut → video TikTok 9:16",
+   "image": "img/autoedit-kieu-1.jpg",
+   "images": [
+    "img/autoedit-kieu-1.jpg",
+    "img/autoedit-ui-timeline.jpg",
+    "img/autoedit-kieu-2.jpg",
+    "img/autoedit-ui-kieu.jpg",
+    "img/autoedit-ui-duyet.jpg"
+   ],
+   "features": [
+    "Cắt thô tự động: bỏ khoảng lặng, từ đệm (à, ừ, ờm), nói lắp, câu nói hỏng rồi nói lại",
+    "Duyệt từng đoạn trước khi cắt, xem thử bản cắt liền mạch",
+    "11 kiểu edit: Viral, Karaoke, Dễ thương, Kịch tính, Motion graphic, Bán hàng, Điện ảnh…",
+    "Chèn B-roll (clip/ảnh sản phẩm) tự động",
+    "TIMELINE như CapCut: kéo thả, sửa từng chi tiết",
+    "Tự cập nhật bản mới, bấm 1 nút",
+    "Phụ đề chữ hoa tiếng Việt, từ khoá tô màu, tiêu đề mở đầu",
+    "Zoom che vết cắt, hiệu ứng âm thanh, nhạc nền tự giảm khi nói",
+    "Xuất 9:16 TikTok/Reels, 16:9 YouTube, 1:1; âm lượng chuẩn",
+    "Chạy ngay trên máy, không gửi video đi đâu",
+    "Dùng thử miễn phí đủ chức năng (video có chữ BHSTUDIO)"
+   ],
+   "plans": [
+    {
+     "days": 30,
+     "label": "1 tháng",
+     "price": 150000
+    },
+    {
+     "days": 90,
+     "label": "3 tháng",
+     "price": 300000
+    }
+   ],
+   "version": "1.2.2",
+   "changes": [
+    "Giao diện gọn mắt, bỏ icon trong nút và tiêu đề",
+    "Giá thuê trong app theo web: 150.000đ/1 tháng, 300.000đ/3 tháng"
+   ],
+   "kind": "app"
+  },
+  {
+   "id": "lop-hoc-chu",
+   "name": "Lớp Học Chữ",
+   "tagline": "Lớp học tương tác TikTok LIVE: giải đố chữ, đuổi hình, toán nhanh và thi đua theo lớp.",
+   "image": "img/lop-hoc-chu-bia.jpg",
+   "images": [
+    "img/lop-hoc-chu-bia.jpg",
+    "img/lop-hoc-chu.webp",
+    "img/lop-hoc-chu-gameplay-01.jpg",
+    "img/lop-hoc-chu-gameplay-02.jpg",
+    "img/lop-hoc-chu-gameplay-03.jpg",
+    "img/lop-hoc-chu-gameplay-04.jpg"
+   ],
+   "features": [
+    "20 câu mỗi tiết, gồm đố chữ, toán, tiếng Anh và lịch sử",
+    "Người xem trả lời qua bình luận, xếp điểm theo tốc độ",
+    "Cô giáo đọc đề tiếng Việt và tương tác cùng người xem",
+    "Tích hợp quà, lượt thích, bảng điểm và trò chơi giờ ra chơi",
+    "Dùng với TikTok LIVE Studio hoặc OBS"
+   ],
+   "plans": [
+    {
+     "days": 36500,
+     "label": "Vĩnh viễn",
+     "price": 100000
+    }
+   ],
+   "version": "1.0.3",
+   "changes": [
+    "Tự cập nhật trong game: bấm Cập nhật ngay là tự tải, tự cài, tự mở lại",
+    "Nhạc YouTube: dán link là phát, chỉnh âm lượng ngay",
+    "Giọng đọc nhấn nhá tự nhiên hơn",
+    "Link LIVE Studio mới: live.tuyendungidol.vn"
+   ]
+  },
+  {
+   "id": "lethanhhon",
+   "name": "Lễ Thành Hôn",
+   "tagline": "Game cưới 3D tương tác cho TikTok LIVE: khách vào tiệc, tặng quà để tham gia nghi lễ. Tải bản dùng thử trước khi mua.",
+   "image": "img/lethanhhon-bia.jpg",
+   "images": [
+    "img/lethanhhon-bia.jpg",
+    "img/up-mw5xz411.jpg"
+   ],
+   "features": [
+    "Khách vào tiệc; bình luận chúc mừng hiện trên sân khấu.",
+    "Tặng quà để đăng ký cô dâu/chú rể, mừng vàng, nhảy, phá đám và đãi rượu.",
+    "Nghi lễ cưới 6 bước tự chạy với cô dâu chú rể 3D, sân khấu hoa giấy.",
+    "Tùy chỉnh ảnh nền, nhân vật, nhạc, chữ và bố cục.",
+    "Dùng TikTok LIVE Studio hoặc OBS; sân khấu hỗ trợ đến 200 khách.",
+    "Bản dùng thử có giả lập; kết nối TikTok LIVE cần mã kích hoạt."
+   ],
+   "plans": [
+    {
+     "days": 36500,
+     "label": "Vĩnh viễn",
+     "price": 599000
+    }
+   ],
+   "version": "1.0.20",
+   "changes": [
+    "Mở khoá quà tặng bất cứ lúc nào, MC dẫn chuyện liên tục, góp vui nhảy nhiều người, nhiều cải tiến."
+   ],
+   "videos": [
+    {
+     "label": "Hướng dẫn tải",
+     "url": "https://www.youtube.com/watch?v=3w0iUjI39J4"
+    }
+   ]
+  },
+  {
+   "id": "sontinh",
+   "name": "Sơn Tinh vs Thủy Tinh",
+   "tagline": "Game đấu 2 phe cho TikTok LIVE: người xem tặng quà để Sơn Tinh hoặc Thủy Tinh tung chiêu, bình luận 1 / 2 để góp sức. Tải bản dùng thử trước khi mua.",
+   "image": "img/sontinh-bia.jpg",
+   "images": [
+    "img/sontinh-bia.jpg",
+    "img/sontinh-1.jpg",
+    "img/sontinh-2.jpg",
+    "img/sontinh-3.jpg",
+    "img/sontinh-4.jpg"
+   ],
+   "features": [
+    "Sàn đấu Sơn Tinh vs Thủy Tinh, nhân vật và hiệu ứng chuyển động mượt.",
+    "Mỗi phe 8 chiêu theo quà: chưởng, dựng núi, sóng biển, khiên chặn đòn, rồng đất, rồng nước, combo VIP.",
+    "Bình luận \"1\" giúp Sơn Tinh ném đá, \"2\" giúp Thủy Tinh phóng cá; chống spam 30 giây mỗi người.",
+    "Bên thắng được Mị Nương cưỡi mây bay xuống ôm; giọng đọc nam/nữ có nhấn nhá.",
+    "Giả lập tự ra chiêu khi live vắng (không hiện tên người tặng), tự tắt khi có người bình luận.",
+    "Bảng TOP người ủng hộ mỗi phe, tính ván thắng, MVP.",
+    "Nhạc nền dán link YouTube là phát, chỉnh to nhỏ riêng nhạc và tiếng hiệu ứng.",
+    "Lọc từ cấm có sẵn; tự chọn quà, tên chiêu, sát thương, máu.",
+    "Dùng TikTok LIVE Studio hoặc OBS. Bản dùng thử chơi thử đủ chiêu; kết nối TikTok LIVE cần mã kích hoạt."
+   ],
+   "plans": [
+    {
+     "days": 36500,
+     "label": "Vĩnh viễn",
+     "price": 699000
+    }
+   ],
+   "version": "1.0.7",
+   "changes": [
+    "Sửa lỗi lưu cài đặt và link nhạc YouTube (bản làm rối)."
+   ]
+  },
+  {
+   "id": "diemdanh",
+   "name": "Điểm Danh Quê Hương",
+   "tagline": "Game bản đồ 63 tỉnh cho TikTok LIVE: người xem bình luận tên tỉnh là bản đồ bay tới, tặng quà được đọc tên kèm quê. Tải bản dùng thử trước khi mua.",
+   "image": "img/diemdanh-bia.jpg",
+   "images": [
+    "img/diemdanh-bia.jpg",
+    "img/diemdanh-1.jpg",
+    "img/diemdanh-2.jpg",
+    "img/diemdanh-3.jpg",
+    "img/diemdanh-4.jpg"
+   ],
+   "features": [
+    "Bản đồ Việt Nam 63 tỉnh (có Hoàng Sa, Trường Sa), bình luận tên tỉnh là bản đồ phóng tới tỉnh đó.",
+    "Hiểu cả tên không dấu, viết tắt (hn, sg, hcm, bmt…) và tên thành phố quen (Đà Lạt, Nha Trang…); chống spam 30 giây mỗi người.",
+    "Quà được đọc tên: \"Hoa hồng từ … đã tới Đắk Lắk\" — tự chọn quà nào được đọc, quà \"Đọc ngay\" chen lên đầu hàng chờ.",
+    "Giọng đọc nam đọc liền câu, chào từng tỉnh kèm danh lam thắng cảnh và đặc sản 63 tỉnh.",
+    "Vòng 2 phút, tổng kết tỉnh đứng đầu, bục TOP 3 tỉnh có avatar người góp nhiều nhất.",
+    "Đếm số người mỗi tỉnh cộng dồn qua các buổi live; khung hàng chờ quà và nhắc người tặng chưa chọn tỉnh.",
+    "Giả lập khi live vắng (không hiện tên), nhạc nền dán link YouTube là phát, lọc từ cấm có sẵn.",
+    "Dùng TikTok LIVE Studio hoặc OBS. Bản dùng thử chơi thử đủ nút Thử; kết nối TikTok LIVE cần mã kích hoạt."
+   ],
+   "plans": [
+    {
+     "days": 36500,
+     "label": "Vĩnh viễn",
+     "price": 150000
+    }
+   ],
+   "version": "1.0.3",
+   "changes": [
+    "Sửa lỗi lưu cài đặt và link nhạc YouTube (bản làm rối)."
+   ]
+  },
+  {
+   "id": "diemdanh3d",
+   "name": "Điểm Danh Quê Hương 3D",
+   "tagline": "Game bản đồ 3D cho TikTok LIVE: thắp sáng 34 tỉnh đỏ vàng rồi bay tới danh lam thật bằng ảnh vệ tinh, MC giới thiệu từng vùng đất. Tải bản dùng thử trước khi mua.",
+   "image": "img/diemdanh3d-bia.jpg",
+   "images": [
+    "img/diemdanh3d-bia.jpg",
+    "img/diemdanh3d-1.jpg",
+    "img/diemdanh3d-2.jpg",
+    "img/diemdanh3d-3.jpg",
+    "img/diemdanh3d-4.jpg"
+   ],
+   "features": [
+    "Chế độ \"Thắp sáng bản đồ Việt Nam\": bản đồ 34 tỉnh đỏ vàng, người xem gõ tên tỉnh + tặng quà là tỉnh đó bừng sáng đèn vàng.",
+    "Bay 3D thật tới danh lam: ảnh vệ tinh + địa hình nổi khối, máy quay hạ từ trên cao xuống xoay quanh thắng cảnh.",
+    "MC giới thiệu đúng cảnh — cảnh tới đâu đọc đến đó: tên danh lam, đặc sản từng tỉnh; tỉnh gộp bay lần lượt qua các tỉnh cũ.",
+    "Hiểu cả tên tỉnh cũ (gõ \"Bình Định\" vẫn sáng Gia Lai), tên không dấu, viết tắt; chống spam 30 giây mỗi người.",
+    "Vắng người xem thì MC tự giới thiệu các tỉnh và tự bật giả lập (không hiện tên, không cộng điểm); có bình luận hoặc quà thật là tự tắt.",
+    "Tỉnh dẫn đầu có ảnh thật danh lam (nguồn Wikimedia, ghi tác giả); TOP 5, hàng chờ đọc tên, thống kê đã sáng / còn lại.",
+    "Giọng đọc nam/nữ nhấn nhá, nhạc nền dán link YouTube là phát, lọc từ cấm có sẵn; đồ hoạ nét, không SFX/pháo hoa.",
+    "Dùng TikTok LIVE Studio hoặc OBS. Bản dùng thử chơi thử đủ nút \"Thử\"; kết nối TikTok LIVE cần mã kích hoạt. Máy yếu bật ?q=low."
+   ],
+   "plans": [
+    {
+     "days": 36500,
+     "label": "Vĩnh viễn",
+     "price": 399000
+    }
+   ],
+   "version": "1.0.4",
+   "changes": [
+    "Sửa lỗi lưu cài đặt và link nhạc YouTube (bản làm rối)."
+   ]
+  },
+  {
+   "id": "haichien",
+   "name": "Hải Chiến Live",
+   "tagline": "Game bắn tàu cho TikTok LIVE: người xem bình luận toạ độ (C5, A2A4A5) để bắn, tặng quà được vũ khí lớn, đánh chìm hết hạm đội là thắng. Tải bản dùng thử trước khi mua.",
+   "image": "img/haichien-bia.jpg",
+   "images": [
+    "img/haichien-bia.jpg",
+    "img/haichien-1.jpg",
+    "img/haichien-2.jpg",
+    "img/haichien-3.jpg",
+    "img/haichien-4.jpg"
+   ],
+   "features": [
+    "Bàn radar 8×8, 5 tàu địch ẩn; người xem bình luận toạ độ như C5 là bắn, chống spam 30 giây mỗi người.",
+    "6 vũ khí theo quà: Đạn Pháo, Loạt Pháo 3 phát, Bom Chùm 3×3, Ngư Lôi quét 1 hàng, Tên Lửa Dò Tìm trúng chắc, Siêu Bom 5×5 — tự chọn quà cho từng vũ khí.",
+    "Tặng quà xong người tặng tự chọn ô (gõ nhiều ô liền: A2A4A5), có khung hướng dẫn + đếm ngược; quá giờ tàu tự nhắm bắn giúp.",
+    "Hiện ảnh đại diện + tên người bắn, bảng TOP xạ thủ, MVP mỗi ván, tự sang ván mới.",
+    "Hiệu ứng biển động, tên lửa, cháy nổ, tàu chìm, pháo hoa; tiếng nổ to rõ, giọng đọc nam/nữ.",
+    "Giả lập khi live vắng (không hiện tên), nhạc nền dán link YouTube là phát, lọc từ cấm có sẵn, máy yếu chạy nhẹ.",
+    "Dùng TikTok LIVE Studio hoặc OBS. Bản dùng thử bắn thử đủ nút Thử; kết nối TikTok LIVE cần mã kích hoạt."
+   ],
+   "plans": [
+    {
+     "days": 36500,
+     "label": "Vĩnh viễn",
+     "price": 100000
+    }
+   ],
+   "version": "1.0.2",
+   "changes": [
+    "Sửa lỗi lưu cài đặt và link nhạc YouTube (bản làm rối)."
+   ]
+  },
+  {
+   "id": "beer-club",
+   "name": "Beer Club VIP",
+   "tagline": "Quán bia rooftop neon cho TikTok LIVE: bình luận là vào bàn, cụng ly 123 dô, tặng quà gọi mồi, tháp bia, vũ công, bao trọn club",
+   "image": "img/beer-club-bia.jpg",
+   "images": [
+    "img/beer-club-bia.jpg",
+    "img/beer-club-1.jpg",
+    "img/beer-club-2.jpg"
+   ],
+   "features": [
+    "Bình luận \"vô / dzô\" là vào bàn, có tên + bong bóng chat, 20 bàn",
+    "Gõ \"cụng / 123 dô\" cả quán cụng ly",
+    "Tặng quà: gọi mồi, tháp bia, em xinh chúc, vũ công nhảy, bao trọn club",
+    "Thả tim đủ mốc là mưa bia, mốc khai tiệc cả phòng cùng làm",
+    "Bảng TOP đại gia, ghế VIP, làm DJ",
+    "Nhạc nền + hiệu ứng, dùng TikTok LIVE Studio hoặc OBS (khung dọc 1080 × 1920)"
+   ],
+   "plans": [
+    {
+     "days": 36500,
+     "label": "Vĩnh viễn",
+     "price": 100000
+    }
+   ],
+   "version": "1.2.9",
+   "changes": [
+    "Sửa lỗi không kết nối được TikTok LIVE; link LIVE Studio hiện đúng khung dọc, không bị rộng."
+   ]
+  },
+  {
+   "id": "nhanvatao",
+   "name": "BH NHÂN VẬT ẢO",
+   "tagline": "Live không lộ mặt: nhân vật 3D nhại theo webcam của bạn, ngồi gõ phím, đổi giọng. Thú chibi tự thiết kế + nạp nhân vật người 3D (.vrm).",
+   "image": "img/nhanvatao-bia.png",
+   "images": [
+    "img/nhanvatao-bia.png",
+    "img/nhanvatao-1.jpg",
+    "img/nhanvatao-2.jpg",
+    "img/nhanvatao-3.png"
+   ],
+   "features": [
+    "Nhân vật nhại theo mặt bạn qua webcam: quay đầu, chớp mắt, nhép miệng, cười — che mặt khi live",
+    "8 thú chibi dễ thương + nhân vật \"Tổng Tài\" vest đen; tự đổi loài, áo, màu, phụ kiện",
+    "Nạp nhân vật người 3D (.vrm) của riêng bạn — ngồi bàn gõ phím, rê chuột theo tay thật",
+    "Ra tay theo cử chỉ: vẫy tay, chữ V, like, thả tim, cố lên",
+    "26 kiểu đổi giọng (chibi, robot, ma, ông chú, hợp xướng…), miệng nhép theo micro",
+    "Nền trong suốt / xanh lá — đưa thẳng vào TikTok LIVE Studio hoặc OBS",
+    "Chế độ giả lập: nhân vật tự cử động khi quay demo",
+    "Nhẹ máy, chạy 60 khung/giây; bảng điều khiển chia mục rõ ràng"
+   ],
+   "plans": [
+    {
+     "days": 30,
+     "label": "1 tháng",
+     "price": 200000
+    },
+    {
+     "days": 90,
+     "label": "3 tháng",
+     "price": 300000
+    },
+    {
+     "days": 36500,
+     "label": "Vĩnh viễn",
+     "price": 600000
+    }
+   ],
+   "version": "1.0.0",
+   "changes": [
+    "Bản đầu tiên: nhân vật 3D theo webcam, 8 thú chibi + Tổng Tài, người 3D ngồi gõ máy, 26 kiểu đổi giọng, nền trong suốt cho LIVE Studio/OBS"
+   ],
+   "kind": "app"
+  }
+ ]
+}

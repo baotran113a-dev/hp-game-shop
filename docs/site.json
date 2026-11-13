@@ -1,0 +1,1013 @@
+{
+  "brand": "BH Studio",
+  "logo": "img/bh-studio-logo.png",
+  "seoDescription": "BH Studio tuyển Idol & NPC TikTok LIVE tại Buôn Ma Thuột: đào tạo từ A–Z, miễn phí cài TikTok LIVE Studio và làm đẹp Douyin, game LIVE tương tác.",
+  "social": {
+    "facebook": "https://www.facebook.com/Hpmediabmt",
+    "tiktok": "https://www.tiktok.com/@hpmedia.bmt"
+  },
+  "nav": [
+    {
+      "label": "Trang chủ",
+      "href": "./"
+    },
+    {
+      "label": "Quyền lợi",
+      "href": "quyen-loi"
+    },
+    {
+      "label": "Idol & NPC",
+      "href": "idol"
+    },
+    {
+      "label": "Tuyển dụng Idol",
+      "href": "tuyen-dung-idol"
+    },
+    {
+      "label": "Đào tạo",
+      "href": "dao-tao"
+    },
+    {
+      "label": "Game LIVE",
+      "href": "game"
+    },
+    {
+      "label": "Phần mềm",
+      "href": "game#phan-mem"
+    },
+    {
+      "label": "Hỏi đáp",
+      "href": "hoi-dap"
+    },
+    {
+      "label": "Nội bộ",
+      "href": "noi-bo"
+    }
+  ],
+  "navCta": "Ứng tuyển",
+  "home": {
+    "seoTitle": "Tuyển Idol TikTok LIVE Buôn Ma Thuột | BH Studio",
+    "seoDescription": "BH Studio tuyển Idol & NPC TikTok LIVE tại Buôn Ma Thuột, Đắk Lắk: thu nhập 10–50 triệu/tháng, có BHXH, đào tạo 7 ngày. Không cần kinh nghiệm.",
+    "hero": {
+      "tag": "Đang mở đợt tuyển Idol TikTok LIVE",
+      "title": "Bật camera.\n**Bật sáng** phòng LIVE của bạn.",
+      "text": "Không cần nổi tiếng, không cần kinh nghiệm. BH Studio lo phần kỹ thuật, làm đẹp và nội dung — bạn chỉ cần tự tin lên sóng và giữ lửa với người xem.",
+      "image": "img/up-mw4pu812.png",
+      "btn1": "Ứng tuyển qua Zalo",
+      "btn2": "Xem quyền lợi",
+      "chips": [
+        "Npc Beauty",
+        "Idol online tại nhà",
+        "Idol live game",
+        "",
+        ""
+      ]
+    },
+    "live": {
+      "defaultName": "npc.suna",
+      "viewers": 1280,
+      "comments": [
+        "Chào idol 👋",
+        "NPC này xinh quá đi mất",
+        "Đã chuẩn bị xu để tặng rồi",
+        "Da đẹp quá, filter gì vậy 😍",
+        "Vào PK đi idol ơi 🔥",
+        "Thả tim cho idol nè ❤️"
+      ]
+    },
+    "nameTry": {
+      "label": "Gõ thử tên LIVE của bạn",
+      "placeholder": "id_cua_ban",
+      "btn": "Giữ tên này"
+    },
+    "highlights": [
+      {
+        "big": "0đ",
+        "small": "Cài TikTok LIVE Studio"
+      },
+      {
+        "big": "0đ",
+        "small": "Làm đẹp chuẩn Douyin"
+      },
+      {
+        "big": "A–Z",
+        "small": "Đào tạo trực tiếp"
+      },
+      {
+        "big": "1–1",
+        "small": "Hỗ trợ trong phiên LIVE"
+      },
+      {
+        "big": "Thưởng",
+        "small": "Chính sách thưởng hấp dẫn"
+      }
+    ],
+    "marquee": [
+      "Tâm sự",
+      "Ca hát",
+      "Nhảy",
+      "NPC",
+      "PK",
+      "Game LIVE",
+      "Làm đẹp Douyin",
+      "LIVE Studio",
+      "Buôn Ma Thuột"
+    ],
+    "creatorsTitle": "Creator đang LIVE cùng BH Studio",
+    "creatorsSub": "Một phần đội ngũ Idol & NPC — bấm vào để ghé phòng LIVE của họ.",
+    "creatorsBtn": "Xem tất cả creator",
+    "free": {
+      "badge": "MIỄN PHÍ",
+      "title": "Cài đặt TikTok LIVE Studio + làm đẹp Douyin",
+      "text": "Dành cho bạn đăng ký livestream làm Idol: kỹ thuật viên cài LIVE Studio, chỉnh filter làm đẹp kiểu Douyin, ánh sáng, khung hình — lên sóng là đẹp ngay.",
+      "btn": "Nhận ưu đãi qua Zalo"
+    },
+    "exploreTitle": "Tìm hiểu thêm",
+    "exploreSub": "Mỗi phần một trang riêng — chọn điều bạn quan tâm.",
+    "explore": [
+      {
+        "icon": "💎",
+        "title": "Quyền lợi",
+        "text": "Định hướng nội dung, đẩy video, PK, cài đặt, làm đẹp miễn phí và hơn thế nữa.",
+        "href": "quyen-loi"
+      },
+      {
+        "icon": "🎭",
+        "title": "Idol & NPC",
+        "text": "Chính sách đãi ngộ, các kiểu LIVE và đội ngũ creator đang hoạt động.",
+        "href": "idol"
+      },
+      {
+        "icon": "🎓",
+        "title": "Đào tạo",
+        "text": "Lộ trình 7 ngày từ người mới đến phiên LIVE đầu tiên.",
+        "href": "dao-tao"
+      },
+      {
+        "icon": "🎮",
+        "title": "Game LIVE",
+        "text": "Game tương tác cho phòng LIVE — mua một lần, dùng vĩnh viễn, dùng thử miễn phí.",
+        "href": "game"
+      }
+    ]
+  },
+  "perks": {
+    "seoTitle": "Quyền lợi Idol TikTok LIVE: 10–50 triệu, BHXH | BH Studio",
+    "seoDescription": "Quyền lợi Idol TikTok LIVE tại BH Studio: lương + chuyên cần + hoa hồng 10–50 triệu/tháng, BHXH, nghỉ 4 ngày/tháng, miễn phí LIVE Studio và làm đẹp Douyin.",
+    "tag": "Quyền lợi creator",
+    "title": "Về **BH Studio**,\nbạn nhận được gì?",
+    "text": "Từ phiên LIVE đầu tiên đến khi có lượng người xem ổn định — mỗi mục dưới đây là một thứ đội ngũ làm cùng bạn.",
+    "items": [
+      {
+        "kicker": "Đồng hành mỗi phiên LIVE",
+        "title": "Định hướng nội dung",
+        "text": "Cùng bạn xây nội dung LIVE hợp tính cách, giữ người xem ổn định và tăng quà theo thời gian.",
+        "bullets": [
+          "Gợi ý kịch bản mở phòng, giữ người xem, kêu gọi quà",
+          "Ưu tiên nội dung PK giao lưu để tăng tương tác",
+          "Xem lại phiên LIVE và góp ý sau mỗi buổi"
+        ],
+        "link": "",
+        "linkText": ""
+      },
+      {
+        "kicker": "Tăng tiếp cận",
+        "title": "Đẩy video lên xu hướng",
+        "text": "Video ngắn tốt kéo người xem về phòng LIVE. Đội ngũ hỗ trợ ý tưởng, quay dựng và đăng đúng thời điểm.",
+        "bullets": [
+          "Ý tưởng video theo trend hằng tuần",
+          "Hỗ trợ quay, dựng video ngắn",
+          "Video lên xu hướng giúp phiên LIVE đông người hơn"
+        ],
+        "link": "",
+        "linkText": ""
+      },
+      {
+        "kicker": "Giao lưu",
+        "title": "PK Việt Nam – Quốc tế",
+        "text": "Tham gia các trận PK giao lưu với creator trong nước và quốc tế — vừa vui, vừa tăng tương tác và quà tặng.",
+        "bullets": [
+          "Xếp lịch PK phù hợp trình độ",
+          "Chiến thuật PK, trả kèo vui nhộn",
+          "Sự kiện PK theo mùa của TikTok LIVE"
+        ],
+        "link": "",
+        "linkText": ""
+      },
+      {
+        "kicker": "Miễn phí",
+        "title": "Cài đặt TikTok LIVE Studio",
+        "text": "Kỹ thuật viên cài và cấu hình LIVE Studio trên máy của bạn: cảnh, nguồn hình, âm thanh, hiệu ứng.",
+        "bullets": [
+          "Cài đặt tận nơi hoặc từ xa",
+          "Thiết lập cảnh LIVE, khung hình, chữ chạy",
+          "Hướng dẫn tự xử lý lỗi thường gặp"
+        ],
+        "link": "",
+        "linkText": ""
+      },
+      {
+        "kicker": "Miễn phí",
+        "title": "Làm đẹp chuẩn Douyin",
+        "text": "Chỉnh filter da, khuôn mặt, ánh sáng và màu sắc theo phong cách Douyin — lên hình tự nhiên mà vẫn lung linh.",
+        "bullets": [
+          "Filter làm đẹp riêng theo gương mặt",
+          "Bố trí đèn, góc máy, phông nền",
+          "Lưu sẵn để mỗi lần LIVE chỉ việc bật"
+        ],
+        "link": "",
+        "linkText": ""
+      },
+      {
+        "kicker": "Studio & thiết bị",
+        "title": "Phòng LIVE chuyên nghiệp",
+        "text": "Studio đủ đèn, máy, âm thanh tại Buôn Ma Thuột; tư vấn chọn thiết bị nếu bạn muốn LIVE tại nhà.",
+        "bullets": [
+          "Phòng LIVE có sẵn tại studio",
+          "Tư vấn micro, đèn, điện thoại / máy tính phù hợp ngân sách",
+          "Hỗ trợ âm thanh, hiệu ứng tiếng cười cho phòng LIVE"
+        ],
+        "link": "",
+        "linkText": ""
+      },
+      {
+        "kicker": "Tương tác",
+        "title": "Game LIVE tương tác",
+        "text": "Người xem bình luận, thả tim, tặng quà là cùng chơi — phòng LIVE luôn sôi động, giữ chân người xem lâu hơn.",
+        "bullets": [
+          "Game do BH Studio tự phát triển",
+          "Có bản dùng thử miễn phí",
+          "Hỗ trợ cài đặt cho Idol"
+        ],
+        "link": "game",
+        "linkText": "Xem game LIVE"
+      },
+      {
+        "kicker": "Hỗ trợ 1–1",
+        "title": "Quản lý theo sát",
+        "text": "Mỗi Idol có người quản lý riêng theo dõi phiên LIVE, xử lý sự cố và động viên khi cần.",
+        "bullets": [
+          "Nhóm hỗ trợ trong giờ LIVE",
+          "Báo cáo kết quả và góp ý định kỳ",
+          "Luôn có người để hỏi"
+        ],
+        "link": "",
+        "linkText": ""
+      }
+    ],
+    "closingTitle": "Và còn nhiều hơn thế",
+    "closing": [
+      {
+        "title": "Chính sách rõ ràng",
+        "text": "Thu nhập, giờ LIVE, ngày nghỉ minh bạch."
+      },
+      {
+        "title": "Môi trường trẻ",
+        "text": "Đội ngũ cùng tuổi, vui vẻ, hỗ trợ nhau."
+      },
+      {
+        "title": "Sự kiện theo mùa",
+        "text": "Tham gia các sự kiện, giải thưởng của TikTok LIVE."
+      }
+    ]
+  },
+  "idol": {
+    "seoTitle": "Idol & NPC TikTok LIVE Buôn Ma Thuột | BH Studio",
+    "seoDescription": "Chính sách Idol, NPC TikTok LIVE chi nhánh Buôn Ma Thuột và các creator đang LIVE cùng BH Studio. Từ 18 tuổi, 130 giờ/tháng, có BHXH.",
+    "tag": "Idol · NPC · TikTok LIVE",
+    "title": "Thế giới **Idol & NPC**\ncủa BH Studio.",
+    "text": "Bạn hợp làm Idol trò chuyện, ca hát hay hóa thân thành một nhân vật NPC? Chọn hướng đi — đội ngũ xây concept, đào tạo và lo hình ảnh cho bạn.",
+    "btn1": "Ứng tuyển làm Idol / NPC",
+    "btn2": "Xem creator",
+    "policyTitle": "Chính sách đãi ngộ NPC",
+    "policy": [
+      {
+        "label": "Thu nhập",
+        "value": "10–50 triệu"
+      },
+      {
+        "label": "Gồm",
+        "value": "Lương + chuyên cần + hoa hồng"
+      },
+      {
+        "label": "Thời gian",
+        "value": "130 giờ/tháng · nghỉ 4 ngày"
+      },
+      {
+        "label": "Quyền lợi",
+        "value": "Có BHXH · từ 18 tuổi"
+      }
+    ],
+    "formatsTitle": "Bạn hợp kiểu LIVE nào?",
+    "formatsSub": "Chọn kiểu bạn thích — đội ngũ định hướng nội dung riêng cho từng kiểu.",
+    "formats": [
+      {
+        "icon": "💬",
+        "title": "Tâm sự – trò chuyện",
+        "text": "LIVE tại nhà, nói chuyện, giao lưu cùng người xem, giờ giấc linh hoạt."
+      },
+      {
+        "icon": "🎤",
+        "title": "Ca hát – nhảy",
+        "text": "Biểu diễn, cover, nhảy theo trend; được hỗ trợ âm thanh, ánh sáng."
+      },
+      {
+        "icon": "🎭",
+        "title": "NPC",
+        "text": "Hóa thân nhân vật, phản ứng theo quà — vui, lạ, giữ chân người xem."
+      },
+      {
+        "icon": "🎮",
+        "title": "Game LIVE",
+        "text": "Chơi game tương tác: người xem bình luận, tặng quà là cùng chơi."
+      }
+    ],
+    "npcTitle": "LIVE NPC là gì?",
+    "npcText": "NPC vốn là những nhân vật trong game do máy điều khiển. Trên TikTok LIVE, NPC là khi bạn nhập vai một nhân vật cụ thể — có tính cách, trang phục, câu nói và cách phản ứng riêng với từng món quà. Người xem vào phòng là nhận ra ngay nhân vật và muốn ở lại xem tiếp.",
+    "npcPoints": [
+      {
+        "title": "Hình tượng đồng bộ",
+        "text": "Không chỉ là trang phục: lời nói, cử chỉ, ánh mắt và cách cảm ơn quà đều theo nhân vật."
+      },
+      {
+        "title": "Giữ đúng vai",
+        "text": "Mỗi nhân vật có trang phục và câu thoại riêng; đổi trang phục thường gắn với quà của người xem."
+      },
+      {
+        "title": "Tương tác là chính",
+        "text": "Biểu cảm, nhịp phản ứng và nội dung mới là thứ giữ người xem ở lại lâu."
+      },
+      {
+        "title": "Kỷ luật lên sóng",
+        "text": "LIVE đúng giờ, giữ năng lượng ổn định, làm theo kịch bản đã luyện."
+      }
+    ],
+    "creatorsTitle": "Đội ngũ creator",
+    "creatorsSub": "Bấm vào creator để mở trang TikTok của họ.",
+    "filterAll": "Tất cả",
+    "searchPlaceholder": "Tìm theo ID…",
+    "list": [
+      {
+        "id": "ptpp_",
+        "type": "Idol",
+        "image": "img/creators/ptpp_.jpg"
+      },
+      {
+        "id": "leopearl.12",
+        "type": "Idol",
+        "image": "img/creators/leopearl.12.jpg"
+      },
+      {
+        "id": "caheumaccan",
+        "type": "Idol",
+        "image": "img/creators/caheumaccan.jpg"
+      },
+      {
+        "id": "linh_153",
+        "type": "Idol",
+        "image": "img/creators/linh_153.jpg"
+      },
+      {
+        "id": "yangdino_",
+        "type": "Idol",
+        "image": "img/creators/yangdino_.jpg"
+      },
+      {
+        "id": "npc.suna",
+        "type": "NPC",
+        "image": "img/creators/npc.suna.jpg"
+      },
+      {
+        "id": "staywithme.290",
+        "type": "Idol",
+        "image": "img/creators/staywithme.290.jpg"
+      },
+      {
+        "id": "_louis1608_",
+        "type": "Idol",
+        "image": "img/creators/_louis1608_.jpg"
+      },
+      {
+        "id": "thuyhuong09123",
+        "type": "Idol",
+        "image": "img/creators/thuyhuong09123.jpg"
+      },
+      {
+        "id": "thah.tharo_",
+        "type": "Idol",
+        "image": "img/creators/thah.tharo_.jpg"
+      },
+      {
+        "id": "nhatvy.206",
+        "type": "Idol",
+        "image": "img/creators/nhatvy.206.jpg"
+      },
+      {
+        "id": "candyleloveyou",
+        "type": "Idol",
+        "image": "img/creators/candyleloveyou.jpg"
+      },
+      {
+        "id": "sumochi.chan",
+        "type": "Idol",
+        "image": "img/creators/sumochi.chan.jpg"
+      },
+      {
+        "id": "avaecanthu",
+        "type": "Idol",
+        "image": "img/creators/avaecanthu.jpg"
+      },
+      {
+        "id": "t.loann",
+        "type": "Idol",
+        "image": "img/creators/t.loann.jpg"
+      },
+      {
+        "id": "mew8722",
+        "type": "Idol",
+        "image": "img/creators/mew8722.jpg"
+      },
+      {
+        "id": "iim.punn",
+        "type": "Idol",
+        "image": "img/creators/iim.punn.jpg"
+      },
+      {
+        "id": "_louispham01_",
+        "type": "Idol",
+        "image": "img/creators/_louispham01_.jpg"
+      },
+      {
+        "id": "huyhayhat_18",
+        "type": "Idol",
+        "image": "img/creators/huyhayhat_18.jpg"
+      },
+      {
+        "id": "ybinh090103",
+        "type": "Idol",
+        "image": "img/creators/ybinh090103.jpg"
+      },
+      {
+        "id": "usenamelat",
+        "type": "Idol",
+        "image": "img/creators/usenamelat.jpg"
+      },
+      {
+        "id": "kimmhuee.10",
+        "type": "Idol",
+        "image": "img/creators/kimmhuee.10.jpg"
+      },
+      {
+        "id": "anhdao_2kkk",
+        "type": "Idol",
+        "image": "img/creators/anhdao_2kkk.jpg"
+      },
+      {
+        "id": "dieuvan_08041996",
+        "type": "Idol",
+        "image": "img/creators/dieuvan_08041996.jpg"
+      },
+      {
+        "id": "zhuangtinger",
+        "type": "Idol",
+        "image": "img/creators/zhuangtinger.jpg"
+      },
+      {
+        "id": "tiktokk_080",
+        "type": "Idol",
+        "image": "img/creators/tiktokk_080.jpg"
+      },
+      {
+        "id": "wngu34",
+        "type": "Idol",
+        "image": "img/creators/wngu34.jpg"
+      },
+      {
+        "id": "lethuy_47",
+        "type": "Idol",
+        "image": "img/creators/lethuy_47.jpg"
+      },
+      {
+        "id": "huyentepp04",
+        "type": "Idol",
+        "image": "img/creators/huyentepp04.jpg"
+      },
+      {
+        "id": "qquyen311",
+        "type": "Idol",
+        "image": "img/creators/qquyen311.jpg"
+      },
+      {
+        "id": "sunni.1805",
+        "type": "Idol",
+        "image": "img/creators/sunni.1805.jpg"
+      },
+      {
+        "id": "phamyenbank",
+        "type": "Idol",
+        "image": "img/creators/phamyenbank.jpg"
+      },
+      {
+        "id": "phigm96",
+        "type": "Idol",
+        "image": "img/creators/phigm96.jpg"
+      },
+      {
+        "id": "gausobuonn",
+        "type": "Idol",
+        "image": "img/creators/gausobuonn.jpg"
+      },
+      {
+        "id": "dj_marina_konkova",
+        "type": "Idol",
+        "image": "img/creators/dj_marina_konkova.jpg"
+      },
+      {
+        "id": "banhbaotroinuoc",
+        "type": "Idol",
+        "image": "img/creators/banhbaotroinuoc.jpg"
+      },
+      {
+        "id": "nguyetnhi227",
+        "type": "Idol",
+        "image": "img/creators/nguyetnhi227.jpg"
+      },
+      {
+        "id": "cc.ngy8888",
+        "type": "Idol",
+        "image": "img/creators/cc.ngy8888.jpg"
+      },
+      {
+        "id": "emboodaya",
+        "type": "Idol",
+        "image": "img/creators/emboodaya.jpg"
+      },
+      {
+        "id": "mynameis.jey",
+        "type": "Idol",
+        "image": "img/creators/mynameis.jey.jpg"
+      },
+      {
+        "id": "lemy0307",
+        "type": "Idol",
+        "image": "img/creators/lemy0307.jpg"
+      },
+      {
+        "id": "sogapcomlam",
+        "type": "Idol",
+        "image": "img/creators/sogapcomlam.jpg"
+      },
+      {
+        "id": "yuni.stars2",
+        "type": "Idol",
+        "image": "img/creators/yuni.stars2.jpg"
+      },
+      {
+        "id": "phomaii2k",
+        "type": "Idol",
+        "image": "img/creators/phomaii2k.jpg"
+      },
+      {
+        "id": "imhere.729",
+        "type": "Idol",
+        "image": "img/creators/imhere.729.jpg"
+      },
+      {
+        "id": "npc.linhmieu",
+        "type": "NPC",
+        "image": "img/creators/npc.linhmieu.jpg"
+      },
+      {
+        "id": "tamlinh.kathamulet",
+        "type": "Idol",
+        "image": "img/creators/tamlinh.kathamulet.jpg"
+      },
+      {
+        "id": "enigma136890",
+        "type": "Idol",
+        "image": "img/creators/enigma136890.jpg"
+      },
+      {
+        "id": "nana.ngkh",
+        "type": "Idol",
+        "image": "img/creators/nana.ngkh.jpg"
+      },
+      {
+        "id": "cnhlintun.463922",
+        "type": "Idol",
+        "image": "img/creators/cnhlintun.463922.jpg"
+      },
+      {
+        "id": "phngthulin.367409",
+        "type": "Idol",
+        "image": "img/creators/phngthulin.367409.jpg"
+      },
+      {
+        "id": "hongthanh.767004",
+        "type": "Idol",
+        "image": "img/creators/hongthanh.767004.jpg"
+      },
+      {
+        "id": "tuytphng_736676",
+        "type": "Idol",
+        "image": "img/creators/tuytphng_736676.jpg"
+      },
+      {
+        "id": "quanghnghng_522548",
+        "type": "Idol",
+        "image": "img/creators/quanghnghng_522548.jpg"
+      },
+      {
+        "id": "lunthi.324177",
+        "type": "Idol",
+        "image": "img/creators/lunthi.324177.jpg"
+      },
+      {
+        "id": "phngm.696553",
+        "type": "Idol",
+        "image": "img/creators/phngm.696553.jpg"
+      },
+      {
+        "id": "tihnglm.549138",
+        "type": "Idol",
+        "image": "img/creators/tihnglm.549138.jpg"
+      },
+      {
+        "id": "thngbo_610463",
+        "type": "Idol",
+        "image": "img/creators/thngbo_610463.jpg"
+      },
+      {
+        "id": "duythin.933761",
+        "type": "Idol",
+        "image": "img/creators/duythin.933761.jpg"
+      },
+      {
+        "id": "tinty_581968",
+        "type": "Idol",
+        "image": "img/creators/tinty_581968.jpg"
+      },
+      {
+        "id": "mcng_171554",
+        "type": "Idol",
+        "image": "img/creators/mcng_171554.jpg"
+      },
+      {
+        "id": "hnhstng_781624",
+        "type": "Idol",
+        "image": "img/creators/hnhstng_781624.jpg"
+      },
+      {
+        "id": "hinh.922781",
+        "type": "Idol",
+        "image": "img/creators/hinh.922781.jpg"
+      },
+      {
+        "id": "vittntin_770902",
+        "type": "Idol",
+        "image": "img/creators/vittntin_770902.jpg"
+      },
+      {
+        "id": "trmthybo_617199",
+        "type": "Idol",
+        "image": "img/creators/trmthybo_617199.jpg"
+      },
+      {
+        "id": "chiutunhuy.727729",
+        "type": "Idol",
+        "image": "img/creators/chiutunhuy.727729.jpg"
+      },
+      {
+        "id": "qucthnhmai.511547",
+        "type": "Idol",
+        "image": "img/creators/qucthnhmai.511547.jpg"
+      },
+      {
+        "id": "nguyttinnh.659990",
+        "type": "Idol",
+        "image": "img/creators/nguyttinnh.659990.jpg"
+      },
+      {
+        "id": "kimthunm_788487",
+        "type": "Idol",
+        "image": "img/creators/kimthunm_788487.jpg"
+      },
+      {
+        "id": "mngtvy_543095",
+        "type": "Idol",
+        "image": "img/creators/mngtvy_543095.jpg"
+      },
+      {
+        "id": "tihngip.665598",
+        "type": "Idol",
+        "image": "img/creators/tihngip.665598.jpg"
+      },
+      {
+        "id": "vnl.775502",
+        "type": "Idol",
+        "image": "img/creators/vnl.775502.jpg"
+      },
+      {
+        "id": "okha.819551",
+        "type": "Idol",
+        "image": "img/creators/okha.819551.jpg"
+      },
+      {
+        "id": "thythanhv.790007",
+        "type": "Idol",
+        "image": "img/creators/thythanhv.790007.jpg"
+      },
+      {
+        "id": "nc_312554",
+        "type": "Idol",
+        "image": "img/creators/nc_312554.jpg"
+      },
+      {
+        "id": "hngtrang_582993",
+        "type": "Idol",
+        "image": "img/creators/hngtrang_582993.jpg"
+      },
+      {
+        "id": "xunmunh.767804",
+        "type": "Idol",
+        "image": "img/creators/xunmunh.767804.jpg"
+      },
+      {
+        "id": "anhduy.241972",
+        "type": "Idol",
+        "image": "img/creators/anhduy.241972.jpg"
+      },
+      {
+        "id": "testlivehpmedia",
+        "type": "Idol",
+        "image": "img/creators/testlivehpmedia.jpg"
+      },
+      {
+        "id": "bao365.plus",
+        "type": "Idol",
+        "image": "img/creators/bao365.plus.jpg"
+      },
+      {
+        "id": "user1441213713555",
+        "type": "Idol",
+        "image": "img/creators/user1441213713555.jpg"
+      },
+      {
+        "id": "ngdep.ht.pin",
+        "type": "Idol",
+        "image": "img/creators/ngdep.ht.pin.jpg"
+      },
+      {
+        "id": "npc.lucdao",
+        "type": "NPC",
+        "image": "img/creators/npc.lucdao.jpg"
+      },
+      {
+        "id": "user57231351611335",
+        "type": "Idol",
+        "image": "img/creators/user57231351611335.jpg"
+      },
+      {
+        "id": "user34514811393492",
+        "type": "Idol",
+        "image": "img/creators/user34514811393492.jpg"
+      },
+      {
+        "id": "sngtrinh_843663",
+        "type": "Idol",
+        "image": "img/creators/sngtrinh_843663.jpg"
+      },
+      {
+        "id": "min.em193",
+        "type": "Idol",
+        "image": "img/creators/min.em193.jpg"
+      },
+      {
+        "id": "huynh.toni72",
+        "type": "Idol",
+        "image": "img/creators/huynh.toni72.jpg"
+      },
+      {
+        "id": "phukientrangsuc79",
+        "type": "Idol",
+        "image": "img/creators/phukientrangsuc79.jpg"
+      },
+      {
+        "id": "vyvieclam08",
+        "type": "Idol",
+        "image": "img/creators/vyvieclam08.jpg"
+      },
+      {
+        "id": "vieclammienphihun2",
+        "type": "Idol",
+        "image": "img/creators/vieclammienphihun2.jpg"
+      },
+      {
+        "id": "giupviecnha002",
+        "type": "Idol",
+        "image": "img/creators/giupviecnha002.jpg"
+      },
+      {
+        "id": "giupviecnha003",
+        "type": "Idol",
+        "image": "img/creators/giupviecnha003.jpg"
+      },
+      {
+        "id": "giupvieccongthang",
+        "type": "Idol",
+        "image": "img/creators/giupvieccongthang.jpg"
+      },
+      {
+        "id": "sunnie.npc",
+        "type": "NPC",
+        "image": "img/creators/sunnie.npc.jpg"
+      },
+      {
+        "id": "vyvieclam011",
+        "type": "Idol",
+        "image": "img/creators/vyvieclam011.jpg"
+      },
+      {
+        "id": "bo.vlog49",
+        "type": "Idol",
+        "image": "img/creators/bo.vlog49.jpg"
+      }
+    ]
+  },
+  "training": {
+    "seoTitle": "Đào tạo Idol TikTok LIVE 7 ngày từ A–Z | BH Studio",
+    "seoDescription": "Lộ trình 7 ngày đào tạo Idol TikTok LIVE: làm đẹp Douyin, cách nói chuyện, quà & tương tác, PK, video ngắn, LIVE thử có người kèm. Người mới vẫn làm được.",
+    "tag": "Lộ trình đào tạo",
+    "title": "**7 ngày** từ người mới\nđến phiên LIVE đầu tiên.",
+    "text": "Học đúng thứ cần để lên sóng tự tin: hình ảnh, cách nói chuyện, xử lý quà và nội dung riêng của bạn. Phù hợp cả người chưa từng LIVE.",
+    "daysTitle": "Lộ trình 7 ngày",
+    "days": [
+      {
+        "icon": "🎯",
+        "title": "Ngày 1 — Chọn hướng đi",
+        "text": "Trò chuyện, chọn kiểu LIVE (Idol, ca hát, NPC, game), đặt tên LIVE và mục tiêu."
+      },
+      {
+        "icon": "✨",
+        "title": "Ngày 2 — Hình ảnh & làm đẹp",
+        "text": "Cài LIVE Studio, làm đẹp Douyin, chỉnh đèn, góc máy, phông nền — miễn phí."
+      },
+      {
+        "icon": "🗣️",
+        "title": "Ngày 3 — Cách nói chuyện",
+        "text": "Mở phòng, chào người xem, giữ nhịp, xử lý lúc vắng người hoặc bị bình luận khó."
+      },
+      {
+        "icon": "🎁",
+        "title": "Ngày 4 — Quà & tương tác",
+        "text": "Cảm ơn quà, mini game, kêu gọi thả tim, cách dùng game LIVE tương tác."
+      },
+      {
+        "icon": "⚔️",
+        "title": "Ngày 5 — PK",
+        "text": "Luật PK, chiến thuật, trả kèo vui, phối hợp với người xem trong trận."
+      },
+      {
+        "icon": "🎬",
+        "title": "Ngày 6 — Video ngắn",
+        "text": "Quay và đăng video theo trend để kéo người xem về phòng LIVE."
+      },
+      {
+        "icon": "🚀",
+        "title": "Ngày 7 — LIVE thử có người kèm",
+        "text": "Phiên LIVE thật có quản lý theo dõi, góp ý ngay sau buổi."
+      }
+    ],
+    "applyTitle": "Các bước ứng tuyển",
+    "apply": [
+      {
+        "title": "Nhắn Zalo đăng ký",
+        "text": "Gửi tên, tuổi, vài ảnh hoặc video ngắn của bạn."
+      },
+      {
+        "title": "Trao đổi & live thử",
+        "text": "Tư vấn kiểu LIVE hợp với bạn, thử một phiên ngắn có người góp ý."
+      },
+      {
+        "title": "Vào lộ trình 7 ngày",
+        "text": "Cài đặt, làm đẹp miễn phí và học theo lộ trình."
+      },
+      {
+        "title": "Lên sóng chính thức",
+        "text": "Bắt đầu LIVE theo lịch, có người hỗ trợ trong suốt phiên."
+      }
+    ],
+    "reqTitle": "Yêu cầu ứng viên",
+    "requirements": [
+      "Từ 18 tuổi trở lên",
+      "Tự tin trước ống kính",
+      "Hoạt ngôn, năng động",
+      "Biết nhảy, biểu diễn cơ bản là lợi thế",
+      "Có khả năng diễn xuất là lợi thế"
+    ]
+  },
+  "game": {
+    "seoTitle": "Game LIVE TikTok tương tác & App edit video | BH Studio",
+    "seoDescription": "Game tương tác cho phòng TikTok LIVE: người xem bình luận, thả tim, tặng quà là chơi. Mua một lần dùng vĩnh viễn, chạy trên Windows với LIVE Studio hoặc OBS.",
+    "tag": "Game LIVE & App edit video",
+    "title": "Game cho phòng LIVE\n**đông vui hơn**.",
+    "text": "Người xem bình luận, thả tim, tặng quà là chơi — giữ chân người xem lâu hơn. Mua một lần dùng vĩnh viễn, cài trên Windows, dùng với TikTok LIVE Studio hoặc OBS.",
+    "buyTitle": "Cách mua game",
+    "buySteps": [
+      {
+        "title": "Liên hệ Zalo",
+        "text": "Bấm \"Liên hệ Zalo mua\" ở game bạn thích, chọn gói rồi nhắn shop qua Zalo."
+      },
+      {
+        "title": "Nhận file cài",
+        "text": "Shop gửi file cài qua Zalo. Mở file để cài; Windows cảnh báo thì bấm \"Thông tin thêm\" → \"Vẫn chạy\"."
+      },
+      {
+        "title": "Gửi mã máy",
+        "text": "Mở app, đầu trang có ô \"Mã máy\" (dạng ABCDE-FGH23). Bấm \"Chép mã máy\" rồi gửi shop kèm ảnh chuyển khoản."
+      },
+      {
+        "title": "Nhận mã kích hoạt",
+        "text": "Shop gửi mã kích hoạt qua Zalo. Dán vào app là kết nối LIVE được."
+      }
+    ],
+    "author": {
+      "label": "Thiết kế & lập trình",
+      "name": "Trần Hữu Gia Bảo",
+      "text": "Người làm ra các game LIVE tương tác của BH Studio. Cần game riêng cho phòng live, hỗ trợ cài đặt hay góp ý — nhắn Zalo trực tiếp.",
+      "image": ""
+    }
+  },
+  "faq": {
+    "seoTitle": "Hỏi đáp tuyển dụng Idol TikTok LIVE | BH Studio",
+    "seoDescription": "Giải đáp khi ứng tuyển Idol TikTok LIVE tại BH Studio Buôn Ma Thuột: chưa từng LIVE, thu nhập NPC, LIVE tại nhà hay studio, game LIVE. Hỏi thêm qua Zalo.",
+    "tag": "Hỏi đáp",
+    "title": "Bạn hỏi, **BH Studio** trả lời.",
+    "text": "Chưa thấy câu bạn cần? Nhắn Zalo, đội ngũ trả lời ngay.",
+    "items": [
+      {
+        "q": "Chưa từng live có đăng ký làm Idol được không?",
+        "a": "Được. Bạn được đào tạo từ đầu theo lộ trình 7 ngày: cách nói chuyện, giữ chân người xem, kêu gọi quà, chơi PK."
+      },
+      {
+        "q": "Miễn phí cài LIVE Studio và làm đẹp Douyin là sao?",
+        "a": "Khi đăng ký làm Idol, kỹ thuật viên cài TikTok LIVE Studio và chỉnh filter làm đẹp kiểu Douyin, ánh sáng, khung hình cho bạn, không mất phí."
+      },
+      {
+        "q": "Làm NPC thu nhập thế nào?",
+        "a": "Chính sách NPC tại Buôn Ma Thuột: 10–50 triệu/tháng (lương + chuyên cần + hoa hồng), 130 giờ/tháng, nghỉ 4 ngày, có BHXH. Xem trang Idol & NPC."
+      },
+      {
+        "q": "Có cần LIVE tại studio không?",
+        "a": "Không bắt buộc. Bạn có thể LIVE tại studio ở Buôn Ma Thuột hoặc tại nhà — đội ngũ tư vấn thiết bị và cài đặt cho bạn."
+      },
+      {
+        "q": "Game LIVE cần máy cấu hình thế nào?",
+        "a": "Windows 10/11 64-bit, RAM 8GB là chạy được. Máy yếu dùng link sân khấu có thêm ?q=low (hướng dẫn có trong app)."
+      },
+      {
+        "q": "Chưa mua game có dùng thử được không?",
+        "a": "Được. Nhắn Zalo shop để nhận file cài, cài xong chơi thử bằng các nút giả lập (có chữ \"BẢN DÙNG THỬ\" trên màn hình). Muốn kết nối phiên LIVE thật thì cần mã kích hoạt."
+      },
+      {
+        "q": "Đổi máy tính thì sao?",
+        "a": "Mã kích hoạt gắn với 1 máy. Đổi máy thì nhắn Zalo gửi mã máy mới, mình cấp lại mã cho thời gian còn lại."
+      },
+      {
+        "q": "Game có ảnh hưởng tài khoản TikTok không?",
+        "a": "Game chỉ đọc bình luận, tim, quà công khai của phiên live, không cần đăng nhập TikTok. Bạn tự chịu trách nhiệm nội dung phiên live theo quy định của TikTok; app có \"Chế độ an toàn\" để quà chỉ dùng cảm ơn."
+      }
+    ]
+  },
+  "contact": {
+    "tag": "Sân khấu đã bật đèn",
+    "title": "Còn thiếu mỗi **bạn** thôi.",
+    "text": "Nhắn Zalo để đăng ký làm Idol, nhận ưu đãi cài đặt miễn phí, hoặc hỏi về game LIVE.",
+    "btn": "Nhắn Zalo ngay"
+  },
+  "footer": "BH Studio · Tuyển Idol TikTok LIVE · Buôn Ma Thuột",
+  "footerNote": "Không liên kết chính thức với TikTok.",
+  "noibo": {
+    "seoTitle": "BH Studio — Nội bộ",
+    "tag": "🔒 Chỉ dành cho thành viên BH Studio",
+    "title": "Tài liệu **nội bộ**",
+    "text": "Chính sách dành riêng cho Idol & NPC của studio. Mỗi mục có mật khẩu riêng — hỏi quản lý để nhận mật khẩu.",
+    "placeholder": "Nhập mật khẩu",
+    "btn": "Mở khóa",
+    "note": "Nội dung được mã hóa, chỉ mở được khi nhập đúng mật khẩu. Không chia sẻ mật khẩu ra ngoài.",
+    "items": [
+      {
+        "id": "idol-tai-nha",
+        "icon": "🏠",
+        "title": "Chính sách thưởng Idol LIVE tại nhà (bao gồm live game)",
+        "text": "Thưởng bảo cấp 27 bậc, creator mới, chuyên cần, BXH ngày, PKQT, sinh nhật, sự kiện và cảnh báo VPNT."
+      },
+      {
+        "id": "npc-cong-ty",
+        "icon": "🏢",
+        "title": "Chính sách lương NPC tại công ty",
+        "text": "Bảng mốc A1–A20 (KPI kim cương, hoa hồng, lương cứng, chuyên cần), lương cứng, thử việc, học việc."
+      }
+    ]
+  }
+}
