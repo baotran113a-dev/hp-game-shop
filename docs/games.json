@@ -1,0 +1,729 @@
+{
+  "shop": {
+    "name": "BH STUDIO",
+    "slogan": "Game tương tác cho TikTok LIVE — bình luận, thả tim, tặng quà là chơi",
+    "zalo": "0364123425"
+  },
+  "games": [
+    {
+      "id": "phobichhoa",
+      "name": "Phố Bích Họa",
+      "tagline": "Game vẽ chân dung cho TikTok LIVE: ai tặng quà là họa sĩ hiphop xịt sơn vẽ ngay ảnh đại diện của người đó lên tường phố; ai bình luận cũng được vẽ chân dung nhỏ — spam là vẽ kín phố. Mỗi vòng cả phòng chọn bộ sơn, có đồng hồ đếm ngược.",
+      "image": "img/phobichhoa-bia.jpg",
+      "images": [
+        "img/phobichhoa-bia.jpg",
+        "img/phobichhoa-v2-1.jpg",
+        "img/phobichhoa-v2-2.jpg",
+        "img/phobichhoa-v2-3.jpg",
+        "img/phobichhoa-v2-4.jpg"
+      ],
+      "features": [
+        "Vòng chơi như ném sếp: đầu vòng cả phòng gõ 1–6 chọn bộ sơn (Sơn xịt, Màu nước, Pop-art, Sơn mài, Dân gian, Bút sáp), vẽ 4 phút có đồng hồ, hết giờ hiện top 3 rồi chọn lại.",
+        "Mỗi món quà = 1 bức chân dung TO: họa sĩ đi bộ tới bức tường trống, quay lưng xịt từng mảng màu, nền trắng, hiện ảnh đại diện người tặng, kẻ viền, dán bảng tên. 5 bậc: Vẽ chân dung · Khung trái tim · Ưu tiên (vẽ trước + khung vàng) · Biển neon · Bích họa lớn. Tặng hoa liên tục thì cộng dồn ×n, nở vòng hoa.",
+        "Bình luận cũng được vẽ: mỗi người cách 4 giây là thêm 1 chân dung nhỏ, xếp kín “tường bình luận” — spam là vẽ đầy phố. Thẻ bình luận hiện ảnh + tên + câu nói, bình xịt bay lên ký tên graffiti lên tường.",
+        "Tap tim là bóng sơn bay lên tường nổ loang màu; thanh “Đêm Hội Phố” đầy thì cả phố lên đèn. Menu quà rõ ràng như ném sếp, băng quà to ghi tên người tặng, bảng vàng top 3.",
+        "Tự quét ảnh đại diện bậy ngay trên máy (không cần mạng): ảnh nghi bậy thì không vẽ, thay bằng hình hoa/thú + tên. Chừa góc dưới phải cho camera người live.",
+        "Có bản tiếng Anh “Mural Street” (đổi ngay trong bảng điều khiển). Giọng họa sĩ cảm ơn gọi tên, nhạc tự soạn hoặc link YouTube, lọc từ cấm, giả lập khi live vắng. Vẽ 2D nhẹ, máy yếu vẫn chạy; dùng TikTok LIVE Studio hoặc OBS. Kết nối TikTok LIVE cần mã kích hoạt."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 299000
+        }
+      ],
+      "version": "1.0.1",
+      "changes": [
+        "Vòng chọn bộ sơn có đồng hồ, bình luận spam được vẽ chân dung nhỏ kín phố, menu như ném sếp, thẻ bình luận, bóng sơn khi thả tim, quà Ưu tiên, chừa góc camera"
+      ]
+    },
+    {
+      "id": "chutro",
+      "name": "Bà Chủ Trọ Khó Tính",
+      "tagline": "Game ném chủ trọ cho TikTok LIVE: cả dãy trọ bình chọn 1 trong 6 chủ trọ khó tính rồi cùng ném giấy, dép, mì gói cho tới khi chủ trọ giơ cờ trắng xin thua. Chủ trọ quát liên tục, gọi đích danh người ném — ai chơi càng nhiều càng bị quát gắt.",
+      "image": "img/chutro-bia.jpg",
+      "images": [
+        "img/chutro-bia.jpg",
+        "img/chutro-1.jpg",
+        "img/chutro-2.jpg",
+        "img/chutro-3.jpg",
+        "img/chutro-4.jpg"
+      ],
+      "features": [
+        "Bình chọn 1 trong 6 chủ trọ bằng bình luận: Bà Tăng Tiền Điện, Ông Khoá Cổng Sớm, Bà Soi Khách, Bà Cắt Wifi, Ông Không Sửa Đồ, Bà Thu Tiền Mùng 1 — mỗi người một kiểu, một món đồ riêng.",
+        "Thả tim là ném giấy, bình luận là ném dép kèm câu bình luận hiện trên sân; thanh \"độ khó tính\" tụt dần tới khi chủ trọ xin thua.",
+        "Quà có hiệu ứng riêng, tên người tặng hiện rõ: ném mì gói dính đầy người, dội xô nước, dán giấy CẤM QUÁT lên mặt, xe ba gác húc, vịt vàng khổng lồ cưỡi sóng.",
+        "Chủ trọ quát liên tục, gọi tên người chơi; người tặng nhiều lần bị quát gắt dần 4 bậc (chữ in hoa, mặt nổi gân đỏ). Có người dẫn la chủ trọ, 22 cặp đối đáp.",
+        "Thua thì chủ trọ giơ cờ trắng + bảng xin thua, bảng vinh danh top 3 rồi bình chọn vòng mới.",
+        "Menu quà có ảnh quà TikTok thật, chọn quà cho từng hiệu ứng ở trang điều khiển. Giọng đọc, nhạc nền link YouTube, lọc từ cấm, giả lập khi live vắng. Vẽ 2D nhẹ, máy yếu vẫn chạy; dùng TikTok LIVE Studio hoặc OBS. Kết nối TikTok LIVE cần mã kích hoạt."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 299000
+        }
+      ],
+      "version": "1.0.0",
+      "changes": [
+        "Bản đầu: 6 chủ trọ, ném mì gói, dội nước, dán CẤM QUÁT, xe ba gác, vịt vàng khổng lồ"
+      ]
+    },
+    {
+      "id": "duoixui",
+      "name": "Đuổi Xui Đón Tết",
+      "tagline": "Game \"spam\" đón Tết cho TikTok LIVE: cả phòng bình chọn 1 trong 6 con Ma Xui rồi thả tim, bình luận, tặng quà để đuổi cho tới khi ma bay mất. Ma chửi gắt, gọi thẳng tên người chơi — ai tặng càng nhiều càng bị ma quát dữ.",
+      "image": "img/duoixui-bia.jpg",
+      "images": [
+        "img/duoixui-bia.jpg",
+        "img/duoixui-1.jpg",
+        "img/duoixui-2.jpg",
+        "img/duoixui-3.jpg",
+        "img/duoixui-4.jpg"
+      ],
+      "features": [
+        "Người xem gõ tên hoặc số 1–6 để chọn con ma bị đuổi: Ma Hết Tiền, Ma Ế, Ma Deadline, Ma Kẹt Xe, Ma Mất Ngủ, Ma Xui Xẻo.",
+        "Tim → ném kẹo, bình luận → ném chổi lông gà (hiện luôn câu bình luận), tặng quà → ném quýt dính đầy người ma, quạt bay, dán chữ Phúc kín mặt, lân húc, rồng vàng.",
+        "Ma chửi gắt, gọi thẳng tên người ném; ai tặng nhiều lần, ma càng quát dữ, nói càng nhanh, mặt đỏ nổi gân.",
+        "Thanh \"độ xui\" tụt dần, hết là ma bay mất kèm pháo hoa \"ĐÃ ĐUỔI XUI!\", bảng vinh danh top 3 rồi bình chọn con ma mới.",
+        "Menu quà có ảnh quà TikTok, mọi quà đều hiện tên người tặng; chọn quà cho từng hiệu ứng, nhạc YouTube hoặc nhạc tự soạn, lọc từ cấm, chống spam, giả lập khi live vắng.",
+        "Vẽ 2D nhẹ, máy yếu vẫn chạy; dùng TikTok LIVE Studio hoặc OBS. Kết nối TikTok LIVE cần mã kích hoạt."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 299000
+        }
+      ],
+      "version": "1.0.0",
+      "changes": [
+        "Bản đầu tiên"
+      ]
+    },
+    {
+      "id": "hangxom",
+      "name": "Đại Chiến Hàng Xóm",
+      "tagline": "Game ném đá qua sân nhà hàng xóm cho TikTok LIVE: cả phòng cùng Bé Na đấu với Ông Tư. Người xem gõ \"góc lực\" để ném, có gió đổi mỗi lượt, hàng rào rơm, mái chòi — ném trúng là Ông Tư la oai oái, hết máu là có bảng vinh danh tay ném cừ khôi.",
+      "image": "img/hangxom-bia.jpg",
+      "images": [
+        "img/hangxom-bia.jpg",
+        "img/hangxom-1.jpg",
+        "img/hangxom-2.jpg",
+        "img/hangxom-3.jpg",
+        "img/hangxom-4.jpg"
+      ],
+      "features": [
+        "Người xem gõ góc + lực (vd \"45 70\") để Bé Na ném đá; tên người ném bay theo hòn đá, Bé Na đọc tên.",
+        "Gió đổi mỗi lượt, hàng rào rơm chặn phát thấp, mái chòi hứng phát cao — mỗi phát hiện kết quả để cả phòng tự chỉnh.",
+        "Ông Tư (máy) ném dép trả đũa, lên cấp khi thua; cả phòng gõ \"né\" để Bé Na né, gõ T/H đoán trúng hụt.",
+        "Quà có hiệu ứng riêng: lặng gió, tăng sức mạnh, ném vịt, hồi máu, đá đôi, mưa đá; chọn quà cho từng chiêu ở trang điều khiển.",
+        "Hai chế độ: cả phòng đấu máy, hoặc 2 phe (gõ 1 / 2) thay lượt ném nhau.",
+        "Giọng Bé Na + Ông Tư nói liên tục, nhạc nền tự soạn hoặc link YouTube, lọc từ cấm, giả lập khi live vắng. Vẽ 2D nhẹ, máy yếu vẫn chạy; dùng TikTok LIVE Studio hoặc OBS. Kết nối TikTok LIVE cần mã kích hoạt."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 209000
+        }
+      ],
+      "version": "1.0.1",
+      "changes": [
+        "Tắt giả lập thì nhân vật không tự ném khi phòng chưa ai chơi",
+        "Bản đầu: ném đá có gió, vịt/chó, 2 chế độ, menu quà 2 bên, bảng điều khiển mới"
+      ]
+    },
+    {
+      "id": "duachaodoi",
+      "name": "Đường Đua Sự Sống",
+      "tagline": "Game đua tương tác cho TikTok LIVE: cả phòng gõ \"đua\" để vào đường đua, thả tim để tăng tốc, tặng quà để gắn tên lửa, cưỡi cá heo, chui cổng không gian. Hết ván, 3 người nhanh nhất được \"Chào Đời\" nhận danh hiệu vui.",
+      "image": "img/duachaodoi-bia.jpg",
+      "images": [
+        "img/duachaodoi-bia.jpg",
+        "img/duachaodoi-1.jpg",
+        "img/duachaodoi-2.jpg",
+        "img/duachaodoi-3.jpg",
+        "img/duachaodoi-4.jpg"
+      ],
+      "features": [
+        "Người xem gõ \"đua\" là vào đường đua với ảnh đại diện + tên, gõ \"tìm\" là camera bay tới mình.",
+        "Thả tim = siêu tốc, thả liên tục = nổ chuỗi; chia sẻ live = tim ×2 trong 3 phút. Camera tự chuyển giữa cảnh bám đuôi (vệt sáng tăng tốc) và toàn cảnh đoàn đua.",
+        "8 hiệu ứng quà rẻ: bình sữa, vây lướt, đuôi turbo, cá heo kéo, bong bóng khiên, lối tắt, cổng không gian, gắn tên lửa — kèm băng sự kiện lớn Soán Ngôi, Vượt Mặt, Trượt Xuống.",
+        "Đấu tay đôi giữa 2 người sát nút, Dòng chảy vàng tim ×2, bảng Top 3, Đại gia ván, Kỷ lục buổi; hết ván lễ Chào Đời cho top 3.",
+        "MC đọc tên, bình luận cuộc đua liên tục; tiếng động thật; nhạc nền tự soạn hoặc link YouTube; lọc từ cấm, chống spam, giả lập khi live vắng.",
+        "Bảng điều khiển gọn như Lễ Thành Hôn, xem trước ngay trong app; dùng TikTok LIVE Studio hoặc OBS. Kết nối TikTok LIVE cần mã kích hoạt."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 199000
+        }
+      ],
+      "version": "1.0.0",
+      "changes": [
+        "Bản đầu: đường đua, tăng tốc, 8 hiệu ứng quà, tay đôi, dòng chảy vàng, lễ Chào Đời, MC + tiếng động thật"
+      ]
+    },
+    {
+      "id": "tramseduyen",
+      "name": "Trạm Se Duyên",
+      "tagline": "Sân khấu ghép đôi hẹn hò cho TikTok LIVE: hai người lên ghế tim, trả lời câu thử lòng, cả phòng tác hợp hay chia rẽ; đủ độ hợp là thành đôi, được chụp hình đăng lên trang của trạm. Hai MC Tơ Hồng và Nguyệt Nga dẫn dắt hài hước, cãi nhau vui nhộn.",
+      "image": "img/tramseduyen-bia2.jpg",
+      "images": [
+        "img/tramseduyen-bia2.jpg",
+        "img/tramseduyen-1.jpg",
+        "img/tramseduyen-2.jpg",
+        "img/tramseduyen-3.jpg",
+        "img/tramseduyen-4.jpg"
+      ],
+      "features": [
+        "Người xem tặng quà Lên Ghế Nam / Lên Ghế Nữ để lên ghế tim; gõ \"1\" hoặc \"2\" đoán ý đôi trên ghế, thả tim góp độ hợp.",
+        "Quà Tác Hợp / Chia Rẽ / Thần Tình Yêu / Mời Nhảy / Giành Ghế — tự chọn quà cho từng việc ở bảng điều khiển.",
+        "Lâu lâu MC hỏi cả nhà \"tác thành hay phản đối\", khán giả bình luận bỏ phiếu; ba câu thử lòng đổi liên tục, hơn 150 câu.",
+        "Thành đôi là chụp tấm \"Chúc mừng cặp đôi số…\" (hình 2 người + tên + ảnh đại diện) rồi đăng lên trang Trạm Se Duyên ngay trên màn.",
+        "2 MC chibi (Tơ Hồng giọng nam trầm + Nguyệt Nga) đối đáp hài hước có vần, chào người mới, nhớ ai đã lên ghế mấy lần; tiếng cười, nhạc nền YouTube.",
+        "Giả lập khi live vắng (không hiện tên), lọc từ cấm, chống spam; dùng TikTok LIVE Studio hoặc OBS. Kết nối TikTok LIVE cần mã kích hoạt."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 399000
+        }
+      ],
+      "version": "1.0.0",
+      "changes": [
+        "Bản đầu tiên"
+      ]
+    },
+    {
+      "id": "daichien",
+      "name": "Đại Chiến 3 Đường",
+      "tagline": "Game PK 2 phe đông lính cho TikTok LIVE: người xem bình luận 1 hoặc 2 để vào phe Rồng Xanh hay Phượng Đỏ, thả tim ra lính, tặng quà triệu hồi tướng, khổng lồ, Thiên Lôi — lính tràn 3 đường phá trụ, hạ nhà chính là thắng.",
+      "image": "img/daichien-bia2.jpg",
+      "images": [
+        "img/daichien-bia2.jpg",
+        "img/daichien-1.jpg",
+        "img/daichien-2.jpg",
+        "img/daichien-3.jpg"
+      ],
+      "features": [
+        "Bản đồ 3 đường (top · mid · adc), mỗi phe 4 trụ + nhà chính; bình luận 1 / 2 là vào phe, gõ tên đường để chọn đường đi.",
+        "Thả tim ra lính (10 tim = 1 lính), follow cộng quân, gõ \"săn\" đi đánh Ngọc Thần giữa bản đồ.",
+        "6 mức triệu hồi theo quà: Binh, Cung Binh, Tướng, Khổng Lồ, Vương Lâm – Hàn Lập, Thiên Lôi — tự chọn quà cho từng mức ở bảng điều khiển.",
+        "Quà lớn chiếu video hiệu ứng nửa màn hình; tải video, nhạc, âm báo của mình lên dùng.",
+        "Hiện ảnh đại diện + tên người tặng, bảng TOP mỗi phe, vinh danh người thắng, tự sang ván mới.",
+        "MC giọng nữ đọc liên tục, chào người mới, trả lời bình luận, chỉnh tốc độ đọc; nhạc nền dán link YouTube là phát.",
+        "Giả lập khi live vắng, lọc từ cấm, chống spam; dùng TikTok LIVE Studio hoặc OBS. Kết nối TikTok LIVE cần mã kích hoạt."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 799000
+        }
+      ],
+      "version": "1.0.3",
+      "changes": [
+        "Giọng MC nữ đọc liên tục + trả lời bình luận",
+        "Giả lập có tên + ảnh đại diện",
+        "Chạy mượt hơn trên máy yếu"
+      ]
+    },
+    {
+      "id": "hoadang",
+      "name": "Hoa Đăng 34 Tỉnh",
+      "tagline": "Đêm hội hoa đăng trên sông cho TikTok LIVE: người xem gõ tên tỉnh để thả hoa đăng, bản đồ 34 tỉnh thành trên trời sáng dần; tặng quà thả đèn trời, thuyền hoa đăng. Đủ 34 tỉnh là Việt Nam rực sáng.",
+      "image": "img/hoadang-bia.jpg",
+      "images": [
+        "img/hoadang-bia.jpg",
+        "img/hoadang-1.jpg",
+        "img/hoadang-2.jpg",
+        "img/hoadang-3.jpg",
+        "img/hoadang-4.jpg"
+      ],
+      "features": [
+        "Gõ tên tỉnh (tên cũ hay tên mới đều hiểu) → hoa đăng của tỉnh đó trôi trên sông, tỉnh sáng lên trên bản đồ 34 tỉnh (có Hoàng Sa, Trường Sa).",
+        "3 mức quà: hoa đăng sen, đèn trời bay lên đậu vào tỉnh, thuyền hoa đăng chạy ngang sông — tự chọn quà ở bảng điều khiển.",
+        "Bảng TOP tỉnh thành + người thả đèn, đồng hồ mỗi đêm; đủ 34 tỉnh → màn \"Việt Nam rực sáng\" rồi sang đêm mới.",
+        "Tranh và kịch bản \"Cha Mẹ\" cảm động, MC kể chuyện liên tục, giọng nam/nữ nhấn nhá.",
+        "Phố cổ, dây đèn lồng, sông có bóng nước; vẽ 2D nhẹ, máy yếu vẫn chạy.",
+        "Giả lập khi live vắng (không hiện tên), lọc từ cấm, chống spam 30 giây; dùng TikTok LIVE Studio hoặc OBS. Kết nối TikTok LIVE cần mã kích hoạt."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 399000
+        }
+      ],
+      "version": "1.0.1",
+      "changes": [
+        "Tranh + kịch bản Cha Mẹ",
+        "Bản đồ to rõ hơn, điểm 5 / 20 / 100",
+        "MC kể liên tục"
+      ]
+    },
+    {
+      "id": "cauca",
+      "name": "Câu Cá Online",
+      "tagline": "Hồ sen 3D, 20 người đứng câu, quà = buff hào quang 5 cấp, rồng nước/rồng vàng, câu rơi trang phục, BXH",
+      "image": "img/cauca-bia2.jpg",
+      "images": [
+        "img/cauca-bia2.jpg",
+        "img/cauca-4.jpg",
+        "img/cauca-1.jpg",
+        "img/cauca-2.jpg",
+        "img/cauca-3.jpg"
+      ],
+      "features": [
+        "Bình luận bất kỳ hoặc thả tim là vào câu, không cần cú pháp",
+        "20 nhân vật chibi đứng câu dọc bờ hồ, có tên + ảnh đại diện",
+        "Tặng quà = BUFF hào quang 5 cấp (mỗi cấp 1 icon quà), cấp cao có rồng nước, rồng vàng",
+        "Câu cá rơi trang phục: cánh, mũ, áo choàng, thú cưng — giữ luôn",
+        "Camera zoom cận cảnh khi câu được cá, kích buff",
+        "Cá Kim Long bốc thăm, nhiệm vụ cả phòng, giờ vàng, mưa/tuyết/nắng",
+        "Bảng xếp hạng cần thủ + tặng quà, nhạc nền + hiệu ứng âm thanh"
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 596000
+        }
+      ],
+      "version": "2.4.7",
+      "changes": [
+        "Sửa lỗi nút điều khiển và lưu link nhạc YouTube."
+      ],
+      "videos": [
+        {
+          "label": "Xem demo",
+          "url": "https://www.youtube.com/watch?v=QiINJoXCLgc&t=29s"
+        }
+      ]
+    },
+    {
+      "id": "auto-edit",
+      "name": "AUTO EDIT",
+      "tagline": "App edit video tự động: ném video vào → cắt thô → 11 kiểu edit, B-roll, timeline như CapCut → video TikTok 9:16",
+      "image": "img/autoedit-kieu-1.jpg",
+      "images": [
+        "img/autoedit-kieu-1.jpg",
+        "img/autoedit-ui-timeline.jpg",
+        "img/autoedit-kieu-2.jpg",
+        "img/autoedit-ui-kieu.jpg",
+        "img/autoedit-ui-duyet.jpg"
+      ],
+      "features": [
+        "Cắt thô tự động: bỏ khoảng lặng, từ đệm (à, ừ, ờm), nói lắp, câu nói hỏng rồi nói lại",
+        "Duyệt từng đoạn trước khi cắt, xem thử bản cắt liền mạch",
+        "11 kiểu edit: Viral, Karaoke, Dễ thương, Kịch tính, Motion graphic, Bán hàng, Điện ảnh…",
+        "Chèn B-roll (clip/ảnh sản phẩm) tự động",
+        "TIMELINE như CapCut: kéo thả, sửa từng chi tiết",
+        "Tự cập nhật bản mới, bấm 1 nút",
+        "Phụ đề chữ hoa tiếng Việt, từ khoá tô màu, tiêu đề mở đầu",
+        "Zoom che vết cắt, hiệu ứng âm thanh, nhạc nền tự giảm khi nói",
+        "Xuất 9:16 TikTok/Reels, 16:9 YouTube, 1:1; âm lượng chuẩn",
+        "Chạy ngay trên máy, không gửi video đi đâu",
+        "Dùng thử miễn phí đủ chức năng (video có chữ BHSTUDIO)"
+      ],
+      "plans": [
+        {
+          "days": 30,
+          "label": "1 tháng",
+          "price": 150000
+        },
+        {
+          "days": 90,
+          "label": "3 tháng",
+          "price": 300000
+        }
+      ],
+      "version": "1.2.2",
+      "changes": [
+        "Giao diện gọn mắt, bỏ icon trong nút và tiêu đề",
+        "Giá thuê trong app theo web: 150.000đ/1 tháng, 300.000đ/3 tháng"
+      ],
+      "kind": "app"
+    },
+    {
+      "id": "lop-hoc-chu",
+      "name": "Lớp Học Chữ",
+      "tagline": "Lớp học tương tác TikTok LIVE: giải đố chữ, đuổi hình, toán nhanh và thi đua theo lớp.",
+      "image": "img/lop-hoc-chu-bia2.jpg",
+      "images": [
+        "img/lop-hoc-chu-bia2.jpg",
+        "img/lop-hoc-chu.webp",
+        "img/lop-hoc-chu-gameplay-01.jpg",
+        "img/lop-hoc-chu-gameplay-02.jpg",
+        "img/lop-hoc-chu-gameplay-03.jpg",
+        "img/lop-hoc-chu-gameplay-04.jpg"
+      ],
+      "features": [
+        "20 câu mỗi tiết, gồm đố chữ, toán, tiếng Anh và lịch sử",
+        "Người xem trả lời qua bình luận, xếp điểm theo tốc độ",
+        "Cô giáo đọc đề tiếng Việt và tương tác cùng người xem",
+        "Tích hợp quà, lượt thích, bảng điểm và trò chơi giờ ra chơi",
+        "Dùng với TikTok LIVE Studio hoặc OBS"
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 100000
+        }
+      ],
+      "version": "1.0.3",
+      "changes": [
+        "Tự cập nhật trong game: bấm Cập nhật ngay là tự tải, tự cài, tự mở lại",
+        "Nhạc YouTube: dán link là phát, chỉnh âm lượng ngay",
+        "Giọng đọc nhấn nhá tự nhiên hơn",
+        "Link LIVE Studio mới: live.tuyendungidol.vn"
+      ]
+    },
+    {
+      "id": "lethanhhon",
+      "name": "Lễ Thành Hôn",
+      "tagline": "Game cưới 3D tương tác cho TikTok LIVE: khách vào tiệc, tặng quà để tham gia nghi lễ. Tải bản dùng thử trước khi mua.",
+      "image": "img/lethanhhon-bia2.jpg",
+      "images": [
+        "img/lethanhhon-bia2.jpg",
+        "img/up-mw5xz411.jpg"
+      ],
+      "features": [
+        "Khách vào tiệc; bình luận chúc mừng hiện trên sân khấu.",
+        "Tặng quà để đăng ký cô dâu/chú rể, mừng vàng, nhảy, phá đám và đãi rượu.",
+        "Nghi lễ cưới 6 bước tự chạy với cô dâu chú rể 3D, sân khấu hoa giấy.",
+        "Tùy chỉnh ảnh nền, nhân vật, nhạc, chữ và bố cục.",
+        "Dùng TikTok LIVE Studio hoặc OBS; sân khấu hỗ trợ đến 200 khách.",
+        "Bản dùng thử có giả lập; kết nối TikTok LIVE cần mã kích hoạt."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 599000
+        }
+      ],
+      "version": "1.0.20",
+      "changes": [
+        "Mở khoá quà tặng bất cứ lúc nào, MC dẫn chuyện liên tục, góp vui nhảy nhiều người, nhiều cải tiến."
+      ],
+      "videos": [
+        {
+          "label": "Hướng dẫn tải",
+          "url": "https://www.youtube.com/watch?v=3w0iUjI39J4"
+        }
+      ]
+    },
+    {
+      "id": "sontinh",
+      "name": "Sơn Tinh vs Thủy Tinh",
+      "tagline": "Game đấu 2 phe cho TikTok LIVE: người xem tặng quà để Sơn Tinh hoặc Thủy Tinh tung chiêu, bình luận 1 / 2 để góp sức. Tải bản dùng thử trước khi mua.",
+      "image": "img/sontinh-bia2.jpg",
+      "images": [
+        "img/sontinh-bia2.jpg",
+        "img/sontinh-1.jpg",
+        "img/sontinh-2.jpg",
+        "img/sontinh-3.jpg",
+        "img/sontinh-4.jpg"
+      ],
+      "features": [
+        "Sàn đấu Sơn Tinh vs Thủy Tinh, nhân vật và hiệu ứng chuyển động mượt.",
+        "Mỗi phe 8 chiêu theo quà: chưởng, dựng núi, sóng biển, khiên chặn đòn, rồng đất, rồng nước, combo VIP.",
+        "Bình luận \"1\" giúp Sơn Tinh ném đá, \"2\" giúp Thủy Tinh phóng cá; chống spam 30 giây mỗi người.",
+        "Bên thắng được Mị Nương cưỡi mây bay xuống ôm; giọng đọc nam/nữ có nhấn nhá.",
+        "Giả lập tự ra chiêu khi live vắng (không hiện tên người tặng), tự tắt khi có người bình luận.",
+        "Bảng TOP người ủng hộ mỗi phe, tính ván thắng, MVP.",
+        "Nhạc nền dán link YouTube là phát, chỉnh to nhỏ riêng nhạc và tiếng hiệu ứng.",
+        "Lọc từ cấm có sẵn; tự chọn quà, tên chiêu, sát thương, máu.",
+        "Dùng TikTok LIVE Studio hoặc OBS. Bản dùng thử chơi thử đủ chiêu; kết nối TikTok LIVE cần mã kích hoạt."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 699000
+        }
+      ],
+      "version": "1.0.7",
+      "changes": [
+        "Sửa lỗi lưu cài đặt và link nhạc YouTube (bản làm rối)."
+      ]
+    },
+    {
+      "id": "diemdanh",
+      "name": "Điểm Danh Quê Hương",
+      "tagline": "Game bản đồ 63 tỉnh cho TikTok LIVE: người xem bình luận tên tỉnh là bản đồ bay tới, tặng quà được đọc tên kèm quê. Tải bản dùng thử trước khi mua.",
+      "image": "img/diemdanh-bia.jpg",
+      "images": [
+        "img/diemdanh-bia.jpg",
+        "img/diemdanh-1.jpg",
+        "img/diemdanh-2.jpg",
+        "img/diemdanh-3.jpg",
+        "img/diemdanh-4.jpg"
+      ],
+      "features": [
+        "Bản đồ Việt Nam 63 tỉnh (có Hoàng Sa, Trường Sa), bình luận tên tỉnh là bản đồ phóng tới tỉnh đó.",
+        "Hiểu cả tên không dấu, viết tắt (hn, sg, hcm, bmt…) và tên thành phố quen (Đà Lạt, Nha Trang…); chống spam 30 giây mỗi người.",
+        "Quà được đọc tên: \"Hoa hồng từ … đã tới Đắk Lắk\" — tự chọn quà nào được đọc, quà \"Đọc ngay\" chen lên đầu hàng chờ.",
+        "Giọng đọc nam đọc liền câu, chào từng tỉnh kèm danh lam thắng cảnh và đặc sản 63 tỉnh.",
+        "Vòng 2 phút, tổng kết tỉnh đứng đầu, bục TOP 3 tỉnh có avatar người góp nhiều nhất.",
+        "Đếm số người mỗi tỉnh cộng dồn qua các buổi live; khung hàng chờ quà và nhắc người tặng chưa chọn tỉnh.",
+        "Giả lập khi live vắng (không hiện tên), nhạc nền dán link YouTube là phát, lọc từ cấm có sẵn.",
+        "Dùng TikTok LIVE Studio hoặc OBS. Bản dùng thử chơi thử đủ nút Thử; kết nối TikTok LIVE cần mã kích hoạt."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 150000
+        }
+      ],
+      "version": "1.0.3",
+      "changes": [
+        "Sửa lỗi lưu cài đặt và link nhạc YouTube (bản làm rối)."
+      ]
+    },
+    {
+      "id": "diemdanh3d",
+      "name": "Điểm Danh Quê Hương 3D",
+      "tagline": "Game bản đồ 3D cho TikTok LIVE: thắp sáng 34 tỉnh đỏ vàng rồi bay tới danh lam thật bằng ảnh vệ tinh, MC giới thiệu từng vùng đất. Tải bản dùng thử trước khi mua.",
+      "image": "img/diemdanh3d-bia.jpg",
+      "images": [
+        "img/diemdanh3d-bia.jpg",
+        "img/diemdanh3d-1.jpg",
+        "img/diemdanh3d-2.jpg",
+        "img/diemdanh3d-3.jpg",
+        "img/diemdanh3d-4.jpg"
+      ],
+      "features": [
+        "Chế độ \"Thắp sáng bản đồ Việt Nam\": bản đồ 34 tỉnh đỏ vàng, người xem gõ tên tỉnh + tặng quà là tỉnh đó bừng sáng đèn vàng.",
+        "Bay 3D thật tới danh lam: ảnh vệ tinh + địa hình nổi khối, máy quay hạ từ trên cao xuống xoay quanh thắng cảnh.",
+        "MC giới thiệu đúng cảnh — cảnh tới đâu đọc đến đó: tên danh lam, đặc sản từng tỉnh; tỉnh gộp bay lần lượt qua các tỉnh cũ.",
+        "Hiểu cả tên tỉnh cũ (gõ \"Bình Định\" vẫn sáng Gia Lai), tên không dấu, viết tắt; chống spam 30 giây mỗi người.",
+        "Vắng người xem thì MC tự giới thiệu các tỉnh và tự bật giả lập (không hiện tên, không cộng điểm); có bình luận hoặc quà thật là tự tắt.",
+        "Tỉnh dẫn đầu có ảnh thật danh lam (nguồn Wikimedia, ghi tác giả); TOP 5, hàng chờ đọc tên, thống kê đã sáng / còn lại.",
+        "Giọng đọc nam/nữ nhấn nhá, nhạc nền dán link YouTube là phát, lọc từ cấm có sẵn; đồ hoạ nét, không SFX/pháo hoa.",
+        "Dùng TikTok LIVE Studio hoặc OBS. Bản dùng thử chơi thử đủ nút \"Thử\"; kết nối TikTok LIVE cần mã kích hoạt. Máy yếu bật ?q=low."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 399000
+        }
+      ],
+      "version": "1.0.4",
+      "changes": [
+        "Sửa lỗi lưu cài đặt và link nhạc YouTube (bản làm rối)."
+      ]
+    },
+    {
+      "id": "haichien",
+      "name": "Hải Chiến Live",
+      "tagline": "Game bắn tàu cho TikTok LIVE: người xem bình luận toạ độ (C5, A2A4A5) để bắn, tặng quà được vũ khí lớn, đánh chìm hết hạm đội là thắng. Tải bản dùng thử trước khi mua.",
+      "image": "img/haichien-bia.jpg",
+      "images": [
+        "img/haichien-bia.jpg",
+        "img/haichien-1.jpg",
+        "img/haichien-2.jpg",
+        "img/haichien-3.jpg",
+        "img/haichien-4.jpg"
+      ],
+      "features": [
+        "Bàn radar 8×8, 5 tàu địch ẩn; người xem bình luận toạ độ như C5 là bắn, chống spam 30 giây mỗi người.",
+        "6 vũ khí theo quà: Đạn Pháo, Loạt Pháo 3 phát, Bom Chùm 3×3, Ngư Lôi quét 1 hàng, Tên Lửa Dò Tìm trúng chắc, Siêu Bom 5×5 — tự chọn quà cho từng vũ khí.",
+        "Tặng quà xong người tặng tự chọn ô (gõ nhiều ô liền: A2A4A5), có khung hướng dẫn + đếm ngược; quá giờ tàu tự nhắm bắn giúp.",
+        "Hiện ảnh đại diện + tên người bắn, bảng TOP xạ thủ, MVP mỗi ván, tự sang ván mới.",
+        "Hiệu ứng biển động, tên lửa, cháy nổ, tàu chìm, pháo hoa; tiếng nổ to rõ, giọng đọc nam/nữ.",
+        "Giả lập khi live vắng (không hiện tên), nhạc nền dán link YouTube là phát, lọc từ cấm có sẵn, máy yếu chạy nhẹ.",
+        "Dùng TikTok LIVE Studio hoặc OBS. Bản dùng thử bắn thử đủ nút Thử; kết nối TikTok LIVE cần mã kích hoạt."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 100000
+        }
+      ],
+      "version": "1.0.2",
+      "changes": [
+        "Sửa lỗi lưu cài đặt và link nhạc YouTube (bản làm rối)."
+      ]
+    },
+    {
+      "id": "beer-club",
+      "name": "Beer Club VIP",
+      "tagline": "Quán bia rooftop neon cho TikTok LIVE: bình luận là vào bàn, cụng ly 123 dô, tặng quà gọi mồi, tháp bia, vũ công, bao trọn club",
+      "image": "img/beer-club-bia.jpg",
+      "images": [
+        "img/beer-club-bia.jpg",
+        "img/beer-club-1.jpg",
+        "img/beer-club-2.jpg"
+      ],
+      "features": [
+        "Bình luận \"vô / dzô\" là vào bàn, có tên + bong bóng chat, 20 bàn",
+        "Gõ \"cụng / 123 dô\" cả quán cụng ly",
+        "Tặng quà: gọi mồi, tháp bia, em xinh chúc, vũ công nhảy, bao trọn club",
+        "Thả tim đủ mốc là mưa bia, mốc khai tiệc cả phòng cùng làm",
+        "Bảng TOP đại gia, ghế VIP, làm DJ",
+        "Nhạc nền + hiệu ứng, dùng TikTok LIVE Studio hoặc OBS (khung dọc 1080 × 1920)"
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 100000
+        }
+      ],
+      "version": "1.2.9",
+      "changes": [
+        "Sửa lỗi không kết nối được TikTok LIVE; link LIVE Studio hiện đúng khung dọc, không bị rộng."
+      ]
+    },
+    {
+      "id": "nhanvatao",
+      "name": "BH NHÂN VẬT ẢO",
+      "tagline": "Live không lộ mặt: nhân vật 3D nhại theo webcam của bạn, ngồi gõ phím, đổi giọng. Thú chibi tự thiết kế + nạp nhân vật người 3D (.vrm).",
+      "image": "img/nhanvatao-bia.png",
+      "images": [
+        "img/nhanvatao-bia.png",
+        "img/nhanvatao-1.jpg",
+        "img/nhanvatao-2.jpg",
+        "img/nhanvatao-3.png"
+      ],
+      "features": [
+        "Nhân vật nhại theo mặt bạn qua webcam: quay đầu, chớp mắt, nhép miệng, cười — che mặt khi live",
+        "8 thú chibi dễ thương + nhân vật \"Tổng Tài\" vest đen; tự đổi loài, áo, màu, phụ kiện",
+        "Nạp nhân vật người 3D (.vrm) của riêng bạn — ngồi bàn gõ phím, rê chuột theo tay thật",
+        "Ra tay theo cử chỉ: vẫy tay, chữ V, like, thả tim, cố lên",
+        "26 kiểu đổi giọng (chibi, robot, ma, ông chú, hợp xướng…), miệng nhép theo micro",
+        "Nền trong suốt / xanh lá — đưa thẳng vào TikTok LIVE Studio hoặc OBS",
+        "Chế độ giả lập: nhân vật tự cử động khi quay demo",
+        "Nhẹ máy, chạy 60 khung/giây; bảng điều khiển chia mục rõ ràng"
+      ],
+      "plans": [
+        {
+          "days": 30,
+          "label": "1 tháng",
+          "price": 200000
+        },
+        {
+          "days": 90,
+          "label": "3 tháng",
+          "price": 300000
+        },
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 600000
+        }
+      ],
+      "version": "1.0.0",
+      "changes": [
+        "Bản đầu tiên: nhân vật 3D theo webcam, 8 thú chibi + Tổng Tài, người 3D ngồi gõ máy, 26 kiểu đổi giọng, nền trong suốt cho LIVE Studio/OBS"
+      ],
+      "kind": "app"
+    },
+    {
+      "id": "nemsep",
+      "name": "Văn Phòng Xả Stress",
+      "tagline": "Game \"ném sếp\" xả stress cho TikTok LIVE: cả phòng bình chọn 1 trong 6 sếp khó tính rồi thả tim, bình luận, tặng quà để ném cho tới khi sếp xin thua. Sếp quát liên tục và gọi thẳng tên người chơi.",
+      "image": "img/nemsep-bia.jpg",
+      "images": [
+        "img/nemsep-bia.jpg",
+        "img/nemsep-v2-1.jpg",
+        "img/nemsep-v2-2.jpg",
+        "img/nemsep-v2-3.jpg",
+        "img/nemsep-v2-4.jpg"
+      ],
+      "features": [
+        "Người xem gõ tên sếp hoặc số 1–6 để bình chọn \"hôm nay ném ai\"; sếp nhiều phiếu nhất lên bàn.",
+        "Tim → giấy vo, bình luận → dép tổ ong (hiện luôn câu bình luận), tặng quà → nhân viên mang ảnh người tặng nhảy lên bàn: cà chua, búa hơi, bánh kem, xô nước đá, chồng hồ sơ.",
+        "6 sếp văn phòng vui nhộn, mỗi sếp một giọng riêng, quát liên tục và gọi thẳng tên người ném — người tặng quà nói 1 câu, sếp cãi lại ngay.",
+        "Thanh \"sức lì\" tụt dần, hết là sếp \"XIN THUA\", bảng vinh danh người ra tay nhiều nhất rồi bình chọn sếp mới.",
+        "Chọn quà cho từng hiệu ứng, nhạc nền tự soạn hoặc dán link YouTube, lọc từ cấm, chống spam, giả lập khi live vắng.",
+        "Có 2 ngôn ngữ: Tiếng Việt và English (chữ, tên sếp, thoại, giọng đọc và bảng điều khiển đều đổi), live cho khán giả nước ngoài được.",
+        "Vẽ 2D nhẹ, máy yếu vẫn chạy; dùng TikTok LIVE Studio hoặc OBS. Kết nối TikTok LIVE cần mã kích hoạt."
+      ],
+      "plans": [
+        {
+          "days": 36500,
+          "label": "Vĩnh viễn",
+          "price": 599000
+        }
+      ],
+      "version": "1.0.8",
+      "changes": [
+        "Thêm bản TIẾNG ANH: chọn Tiếng Việt / English, đổi hết chữ, 6 sếp, thoại và giọng đọc",
+        "Sửa menu quà LIVE FEST trên máy đã lưu danh sách quà cũ",
+        "Quà LIVE FEST trên menu quà (LIVE FEST 26, FEST Explorer, FEST Energy)",
+        "Cà chua dính kín mặt sếp, tặng càng nhiều càng phủ đầy",
+        "Quà gán ở bảng điều khiển luôn ra đúng hiệu ứng",
+        "Mọi quà đều hiện tên người tặng ngay trên món đồ",
+        "Quà cà chua luôn được ném, bay từ 2 bên màn hình, không bị khung bình luận che",
+        "Quà tặng giữa 2 vòng được giữ lại để ném bù",
+        "Làm lại toàn bộ hình: văn phòng có chiều sâu, sếp nét hoạt hình",
+        "Menu quà có ảnh quà ngay trên sân khấu",
+        "Hiệu ứng quà hoành tráng: búa, bánh kem úp mặt, xô nước đá, chồng hồ sơ rơi từ trần",
+        "Nhân viên lên bàn mặc đồ theo món quà, ảnh người tặng trên đầu",
+        "Sân khấu không còn chữ bật tiếng; nút bật tiếng xem trước",
+        "Nhạc nền vui đặt sẵn",
+        "Link LIVE Studio tự bật tiếng, không còn dính chữ \"bấm để bật\"",
+        "Bản đầu: 6 sếp, bình chọn, ném, quà lên bàn, thoại gọi tên"
+      ],
+      "platforms": [
+        "win",
+        "android"
+      ]
+    },
+    {
+      "id": "tautet",
+      "soon": true,
+      "name": "Chuyến Tàu Tết",
+      "tagline": "Tàu cao tốc 3D chạy Bắc – Nam qua 34 tỉnh thành cho TikTok LIVE: người xem gõ tên quê để lên tàu về ăn Tết, khoang tàu đông dần, tới nơi có cảnh về nhà gặp bố mẹ. Đang hoàn thiện.",
+      "image": "img/tautet-bia.jpg",
+      "images": [
+        "img/tautet-bia.jpg",
+        "img/tautet-1.jpg",
+        "img/tautet-2.jpg",
+        "img/tautet-3.jpg",
+        "img/tautet-4.jpg",
+        "img/tautet-5.jpg"
+      ],
+      "features": [
+        "Tàu 3D chạy trên cầu cạn, qua núi, đèo biển, đường hầm; trời đổi theo từng vùng miền.",
+        "Gõ tên quê → lên tàu, tên hiện trong khoang tàu; tặng quà đưa thêm người cùng về quê.",
+        "Mỗi chuyến khoảng 7 phút qua 34 tỉnh, về đích vinh danh tỉnh đông người về nhất.",
+        "MC giọng nam nhấn nhá, kể kịch bản \"Về nhà\" cảm động.",
+        "Nhắn Zalo để được báo ngay khi ra mắt."
+      ],
+      "plans": []
+    },
+    {
+      "id": "congthanh",
+      "soon": true,
+      "name": "Công Thành Chiến",
+      "tagline": "Game PK Băng vs Lửa cho TikTok LIVE: 2 phe đông lính công thành, tường sập từng mảng, khổng lồ, rồng, bão tuyết, thiên thạch theo quà; gõ XÂY để sửa thành. Đang hoàn thiện.",
+      "image": "img/congthanh-bia2.jpg",
+      "images": [
+        "img/congthanh-bia2.jpg",
+        "img/congthanh-1.jpg",
+        "img/congthanh-2.jpg",
+        "img/congthanh-3.jpg"
+      ],
+      "features": [
+        "2 thành Băng và Lửa, lính tràn công thành, tường nứt rồi sập từng mảng, tháp đổ, nhà chính sập là thua.",
+        "Quà triệu hồi cung thủ, tướng, khổng lồ, rồng; quà lớn gọi bão tuyết hoặc thiên thạch.",
+        "Người xem gõ XÂY để sửa tường thành của phe mình.",
+        "Nhạc nền tự soạn, tiếng động mới, MC đọc theo trận.",
+        "Nhắn Zalo để được báo ngay khi ra mắt."
+      ],
+      "plans": []
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hướng dẫn Lễ Thành Hôn</title>
+<meta name="description" content="Hướng dẫn sử dụng game live TikTok Lễ Thành Hôn: kích hoạt, kết nối, đưa vào LIVE Studio, chọn quà, nghi lễ, động phòng và xử lý sự cố.">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script>
+  // ?theme=dark: mở trong app (nền tối). ?app=1: bỏ phần đầu trang (hộp hướng dẫn trong app đã có tiêu đề)
+  (function () { var q = new URLSearchParams(location.search); if (q.get('theme')) document.documentElement.dataset.theme = q.get('theme'); if (q.has('app')) document.documentElement.classList.add('in-app'); })();
+</script>
+<style>
+:root {
+  --bg: #faf7fb; --card: #ffffff; --ink: #1f1726; --muted: #6b5f75; --line: #e8e0ee;
+  --accent: #7c3aed; --accent-soft: #f1eaff; --red: #c8102e; --red-soft: #fdecef; --gold: #b7791f; --gold-soft: #fff6e0;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d0b16; --card: #15121f; --ink: #ece6f3; --muted: #a99fb6; --line: #2a2438;
+    --accent: #a78bfa; --accent-soft: #241a3d; --red: #ff6b81; --red-soft: #33141c; --gold: #f2c14e; --gold-soft: #2e2410;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d0b16; --card: #15121f; --ink: #ece6f3; --muted: #a99fb6; --line: #2a2438;
+  --accent: #a78bfa; --accent-soft: #241a3d; --red: #ff6b81; --red-soft: #33141c; --gold: #f2c14e; --gold-soft: #2e2410;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.65 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; }
+.in-app .wrap { padding-top: 16px; }
+.in-app header { display: none; }
+header { padding: 8px 0 20px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+header h1 { margin: 0 0 6px; font-size: 30px; line-height: 1.25; letter-spacing: -0.01em; }
+header p { margin: 0; color: var(--muted); }
+.tag { display: inline-block; font-size: 13px; font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 2px 10px; border-radius: 999px; margin-bottom: 10px; }
+nav.toc { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin-bottom: 24px; }
+nav.toc b { display: block; margin-bottom: 6px; }
+nav.toc ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 28px; }
+nav.toc li { break-inside: avoid; }
+nav.toc a { color: var(--ink); text-decoration: none; }
+nav.toc a:hover { color: var(--accent); text-decoration: underline; }
+section { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 22px; margin-bottom: 16px; scroll-margin-top: 12px; }
+section h2 { margin: 0 0 8px; font-size: 20px; line-height: 1.3; display: flex; gap: 10px; align-items: baseline; }
+section h2 .n { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 14px; display: inline-grid; place-items: center; transform: translateY(-2px); }
+h3 { font-size: 16px; margin: 14px 0 4px; }
+p { margin: 6px 0; }
+ul, ol { margin: 6px 0 8px; padding-left: 22px; }
+li { margin: 3px 0; }
+code { font-family: Consolas, 'Cascadia Mono', monospace; font-size: 14px; background: var(--accent-soft); color: var(--accent); padding: 1px 6px; border-radius: 6px; word-break: break-all; }
+.btn { display: inline-block; font-size: 14px; font-weight: 700; background: var(--accent-soft); color: var(--accent); border: 1px solid var(--line); border-radius: 8px; padding: 0 8px; white-space: nowrap; }
+.lock { display: inline-block; font-size: 14px; font-weight: 700; background: #3a3542; color: #b9b2c4; border-radius: 8px; padding: 0 8px; white-space: nowrap; }
+.note, .warn { border-radius: 10px; padding: 10px 14px; margin: 10px 0; font-size: 15px; }
+.note { background: var(--gold-soft); border-left: 4px solid var(--gold); }
+.warn { background: var(--red-soft); border-left: 4px solid var(--red); }
+.tbl { width: 100%; overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 460px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+th { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+td:first-child { font-weight: 700; white-space: nowrap; }
+.steps { counter-reset: s; list-style: none; padding: 0; }
+.steps li { counter-increment: s; position: relative; padding: 7px 0 7px 42px; border-bottom: 1px dashed var(--line); }
+.steps li:last-child { border-bottom: 0; }
+.steps li::before { content: counter(s); position: absolute; left: 0; top: 7px; width: 28px; height: 28px; border-radius: 50%; background: var(--red-soft); color: var(--red); font-weight: 800; display: grid; place-items: center; }
+footer { color: var(--muted); font-size: 14px; text-align: center; margin-top: 24px; }
+footer a { color: var(--accent); }
+@media (max-width: 640px) {
+  header h1 { font-size: 24px; }
+  nav.toc ol { columns: 1; }
+  section { padding: 16px; }
+}
+@media print { body { background: #fff; } section, nav.toc { break-inside: avoid; border-color: #ccc; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="tag">Game live TikTok · BH Studio</span>
+  <h1>Hướng dẫn sử dụng game live “Lễ Thành Hôn”</h1>
+  <p>Người xem vào phòng live thành khách dự tiệc cưới. Ai tặng quà Chú Rể / Cô Dâu sẽ lên sân khấu, đủ một đôi là nghi lễ cưới tự chạy. Khách còn tặng quà để mừng cưới, cúp điện, khui sâm banh, lên nhảy…</p>
+</header>
+
+<nav class="toc">
+  <b>Mục lục</b>
+  <ol>
+    <li><a href="#nhanh">Bắt đầu nhanh (5 bước)</a></li>
+    <li><a href="#kichhoat">Kích hoạt bản quyền</a></li>
+    <li><a href="#ketnoi">Kết nối TikTok LIVE</a></li>
+    <li><a href="#livestudio">Đưa vào LIVE Studio / OBS</a></li>
+    <li><a href="#qua">Chọn quà cho từng hành động</a></li>
+    <li><a href="#khoa">Vì sao ô quà có ổ khóa?</a></li>
+    <li><a href="#luat">Người xem chơi thế nào</a></li>
+    <li><a href="#nghile">Nghi lễ cưới 7 bước</a></li>
+    <li><a href="#dongphong">Động phòng (40 giây)</a></li>
+    <li><a href="#hieuung">Hiệu ứng quà</a></li>
+    <li><a href="#mc">MC và kịch bản</a></li>
+    <li><a href="#thu">Tập thử trước khi live</a></li>
+    <li><a href="#dieukhien">Nút điều khiển khi live</a></li>
+    <li><a href="#nhac">Âm thanh và nhạc</a></li>
+    <li><a href="#manhinh">Màn hình sân khấu</a></li>
+    <li><a href="#nen">Ảnh nền, bàn tiệc, nhân vật</a></li>
+    <li><a href="#capnhat">Cập nhật bản mới</a></li>
+    <li><a href="#tiktok">Giữ live an toàn</a></li>
+    <li><a href="#suco">Sự cố thường gặp</a></li>
+  </ol>
+</nav>
+
+<section id="nhanh">
+  <h2><span class="n">1</span>Bắt đầu nhanh (5 bước)</h2>
+  <ol class="steps">
+    <li>Mở app <b>Lễ Thành Hôn</b>, nhập mã kích hoạt (mục 2).</li>
+    <li>Gõ tên tài khoản TikTok của bạn rồi bấm <span class="btn">Kết nối</span> (mục 3).</li>
+    <li>Thêm sân khấu vào TikTok LIVE Studio bằng nguồn <b>Liên kết</b>, cỡ <b>1080 × 1920</b> (mục 4).</li>
+    <li>Chọn quà cho từng hành động (mục 5).</li>
+    <li>Bấm <span class="btn">Thử nhanh 1 đám cưới</span> để xem thử, thấy ổn là lên live.</li>
+  </ol>
+</section>
+
+<section id="kichhoat">
+  <h2><span class="n">2</span>Kích hoạt bản quyền</h2>
+  <ol>
+    <li>Ở mục <b>Bản quyền &amp; dùng thử</b>, bấm <span class="btn">Sao chép</span> để lấy <b>mã máy</b>.</li>
+    <li>Bấm <span class="btn">Xem giá &amp; QR</span> rồi nhắn Zalo shop kèm mã máy để mua.</li>
+    <li>Nhận <b>mã kích hoạt</b> qua Zalo, bấm <span class="btn">Dán</span> rồi <span class="btn">Kích hoạt</span>.</li>
+  </ol>
+  <p>Chưa kích hoạt thì vẫn dùng thử giả lập và sân khấu, nhưng <b>chưa kết nối được TikTok LIVE</b>, sân khấu có chữ mờ “BẢN DÙNG THỬ”.</p>
+</section>
+
+<section id="ketnoi">
+  <h2><span class="n">3</span>Kết nối TikTok LIVE</h2>
+  <p>Gõ tên tài khoản TikTok đang live (<b>không cần @</b>), bấm <span class="btn">Kết nối</span>. Muốn dừng thì bấm <span class="btn">Ngắt</span>.</p>
+  <p>Lần sau mở app, game <b>tự kết nối lại</b>. Chưa lên live thì cứ 1 phút game tự thử lại, bạn không cần làm gì.</p>
+</section>
+
+<section id="livestudio">
+  <h2><span class="n">4</span>Đưa vào LIVE Studio / OBS</h2>
+  <h3>TikTok LIVE Studio</h3>
+  <ol>
+    <li>Thêm nguồn <b>Liên kết</b>, dán link hiện ở mục <b>Đưa sân khấu vào LIVE Studio / OBS</b> trong game (ví dụ <code>http://live.tuyendungidol.vn:8688/stage</code>).</li>
+    <li>Đặt cỡ <b>1080 × 1920</b> (khung dọc) và <b>bật âm thanh</b> của nguồn.</li>
+    <li>Nếu sân khấu hiện “Bấm vào đây để bật âm thanh” thì bấm vào sân khấu 1 lần.</li>
+  </ol>
+  <h3>OBS</h3>
+  <p>Thêm <b>Browser Source</b>, link <code>http://localhost:8688/stage</code>, cỡ 1080 × 1920.</p>
+  <div class="note"><b>Kiểm tra độ nét:</b> mục này trong game báo cỡ thật của sân khấu. <b>Chữ xanh là nét</b>, chữ đỏ là đặt sai cỡ (hình trên live sẽ mờ), làm theo hướng dẫn hiện ra. Mỗi lần cập nhật game nhớ bấm <b>Làm mới</b> nguồn Liên kết.</div>
+</section>
+
+<section id="qua">
+  <h2><span class="n">5</span>Chọn quà cho từng hành động</h2>
+  <p>Vào mục <b>Chọn quà</b>, bấm <span class="btn">Tải danh sách quà TikTok</span> rồi chọn một món quà cho từng hành động. Người xem tặng <b>đúng quà đã chọn</b> thì hành động chạy; quà khác chỉ được cảm ơn và cộng vào bảng TOP.</p>
+  <div class="tbl"><table>
+    <tr><th>Ô trên menu</th><th>Trên sân khấu</th></tr>
+    <tr><td>Chú Rể / Cô Dâu</td><td>Người tặng lên sân khấu đứng chờ, tên hiện trên cổng hoa. Đủ đôi là vào lễ.</td></tr>
+    <tr><td>Mừng Cưới</td><td>Thiệp chúc phúc bay lên.</td></tr>
+    <tr><td>Cúp Điện</td><td>Hội trường tắt đèn, một đèn rọi đôi uyên ương, rồi sáng lại.</td></tr>
+    <tr><td>Quẩy Lên</td><td>Người tặng lên nhảy <b>7 giây</b> với đèn bar và nhạc nhảy đám cưới.</td></tr>
+    <tr><td>Tình Cũ</td><td>“Người yêu cũ” chạy lên giơ bảng, hai bảo vệ ra khiêng đi.</td></tr>
+    <tr><td>Sâm Banh</td><td>Khui sâm banh, “2 3 dzô”, cả hội trường reo hò.</td></tr>
+    <tr><td>Nhìn Lén</td><td>Chỉ dùng lúc Động phòng: vén góc rèm, lộ một cảnh hài.</td></tr>
+    <tr><td>Giật Dâu / Giật Rể</td><td>Người tặng thay chỗ cô dâu / chú rể, người cũ chạy xuống khóc.</td></tr>
+  </table></div>
+  <p>Chữ trên từng ô (2 từ cho gọn) sửa được ở mục Chọn quà.</p>
+</section>
+
+<section id="khoa">
+  <h2><span class="n">6</span>Vì sao ô quà có ổ khóa?</h2>
+  <p>Ô nào lúc đó chưa diễn được sẽ có <b>ổ khóa vàng</b> ở góc. Có 2 lúc:</p>
+  <div class="tbl"><table>
+    <tr><th>Lúc</th><th>Ô còn mở</th><th>Lý do</th></tr>
+    <tr><td>Chưa có cô dâu chú rể</td><td>Chú Rể, Cô Dâu</td><td>Các hiệu ứng khác cần có đôi uyên ương trên sân khấu mới diễn được.</td></tr>
+    <tr><td>Đang động phòng (40 giây)</td><td>Nhìn Lén, Chú Rể, Cô Dâu</td><td>Để đôi uyên ương “động phòng” không bị làm phiền. Chú Rể / Cô Dâu vẫn nhận để xếp vào đám sau.</td></tr>
+  </table></div>
+  <p>Hết lúc đó ô <b>tự mở lại</b>. Lỡ tặng vào ô khóa thì quà vẫn được cảm ơn và cộng bảng TOP, chỉ là hiệu ứng không chạy.</p>
+</section>
+
+<section id="luat">
+  <h2><span class="n">7</span>Người xem chơi thế nào</h2>
+  <ul>
+    <li><b>Bình luận bất kỳ</b>: thành khách dự tiệc, có bảng tên. Bình luận hiện bong bóng chữ trên đầu <b>3 giây</b>.</li>
+    <li>Gõ <b>“nam”</b> hoặc <b>“nữ”</b>: đổi nhân vật của mình sang nam / nữ.</li>
+    <li>Tặng quà <b>Chú Rể / Cô Dâu</b>: nhân vật đi lên sân khấu đứng chờ, tên hiện to trên cổng hoa.</li>
+    <li>Đang có đám cưới mà vẫn có người tặng Chú Rể / Cô Dâu: tên vào bảng <b>“ĐÁM CƯỚI TIẾP THEO”</b> (góc trái, hiện 30 giây một lần và ngay khi có người đăng ký), xong đám này tới đám kế tiếp theo thứ tự.</li>
+    <li>Người đang là <b>cô dâu / chú rể</b> gõ <b>“tên + tên mới”</b> (vd. <i>tên Nguyễn Huy</i>): đổi tên trên cổng hoa. Khách thường gõ không có tác dụng, tên có từ bậy bị chặn.</li>
+    <li>Khung <b>“💬 BÌNH LUẬN”</b> ngay trên menu quà tự nhắc 3 lệnh này cho người xem.</li>
+  </ul>
+</section>
+
+<section id="nghile">
+  <h2><span class="n">8</span>Nghi lễ cưới 7 bước</h2>
+  <p>Đủ chú rể và cô dâu thì hai người xuống đầu thảm đỏ và lễ <b>tự chạy</b>. Camera zoom cận đôi uyên ương, mỗi bước có một <b>tag thông điệp</b> nhỏ phía dưới.</p>
+  <ol class="steps">
+    <li><b>Sánh bước</b> (12 giây): đi thảm đỏ lên sân khấu, pháo giấy.</li>
+    <li><b>Lên cỗ</b> (8 giây): mâm cỗ dọn lên bàn.</li>
+    <li><b>Đeo nhẫn</b> (10 giây): chú rể quỳ đeo nhẫn cho cô dâu.</li>
+    <li><b>Rót rượu</b> (8 giây): rót sâm banh vào tháp ly.</li>
+    <li><b>Hôn nhau</b> (7 giây).</li>
+    <li><b>Chúc phúc</b> (8 giây): chú rể bế cô dâu đi vòng sân khấu.</li>
+    <li><b>Động phòng</b> (40 giây): giường cưới, rèm buông.</li>
+  </ol>
+  <p>Mục <b>Nghi lễ</b>: bỏ tích để bỏ bước, chỉnh số giây từng bước và thời gian nghỉ giữa 2 đám (mặc định 10 giây).</p>
+</section>
+
+<section id="dongphong">
+  <h2><span class="n">9</span>Động phòng (40 giây)</h2>
+  <ul>
+    <li>Giường cưới rồng phượng giữa màn hình, sau rèm đỏ chỉ thấy <b>bóng mờ</b> đôi uyên ương đổi dáng liên tục.</li>
+    <li>Trên cùng là khung <b>tên + ảnh đại diện</b> chú rể ♥ cô dâu; phía dưới là <b>XIN ĐỪNG LÀM PHIỀN ♥</b> và <b>đồng hồ đếm ngược</b>.</li>
+    <li>Chỉ quà <b>Nhìn Lén</b> còn mở: người tặng hiện cạnh giường, vén góc rèm lộ cảnh hài.</li>
+  </ul>
+</section>
+
+<section id="hieuung">
+  <h2><span class="n">10</span>Hiệu ứng quà</h2>
+  <ul>
+    <li>Nhiều người tặng cùng lúc thì hiệu ứng <b>xếp hàng, chạy từng cái</b>.</li>
+    <li>Đang làm lễ mà có hiệu ứng thì lễ tạm dừng, xong hiệu ứng <b>làm lại bước đó</b>.</li>
+    <li><b>Quẩy Lên:</b> mỗi người nhảy 7 giây, mỗi lượt một bài nhạc. Lúc nhảy, nhạc nền và nhạc YouTube tự tắt, <b>MC im</b>.</li>
+  </ul>
+</section>
+
+<section id="mc">
+  <h2><span class="n">11</span>MC và kịch bản</h2>
+  <ul>
+    <li>Lúc <b>chưa có lễ</b>: MC chào khách, cảm ơn quà, giới thiệu cách chơi.</li>
+    <li>Lúc <b>đang làm lễ</b>: MC <b>chỉ dẫn nghi lễ</b>, không đọc quà hay chào khách. Lúc khách nhảy: MC im.</li>
+    <li>MC nói <b>không hạ nhỏ nhạc nền</b>.</li>
+    <li><b>Kịch bản MC</b> (mục Nhân vật &amp; MC) có 2 phần chọn riêng rồi bấm <span class="btn">Áp dụng</span>:
+      <ul>
+        <li><b>Lời MC lúc chờ</b> (chưa có cô dâu chú rể): Hội vu quy, Ca dao lục bát, Trung tâm mai mối, Trang trọng, Vui nhộn, Ngắn gọn.</li>
+        <li><b>Lời dẫn nghi lễ</b> (đôi đã lên): Ca dao trang trọng, Ca dao vui, Hài “mất tự do”, Trang trọng, Vui nhộn, Ngắn gọn.</li>
+      </ul>
+      Tên cô dâu chú rể <b>tự điền</b> vào lời MC. Chọn <b>Tự điền</b> để tự viết từng câu.</li>
+    <li>Ô <b>Cho máy đọc một câu</b>: gõ câu bất kỳ, MC đọc ngay (lúc nào cũng đọc).</li>
+  </ul>
+</section>
+
+<section id="thu">
+  <h2><span class="n">12</span>Tập thử trước khi live</h2>
+  <ul>
+    <li><span class="btn">Thử nhanh 1 đám cưới</span>: 2 khách giả đăng ký rồi vào lễ.</li>
+    <li><b>Quà chỉ định</b>: bấm từng nút để thử đúng quà đã chọn.</li>
+    <li><span class="btn">Bắt đầu giả lập tự động</span>: khách ảo tự vào, bình luận, tặng đủ loại quà.</li>
+  </ul>
+  <div class="warn">Nhớ <b>tắt giả lập tự động</b> trước khi lên live thật.</div>
+</section>
+
+<section id="dieukhien">
+  <h2><span class="n">13</span>Nút điều khiển khi live</h2>
+  <div class="tbl"><table>
+    <tr><th>Nút</th><th>Dùng khi</th></tr>
+    <tr><td>Bắt đầu lễ ngay</td><td>Đã đủ đôi, muốn vào lễ luôn.</td></tr>
+    <tr><td>Sang bước tiếp</td><td>Bỏ qua bước đang chạy.</td></tr>
+    <tr><td>Tới bước Động phòng</td><td>Nhảy thẳng tới bước 7.</td></tr>
+    <tr><td>Dọn đôi trên sân khấu</td><td>Kết thúc đám cưới đang diễn ra.</td></tr>
+    <tr><td>Xóa hàng chờ / Xóa bảng TOP</td><td>Làm lại từ đầu.</td></tr>
+    <tr><td>Mời khách về hết</td><td>Dọn khách cho gọn.</td></tr>
+  </table></div>
+</section>
+
+<section id="nhac">
+  <h2><span class="n">14</span>Âm thanh và nhạc</h2>
+  <ul>
+    <li>Âm lượng mặc định đã cân sẵn: <b>nhạc nền 18, giọng MC 100, hiệu ứng 60, nhạc nhảy 55</b>. Chỉnh ở mục <b>Âm thanh &amp; nhạc</b>.</li>
+    <li>Chọn nhạc nền, nhạc nhảy (mặc định 3 bài nhảy đám cưới 7 giây), hoặc <b>Tải nhạc lên</b>.</li>
+    <li><b>Nhạc YouTube</b>: dán link rồi bấm <span class="btn">Phát</span>; lúc phát, nhạc nền game tự tắt.</li>
+  </ul>
+  <div class="warn">Nhạc có bản quyền dễ bị TikTok tắt tiếng. Nên dùng nhạc không bản quyền.</div>
+</section>
+
+<section id="manhinh">
+  <h2><span class="n">15</span>Màn hình sân khấu</h2>
+  <ul>
+    <li><b>Tiêu đề</b>: logo “Lễ Thành Hôn” rồng phượng (tắt được ở mục Chữ).</li>
+    <li><b>Cổng hoa</b>: tên cô dâu chú rể tự hiện, tên dài tự thu nhỏ cho vừa.</li>
+    <li><b>Menu quà</b>: 6 ô ở sảnh ngoài phía dưới, vài giây trượt sang nhóm tiếp. Kiểu khác (Ngang, Dọc, Lưới) chọn ở mục Bố cục chữ.</li>
+    <li><b>Khung lệnh bình luận</b> ngay trên menu, <b>bảng TOP mừng cưới</b> bên phải.</li>
+    <li>Mọi khối kéo thả / đổi cỡ / ẩn được ở mục <b>Bố cục chữ</b>; lỡ tay thì bấm <span class="btn">Về bố cục mặc định</span>.</li>
+    <li>Mục <b>Hiệu ứng &amp; cỡ</b>: <b>Độ nét hình</b> (mặc định 40, máy giật thì kéo về 0), cỡ khách, cỡ bảng tên, số khách tối đa (mặc định 30), cánh hoa rơi.</li>
+  </ul>
+</section>
+
+<section id="nen">
+  <h2><span class="n">16</span>Ảnh nền, bàn tiệc, nhân vật</h2>
+  <ul>
+    <li>Mục <b>Ảnh nền &amp; vị trí</b>: đổi nền, kéo bàn tiệc / MC ngay trên khung xem trước (kéo góc vàng để đổi cỡ).</li>
+    <li>Mục <b>Nhân vật &amp; MC</b>: tải ảnh nhân vật PNG nền trong suốt, đặt tên MC.</li>
+  </ul>
+</section>
+
+<section id="capnhat">
+  <h2><span class="n">17</span>Cập nhật bản mới</h2>
+  <p>Có bản mới thì game hiện hộp <b>“Có bản mới”</b>: bấm <span class="btn">Cập nhật ngay</span> là game tự tải, tự cài, tự mở lại. <b>Mã kích hoạt và cài đặt vẫn giữ nguyên.</b></p>
+  <p>Tải tay: <a href="https://tuyendungidol.vn" target="_blank" rel="noopener">tuyendungidol.vn</a> → Lễ Thành Hôn, cài đè lên bản cũ.</p>
+</section>
+
+<section id="tiktok">
+  <h2><span class="n">18</span>Giữ live an toàn</h2>
+  <ul>
+    <li>TikTok có thể cảnh báo khi <b>tặng quà để đổi lợi thế</b>. Nếu bị cảnh báo: mục <b>Nghi lễ</b>, bật <b>“Đăng ký bằng bình luận”</b> rồi bỏ chọn quà Chú Rể / Cô Dâu.</li>
+    <li>Nên dùng nhạc không bản quyền và bật <b>Từ cấm</b> (đầu mục Chữ) để che tên, bình luận bậy.</li>
+  </ul>
+</section>
+
+<section id="suco">
+  <h2><span class="n">19</span>Sự cố thường gặp</h2>
+  <div class="tbl"><table>
+    <tr><th>Gặp</th><th>Cách xử lý</th></tr>
+    <tr><td>Hình trên live bị mờ</td><td>Đặt nguồn Liên kết đúng <b>1080 × 1920</b>, bỏ <code>?q=low</code>, bấm Làm mới. Xem dòng báo cỡ ở mục 4.</td></tr>
+    <tr><td>Không có tiếng</td><td>Bấm vào sân khấu 1 lần, kiểm tra nguồn đã bật âm thanh.</td></tr>
+    <tr><td>Nghe nhạc bị đè</td><td>Đừng mở sân khấu ở 2 chỗ cùng có tiếng (vừa LIVE Studio vừa OBS).</td></tr>
+    <tr><td>Không kết nối được</td><td>Kiểm tra tên tài khoản (không @), đã lên live chưa, đã kích hoạt mã chưa.</td></tr>
+    <tr><td>LIVE Studio trắng</td><td>Dùng link dự phòng <code>http://lvh.me:8688/stage</code>, kiểm tra app còn mở, rồi bấm Làm mới nguồn.</td></tr>
+    <tr><td>Sân khấu giật</td><td>Kéo “Độ nét hình” về 0, hoặc thêm <code>?q=low</code> vào cuối link.</td></tr>
+    <tr><td>Tặng quà mà không có gì</td><td>Quà chưa được chọn cho hành động nào, hoặc ô đang có ổ khóa (mục 6).</td></tr>
+  </table></div>
+</section>
+
+<footer>Lễ Thành Hôn · BH Studio · <a href="https://tuyendungidol.vn" target="_blank" rel="noopener">tuyendungidol.vn</a></footer>
+</div>
+</body>
+</html>
