@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /noi-bo
+Disallow: /ma-hoa/
+
+Sitemap: https://tuyendungidol.vn/sitemap.xml

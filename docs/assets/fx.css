@@ -1,0 +1,21 @@
+/* Hiệu ứng chuột + cuộn + nền 3D (đi kèm assets/fx.js) */
+.bg3d { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; opacity: .75; }
+.sprog { position: fixed; left: 0; top: 0; height: 3px; width: 100%; z-index: 40; transform-origin: 0 50%; transform: scaleX(var(--sp, 0)); background: var(--grad); box-shadow: 0 0 12px rgba(168, 85, 247, .8); pointer-events: none; }
+header { transition: background .3s, box-shadow .3s; } header.scr { background: rgba(8, 5, 26, .9); box-shadow: 0 10px 30px rgba(0, 0, 0, .35); }
+.mglow { position: fixed; left: 0; top: 0; width: 520px; height: 520px; margin: -260px 0 0 -260px; border-radius: 50%; pointer-events: none; z-index: -1; background: radial-gradient(circle, rgba(168, 85, 247, .22), rgba(124, 58, 237, .08) 40%, transparent 68%); will-change: transform; }
+.cur { position: fixed; left: 0; top: 0; width: 34px; height: 34px; margin: -17px 0 0 -17px; border-radius: 50%; border: 1.5px solid rgba(216, 180, 254, .8); pointer-events: none; z-index: 90; transition: width .25s, height .25s, margin .25s, background .25s, border-color .25s, scale .15s; will-change: transform; }
+.cur.big { width: 64px; height: 64px; margin: -32px 0 0 -32px; background: rgba(168, 85, 247, .16); border-color: rgba(255, 255, 255, .9); }
+.cdot { position: fixed; left: 0; top: 0; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; background: #fff; pointer-events: none; z-index: 91; will-change: transform; }
+.spark { position: fixed; z-index: 89; width: 6px; height: 6px; margin: -3px 0 0 -3px; border-radius: 50%; pointer-events: none; background: radial-gradient(#fff, #c084fc 60%, transparent 70%); animation: spark .8s ease-out forwards; }
+@keyframes spark { to { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; } }
+.tilt { transform-style: preserve-3d; will-change: transform; transition: transform .2s ease-out, border-color .25s, background .25s; }
+.tilt::after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s; background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(216, 180, 254, .2), transparent 60%); }
+.tilt.hov::after { opacity: 1; }
+.card, .ccard, .game, .prow, .pol > div, .ticket, .step, .ts .glass, .closing li, details { position: relative; }
+.stage { transition: transform .15s ease-out; transform-style: preserve-3d; }
+.btn.mag { transition: transform .2s ease-out, box-shadow .2s; }
+.mq { transform: rotate(-1.2deg) skewX(var(--sk, 0deg)); }
+.rv.l { transform: perspective(800px) translateX(-50px) rotateY(18deg); } .rv.r { transform: perspective(800px) translateX(50px) rotateY(-18deg); } .rv.z { transform: perspective(800px) scale(.88) rotateX(14deg); }
+.rv.l.in, .rv.r.in, .rv.z.in { transform: none; }
+.rv { transform: perspective(800px) translateY(30px) rotateX(10deg); }
+@media (hover: none), (pointer: coarse) { .cur, .cdot, .mglow { display: none; } }

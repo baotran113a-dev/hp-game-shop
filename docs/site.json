@@ -1,0 +1,1385 @@
+{
+  "brand": "BH Studio",
+  "logo": "img/bh-studio-logo.png",
+  "seoDescription": "BH Studio tuyển Idol & NPC TikTok LIVE tại Buôn Ma Thuột: đào tạo từ A–Z, miễn phí cài TikTok LIVE Studio và làm đẹp Douyin, game LIVE tương tác.",
+  "social": {
+    "facebook": "https://www.facebook.com/Hpmediabmt",
+    "tiktok": "https://www.tiktok.com/@hpmedia.bmt"
+  },
+  "nav": [
+    {
+      "label": "Trang chủ",
+      "href": "./"
+    },
+    {
+      "label": "Tuyển Idol",
+      "href": "idol"
+    },
+    {
+      "label": "Quyền lợi",
+      "href": "quyen-loi"
+    },
+    {
+      "label": "Đào tạo",
+      "href": "dao-tao"
+    },
+    {
+      "label": "Hướng dẫn",
+      "href": "huong-dan-live"
+    },
+    {
+      "label": "Game LIVE",
+      "href": "game"
+    },
+    {
+      "label": "Hỏi đáp",
+      "href": "hoi-dap"
+    }
+  ],
+  "navCta": "Ứng tuyển",
+  "home": {
+    "seoTitle": "Tuyển Idol TikTok LIVE Buôn Ma Thuột | BH Studio",
+    "seoDescription": "BH Studio tuyển Idol & NPC TikTok LIVE tại Buôn Ma Thuột, Đắk Lắk: thu nhập 10–50 triệu/tháng, có BHXH, đào tạo 7 ngày. Không cần kinh nghiệm.",
+    "hero": {
+      "tag": "Đang mở đợt tuyển Idol TikTok LIVE",
+      "title": "Bật camera.\n**Bật sáng** phòng LIVE của bạn.",
+      "text": "Không cần nổi tiếng, không cần kinh nghiệm. BH Studio lo phần kỹ thuật, làm đẹp và nội dung — bạn chỉ cần tự tin lên sóng và giữ lửa với người xem.",
+      "image": "img/up-mw4pu812.png",
+      "btn1": "Ứng tuyển qua Zalo",
+      "btn2": "Xem quyền lợi",
+      "chips": [
+        "Npc Beauty",
+        "Idol online tại nhà",
+        "Idol live game",
+        "",
+        ""
+      ],
+      "btn2Href": "quyen-loi"
+    },
+    "live": {
+      "defaultName": "npc.suna",
+      "viewers": 1280,
+      "comments": [
+        "Chào idol 👋",
+        "NPC này xinh quá đi mất",
+        "Đã chuẩn bị xu để tặng rồi",
+        "Da đẹp quá, filter gì vậy 😍",
+        "Vào PK đi idol ơi 🔥",
+        "Thả tim cho idol nè ❤️"
+      ]
+    },
+    "nameTry": {
+      "label": "Gõ thử tên LIVE của bạn",
+      "placeholder": "id_cua_ban",
+      "btn": "Giữ tên này"
+    },
+    "highlights": [
+      {
+        "big": "10–50tr",
+        "small": "Thu nhập mỗi tháng"
+      },
+      {
+        "big": "7 ngày",
+        "small": "Đào tạo từ người mới"
+      },
+      {
+        "big": "1–1",
+        "small": "Hỗ trợ trong phiên LIVE"
+      },
+      {
+        "big": "Thưởng",
+        "small": "Chính sách thưởng hấp dẫn"
+      }
+    ],
+    "marquee": [
+      "Tâm sự",
+      "Ca hát",
+      "Nhảy",
+      "NPC",
+      "PK",
+      "Game LIVE",
+      "Làm đẹp Douyin",
+      "LIVE Studio",
+      "Buôn Ma Thuột"
+    ],
+    "creatorsTitle": "Creator đang LIVE cùng BH Studio",
+    "creatorsSub": "Một phần đội ngũ Idol & NPC — bấm vào để ghé phòng LIVE của họ.",
+    "creatorsBtn": "Xem tất cả creator",
+    "free": {
+      "badge": "MIỄN PHÍ",
+      "title": "Cài đặt TikTok LIVE Studio + làm đẹp Douyin",
+      "text": "Dành cho bạn đăng ký livestream làm Idol: kỹ thuật viên cài LIVE Studio, chỉnh filter làm đẹp kiểu Douyin, ánh sáng, khung hình — lên sóng là đẹp ngay.",
+      "btn": "Nhận ưu đãi qua Zalo"
+    },
+    "exploreTitle": "Tìm hiểu thêm",
+    "exploreSub": "Mỗi phần một trang riêng — chọn điều bạn quan tâm.",
+    "explore": [
+      {
+        "title": "Tuyển Idol",
+        "text": "Chính sách, hình thức LIVE và cách ứng tuyển.",
+        "href": "idol"
+      },
+      {
+        "title": "Quyền lợi",
+        "text": "Định hướng nội dung, PK Quốc tế, thiết bị, báo chí…",
+        "href": "quyen-loi"
+      },
+      {
+        "title": "Đào tạo",
+        "text": "Lộ trình 7 ngày từ người mới đến phiên LIVE đầu tiên.",
+        "href": "dao-tao"
+      },
+      {
+        "title": "Hướng dẫn",
+        "text": "Cách xử lý vi phạm, mở PK, định danh, filter khi LIVE.",
+        "href": "huong-dan-live"
+      }
+    ],
+    "galleryTitle": "Khoảnh khắc BH Studio",
+    "gallerySub": "Ảnh thật từ các sự kiện của đội ngũ.",
+    "gallery": [
+      {
+        "img": "img/that/gala-1.jpg",
+        "cap": "Gala Live To Shine 2024"
+      },
+      {
+        "img": "img/that/gala-san-khau.jpg",
+        "cap": "Sân khấu Gala"
+      },
+      {
+        "img": "img/that/gala-trao-giai.jpg",
+        "cap": "Lễ trao giải"
+      },
+      {
+        "img": "img/that/tham-do.jpg",
+        "cap": "Thảm đỏ"
+      }
+    ]
+  },
+  "idol": {
+    "seoTitle": "Tuyển Idol & NPC TikTok LIVE Buôn Ma Thuột | BH Studio",
+    "seoDescription": "BH Studio tuyển Idol, NPC TikTok LIVE tại Buôn Ma Thuột: thu nhập 10–50 triệu/tháng, 130 giờ/tháng, có BHXH, từ 18 tuổi. Quyền lợi, cách ứng tuyển và creator đang LIVE.",
+    "tag": "Tuyển Idol · NPC · TikTok LIVE",
+    "title": "Tuyển **Idol & NPC**\nTikTok LIVE.",
+    "text": "Không cần kinh nghiệm. Chọn kiểu LIVE hợp với bạn — BH Studio lo kỹ thuật, làm đẹp, nội dung và đi cùng bạn mỗi phiên.",
+    "btn1": "Ứng tuyển qua Zalo",
+    "btn2": "Xem creator",
+    "policyTitle": "Chính sách đãi ngộ",
+    "policy": [
+      {
+        "label": "Thu nhập",
+        "value": "10–50 triệu"
+      },
+      {
+        "label": "Gồm",
+        "value": "Lương + chuyên cần + hoa hồng"
+      },
+      {
+        "label": "Thời gian",
+        "value": "130 giờ/tháng · nghỉ 4 ngày"
+      },
+      {
+        "label": "Quyền lợi",
+        "value": "Có BHXH · từ 18 tuổi"
+      }
+    ],
+    "formatsTitle": "Bạn hợp kiểu LIVE nào?",
+    "formatsSub": "Mỗi kiểu có cách định hướng nội dung riêng.",
+    "formats": [
+      {
+        "title": "Tâm sự – trò chuyện",
+        "text": "LIVE tại nhà, nói chuyện, giao lưu cùng người xem, giờ giấc linh hoạt."
+      },
+      {
+        "title": "Ca hát – nhảy",
+        "text": "Biểu diễn, cover, nhảy theo trend; được hỗ trợ âm thanh, ánh sáng."
+      },
+      {
+        "title": "NPC",
+        "text": "Nhập vai một nhân vật có tính cách, trang phục, câu nói riêng — phản ứng theo từng món quà."
+      },
+      {
+        "title": "Game LIVE",
+        "text": "Chơi game tương tác cùng người xem, hoặc làm Streamer game: GTA-5, Liên Minh, PUBG…"
+      }
+    ],
+    "creatorsTitle": "Đội ngũ creator",
+    "creatorsSub": "Bấm vào creator để mở trang TikTok của họ.",
+    "filterAll": "Tất cả",
+    "searchPlaceholder": "Tìm theo ID…",
+    "list": [
+      {
+        "id": "ptpp_",
+        "type": "Idol",
+        "image": "img/creators/ptpp_.jpg"
+      },
+      {
+        "id": "leopearl.12",
+        "type": "Idol",
+        "image": "img/creators/leopearl.12.jpg"
+      },
+      {
+        "id": "caheumaccan",
+        "type": "Idol",
+        "image": "img/creators/caheumaccan.jpg"
+      },
+      {
+        "id": "linh_153",
+        "type": "Idol",
+        "image": "img/creators/linh_153.jpg"
+      },
+      {
+        "id": "yangdino_",
+        "type": "Idol",
+        "image": "img/creators/yangdino_.jpg"
+      },
+      {
+        "id": "npc.suna",
+        "type": "NPC",
+        "image": "img/creators/npc.suna.jpg"
+      },
+      {
+        "id": "staywithme.290",
+        "type": "Idol",
+        "image": "img/creators/staywithme.290.jpg"
+      },
+      {
+        "id": "_louis1608_",
+        "type": "Idol",
+        "image": "img/creators/_louis1608_.jpg"
+      },
+      {
+        "id": "thuyhuong09123",
+        "type": "Idol",
+        "image": "img/creators/thuyhuong09123.jpg"
+      },
+      {
+        "id": "thah.tharo_",
+        "type": "Idol",
+        "image": "img/creators/thah.tharo_.jpg"
+      },
+      {
+        "id": "nhatvy.206",
+        "type": "Idol",
+        "image": "img/creators/nhatvy.206.jpg"
+      },
+      {
+        "id": "candyleloveyou",
+        "type": "Idol",
+        "image": "img/creators/candyleloveyou.jpg"
+      },
+      {
+        "id": "sumochi.chan",
+        "type": "Idol",
+        "image": "img/creators/sumochi.chan.jpg"
+      },
+      {
+        "id": "avaecanthu",
+        "type": "Idol",
+        "image": "img/creators/avaecanthu.jpg"
+      },
+      {
+        "id": "t.loann",
+        "type": "Idol",
+        "image": "img/creators/t.loann.jpg"
+      },
+      {
+        "id": "mew8722",
+        "type": "Idol",
+        "image": "img/creators/mew8722.jpg"
+      },
+      {
+        "id": "iim.punn",
+        "type": "Idol",
+        "image": "img/creators/iim.punn.jpg"
+      },
+      {
+        "id": "_louispham01_",
+        "type": "Idol",
+        "image": "img/creators/_louispham01_.jpg"
+      },
+      {
+        "id": "huyhayhat_18",
+        "type": "Idol",
+        "image": "img/creators/huyhayhat_18.jpg"
+      },
+      {
+        "id": "ybinh090103",
+        "type": "Idol",
+        "image": "img/creators/ybinh090103.jpg"
+      },
+      {
+        "id": "usenamelat",
+        "type": "Idol",
+        "image": "img/creators/usenamelat.jpg"
+      },
+      {
+        "id": "kimmhuee.10",
+        "type": "Idol",
+        "image": "img/creators/kimmhuee.10.jpg"
+      },
+      {
+        "id": "anhdao_2kkk",
+        "type": "Idol",
+        "image": "img/creators/anhdao_2kkk.jpg"
+      },
+      {
+        "id": "dieuvan_08041996",
+        "type": "Idol",
+        "image": "img/creators/dieuvan_08041996.jpg"
+      },
+      {
+        "id": "zhuangtinger",
+        "type": "Idol",
+        "image": "img/creators/zhuangtinger.jpg"
+      },
+      {
+        "id": "tiktokk_080",
+        "type": "Idol",
+        "image": "img/creators/tiktokk_080.jpg"
+      },
+      {
+        "id": "wngu34",
+        "type": "Idol",
+        "image": "img/creators/wngu34.jpg"
+      },
+      {
+        "id": "lethuy_47",
+        "type": "Idol",
+        "image": "img/creators/lethuy_47.jpg"
+      },
+      {
+        "id": "huyentepp04",
+        "type": "Idol",
+        "image": "img/creators/huyentepp04.jpg"
+      },
+      {
+        "id": "qquyen311",
+        "type": "Idol",
+        "image": "img/creators/qquyen311.jpg"
+      },
+      {
+        "id": "sunni.1805",
+        "type": "Idol",
+        "image": "img/creators/sunni.1805.jpg"
+      },
+      {
+        "id": "phamyenbank",
+        "type": "Idol",
+        "image": "img/creators/phamyenbank.jpg"
+      },
+      {
+        "id": "phigm96",
+        "type": "Idol",
+        "image": "img/creators/phigm96.jpg"
+      },
+      {
+        "id": "gausobuonn",
+        "type": "Idol",
+        "image": "img/creators/gausobuonn.jpg"
+      },
+      {
+        "id": "dj_marina_konkova",
+        "type": "Idol",
+        "image": "img/creators/dj_marina_konkova.jpg"
+      },
+      {
+        "id": "banhbaotroinuoc",
+        "type": "Idol",
+        "image": "img/creators/banhbaotroinuoc.jpg"
+      },
+      {
+        "id": "nguyetnhi227",
+        "type": "Idol",
+        "image": "img/creators/nguyetnhi227.jpg"
+      },
+      {
+        "id": "cc.ngy8888",
+        "type": "Idol",
+        "image": "img/creators/cc.ngy8888.jpg"
+      },
+      {
+        "id": "emboodaya",
+        "type": "Idol",
+        "image": "img/creators/emboodaya.jpg"
+      },
+      {
+        "id": "mynameis.jey",
+        "type": "Idol",
+        "image": "img/creators/mynameis.jey.jpg"
+      },
+      {
+        "id": "lemy0307",
+        "type": "Idol",
+        "image": "img/creators/lemy0307.jpg"
+      },
+      {
+        "id": "sogapcomlam",
+        "type": "Idol",
+        "image": "img/creators/sogapcomlam.jpg"
+      },
+      {
+        "id": "yuni.stars2",
+        "type": "Idol",
+        "image": "img/creators/yuni.stars2.jpg"
+      },
+      {
+        "id": "phomaii2k",
+        "type": "Idol",
+        "image": "img/creators/phomaii2k.jpg"
+      },
+      {
+        "id": "imhere.729",
+        "type": "Idol",
+        "image": "img/creators/imhere.729.jpg"
+      },
+      {
+        "id": "npc.linhmieu",
+        "type": "NPC",
+        "image": "img/creators/npc.linhmieu.jpg"
+      },
+      {
+        "id": "tamlinh.kathamulet",
+        "type": "Idol",
+        "image": "img/creators/tamlinh.kathamulet.jpg"
+      },
+      {
+        "id": "enigma136890",
+        "type": "Idol",
+        "image": "img/creators/enigma136890.jpg"
+      },
+      {
+        "id": "nana.ngkh",
+        "type": "Idol",
+        "image": "img/creators/nana.ngkh.jpg"
+      },
+      {
+        "id": "cnhlintun.463922",
+        "type": "Idol",
+        "image": "img/creators/cnhlintun.463922.jpg"
+      },
+      {
+        "id": "phngthulin.367409",
+        "type": "Idol",
+        "image": "img/creators/phngthulin.367409.jpg"
+      },
+      {
+        "id": "hongthanh.767004",
+        "type": "Idol",
+        "image": "img/creators/hongthanh.767004.jpg"
+      },
+      {
+        "id": "tuytphng_736676",
+        "type": "Idol",
+        "image": "img/creators/tuytphng_736676.jpg"
+      },
+      {
+        "id": "quanghnghng_522548",
+        "type": "Idol",
+        "image": "img/creators/quanghnghng_522548.jpg"
+      },
+      {
+        "id": "lunthi.324177",
+        "type": "Idol",
+        "image": "img/creators/lunthi.324177.jpg"
+      },
+      {
+        "id": "phngm.696553",
+        "type": "Idol",
+        "image": "img/creators/phngm.696553.jpg"
+      },
+      {
+        "id": "tihnglm.549138",
+        "type": "Idol",
+        "image": "img/creators/tihnglm.549138.jpg"
+      },
+      {
+        "id": "thngbo_610463",
+        "type": "Idol",
+        "image": "img/creators/thngbo_610463.jpg"
+      },
+      {
+        "id": "duythin.933761",
+        "type": "Idol",
+        "image": "img/creators/duythin.933761.jpg"
+      },
+      {
+        "id": "tinty_581968",
+        "type": "Idol",
+        "image": "img/creators/tinty_581968.jpg"
+      },
+      {
+        "id": "mcng_171554",
+        "type": "Idol",
+        "image": "img/creators/mcng_171554.jpg"
+      },
+      {
+        "id": "hnhstng_781624",
+        "type": "Idol",
+        "image": "img/creators/hnhstng_781624.jpg"
+      },
+      {
+        "id": "hinh.922781",
+        "type": "Idol",
+        "image": "img/creators/hinh.922781.jpg"
+      },
+      {
+        "id": "vittntin_770902",
+        "type": "Idol",
+        "image": "img/creators/vittntin_770902.jpg"
+      },
+      {
+        "id": "trmthybo_617199",
+        "type": "Idol",
+        "image": "img/creators/trmthybo_617199.jpg"
+      },
+      {
+        "id": "chiutunhuy.727729",
+        "type": "Idol",
+        "image": "img/creators/chiutunhuy.727729.jpg"
+      },
+      {
+        "id": "qucthnhmai.511547",
+        "type": "Idol",
+        "image": "img/creators/qucthnhmai.511547.jpg"
+      },
+      {
+        "id": "nguyttinnh.659990",
+        "type": "Idol",
+        "image": "img/creators/nguyttinnh.659990.jpg"
+      },
+      {
+        "id": "kimthunm_788487",
+        "type": "Idol",
+        "image": "img/creators/kimthunm_788487.jpg"
+      },
+      {
+        "id": "mngtvy_543095",
+        "type": "Idol",
+        "image": "img/creators/mngtvy_543095.jpg"
+      },
+      {
+        "id": "tihngip.665598",
+        "type": "Idol",
+        "image": "img/creators/tihngip.665598.jpg"
+      },
+      {
+        "id": "vnl.775502",
+        "type": "Idol",
+        "image": "img/creators/vnl.775502.jpg"
+      },
+      {
+        "id": "okha.819551",
+        "type": "Idol",
+        "image": "img/creators/okha.819551.jpg"
+      },
+      {
+        "id": "thythanhv.790007",
+        "type": "Idol",
+        "image": "img/creators/thythanhv.790007.jpg"
+      },
+      {
+        "id": "nc_312554",
+        "type": "Idol",
+        "image": "img/creators/nc_312554.jpg"
+      },
+      {
+        "id": "hngtrang_582993",
+        "type": "Idol",
+        "image": "img/creators/hngtrang_582993.jpg"
+      },
+      {
+        "id": "xunmunh.767804",
+        "type": "Idol",
+        "image": "img/creators/xunmunh.767804.jpg"
+      },
+      {
+        "id": "anhduy.241972",
+        "type": "Idol",
+        "image": "img/creators/anhduy.241972.jpg"
+      },
+      {
+        "id": "testlivehpmedia",
+        "type": "Idol",
+        "image": "img/creators/testlivehpmedia.jpg"
+      },
+      {
+        "id": "bao365.plus",
+        "type": "Idol",
+        "image": "img/creators/bao365.plus.jpg"
+      },
+      {
+        "id": "user1441213713555",
+        "type": "Idol",
+        "image": "img/creators/user1441213713555.jpg"
+      },
+      {
+        "id": "ngdep.ht.pin",
+        "type": "Idol",
+        "image": "img/creators/ngdep.ht.pin.jpg"
+      },
+      {
+        "id": "npc.lucdao",
+        "type": "NPC",
+        "image": "img/creators/npc.lucdao.jpg"
+      },
+      {
+        "id": "user57231351611335",
+        "type": "Idol",
+        "image": "img/creators/user57231351611335.jpg"
+      },
+      {
+        "id": "user34514811393492",
+        "type": "Idol",
+        "image": "img/creators/user34514811393492.jpg"
+      },
+      {
+        "id": "sngtrinh_843663",
+        "type": "Idol",
+        "image": "img/creators/sngtrinh_843663.jpg"
+      },
+      {
+        "id": "min.em193",
+        "type": "Idol",
+        "image": "img/creators/min.em193.jpg"
+      },
+      {
+        "id": "huynh.toni72",
+        "type": "Idol",
+        "image": "img/creators/huynh.toni72.jpg"
+      },
+      {
+        "id": "phukientrangsuc79",
+        "type": "Idol",
+        "image": "img/creators/phukientrangsuc79.jpg"
+      },
+      {
+        "id": "vyvieclam08",
+        "type": "Idol",
+        "image": "img/creators/vyvieclam08.jpg"
+      },
+      {
+        "id": "vieclammienphihun2",
+        "type": "Idol",
+        "image": "img/creators/vieclammienphihun2.jpg"
+      },
+      {
+        "id": "giupviecnha002",
+        "type": "Idol",
+        "image": "img/creators/giupviecnha002.jpg"
+      },
+      {
+        "id": "giupviecnha003",
+        "type": "Idol",
+        "image": "img/creators/giupviecnha003.jpg"
+      },
+      {
+        "id": "giupvieccongthang",
+        "type": "Idol",
+        "image": "img/creators/giupvieccongthang.jpg"
+      },
+      {
+        "id": "sunnie.npc",
+        "type": "NPC",
+        "image": "img/creators/sunnie.npc.jpg"
+      },
+      {
+        "id": "vyvieclam011",
+        "type": "Idol",
+        "image": "img/creators/vyvieclam011.jpg"
+      },
+      {
+        "id": "bo.vlog49",
+        "type": "Idol",
+        "image": "img/creators/bo.vlog49.jpg"
+      }
+    ],
+    "applyTitle": "Ứng tuyển thế nào?",
+    "apply": [
+      {
+        "title": "Nhắn Zalo đăng ký",
+        "text": "Gửi tên, tuổi, vài ảnh hoặc video ngắn của bạn."
+      },
+      {
+        "title": "Trao đổi & live thử",
+        "text": "Tư vấn kiểu LIVE hợp với bạn, thử một phiên ngắn có người góp ý."
+      },
+      {
+        "title": "Vào lộ trình 7 ngày",
+        "text": "Cài đặt, làm đẹp miễn phí và học theo lộ trình."
+      },
+      {
+        "title": "Lên sóng chính thức",
+        "text": "Bắt đầu LIVE theo lịch, có người hỗ trợ trong suốt phiên."
+      }
+    ],
+    "reqTitle": "Yêu cầu ứng viên",
+    "requirements": [
+      "Từ 18 tuổi trở lên",
+      "Tự tin, giọng nói truyền cảm, giữ không khí vui",
+      "Ứng biến nhanh, làm nội dung theo kịch bản",
+      "Sẵn sàng nhảy, đứng NPC, chơi game tương tác",
+      "LIVE đủ ngày, đủ giờ theo lịch",
+      "Tuân thủ nguyên tắc cộng đồng TikTok và nội quy",
+      "Hiểu về TikTok LIVE là lợi thế"
+    ],
+    "studioTitle": "Phòng LIVE thật tại Buôn Ma Thuột",
+    "studio": [
+      {
+        "img": "img/that/phong-live-2.jpg",
+        "cap": "Idol lên sóng tại studio"
+      },
+      {
+        "img": "img/that/cai-dat.jpg",
+        "cap": "Máy quay + màn hình LIVE Studio"
+      },
+      {
+        "img": "img/that/phong-live.jpg",
+        "cap": "Phòng LIVE đủ đèn, máy"
+      },
+      {
+        "img": "img/that/idol-live.jpg",
+        "cap": "Lên hình chuẩn Douyin"
+      }
+    ],
+    "perksBtn": "Xem đầy đủ quyền lợi",
+    "modesTitle": "Chọn hình thức phù hợp",
+    "modesSub": "Ở đâu cũng LIVE được — chọn cách làm hợp với bạn.",
+    "modes": [
+      {
+        "title": "LIVE tại nhà",
+        "text": "LIVE trên tài khoản TikTok của bạn, ở bất kỳ đâu. Quản lý theo dõi, góp ý và tư vấn thiết bị cho bạn."
+      },
+      {
+        "title": "LIVE tại studio Buôn Ma Thuột",
+        "text": "Phòng LIVE có sẵn đèn, máy, âm thanh; có người hỗ trợ ngay tại chỗ trong suốt phiên."
+      }
+    ]
+  },
+  "training": {
+    "seoTitle": "Đào tạo Idol TikTok LIVE 7 ngày từ A–Z | BH Studio",
+    "seoDescription": "Lộ trình 7 ngày đào tạo Idol TikTok LIVE: làm đẹp Douyin, cách nói chuyện, quà & tương tác, PK, video ngắn, LIVE thử có người kèm. Người mới vẫn làm được.",
+    "tag": "Lộ trình đào tạo",
+    "title": "**7 ngày** từ người mới\nđến phiên LIVE đầu tiên.",
+    "text": "Học đúng thứ cần để lên sóng tự tin: hình ảnh, cách nói chuyện, xử lý quà và nội dung riêng của bạn. Phù hợp cả người chưa từng LIVE.",
+    "daysTitle": "Lộ trình 7 ngày",
+    "days": [
+      {
+        "title": "Ngày 1 — Chọn hướng đi",
+        "text": "Trò chuyện, chọn kiểu LIVE (Idol, ca hát, NPC, game), đặt tên LIVE và mục tiêu."
+      },
+      {
+        "title": "Ngày 2 — Hình ảnh & làm đẹp",
+        "text": "Cài LIVE Studio, làm đẹp Douyin, chỉnh đèn, góc máy, phông nền — miễn phí."
+      },
+      {
+        "title": "Ngày 3 — Cách nói chuyện",
+        "text": "Mở phòng, chào người xem, giữ nhịp, xử lý lúc vắng người hoặc bị bình luận khó."
+      },
+      {
+        "title": "Ngày 4 — Quà & tương tác",
+        "text": "Cảm ơn quà, mini game, kêu gọi thả tim, cách dùng game LIVE tương tác."
+      },
+      {
+        "title": "Ngày 5 — PK",
+        "text": "Luật PK, chiến thuật, trả kèo vui, phối hợp với người xem trong trận."
+      },
+      {
+        "title": "Ngày 6 — Video ngắn",
+        "text": "Quay và đăng video theo trend để kéo người xem về phòng LIVE."
+      },
+      {
+        "title": "Ngày 7 — LIVE thử có người kèm",
+        "text": "Phiên LIVE thật có quản lý theo dõi, góp ý ngay sau buổi."
+      }
+    ]
+  },
+  "game": {
+    "seoTitle": "Game LIVE TikTok tương tác & App edit video | BH Studio",
+    "seoDescription": "Game tương tác cho phòng TikTok LIVE: người xem bình luận, thả tim, tặng quà là chơi. Mua một lần dùng vĩnh viễn, chạy trên Windows với LIVE Studio hoặc OBS.",
+    "tag": "Game LIVE & App edit video",
+    "title": "Game cho phòng LIVE\n**đông vui hơn**.",
+    "text": "Người xem bình luận, thả tim, tặng quà là chơi — giữ chân người xem lâu hơn. Mua một lần dùng vĩnh viễn, cài trên Windows, dùng với TikTok LIVE Studio hoặc OBS.",
+    "buyTitle": "Cách mua game",
+    "buySteps": [
+      {
+        "title": "Liên hệ Zalo",
+        "text": "Bấm \"Liên hệ Zalo mua\" ở game bạn thích, chọn gói rồi nhắn shop qua Zalo."
+      },
+      {
+        "title": "Nhận file cài",
+        "text": "Shop gửi file cài qua Zalo. Mở file để cài; Windows cảnh báo thì bấm \"Thông tin thêm\" → \"Vẫn chạy\"."
+      },
+      {
+        "title": "Gửi mã máy",
+        "text": "Mở app, đầu trang có ô \"Mã máy\" (dạng ABCDE-FGH23). Bấm \"Chép mã máy\" rồi gửi shop kèm ảnh chuyển khoản."
+      },
+      {
+        "title": "Nhận mã kích hoạt",
+        "text": "Shop gửi mã kích hoạt qua Zalo. Dán vào app là kết nối LIVE được."
+      }
+    ],
+    "author": {
+      "label": "Thiết kế & lập trình",
+      "name": "Trần Hữu Gia Bảo",
+      "text": "Người làm ra các game LIVE tương tác của BH Studio. Cần game riêng cho phòng live, hỗ trợ cài đặt hay góp ý — nhắn Zalo trực tiếp.",
+      "image": ""
+    }
+  },
+  "faq": {
+    "seoTitle": "Hỏi đáp tuyển dụng Idol TikTok LIVE | BH Studio",
+    "seoDescription": "Giải đáp khi ứng tuyển Idol TikTok LIVE tại BH Studio Buôn Ma Thuột: chưa từng LIVE, thu nhập NPC, LIVE tại nhà hay studio, game LIVE. Hỏi thêm qua Zalo.",
+    "tag": "Hỏi đáp",
+    "title": "Bạn hỏi, **BH Studio** trả lời.",
+    "text": "Chưa thấy câu bạn cần? Nhắn Zalo, đội ngũ trả lời ngay.",
+    "items": [
+      {
+        "q": "Chưa từng live có đăng ký làm Idol được không?",
+        "a": "Được. Bạn được đào tạo từ đầu theo lộ trình 7 ngày: cách nói chuyện, giữ chân người xem, kêu gọi quà, chơi PK."
+      },
+      {
+        "q": "Miễn phí cài LIVE Studio và làm đẹp Douyin là sao?",
+        "a": "Khi đăng ký làm Idol, kỹ thuật viên cài TikTok LIVE Studio và chỉnh filter làm đẹp kiểu Douyin, ánh sáng, khung hình cho bạn, không mất phí."
+      },
+      {
+        "q": "Làm NPC thu nhập thế nào?",
+        "a": "Chính sách NPC tại Buôn Ma Thuột: 10–50 triệu/tháng (lương + chuyên cần + hoa hồng), 130 giờ/tháng, nghỉ 4 ngày, có BHXH. Xem trang Tuyển Idol."
+      },
+      {
+        "q": "Có cần LIVE tại studio không?",
+        "a": "Không bắt buộc. Bạn có thể LIVE tại studio ở Buôn Ma Thuột hoặc tại nhà — đội ngũ tư vấn thiết bị và cài đặt cho bạn."
+      },
+      {
+        "q": "Game LIVE cần máy cấu hình thế nào?",
+        "a": "Windows 10/11 64-bit, RAM 8GB là chạy được. Máy yếu dùng link sân khấu có thêm ?q=low (hướng dẫn có trong app)."
+      },
+      {
+        "q": "Chưa mua game có dùng thử được không?",
+        "a": "Được. Nhắn Zalo shop để nhận file cài, cài xong chơi thử bằng các nút giả lập (có chữ \"BẢN DÙNG THỬ\" trên màn hình). Muốn kết nối phiên LIVE thật thì cần mã kích hoạt."
+      },
+      {
+        "q": "Đổi máy tính thì sao?",
+        "a": "Mã kích hoạt gắn với 1 máy. Đổi máy thì nhắn Zalo gửi mã máy mới, mình cấp lại mã cho thời gian còn lại."
+      },
+      {
+        "q": "Game có ảnh hưởng tài khoản TikTok không?",
+        "a": "Game chỉ đọc bình luận, tim, quà công khai của phiên live, không cần đăng nhập TikTok. Bạn tự chịu trách nhiệm nội dung phiên live theo quy định của TikTok; app có \"Chế độ an toàn\" để quà chỉ dùng cảm ơn."
+      },
+      {
+        "q": "Tài khoản cần xác minh danh tính (KYC) không?",
+        "a": "Nên làm sớm: vào tiktok.com/kyc, chuẩn bị CCCD và làm theo hướng dẫn. Tài khoản chưa xác minh dễ bị giới hạn khi nhận và tặng quà."
+      },
+      {
+        "q": "TikTok báo nghi dưới 18 tuổi thì làm gì?",
+        "a": "Chụp rõ, ngang 2 mặt CCCD rồi gửi quản lý để được hướng dẫn bổ sung giấy tờ."
+      },
+      {
+        "q": "Bị TikTok cảnh cáo (gậy) thì sao?",
+        "a": "Mỗi lần cảnh cáo có hiệu lực 90 ngày; bị cảnh cáo nhiều lần trong thời gian đó có thể bị hạn chế LIVE hoặc khóa tài khoản vĩnh viễn. Báo quản lý ngay để được hướng dẫn khiếu nại."
+      },
+      {
+        "q": "Vì sao tiền rút về ít hơn số thưởng trên app?",
+        "a": "Mỗi lần rút có phí giao dịch, và ngân hàng đổi USD theo tỉ giá riêng (thường thấp hơn trên app). Gom số lớn rồi rút một lần sẽ đỡ phí hơn."
+      },
+      {
+        "q": "Rút tiền bị hoàn về hoặc báo giới hạn?",
+        "a": "Thường do ngân hàng đang bảo trì hoặc lỗi liên kết: thử rút lại lúc khác, hoặc hủy liên kết rồi liên kết lại. Vẫn lỗi thì chụp màn hình báo lỗi gửi quản lý."
+      },
+      {
+        "q": "LIVE bị giật, văng PK hoặc mất tiếng khi PK?",
+        "a": "Đa phần do TikTok đang cập nhật tính năng (vài ngày) — cập nhật app bản mới nhất và kiểm tra mạng. Mất tiếng khi PK thì tắt hẳn máy khoảng 10 phút rồi vào lại."
+      }
+    ]
+  },
+  "contact": {
+    "tag": "Sân khấu đã bật đèn",
+    "title": "Còn thiếu mỗi **bạn** thôi.",
+    "text": "Nhắn Zalo để đăng ký làm Idol, nhận ưu đãi cài đặt miễn phí, hoặc hỏi về game LIVE.",
+    "btn": "Nhắn Zalo ngay"
+  },
+  "footer": "BH Studio · Tuyển Idol TikTok LIVE · Buôn Ma Thuột",
+  "footerNote": "Không liên kết chính thức với TikTok.",
+  "noibo": {
+    "seoTitle": "BH Studio — Nội bộ",
+    "tag": "Chỉ dành cho thành viên BH Studio",
+    "title": "Tài liệu **nội bộ**",
+    "text": "Chính sách dành riêng cho Idol & NPC của studio. Mỗi mục có mật khẩu riêng — hỏi quản lý để nhận mật khẩu.",
+    "placeholder": "Nhập mật khẩu",
+    "btn": "Mở khóa",
+    "note": "Nội dung được mã hóa, chỉ mở được khi nhập đúng mật khẩu. Không chia sẻ mật khẩu ra ngoài.",
+    "items": [
+      {
+        "id": "idol-tai-nha",
+        "title": "Chính sách thưởng Idol LIVE tại nhà (bao gồm live game)",
+        "text": "Thưởng bảo cấp 27 bậc, creator mới, chuyên cần, BXH ngày, PKQT, sinh nhật, sự kiện và cảnh báo VPNT."
+      },
+      {
+        "id": "npc-cong-ty",
+        "title": "Chính sách lương NPC tại công ty",
+        "text": "Bảng mốc A1–A20 (KPI kim cương, hoa hồng, lương cứng, chuyên cần), lương cứng, thử việc, học việc."
+      }
+    ]
+  },
+  "perks": {
+    "seoTitle": "Quyền lợi Creator TikTok LIVE | BH Studio",
+    "seoDescription": "Hợp tác với BH Studio bạn được gì: định hướng nội dung, đẩy video xu hướng, thi đấu PK Quốc tế, hỗ trợ thiết bị và cài đặt, Streamer Gaming, báo chí và thương hiệu toàn cầu.",
+    "tag": "Quyền lợi Creator BH Studio",
+    "title": "Hợp tác với **BH Studio**\nbạn được gì?",
+    "text": "Từ định hướng nội dung, hỗ trợ thiết bị LIVE đến thi đấu PK Quốc tế và cơ hội lên báo — xem từng mục để nắm thông tin thật chi tiết nhé!",
+    "items": [
+      {
+        "kicker": "Đồng hành mỗi phiên LIVE",
+        "title": "Định hướng nội dung",
+        "text": "Đồng hành cùng Creator xây dựng nội dung LIVE cuốn hút người xem, giữ lưu lượng ổn định và tăng doanh thu.",
+        "bullets": [
+          "Ưu tiên các nội dung PK giao lưu để tăng tương tác và quà tặng trong phiên LIVE."
+        ]
+      },
+      {
+        "kicker": "Tăng tiếp cận",
+        "title": "Giúp Creator đẩy xu hướng video",
+        "text": "Video sau khi được TikTok kiểm duyệt sẽ được đẩy lên xu hướng, giúp Idol tăng lượt tiếp cận, tương tác, follow và bình luận.",
+        "bullets": [
+          "Video thường lên xu hướng giúp buổi LIVE hiệu quả hơn: thêm người xem, thêm quà tặng từ cả video lẫn livestream."
+        ]
+      },
+      {
+        "kicker": "Giao lưu thế giới",
+        "title": "Thi đấu PK Quốc tế",
+        "text": "Đại diện Việt Nam giao lưu với bạn bè trên thế giới.",
+        "bullets": [
+          "Nổi tiếng rộng rãi hơn, tự tin hơn",
+          "Tăng doanh thu nhanh chóng",
+          "Website chuyên nghiệp kết nối nhiều TCN của TikTok tại nhiều quốc gia"
+        ]
+      },
+      {
+        "kicker": "Tư vấn & cài đặt",
+        "title": "Hỗ trợ tư vấn và cài đặt",
+        "text": "Là Idol/Agency thuộc BH Studio bạn sẽ được hỗ trợ khi đạt đủ điều kiện:",
+        "bullets": [
+          "Hỗ trợ giá 10%–100% thiết bị âm thanh livestream",
+          "Hỗ trợ, cài đặt phần mềm Cubase 10 cho Idol đạt chỉ tiêu",
+          "Tư vấn phòng LIVE/Studio giúp hiểu hơn về livestream",
+          "Miễn phí cài TikTok LIVE Studio và làm đẹp chuẩn Douyin"
+        ]
+      },
+      {
+        "kicker": "Streamer Gaming",
+        "title": "Tập làm Streamer dễ dàng hơn bao giờ hết",
+        "text": "Bạn thích chơi game và muốn LIVE để giao lưu cùng mọi người? Đăng ký trở thành Streamer cùng BH Studio ngay hôm nay.",
+        "bullets": [
+          "Đội ngũ Admin chuyên nghiệp hỗ trợ các vấn đề về game và hướng dẫn tham gia hoạt động.",
+          "GTA-5 Roleplay · Liên Minh Huyền Thoại · PUBG: Battlegrounds · DayZ"
+        ]
+      },
+      {
+        "kicker": "Xuất hiện trên truyền thông",
+        "title": "Báo chí — tỏa sáng trên truyền thông",
+        "text": "Bạn không chỉ được cộng đồng ghi nhận mà còn có cơ hội tỏa sáng trên các phương tiện truyền thông uy tín — quyền lợi đặc biệt dành riêng cho Nhà sáng tạo của BH Studio."
+      },
+      {
+        "kicker": "Đào tạo & hỗ trợ truyền thông",
+        "title": "Tỏa sáng cùng thương hiệu toàn cầu",
+        "text": "Cơ hội xuất hiện cùng các đối tác quốc tế như Sony, TikTok và các nhãn hàng uy tín khác; học hỏi kỹ năng sáng tạo từ chuyên gia hàng đầu.",
+        "bullets": [
+          "Workshop “Bắt Trend Livestream TikTok Idol” cùng Sony Vietnam."
+        ],
+        "link": "https://experience.sony-asia.com/vn/home/WorkshopDetails/1633",
+        "linkText": "Xem Workshop cùng Sony"
+      }
+    ],
+    "closingTitle": "Và nhiều hơn thế nữa khi bạn là Creator BH Studio",
+    "closing": [
+      {
+        "title": "Chiết khấu Agency ổn định",
+        "text": "Theo từng giai đoạn TikTok"
+      },
+      {
+        "title": "Thưởng thêm từ TCN",
+        "text": "Chuyển khoản trực tiếp"
+      },
+      {
+        "title": "Nhiều hoạt động từ TikTok",
+        "text": "Dành cho Talent tỏa sáng"
+      }
+    ]
+  },
+  "guide": {
+    "seoTitle": "Hướng dẫn TikTok LIVE cho Idol | BH Studio",
+    "seoDescription": "Cẩm nang TikTok LIVE: tự kiểm tra vi phạm, định danh, mở PK, cách PK, thêm ảnh vào LIVE, lấy lại filter, thông báo phát LIVE và nhiều mẹo khác.",
+    "tag": "Cẩm nang TikTok LIVE",
+    "title": "**Hướng dẫn** cho Idol\nTikTok LIVE.",
+    "text": "Những bài hướng dẫn hay dùng nhất: xử lý vi phạm, mở PK, định danh, filter, thông báo phát LIVE… đọc xong là làm được ngay."
+  },
+  "rules": {
+    "seoTitle": "Quy tắc cộng đồng TikTok LIVE cho Idol | BH Studio",
+    "seoDescription": "Chính sách nội dung livestream: 16 nhóm quy định Idol, Quản lý và Nhân sự phải nắm khi phát LIVE, kèm ví dụ nên và không nên.",
+    "tag": "Chính sách nội dung livestream",
+    "title": "Quy tắc cộng đồng chung\n**Phát sóng trực tiếp**",
+    "text": "Quy định và nguyên tắc bảo vệ Nhà sáng tạo LIVE, cộng đồng người xem và hình ảnh thương hiệu trên nền tảng TikTok. Áp dụng cho toàn bộ Idol, Quản lý và Nhân sự.",
+    "effective": "Bản chính sách này được xây dựng nhằm bảo vệ Nhà sáng tạo LIVE, cộng đồng người xem và duy trì hình ảnh thương hiệu trên TikTok. Mọi thay đổi sẽ được Công ty thông báo bổ sung chính thức. Có hiệu lực từ tháng 02/2024.",
+    "items": [
+      {
+        "title": "Thông tin nhận dạng cá nhân",
+        "text": "Chúng tôi không cho phép nội dung chứa dữ liệu cá nhân hoặc thông tin nhận dạng cá nhân (PII), bao gồm thông tin bí mật cho các tổ chức công hoặc tư. Không cho phép trên LIVE:",
+        "bullets": [
+          "Bản thân hoặc người xung quanh đọc số điện thoại của bất kỳ ai, dưới mọi hình thức: số, chữ hay ngoại ngữ.",
+          "Các thông tin số liệu riêng tư, giá tiền từ video quảng cáo phát sóng trên LIVE.",
+          "Cung cấp CCCD / CMND / Hộ chiếu / Bằng lái xe / các loại thẻ bằng hình ảnh hoặc lời nói.",
+          "Đọc số tài khoản ngân hàng, số tài khoản bất kỳ liên quan tới thông tin cá nhân hoặc tổ chức.",
+          "Cung cấp thông tin cá nhân trên các nền tảng khác như Zalo, Telegram, Facebook, Instagram, WhatsApp, Line… và các app livestream khác.",
+          "Địa chỉ cụ thể đang ở, địa chỉ hoạt động, quán ăn hay nơi sắp đến — nhằm bảo vệ Nhà sáng tạo LIVE và người khác.",
+          "Các nội dung liên quan đến Chính trị (bàn tán, mỉa mai hoặc xưng tên các chính trị gia trong bộ máy Nhà nước…), Tôn giáo…",
+          "Công cụ thứ 3 xuất hiện trên LIVE như: bình luận của User, giọng đọc AI (giọng chị Google đọc…), hoặc các hình ảnh gợi dục, hiện thông tin cấm.",
+          "Âm thanh / nhạc có quảng cáo như mở trên YouTube, Zing, Facebook…"
+        ],
+        "examples": [
+          {
+            "sai": "Đọc số: “Ai cần tư vấn gọi em 09xx…”, hoặc viết số lên giấy giơ trước camera.",
+            "dung": "“Bạn cần hỗ trợ cứ bình luận, em trả lời ngay trên LIVE nha.”"
+          },
+          {
+            "sai": "“Kết bạn Zalo em nói chuyện riêng nha”, “Vào Telegram nhóm em có quà”.",
+            "dung": "Mọi trao đổi chỉ diễn ra trong phiên LIVE và tin nhắn TikTok."
+          },
+          {
+            "sai": "“Em đang ngồi quán cà phê X đường Y, ai rảnh qua chơi.”",
+            "dung": "“Hôm nay em LIVE ở một quán rất xinh” — không nói tên, không quay biển hiệu."
+          },
+          {
+            "sai": "Mở nhạc quảng cáo YouTube/Zing làm nền, dùng giọng AI đọc bình luận liên tục.",
+            "dung": "Dùng nhạc trong thư viện âm thanh TikTok, tự đọc bình luận bằng giọng thật."
+          }
+        ]
+      },
+      {
+        "title": "Tóm tắt nguyên tắc cấm trên phát sóng LIVE",
+        "text": "Không cho phép xuất hiện những từ ngữ sau trên LIVE, ngay cả khi dùng từ lóng:",
+        "bullets": [
+          "**Chỉ hành động:** tụt, cởi, bỏ quần áo…",
+          "**Trả kèo:** rên, vuốt ve vùng nhạy cảm, hành động sexy liên tưởng tới gợi dục, kể cả lướt sóng (mô tả cơ thể 18+).",
+          "**Trẻ em:** trẻ em xuất hiện một mình hoặc trần truồng, kể cả hình ảnh hồi bé.",
+          "**Lời nói và sự liên tưởng:** kêu gọi chia sẻ, tăng view để làm một hành động bất hợp pháp, kể cả các từ “nhảy sexy”, gợi dục, hiếp dâm, hiếp, bóp, nắn… Không liên tưởng hoặc nói tránh, nói giảm để lách luật — chỉ cần mang hàm ý trả kèo bộ phận nhạy cảm đều là vi phạm nghiêm trọng.",
+          "**Lăng mạ:** khùng, điên, bại não, con đĩ, con điếm, hay dùng tên con vật gán rồi ghép với tên của User.",
+          "**Vu khống:** không vu khống, bịa chuyện về vấn đề nhạy cảm tạo drama thu hút người xem. Nguy hiểm hơn là chia sẻ thông tin không đúng về một ai đó và video tình dục (ví dụ: kêu gọi tặng quà để chia sẻ clip / ảnh nóng của User / Idol…).",
+          "**Hành hạ bản thân:** dùng đồ vật hoặc cơ thể để tác động (vỗ mông, mặt, vùng nhạy cảm), leo trèo nguy hiểm, bôi các thứ có màu, có mùi lên cơ thể, uống các thứ gây hại cho sức khỏe (nước mắm, nước tương, dầu ăn…).",
+          "**Hùa theo đối thủ PK hoặc User:** cố ý hùa theo hành động / lời nói gây phản cảm mà không ngăn cản, nhắc nhở. Cấm nói các từ như lắc mông, lắc đít, lắc hông, lắc hàng trên LIVE; không yêu cầu người khác trả kèo PK mang tính 18+, hàm ý 18+, gây khêu gợi 18+; không tụt áo, khoe ngực, các bộ phận nhạy cảm hoặc bộ phận sinh dục.",
+          "**Các từ lóng liên quan:** chếch chi, sô, sò, khoai, trứng cút, bưởi, đào, hột, nhỏ, tiêu, lướt sóng và các từ lóng khác có thiên hướng thô tục, nhạy cảm… (các từ lóng này bị phát hiện kèm theo câu thoại ẩn ý của người nói để xử lý).",
+          "**Thông tin nhận dạng cá nhân:** nói hay đưa ảnh / video có số điện thoại, địa chỉ cụ thể, rủ kết bạn qua các ứng dụng khác…",
+          "**Phân biệt và miệt thị giới tính:** gọi User nam là chị / cô / dì… hoặc User nữ là anh / bác / chú… (khác giới tính thật) bị xem là vi phạm và sập LIVE 7 ngày. Gọi User là bê đê, bóng, lại cái, bạch tạng… cũng là vi phạm nặng.",
+          "**Video nhạy cảm:** đặc biệt các video tay chạm vùng nhạy cảm, vuốt ve, cà hẩy, mô tả hành vi 18+. Cả video có các con vật không mặc quần áo như Con Ếch Xanh, Đỏ, Vàng…",
+          "**Công cụ thứ 3 hoặc âm thanh:** bình luận của User hiện trên LIVE có từ ngữ cấm. Giọng Google đọc bình luận của User thành tiếng với ngôn từ đả kích, hù dọa, miệt thị, mua bán, bán dâm, cờ bạc, thách thức, yêu cầu làm việc bậy bạ… và âm thanh từ bên ngoài hoặc quảng cáo lúc phát nhạc…",
+          "**Tác động vật lý ảo:** “vả”, “đấm” bằng tay hay vũ khí dù là giỡn cũng bị coi là vi phạm, kể cả đưa cùi chỏ lên màn hình đòi đánh người xem. Đặc biệt đòi giết người trên LIVE sẽ bị khóa tài khoản vĩnh viễn. (Không để xuất hiện nội dung đánh nhau, gây sát thương, kể cả đơn thuần là giỡn…)"
+        ],
+        "examples": [
+          {
+            "sai": "“Lên 1.000 mắt em cởi áo khoác”, “thua PK em lướt sóng cho xem”.",
+            "dung": "Hình phạt PK vui vẻ: đeo bờm tai thỏ, hát một bài, làm mặt xấu 10 giây."
+          },
+          {
+            "sai": "Đọc lại bình luận thô tục của người xem, hùa theo kiểu “anh này nói đúng nè”.",
+            "dung": "Bỏ qua, nhắc nhẹ “Mình nói chuyện vui vẻ thôi nha” và nhờ quản trị cấm bình luận."
+          },
+          {
+            "sai": "Giả vờ đấm vào màn hình: “Đứa nào chê em là em đánh đó!”.",
+            "dung": "Đùa nhẹ nhàng bằng lời, không làm động tác đe doạ."
+          },
+          {
+            "sai": "Uống một hơi hết chai rượu, leo lên lan can để “làm content”.",
+            "dung": "Thử thách an toàn: ăn chanh, nói nhanh, đoán bài hát."
+          },
+          {
+            "sai": "Gọi người xem nam là “chị ơi” cho vui, gọi ai đó là “bê đê”, “bóng”, “lại cái”.",
+            "dung": "Gọi chung “bạn”, “cả nhà” khi không chắc giới tính của người xem."
+          }
+        ]
+      },
+      {
+        "title": "Ngôn từ và hành vi gây thù ghét",
+        "text": "TikTok là một cộng đồng đa dạng với các thành viên có xuất thân khác nhau. Sự khác biệt giữa chúng ta nên được tôn trọng, chứ không phải là nguyên nhân gây ra chia rẽ.",
+        "after": [
+          "Không cho phép bất cứ hành vi thù ghét, ngôn từ gây thù ghét hay hành động cổ xúy tư tưởng thù ghét, bao gồm nội dung tấn công một cá nhân hoặc nhóm người do đặc điểm được bảo vệ (trong đó có trẻ em)."
+        ],
+        "examples": [
+          {
+            "sai": "Chê bai người theo vùng miền, giới tính, dân tộc, tôn giáo, người khuyết tật… dù chỉ là “đùa”.",
+            "dung": "Đùa về chính mình hoặc tình huống, không lấy đặc điểm của nhóm người khác làm trò cười."
+          },
+          {
+            "sai": "Nhại giọng một vùng miền để chế giễu người xem đến từ vùng đó.",
+            "dung": "“Chào bạn ở Huế, thích quá, giọng Huế dễ thương ghê!”"
+          }
+        ]
+      },
+      {
+        "title": "Chơi cờ bạc",
+        "text": "Tuy TikTok là nền tảng giải trí, nhưng việc mạo hiểm đầu tư tiền bạc vào game, cá cược, vé số, lô đề, mạt chược hay các hình thức gọi mời, khuyến mãi có thể gây thiệt hại tiềm ẩn cho một số người, bao gồm mất mát tài chính lớn hoặc bị nghiện. Không cho phép quảng bá dịch vụ đánh bạc.",
+        "note": "Ví dụ cấm: “Chiều nay anh đánh bao lô con 90 đi” / “Em còn vài tờ vé số, anh mua ủng hộ đi” / “Em đi bán vé số, ai ủng hộ em”… hoặc nội dung liên quan tới vé số, lô đề, các con số gắn với tương tác cờ bạc, tiền nong hoặc quy đổi tiền tệ…",
+        "examples": [
+          {
+            "sai": "“Ai đoán đúng tỉ số trận tối nay em tặng 100k.”",
+            "dung": "Đoán tỉ số cho vui, người đoán đúng được em hát tặng một bài."
+          },
+          {
+            "sai": "“Tặng 10 bông hồng = 1 lượt quay, quay trúng em chuyển khoản.”",
+            "dung": "Không gắn quà TikTok với tiền thật, thẻ cào hay phần thưởng ngoài nền tảng."
+          },
+          {
+            "sai": "Chơi bài, lắc tài xỉu, mạt chược ăn tiền ngay trên LIVE.",
+            "dung": "Chơi trò chơi trí tuệ không ăn tiền: đố vui, nối từ."
+          }
+        ]
+      },
+      {
+        "title": "Quấy rối và bắt nạt",
+        "text": "Không cho phép sử dụng ngôn ngữ hoặc hành vi quấy rối, làm nhục, đe dọa hay đánh cắp thông tin của người khác, gồm cả việc đáp trả những hành động đó với ý đồ quấy rối trả đũa (ngoại trừ phát biểu phản bác không mang tính quấy rối).",
+        "bullets": [
+          "Lời lẽ với mục đích nhạo báng, làm nhục, làm xấu hổ, hăm dọa hoặc làm tổn thương một cá nhân.",
+          "Nội dung tán tụng, bình thường hóa hoặc cổ xúy hành vi quấy rối tình dục.",
+          "Đe dọa tấn công mạng hoặc đánh cắp, tiết lộ thông tin cá nhân nhằm quấy rối hoặc tống tiền người khác.",
+          "Nội dung hạ thấp nhân phẩm hoặc nhạo báng những nạn nhân của thảm kịch bạo lực.",
+          "Hành vi bắt nạt hoặc quấy rối khác."
+        ],
+        "examples": [
+          {
+            "sai": "“Nhìn cái mặt avatar là biết nghèo rồi”, gọi tên một người xem ra để chê.",
+            "dung": "Có người nói khó nghe thì không đáp trả, nhờ quản trị cấm bình luận."
+          },
+          {
+            "sai": "Đọc to tên thật, nơi làm việc của một người đang có drama để cả LIVE vào “bóc”.",
+            "dung": "Không nhắc đến người thật ngoài phiên LIVE, không kể chuyện riêng của người khác."
+          },
+          {
+            "sai": "“Đứa nào báo cáo kênh em, em tìm ra là em đăng hết thông tin lên.”",
+            "dung": "“Ai không thích có thể lướt qua, cảm ơn bạn đã ghé.”"
+          }
+        ]
+      },
+      {
+        "title": "Ảnh khỏa thân",
+        "text": "Không cho phép nội dung mô tả bộ phận sinh dục, rốn, mông trần, vùng mu hoặc đầu nhũ hoa phụ nữ, bao gồm hình ảnh được chế tác bằng kỹ thuật số hoặc video. Đặc biệt là trẻ em dưới 18 tuổi, trẻ sơ sinh không mặc quần áo dù chỉ chạy lướt qua, xuất hiện 1 giây — nguy hiểm hơn là trẻ em dưới 18 tuổi xuất hiện một mình trong phiên LIVE.",
+        "note": "Lưu ý: Khi cúi cần dùng bàn tay che vùng ngực (tam giác nhạy cảm) mà tay không chạm vào áo hay da thịt.",
+        "examples": [
+          {
+            "sai": "Áo croptop hở rốn, váy quá ngắn khi ngồi thấp, áo cổ rộng khi cúi lấy đồ.",
+            "dung": "Trang phục kín đáo, ngồi đúng góc máy; cần cúi thì đưa tay che ngực (không chạm áo)."
+          },
+          {
+            "sai": "Để con nhỏ chạy quanh khi đang thay đồ, hoặc bé ngồi một mình trước máy khi người lớn đi vắng.",
+            "dung": "Trẻ nhỏ chỉ xuất hiện khi có người lớn ngồi cùng và mặc đồ đầy đủ."
+          }
+        ]
+      },
+      {
+        "title": "Nội dung gợi dục",
+        "text": "Chúng tôi hoan nghênh những màn trình diễn và khiêu vũ nơi mọi người thể hiện bản thân một cách sáng tạo, tôn vinh văn hóa hoặc giải trí. Tuy nhiên, một số hành vi kích dục hoặc gợi dục có thể khiến người xem khó chịu và khiến người trẻ tuổi gặp rủi ro bị bóc lột.",
+        "after": [
+          "Không cho phép nội dung do người trẻ tuổi thực hiện những màn trình diễn khêu gợi hoặc ám chỉ đến hoạt động tình dục, hoặc bất cứ ai sử dụng lời tường thuật trần trụi về tình dục."
+        ],
+        "examples": [
+          {
+            "sai": "Nhảy với động tác vuốt người, lắc hông sát camera, liếm môi nhìn máy.",
+            "dung": "Nhảy trend vui, động tác rõ ràng, giữ khoảng cách vừa phải với camera."
+          },
+          {
+            "sai": "Kể chi tiết chuyện “phòng the” của bản thân hay bạn bè cho LIVE nghe.",
+            "dung": "Chuyện tình cảm chỉ kể vui, chung chung, không nói chi tiết nhạy cảm."
+          }
+        ]
+      },
+      {
+        "title": "Hoạt động tình dục và tình cảm",
+        "groups": [
+          {
+            "label": "Đối với TikTok",
+            "bullets": [
+              "Quyền truy cập LIVE có thể bị đình chỉ do vi phạm chính sách Hình ảnh khỏa thân và Hoạt động tình dục của người lớn. Không cho phép nội dung mô tả tình dục xâm nhập và không xâm nhập, ái vật tình dục, hành vi khêu gợi hoặc kích dục, hoặc chứa ngôn ngữ khiêu dâm để thỏa mãn tình dục."
+            ]
+          },
+          {
+            "label": "Đối với Công ty",
+            "bullets": [
+              "Nhà sáng tạo LIVE, Quản lý và tất cả Nhân sự không có tình cảm yêu đương với nhau; khác giới không sinh hoạt ở chung nhà (phòng) dù bất kể lý do gì sau khi làm việc tại Công ty (NST với NST; NST với Nhân sự; NST với Quản lý). Nếu phát hiện sẽ xử lý theo Quy định chung của Công ty hoặc sa thải ngay lập tức mà không thanh toán chi phí hoạt động trước đó.",
+              "**Cấm tuyệt đối:** Nhà sáng tạo LIVE, Quản lý và tất cả Nhân sự không tổ chức tụ tập, gặp gỡ hay môi giới mại dâm, sử dụng chất kích thích dưới bất kỳ hình thức nào (dù là người trực tiếp tham gia hay mua bán, giới thiệu). Công ty chỉ hoạt động nội dung online giải trí (dùng tài năng và sức hút từ nội dung biểu diễn để nhận quà tặng trên LIVE), tuyệt đối cấm các hành vi vi phạm pháp luật và đạo đức nêu trên.",
+              "Công ty không khuyến khích Nhà sáng tạo LIVE, Quản lý và Nhân sự gặp gỡ, có tình cảm với người bên ngoài để tránh rủi ro xấu nhất như: nhận tiền từ người khác rồi sau này có chuyện bị đưa lên MXH (gây hình ảnh xấu cho bản thân và Công ty); nhậu nhẹt say xỉn mất kiểm soát, dễ mắc các bệnh liên quan đến tình dục hoặc chuyện ngoài ý muốn; lợi dụng danh tiếng Công ty để đi khách, buôn bán chất cấm hay phục tùng người khác vì mục đích cá nhân."
+            ]
+          }
+        ],
+        "examples": [
+          {
+            "sai": "Nói chuyện, đọc truyện hoặc mô tả bằng lời các hành vi tình dục, kể cả “nói giảm nói tránh”.",
+            "dung": "Chuyển chủ đề ngay khi bình luận kéo câu chuyện sang hướng này."
+          },
+          {
+            "sai": "Idol và quản lý yêu nhau, dọn về sống chung; hẹn gặp người tặng quà ở quán nhậu sau giờ LIVE.",
+            "dung": "Giữ quan hệ công việc; người xem chỉ giao lưu trong phiên LIVE."
+          }
+        ]
+      },
+      {
+        "title": "Bóc lột tình dục",
+        "text": "Quyền truy cập LIVE có thể bị đình chỉ do vi phạm chính sách Hình ảnh khỏa thân và Hoạt động tình dục của người lớn.",
+        "after": [
+          "Không cho phép nội dung mô tả, gạ gẫm, cổ xúy, bình thường hóa hoặc ca tụng hành vi tình dục không có sự đồng thuận hoặc động chạm khi không được chấp thuận, chia sẻ hình ảnh thân mật khi chưa được đồng ý, bạo lực tình dục hoặc gạ gẫm tình dục."
+        ],
+        "examples": [
+          {
+            "sai": "“Ai tặng Vũ Trụ thì em gửi ảnh riêng qua tin nhắn.”",
+            "dung": "Không bao giờ hứa gửi ảnh riêng, không đổi quà lấy hình ảnh cá nhân."
+          },
+          {
+            "sai": "Đăng lại ảnh/clip thân mật của người khác “để mọi người xem”.",
+            "dung": "Gặp nội dung như vậy thì báo cáo ngay, không chia sẻ."
+          }
+        ]
+      },
+      {
+        "title": "Bóc lột và lạm dụng thanh thiếu niên",
+        "text": "Chúng tôi ưu tiên giúp người trẻ tuổi khám phá và tìm hiểu một cách an toàn trong giai đoạn phát triển đặc biệt.",
+        "after": [
+          "Không cho phép hành vi bóc lột và lạm dụng thanh thiếu niên, bao gồm nội dung lạm dụng tình dục thanh thiếu niên (CSAM), nội dung khỏa thân, dụ dỗ, tống tiền / tống tình bằng hình ảnh tình dục, gạ gẫm, ấu dâm và lạm dụng người trẻ tuổi về thể chất hay tâm lý. Bao gồm cả nội dung có thật, hư cấu, tạo bằng kỹ thuật số và thể hiện bằng mỹ thuật hoặc đồ vật."
+        ],
+        "examples": [
+          {
+            "sai": "Người xem nhắn “bé mấy tuổi, cho anh xin số” với idol nhỏ tuổi mà idol vẫn trả lời.",
+            "dung": "Chặn và báo quản lý ngay khi thấy người lạ tiếp cận trẻ vị thành niên."
+          },
+          {
+            "sai": "Dụ trẻ em trong LIVE làm thử thách nguy hiểm hoặc nói điều không phù hợp.",
+            "dung": "Không để trẻ dưới 18 tuổi tham gia nội dung LIVE của công ty."
+          }
+        ]
+      },
+      {
+        "title": "Hoạt động tình dục và hình ảnh khỏa thân của trẻ vị thành niên",
+        "text": "Không cho phép các nội dung sau:",
+        "bullets": [
+          "Nội dung tạo dựng bằng kỹ thuật số bắt chước, ngụ ý hoặc phô bày hoạt động tình dục có liên quan tới trẻ vị thành niên.",
+          "Lời bài hát khiêu dâm có liên quan tới trẻ vị thành niên.",
+          "Vũ đạo khiêu dâm có liên quan tới trẻ vị thành niên.",
+          "Trẻ vị thành niên mặc trang phục kiệm vải không phù hợp với tình huống hoặc địa điểm."
+        ],
+        "examples": [
+          {
+            "sai": "Cho bé nhảy theo bài nhạc có lời lẽ người lớn, động tác gợi cảm.",
+            "dung": "Nếu có bé trong khung hình: bài hát thiếu nhi, động tác hồn nhiên."
+          },
+          {
+            "sai": "Bé mặc bikini, đồ ngủ mỏng xuất hiện trong LIVE.",
+            "dung": "Bé mặc đồ kín đáo, có người lớn đi cùng."
+          }
+        ]
+      },
+      {
+        "title": "Bóc lột tình dục và bạo lực giới",
+        "text": "Chúng tôi cam kết cung cấp không gian tôn trọng bình đẳng giới, ủng hộ những mối quan hệ lành mạnh và tôn trọng quyền riêng tư cá nhân.",
+        "after": [
+          "Không cho phép hành vi bóc lột tình dục hoặc bạo lực giới, bao gồm hành vi tình dục không có sự đồng thuận, lạm dụng tình dục bằng hình ảnh, tống tiền / tống tình bằng hình ảnh tình dục, lạm dụng thân thể và quấy rối tình dục."
+        ],
+        "examples": [
+          {
+            "sai": "“Đàn bà thì phải ở nhà nấu cơm, LIVE làm gì?” — idol hùa theo bình luận này.",
+            "dung": "“Ai cũng có quyền làm điều mình thích nha.”"
+          },
+          {
+            "sai": "Đe doạ tung ảnh người yêu cũ lên LIVE để “trả thù”.",
+            "dung": "Không đưa chuyện riêng và hình ảnh của người khác lên LIVE."
+          }
+        ]
+      },
+      {
+        "title": "Hoạt động bất hợp pháp và hàng hóa bị kiểm soát",
+        "text": "Không cho phép nội dung:",
+        "bullets": [
+          "Mô tả, quảng bá hoặc buôn bán súng cầm tay, đạn dược, phụ kiện súng hay vũ khí gây nổ.",
+          "Hướng dẫn cách chế tạo vũ khí.",
+          "Mô tả, quảng bá hoặc buôn bán ma túy hoặc các chất bị kiểm soát khác.",
+          "Mô tả các hành vi có thể bị pháp luật trừng phạt, bao gồm trộm cắp, hành hung, bóc lột con người, làm giả và hành vi gây hại khác.",
+          "Hướng dẫn cách thực hiện các hoạt động tội phạm."
+        ],
+        "examples": [
+          {
+            "sai": "Khoe súng hơi, dao, pháo nổ trước camera hoặc chỉ cách mua.",
+            "dung": "Đồ trang trí, đạo cụ phải an toàn; không cầm vật giống vũ khí."
+          },
+          {
+            "sai": "Hút thuốc lá điện tử/bóng cười, “bao ship” hàng không rõ nguồn gốc trên LIVE.",
+            "dung": "Không hút, uống chất kích thích; không rao bán hàng hoá trên phiên LIVE giải trí."
+          },
+          {
+            "sai": "Kể cách “mượn” đồ không trả, cách làm giả giấy tờ như chuyện vui.",
+            "dung": "Không kể, không hướng dẫn bất kỳ hành vi vi phạm pháp luật nào."
+          }
+        ]
+      },
+      {
+        "title": "Bản quyền",
+        "text": "Không cho phép nội dung xâm phạm quyền sở hữu trí tuệ của người khác — ví dụ nhạc và nội dung video (hình ảnh và âm thanh) phát trên LIVE đã được đăng ký quyền sở hữu trí tuệ.",
+        "note": "Biện pháp: Không được mở lại các bài hát / video đã bị báo cáo hoặc phát lại hình ảnh đó trong các phiên LIVE tiếp theo để tránh rủi ro.",
+        "examples": [
+          {
+            "sai": "Phát nguyên bài hit đang bị báo bản quyền, mở phim/trận bóng đá trực tiếp trên LIVE.",
+            "dung": "Dùng nhạc trong thư viện TikTok, tự hát hoặc nhạc không lời có giấy phép."
+          },
+          {
+            "sai": "Lấy video của kênh khác phát lại để “react”.",
+            "dung": "Làm nội dung của chính mình; muốn dùng của người khác thì phải được cho phép."
+          }
+        ]
+      },
+      {
+        "title": "Ngôn từ trên LIVE",
+        "text": "Chúng tôi không bao giờ hướng dẫn hay chỉ bảo Nhà sáng tạo LIVE, Quản lý và Nhân sự những phát ngôn gây mâu thuẫn, xúc phạm đến cá nhân, tập thể, tổ chức nào hay Nhà nước — trên LIVE cũng như trong cuộc sống hằng ngày.",
+        "after": [
+          "Tuyệt đối không lộng ngôn một cách thiếu suy nghĩ, tránh ảnh hưởng đến các thành viên khác trong nhóm, đến kênh của nhóm và hơn hết là không ảnh hưởng đến Công ty nói riêng và TikTok nói chung."
+        ],
+        "examples": [
+          {
+            "sai": "Bình luận về lãnh đạo, chính sách, đưa tin “nghe nói” về sự kiện chính trị.",
+            "dung": "Gặp câu hỏi chính trị thì từ chối nhẹ: “Mình chỉ tám chuyện vui thôi nha.”"
+          },
+          {
+            "sai": "Nóng giận chửi thề, nói xấu công ty hay đối thủ PK trên LIVE.",
+            "dung": "Bực thì tạm tắt mic, hít thở; có vấn đề thì báo quản lý sau phiên LIVE."
+          }
+        ]
+      },
+      {
+        "title": "Lôi kéo, treo và chia sẻ thông tin khác (+LIVE tại Công ty)",
+        "bullets": [
+          "Không hoan nghênh việc chủ động tiếp cận và lôi kéo người dùng tặng quà từ các nhóm khác nhưng cùng Công ty.",
+          "Không khuyến khích dùng tài khoản cá nhân, tài khoản clone ẩn danh treo trên LIVE các nhóm cùng Công ty.",
+          "Không khuyến khích tặng quà cho các nhóm LIVE khác cùng Công ty, kể cả PKQT, với mục đích tạo sự chú ý hay bất kỳ lý do nào khác.",
+          "Không khuyến khích tặng quà để kết nghĩa, đám cưới tạo sự thân thiện rồi tiếp cận người tặng quà qua tin nhắn riêng, dù là cho bản thân hay tặng phụ người khác.",
+          "Không khuyến khích chia sẻ thông tin cá nhân của Idol cho User như Facebook, Instagram, TikTok, Zalo… hay các MXH khác để tránh bị quấy rối — khi đó Công ty không thể can thiệp. Chúng tôi chỉ hỗ trợ trên TikTok thông qua LIVESTREAM: cấm bình luận hoặc chặn tài khoản đó và các tài khoản clone liên quan nếu được báo.",
+          "Không khuyến khích gặp gỡ, trao đổi thân mật bên ngoài hoặc chuyện tình cảm giữa Idol và người tặng quà trên nền tảng, ảnh hưởng đến công việc sau này.",
+          "Không khuyến khích Idol với Idol hoặc Idol với Nhân sự nảy sinh tình cảm, yêu đương dù cùng giới hay khác giới, hoặc sống chung. Chúng tôi chỉ cung cấp dịch vụ Livestream và làm việc trên nền tảng một cách an toàn, không hoạt động như công ty môi giới tình cảm. Vi phạm điều này được coi là nghiêm trọng.",
+          "Tuyệt đối cấm chia sẻ thông tin cá nhân theo hướng tiêu cực, bịa chuyện hoặc thông tin nội bộ chưa được Công ty công bố chính thức nhằm chia rẽ và lôi kéo người tặng quà."
+        ],
+        "after": [
+          "Do đó, việc CẤM các hành động trên nhằm bảo vệ quyền lợi từng nhóm và thông tin nội bộ.",
+          "Sau 01 lần bị nhóm khác cùng Công ty khiếu nại và đã được nhắc nhở mà còn tái phạm thì được coi là **vi phạm mức độ nghiêm trọng** trong giai đoạn này."
+        ],
+        "examples": [
+          {
+            "sai": "Vào LIVE nhóm bạn cùng công ty, nhắn “qua bên em chơi đi anh” cho người đang tặng quà.",
+            "dung": "Chỉ chăm sóc người xem trong phòng của mình."
+          },
+          {
+            "sai": "Dùng nick clone treo LIVE nhóm khác để xem ai tặng, rồi nhắn riêng làm quen.",
+            "dung": "Không dùng nick phụ theo dõi hay lôi kéo người xem của nhóm khác."
+          },
+          {
+            "sai": "“Anh tặng em đám cưới đi, rồi mình nói chuyện riêng” — sau đó xin Zalo người tặng.",
+            "dung": "Cảm ơn người tặng ngay trên LIVE, không chuyển sang nhắn riêng ngoài nền tảng."
+          },
+          {
+            "sai": "Kể với người xem “bên nhóm kia sắp giải tán, qua em đi” — tin chưa được công ty công bố.",
+            "dung": "Không bàn chuyện nội bộ trên LIVE; có thắc mắc thì hỏi quản lý."
+          }
+        ]
+      }
+    ]
+  }
+}
